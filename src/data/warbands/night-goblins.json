@@ -1,0 +1,451 @@
+{
+  "id": "night-goblins",
+  "name": "Night Goblins",
+  "source": "Night Goblins.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 20,
+  "specialRules": [
+    {
+      "name": "Animosity",
+      "text": "At the beginning of each Night Goblin turn roll a D12; on a 1-2 they squabble and do nothing else for the rest of the turn. Trolls, Squigs, Snotlings and other non-goblins are not affected."
+    },
+    {
+      "name": "Hate Stunties",
+      "text": "Night Goblins are subject to hatred towards Dwarfs. Fanatics are not affected."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "night-goblin",
+      "name": "Night Goblin equipment list",
+      "usedBy": "Big Boss, Shaman, Bosses, Night Goblins",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Club",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Short Bow",
+          "category": "missile",
+          "listCost": 5
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Madcap Mushrooms",
+          "category": "misc",
+          "listCost": 25,
+          "note": "Common (all Night Goblins). Rules as Mordheim rulebook."
+        }
+      ]
+    },
+    {
+      "id": "fanatic",
+      "name": "Fanatic equipment list",
+      "usedBy": "Fanatics",
+      "items": [
+        {
+          "name": "Poison daggers",
+          "category": "melee",
+          "listCost": 25,
+          "note": "Common (Fanatics only). Pair of daggers coated in Death Cap juice, re-applied free after every game; same effect as Black Lotus."
+        },
+        {
+          "name": "Double handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Ball & chain",
+          "category": "melee",
+          "listCost": 15,
+          "note": "Common (Fanatics only). Rules as Mordheim Annual 2002."
+        },
+        {
+          "name": "Madcap Mushrooms",
+          "category": "misc",
+          "listCost": 25,
+          "note": "Common. Fanatics must buy them each game."
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "big-boss",
+      "name": "Big Boss",
+      "kind": "hero",
+      "cost": 45,
+      "min": 1,
+      "max": 1,
+      "startingExp": 17,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "night-goblin",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Strength",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Leader",
+          "text": "Any model in the warband within 6\" of the Big Boss may use his Leadership instead of their own."
+        }
+      ],
+      "notes": "PDF text for weapons: 'weapons from the Night Goblin equipment list'."
+    },
+    {
+      "id": "shaman",
+      "name": "Shaman",
+      "kind": "hero",
+      "cost": 50,
+      "min": 0,
+      "max": 1,
+      "startingExp": 10,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipmentList": "night-goblin",
+      "isLeader": false,
+      "spellcaster": "Waaagh! Magic",
+      "skills": [
+        "Shooting",
+        "Academic",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Wizard",
+          "text": "Wizard; uses Waaagh! Magic as listed in the Mordheim Annual 2002."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "boss",
+      "name": "Boss",
+      "kind": "hero",
+      "cost": 25,
+      "min": 0,
+      "max": 4,
+      "startingExp": 6,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipmentList": "night-goblin",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "night-goblin",
+      "name": "Night Goblin",
+      "kind": "henchman",
+      "cost": 15,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 5
+      },
+      "equipmentList": "night-goblin",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Animosity",
+          "text": "At the beginning of each Night Goblin turn roll a D12; on a 1-2 they squabble and do nothing else for the rest of the turn. Only Night Goblins are affected."
+        },
+        {
+          "name": "Hate Stunties",
+          "text": "Subject to hatred towards Dwarfs (Night Goblins only)."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "fanatic",
+      "name": "Fanatic",
+      "kind": "henchman",
+      "cost": 20,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 5
+      },
+      "equipmentList": "fanatic",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Addict",
+          "text": "Needs Madcap Mushrooms bought each game; without them he stays out of the battle."
+        },
+        {
+          "name": "Mushroom Brain",
+          "text": "Cannot gain experience."
+        },
+        {
+          "name": "Looney",
+          "text": "Subject to Frenzy. Tests for permanent damage after the battle as described in the rulebook."
+        },
+        {
+          "name": "Frantic",
+          "text": "Strikes first in combat, ignoring penalties or bonuses for weapons or initiative order."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "cave-squig",
+      "name": "Cave Squig",
+      "kind": "henchman",
+      "cost": 15,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": {
+        "M": 0,
+        "WS": 4,
+        "BS": 0,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 5
+      },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [
+        "Natural weapons (never uses weapons or armour)"
+      ],
+      "specialRules": [
+        {
+          "name": "Movement",
+          "text": "No set Movement: moves 2D6\". Never runs or declares charges; may contact enemies within its 2D6\" move and then counts as charging."
+        },
+        {
+          "name": "Minderz",
+          "text": "Must stay within 6\" of a Night Goblin at the start of its Movement phase or goes wild: moves 2D6\" in a random direction each turn, fights any model it contacts, and is out of the player's control for the rest of the game."
+        },
+        {
+          "name": "Animals",
+          "text": "Do not gain experience."
+        }
+      ],
+      "notes": "Movement is 2D6\" (M recorded as 0). Never more Cave Squigs than Night Goblins."
+    },
+    {
+      "id": "troll",
+      "name": "Troll",
+      "kind": "henchman",
+      "cost": 200,
+      "min": 0,
+      "max": 1,
+      "startingExp": 0,
+      "profile": {
+        "M": 6,
+        "WS": 3,
+        "BS": 1,
+        "S": 5,
+        "T": 4,
+        "W": 3,
+        "I": 1,
+        "A": 3,
+        "Ld": 4
+      },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [
+        "None (never given weapons or armour; may carry a big club)"
+      ],
+      "specialRules": [
+        {
+          "name": "Fear",
+          "text": "Causes fear."
+        },
+        {
+          "name": "Stupidity",
+          "text": "Subject to stupidity."
+        },
+        {
+          "name": "Regeneration",
+          "text": "When wounded roll a D12; on 7+ the wound is ignored. Not vs fire or fire-based magic. Never rolls for injury after battle."
+        },
+        {
+          "name": "Dumb Monsters",
+          "text": "Never learns skills or gains experience."
+        },
+        {
+          "name": "Always Hungry",
+          "text": "Upkeep 15gc after every game; the Big Boss may instead sacrifice three Snotlings or two Cave Squigs. If unpaid the Troll wanders off."
+        },
+        {
+          "name": "Vomit Attack",
+          "text": "Instead of normal attacks, a single automatic hit at Strength 5 ignoring armour saves."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "snotling-mob",
+      "name": "Snotling Mob",
+      "kind": "henchman",
+      "cost": 50,
+      "min": 0,
+      "max": 1,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 2,
+        "S": 2,
+        "T": 2,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 4
+      },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [
+        "Pointy stick (counts as a dagger, gives the enemy +1 armour save or a natural-12 save if he had none; free)"
+      ],
+      "specialRules": [
+        {
+          "name": "Mob",
+          "text": "Bought as a mob of 5 for 50gc; replace members for 10gc each up to 5. Always move and fight as a mob, all within 1\"."
+        },
+        {
+          "name": "Weedy",
+          "text": "If wounded: knocked down on 1-2, stunned on 3-6, out of action on 7-12."
+        },
+        {
+          "name": "Dodgy",
+          "text": "Natural 12 dodge save against shooting."
+        },
+        {
+          "name": "Insignificant",
+          "text": "The whole mob counts as a single model for rout tests, maximum warband size and income. An enemy hero gains experience only for taking the last Snotling out of action."
+        }
+      ],
+      "notes": "Mob of 5 counts as one model."
+    }
+  ],
+  "spells": {
+    "listName": "Waaagh! Magic",
+    "usedBy": [
+      "shaman"
+    ]
+  },
+  "conversionNotes": [
+    "Animosity D6 roll of 1 -> D12 1-2.",
+    "Troll Regeneration D6 4+ -> D12 7+.",
+    "Snotling Weedy injury 1 / 2-3 / 4-6 -> 1-2 / 3-6 / 7-12 (proportional, judgement call). Snotling 6+ dodge save and 6+ armour save -> natural 12.",
+    "Cave Squig M printed as '2D6'; recorded as M0 with the move rule in specialRules and notes.",
+    "Waaagh! Magic is from the Mordheim Annual 2002 and not included in this PDF.",
+    "Night Goblin special skills (Ded Shooty, Sneaky Git, Infiltrate, Netter) are not transcribed as fighter data; the PDF has no Strength column checked for Shaman, and Special column marks Big Boss and Boss only.",
+    "Fanatic Madcap Mushrooms: Fanatics need them each game; also listed on the main Night Goblin list per 'all Night Goblins' availability.",
+    "Snotling Mob treated as a single henchman entry cost 50 (mob of 5), max 1; Snotling profile BS 2 S 2 T 2 per image.",
+    "Skill table has ambiguous column positions in the PDF image; read from the rendered page."
+  ]
+}

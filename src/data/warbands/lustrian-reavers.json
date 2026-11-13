@@ -1,0 +1,552 @@
+{
+  "id": "lustrian-reavers",
+  "name": "Lustrian Reavers",
+  "source": "Lustrian-Reavers-V1.2.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 10,
+  "specialRules": [
+    {
+      "name": "Rare Heroes",
+      "text": "Only one of each type of Hero may ever be bought during the existence of the warband. Heroes are bought with the weapons and armour listed in their entry and can never swap or give these away, though new equipment may be acquired."
+    },
+    {
+      "name": "Promotions",
+      "text": "When a Hero is lost it cannot be replaced by hiring. The warband keeps the fallen Hero's weapons and armour (not other equipment) and may promote a Prospect into the role as if he had rolled Lad's Got Talent: choose two skill lists available to Heroes in the warband for the new Hero, who immediately makes one roll on the Heroes Advance table. The Prospect's own equipment goes to the stash. With no Prospect, promote the next one hired."
+    },
+    {
+      "name": "Hired Swords",
+      "text": "May only hire an Ogre Bodyguard, Dwarf Trollslayer, Tilean Marksman or a Big Game Hunter."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "heroes",
+      "name": "Heroes equipment list",
+      "usedBy": "Conqueror, Saurus Slayer, Beastmaster, Jungle Shadow, Trapmaster",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Mace",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Misericordia",
+          "category": "melee",
+          "listCost": 10,
+          "note": "Uses dagger rules; when attacking downed enemies roll 2D6 and pick the highest 'to wound' roll"
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Lance",
+          "category": "melee",
+          "listCost": 40,
+          "note": "Mounted models only"
+        },
+        {
+          "name": "Javelin",
+          "category": "missile",
+          "listCost": 10,
+          "note": "8\" range, no penalty for moving and shooting"
+        },
+        {
+          "name": "Throwing Knives",
+          "category": "missile",
+          "listCost": 15
+        },
+        {
+          "name": "Blowpipe",
+          "category": "missile",
+          "listCost": 15
+        },
+        {
+          "name": "Pistol",
+          "category": "missile",
+          "listCost": 15
+        },
+        {
+          "name": "Light Armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Buckler",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Rope & Hook",
+          "category": "misc",
+          "listCost": 5
+        },
+        {
+          "name": "Crimson Shade",
+          "category": "misc",
+          "listCost": 35
+        },
+        {
+          "name": "Dark Venom",
+          "category": "misc",
+          "listCost": 30
+        },
+        {
+          "name": "Net",
+          "category": "misc",
+          "listCost": 5
+        },
+        {
+          "name": "Warhorse",
+          "category": "misc",
+          "listCost": 80
+        },
+        {
+          "name": "Warhound",
+          "category": "misc",
+          "listCost": 20
+        },
+        {
+          "name": "Lizardmen skin cloak",
+          "category": "misc",
+          "listCost": 10,
+          "note": "Saurus Slayer only. Grants 12+ ward save (printed 6+), not reduced by strength or other modifiers"
+        },
+        {
+          "name": "Skull Mask",
+          "category": "misc",
+          "listCost": 15,
+          "note": "Saurus Slayer only. Causes fear"
+        },
+        {
+          "name": "Lizardman Sword upgrade",
+          "category": "melee",
+          "listCost": 30,
+          "note": "Saurus Slayer only. Upgrades any sword; +1 to wound rolls due to Poison"
+        },
+        {
+          "name": "Trophy Slann Holy headdress",
+          "category": "armour",
+          "listCost": 35,
+          "note": "Saurus Slayer only. +2 bonus to armour saves (as printed)"
+        },
+        {
+          "name": "Tilean Hunting Hawk",
+          "category": "misc",
+          "listCost": 30,
+          "note": "Beastmaster only (0-1). M12 WS4 BS0 S4 T3 W- I5 A1 Ld-. Part of the equipment: attacks any enemy within 12\" as a melee attack, even out of line of sight (unless Hidden), then returns to the Beastmaster. Cannot be targeted separately. Does not attack if the Beastmaster is in hand-to-hand combat. Animal rules; no experience"
+        }
+      ]
+    },
+    {
+      "id": "prospects",
+      "name": "Prospect equipment list",
+      "usedBy": "Prospects",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Mace",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Short Bow",
+          "category": "missile",
+          "listCost": 5
+        },
+        {
+          "name": "Light Armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "conqueror",
+      "name": "Conqueror",
+      "kind": "hero",
+      "cost": 150,
+      "min": 0,
+      "max": 1,
+      "startingExp": 24,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 4,
+        "T": 4,
+        "W": 2,
+        "I": 3,
+        "A": 2,
+        "Ld": 7
+      },
+      "equipmentList": "heroes",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength"
+      ],
+      "fixedEquipment": [
+        "Masterwork Heavy Armour (7+ armour save, -1 Movement)",
+        "Bec de Corbin",
+        "Helmet"
+      ],
+      "specialRules": [
+        {
+          "name": "Survivor",
+          "text": "Cannot be taken out of action unless already Knocked Down or Stunned; treat Out of Action as Stunned if standing when wounded. The first time he suffers a Dead result on the Serious Injury chart, treat it as Multiple Injuries instead (once only)."
+        }
+      ],
+      "notes": "Any Hero may be chosen as leader (gets the Leader rule); Conqueror flagged leader as a default. Masterwork heavy armour printed 4+ save, -1M. Bec de Corbin: two hands, strikes in initiative order when charged, +1 Strength, injury roll 2-4 treated as stunned (Dwarfs immune)."
+    },
+    {
+      "id": "saurus-slayer",
+      "name": "Saurus Slayer",
+      "kind": "hero",
+      "cost": 135,
+      "min": 0,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 2,
+        "Ld": 8
+      },
+      "equipmentList": "heroes",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength",
+        "Speed"
+      ],
+      "fixedEquipment": [
+        "Heavy Armour",
+        "Misericordia",
+        "Two swords",
+        "Helmet"
+      ],
+      "specialRules": [
+        {
+          "name": "Duelist",
+          "text": "If engaged with only a single opponent in melee, may re-roll missed hits on the first turn whether he charged or was charged."
+        }
+      ],
+      "notes": "May buy Saurus Slayer special equipment (cloak, skull mask, Lizardman sword, headdress) listed in the Heroes list."
+    },
+    {
+      "id": "beastmaster",
+      "name": "Reaver Beastmaster",
+      "kind": "hero",
+      "cost": 90,
+      "min": 0,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 4,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "heroes",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Shooting",
+        "Strength",
+        "Speed"
+      ],
+      "fixedEquipment": [
+        "Heavy Armour",
+        "Spear",
+        "Sword"
+      ],
+      "specialRules": [
+        {
+          "name": "War Beasts",
+          "text": "May include up to 2 War Beasts (Estalian Warhound 0-2, Barbary Monkey 0-1). They count toward the warband maximum, must be bought when the warband is created (replaceable if killed) and use the Beastmaster's Ld within 6\". If the Beastmaster is lost they cannot be used until a Prospect is promoted into a new Beastmaster. War Beasts are Animals, never gain experience, and suffer injuries like Henchmen (dead on 1-4 on D12, printed 1-2 on D6)."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "jungle-shadow",
+      "name": "Jungle Shadow",
+      "kind": "hero",
+      "cost": 90,
+      "min": 0,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 4,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "heroes",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Shooting",
+        "Academic",
+        "Speed"
+      ],
+      "fixedEquipment": [
+        "Javelins",
+        "Light armour",
+        "Two daggers"
+      ],
+      "specialRules": [
+        {
+          "name": "Silent Hunter",
+          "text": "Always considered Hidden if touching any terrain 1\" high. Shooting does not reveal him, though spellcasting does. Does not work with Blackpowder weapons."
+        },
+        {
+          "name": "Surprise Attack",
+          "text": "If attacking an enemy from behind (shot from the 180 degree arc behind its facing), may re-roll missed to-hit rolls."
+        },
+        {
+          "name": "Canopy Walker",
+          "text": "May re-roll all failed climbing, jumping and falling off ledges tests once."
+        },
+        {
+          "name": "Optional Wizard",
+          "text": "For +30 gc may be a Wizard using the Lesser Magic list; generate one spell as standard; remove the Light Armour from his starting equipment."
+        }
+      ],
+      "notes": "Wizard upgrade is optional; spellcaster field left null."
+    },
+    {
+      "id": "trapmaster",
+      "name": "Trapmaster",
+      "kind": "hero",
+      "cost": 140,
+      "min": 0,
+      "max": 1,
+      "startingExp": 17,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "heroes",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Academic"
+      ],
+      "fixedEquipment": [
+        "Heavy Armour",
+        "Sword",
+        "Tilean Hunting Rifle (as Hochland Long Rifle)",
+        "Firepots of Miragliano",
+        "Leaf coat (counts as Elven Cloak)"
+      ],
+      "specialRules": [
+        {
+          "name": "Deadeye",
+          "text": "No penalties for shooting at long range."
+        },
+        {
+          "name": "Traps",
+          "text": "Starts each game with 1 Trap and may buy up to 5 more at 5 gc each before the game. One use each, used in the Shooting phase instead of shooting (not if he ran, not in melee). Place 2 trap counters (1 false, 1 real) of 1\" diameter within 3\" of the Trapmaster and at least 3\" from other models. A model moving within 2\" must flip one; a real one causes D3 S5 hits (no criticals). Remove counters when sprung."
+        }
+      ],
+      "notes": "Firepots of Miragliano: 8\" range, no long-range penalty, S2 hit; target tests Initiative at start of next turn or cannot charge or shoot until the following turn."
+    },
+    {
+      "id": "prospect",
+      "name": "Prospect",
+      "kind": "henchman",
+      "cost": 35,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "prospects",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Promotion Only",
+          "text": "Re-roll any Lad's Got Talent result on the Henchmen Advancement table. When promoted a new Prospect may be hired as the model no longer counts as one."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "estalian-warhound",
+      "name": "Estalian Warhound",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": {
+        "M": 6,
+        "WS": 4,
+        "BS": 0,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 5
+      },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [
+        "Natural weapons",
+        "9+ armour save (printed 5+)"
+      ],
+      "specialRules": [
+        {
+          "name": "War Beast",
+          "text": "Requires a Beastmaster; uses his Ld within 6\". Animal, never gains experience."
+        }
+      ],
+      "notes": "Counts toward the 2 War Beast limit with the Barbary Monkey."
+    },
+    {
+      "id": "barbary-monkey",
+      "name": "Barbary Monkey",
+      "kind": "henchman",
+      "cost": 40,
+      "min": 0,
+      "max": 1,
+      "startingExp": 0,
+      "profile": {
+        "M": 6,
+        "WS": 4,
+        "BS": 0,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 5,
+        "A": 2,
+        "Ld": 6
+      },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [
+        "Natural weapons"
+      ],
+      "specialRules": [
+        {
+          "name": "Nimble",
+          "text": "Can climb any sheer surface without Initiative tests, re-roll failed Diving Charge tests, can enter buildings unlike other animals. Has a 9+ ward save (printed 5+) against all wounds from melee, shooting, magic or falling."
+        },
+        {
+          "name": "War Beast",
+          "text": "Requires a Beastmaster; uses his Ld within 6\". Animal, never gains experience."
+        }
+      ],
+      "notes": "Counts toward the 2 War Beast limit with the Warhound."
+    }
+  ],
+  "spells": {
+    "listName": "Lesser Magic",
+    "usedBy": [
+      "jungle-shadow"
+    ]
+  },
+  "conversionNotes": [
+    "PDF is a scan with no text layer; read from images.",
+    "Conversions applied: Masterwork Heavy Armour 4+ save -> 7+; Estalian Warhound 5+ armour save -> 9+; Barbary Monkey 5+ ward -> 9+; Lizardmen skin cloak 6+ ward -> natural 12 (12+). War beast dead on 1-2 on D6 -> 1-4 on D12 (proportional; schema only lists 1 -> 1-2, confirm). Trophy headdress +2 armour save bonus left as printed. Bec de Corbin injury 2-4 stunned left as printed.",
+    "Estalian Warhound and Barbary Monkey are henchman fighters (bought at creation, count toward model limit); the Tilean Hunting Hawk is an item in the Heroes list because the PDF says it is part of the equipment. Warhound and Warhorse also appear in the Heroes list as printed.",
+    "Leader: PDF lets any Hero be chosen as leader; Conqueror is flagged isLeader as a default.",
+    "Each Hero type is 0-1 (only one of each type ever, no minimum), although the warband needs at least one Hero.",
+    "Trap cost (5 gc each) and Saurus Slayer special equipment prices are in notes/list items. Jungle Shadow wizard upgrade (+30 gc) is optional."
+  ]
+}

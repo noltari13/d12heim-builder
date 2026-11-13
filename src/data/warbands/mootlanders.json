@@ -1,0 +1,298 @@
+{
+  "id": "mootlanders",
+  "name": "Mootlanders",
+  "source": "Mootlanders.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 20,
+  "specialRules": [
+    {
+      "name": "Weak Halflings",
+      "text": "Halflings are weak and easily knocked senseless: when rolling for a Halfling's injury, a roll of 2 is treated as stunned (printed for D6; see conversionNotes)."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "halfling",
+      "name": "Mootlander equipment list",
+      "usedBy": "Moot Elder, Halfling Thieves, Scouts, Warriors",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Staff",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10
+        },
+        {
+          "name": "Short Bow",
+          "category": "missile",
+          "listCost": 5
+        },
+        {
+          "name": "Sling",
+          "category": "missile",
+          "listCost": 2
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Cooking Pot Helmet",
+          "category": "armour",
+          "listCost": 8
+        },
+        {
+          "name": "Pistol",
+          "category": "missile",
+          "listCost": 15,
+          "note": "Moot Elder only"
+        }
+      ]
+    },
+    {
+      "id": "chef",
+      "name": "Halfling Master Chef list",
+      "usedBy": "Halfling Master Chef only",
+      "items": [
+        {
+          "name": "Kitchen Knife",
+          "category": "melee",
+          "listCost": 2,
+          "note": "Strength as user, -1 save modifier"
+        },
+        {
+          "name": "Cleaver",
+          "category": "melee",
+          "listCost": 3,
+          "note": "Strength as user, -1 save modifier"
+        },
+        {
+          "name": "Ladle",
+          "category": "melee",
+          "listCost": 2,
+          "note": "Strength -1 (user's minus 1); no armour save except shields/skills; Knuckle Cracking: if it hits and scores a natural 12 to wound (printed 6) the enemy drops his weapon"
+        },
+        {
+          "name": "Tenderiser",
+          "category": "melee",
+          "listCost": 3,
+          "note": "Strength as user; stuns on 2-4"
+        },
+        {
+          "name": "Cooking Pot Helmet",
+          "category": "armour",
+          "listCost": 8,
+          "note": "Master Chef with a Cooking Pot has a 9+ save (printed 5+) against being stunned, never modified"
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "moot-elder",
+      "name": "Moot Elder",
+      "kind": "hero",
+      "cost": 55,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 5,
+        "S": 2,
+        "T": 2,
+        "W": 1,
+        "I": 6,
+        "A": 1,
+        "Ld": 9
+      },
+      "equipmentList": "halfling",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Academic",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Leader",
+          "text": "Any warrior within 6\" of the Moot Elder may use his Leadership when taking Ld tests."
+        }
+      ],
+      "notes": "May be armed with a pistol for 15 gc (in list). Skill table row is 'Ring Leader'."
+    },
+    {
+      "id": "master-chef",
+      "name": "Halfling Master Chef",
+      "kind": "hero",
+      "cost": 35,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 4,
+        "S": 3,
+        "T": 2,
+        "W": 1,
+        "I": 5,
+        "A": 1,
+        "Ld": 9
+      },
+      "equipmentList": "chef",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Strength",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Inspired Cooking",
+          "text": "Any Halfling models within 6\" of the Master Chef may re-roll any failed hits in combat (once per turn)."
+        }
+      ],
+      "notes": "Equipped from the Master Chef utensils list only."
+    },
+    {
+      "id": "halfling-thief",
+      "name": "Halfling Thief",
+      "kind": "hero",
+      "cost": 25,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 4,
+        "S": 2,
+        "T": 2,
+        "W": 1,
+        "I": 5,
+        "A": 1,
+        "Ld": 9
+      },
+      "equipmentList": "halfling",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Shooting",
+        "Academic",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Sneaky",
+          "text": "Can hide in the slightest shadow or cover. Always has a -1 to hit modifier when shot at, in addition to other modifiers."
+        }
+      ],
+      "notes": "Entry heading says 0-2; Choice of Warriors text says up to three."
+    },
+    {
+      "id": "halfling-warrior",
+      "name": "Halfling Warrior",
+      "kind": "henchman",
+      "cost": 15,
+      "min": null,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 4,
+        "S": 2,
+        "T": 2,
+        "W": 1,
+        "I": 5,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "halfling",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "Bought in groups of 1-5; any number allowed."
+    },
+    {
+      "id": "halfling-scout",
+      "name": "Halfling Scout",
+      "kind": "henchman",
+      "cost": 20,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 4,
+        "S": 2,
+        "T": 2,
+        "W": 1,
+        "I": 5,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "halfling",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Keen Eyesight",
+          "text": "Can spot hidden enemies at twice their Initiative value in inches."
+        }
+      ],
+      "notes": ""
+    }
+  ],
+  "spells": null,
+  "conversionNotes": [
+    "PDF is a scan (low-resolution house-rules page images); profiles read from images.",
+    "Halfling injury rule 'a roll of 2 is stunned' left as printed; the schema has no D12 injury-table conversion for it (1 -> 1-2 pattern suggests 3-4). Confirm. Tenderiser 'stuns on 2-4' also left as printed.",
+    "Conversions: Master Chef Cooking Pot save vs stun 5+ -> 9+; Ladle Knuckle Cracking 'a 6' -> natural 12.",
+    "Master Chef list as printed shows only four utensils (the page may end there); Cooking Pot Helmet is duplicated into the Chef list because the rules say a Chef may be equipped with one. Confirm.",
+    "Halfling Thieves: heading 0-2 vs Choice of Warriors 'up to three'; max set to 2 (heading).",
+    "Moot Elder min 1; Master Chef 'may have one': min 0 max 1. Warband maximum printed as 20 models.",
+    "No spell list. Scout and Warrior profiles are identical as printed."
+  ]
+}

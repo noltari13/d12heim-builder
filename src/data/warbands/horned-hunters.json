@@ -1,0 +1,398 @@
+{
+  "id": "horned-hunters",
+  "name": "Horned Hunters",
+  "source": "Horned Hunters.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 12,
+  "specialRules": [
+    {
+      "name": "Woodcraft",
+      "text": "Horned Hunter warbands move through any difficult terrain without suffering movement penalties. They may only frequent towns or cities when compulsory (to trade/recruit)."
+    },
+    {
+      "name": "Special skill list",
+      "text": "Horned Hunter Heroes may choose from the Horned Hunter special skills (Master Trapper, Infiltration, Foul Odour, Animal Friendship, Pathfinder, Hide in Shadows) instead of any standard skill table available to them."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "hero",
+      "name": "Horned Hunter equipment list",
+      "usedBy": "Horned Hunter, Priest of Taal, Initiates",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Mace/Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Longbow",
+          "category": "missile",
+          "listCost": 15
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10
+        },
+        {
+          "name": "Short bow",
+          "category": "missile",
+          "listCost": 5
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Toughened Leathers",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Hunting arrows",
+          "category": "misc",
+          "listCost": 20
+        },
+        {
+          "name": "Blessed Stag Hide",
+          "category": "misc",
+          "listCost": 40,
+          "note": "Rare 10. Horned Hunter special equipment: once per turn the wearer may re-roll a failed Initiative test."
+        },
+        {
+          "name": "Trip wire",
+          "category": "misc",
+          "listCost": 15,
+          "note": "Common. Horned Hunter special equipment: a Hero doing nothing else may set a trap (marker in base contact). A model moving within 2\" of the marker risks triggering it on a D12 roll of 5+, suffering a S4 hit. If not triggered or no wound, the victim may finish his move otherwise he is knocked down or stunned 2\" from the marker. Marker removed either way. The Hero cannot trigger his own traps."
+        }
+      ]
+    },
+    {
+      "id": "henchmen",
+      "name": "Horned Hunter henchmen equipment list",
+      "usedBy": "Zealots, Drunken Gang",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Mace/Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10
+        },
+        {
+          "name": "Toughened Leathers",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "horned-hunter",
+      "name": "Horned Hunter",
+      "kind": "hero",
+      "cost": 60,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "hero",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Strength",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Leader",
+          "text": "Any warrior within 6\" may use this model's Leadership when taking Leadership tests."
+        },
+        {
+          "name": "Hang the Bandit!",
+          "text": "Hates all Bandits and Outlaws."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "priest-of-taal",
+      "name": "Priest of Taal",
+      "kind": "hero",
+      "cost": 45,
+      "min": 0,
+      "max": 1,
+      "startingExp": 12,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "hero",
+      "isLeader": false,
+      "spellcaster": "Prayers of Taal",
+      "skills": [
+        "Combat",
+        "Academic",
+        "Strength",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Prayers",
+          "text": "May use the Prayers of Taal."
+        },
+        {
+          "name": "Strictures",
+          "text": "May never wear heavy armour."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "initiate",
+      "name": "Initiates",
+      "kind": "hero",
+      "cost": 40,
+      "min": 0,
+      "max": 3,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "hero",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Strength",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Infiltrator",
+          "text": "Always placed on the battlefield after the opposing warband, anywhere out of sight of the enemy and more than 12\" away from any enemy model. If both players have infiltrators, roll a D12 each and the lowest roll sets up first."
+        },
+        {
+          "name": "Hang the Bandit!",
+          "text": "Hates all Bandits and Outlaws."
+        },
+        {
+          "name": "Strictures",
+          "text": "May never wear armour."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "zealot",
+      "name": "Zealots",
+      "kind": "henchman",
+      "cost": 20,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "henchmen",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Strictures",
+          "text": "May never wear armour."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "drunken-gang",
+      "name": "Drunken Gang",
+      "kind": "henchman",
+      "cost": 30,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "henchmen",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Drunk",
+          "text": "Automatically pass all Leadership-based tests they are required to take."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "warhound",
+      "name": "Warhounds",
+      "kind": "henchman",
+      "cost": 15,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": {
+        "M": 6,
+        "WS": 4,
+        "BS": 0,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 5
+      },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [
+        "Natural weapons (never use or need weapons and armour)"
+      ],
+      "specialRules": [
+        {
+          "name": "Animals",
+          "text": "Do not gain experience."
+        }
+      ],
+      "notes": ""
+    }
+  ],
+  "spells": {
+    "listName": "Prayers of Taal",
+    "usedBy": [
+      "priest-of-taal"
+    ]
+  },
+  "conversionNotes": [
+    "Trip Wire trigger: 'On a score of 3+' on D6 -> 5+ on D12.",
+    "Master Trapper skill: traps triggered on 2+ -> 3+ (printed in skill text, not copied into fighter rules since it is a skill).",
+    "Infiltrator 'roll a D6 for each, lowest sets up first' changed to D12 (no threshold).",
+    "Skill table column 'Special' = Horned Hunter special skills (Master Trapper, Infiltration, Foul Odour, Animal Friendship, Pathfinder, Hide in Shadows). Priest of Taal has no Shooting column; Initiates and Horned Hunter have no Academic.",
+    "Prayers of Taal difficulties are printed as on a D6 table with difficulty values (5-9) and were left unchanged.",
+    "Hero list vs henchman list: Horned Hunter, Priest, Initiates use the main list; Zealots and Drunken Gang use the henchmen list. Hunting arrows, Blessed Stag Hide and Trip wire are listed as misc; Blessed Stag Hide 'Rare 10' and Trip Wire 'Common' availability recorded in notes.",
+    "Max 12 warriors. Drunken Gang and Warhounds are 0-5 each; Zealots unlimited."
+  ]
+}

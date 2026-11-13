@@ -1,0 +1,194 @@
+{
+  "id": "bretonnian-knights",
+  "name": "Bretonnian Knights",
+  "source": "Bretonnian Knights.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 12,
+  "specialRules": [
+    { "name": "Blessing of the Lady", "text": "Before each game, make a Leadership test against the warband leader's Leadership. If passed, any enemy model wishing to fire a black powder weapon must roll 7+ on a D12 or it may not fire (test each time). Other shooting weapons (bows, crossbows) need no test, except that any enemy model shooting at a Bretonnian Knight (Questing Knights and Knights Errant only) must first roll 7+ on a D12." }
+  ],
+  "equipmentLists": [
+    {
+      "id": "knights",
+      "name": "Knights equipment list",
+      "usedBy": "Questing Knight, Knights Errant",
+      "items": [
+        { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st free" },
+        { "name": "Mace", "category": "melee", "listCost": 3 },
+        { "name": "Sword", "category": "melee", "listCost": 10 },
+        { "name": "Axe", "category": "melee", "listCost": 5 },
+        { "name": "Double-handed weapon", "category": "melee", "listCost": 15 },
+        { "name": "Morning Star", "category": "melee", "listCost": 15 },
+        { "name": "Lance", "category": "melee", "listCost": 20 },
+        { "name": "Light armour", "category": "armour", "listCost": 20 },
+        { "name": "Heavy armour", "category": "armour", "listCost": 50 },
+        { "name": "Shield", "category": "armour", "listCost": 5 },
+        { "name": "Helmet", "category": "armour", "listCost": 10 },
+        { "name": "Warhorse", "category": "misc", "listCost": 80 },
+        { "name": "Barding", "category": "armour", "listCost": 30, "note": "Rare 11. Armour for a warhorse; mounted model gets an extra +1 armour save (+2 instead of +1 for being mounted). A barded mount is only killed on a roll of 1-2 on D12 (instead of 1-4) if the model is taken out of action. Warhorse only." }
+      ]
+    },
+    {
+      "id": "men-at-arms",
+      "name": "Men-at-arms equipment list",
+      "usedBy": "Men-at-arms",
+      "items": [
+        { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st free" },
+        { "name": "Hammer", "category": "melee", "listCost": 3 },
+        { "name": "Sword", "category": "melee", "listCost": 10 },
+        { "name": "Axe", "category": "melee", "listCost": 5 },
+        { "name": "Spear", "category": "melee", "listCost": 10 },
+        { "name": "Halberd", "category": "melee", "listCost": 10 },
+        { "name": "Double-handed weapon", "category": "melee", "listCost": 15 },
+        { "name": "Light armour", "category": "armour", "listCost": 20 },
+        { "name": "Shield", "category": "armour", "listCost": 5 },
+        { "name": "Helmet", "category": "armour", "listCost": 10 }
+      ]
+    },
+    {
+      "id": "squires",
+      "name": "Squires equipment list",
+      "usedBy": "Squires",
+      "items": [
+        { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st free" },
+        { "name": "Hammer", "category": "melee", "listCost": 3 },
+        { "name": "Sword", "category": "melee", "listCost": 10 },
+        { "name": "Axe", "category": "melee", "listCost": 5 },
+        { "name": "Spear", "category": "melee", "listCost": 10 },
+        { "name": "Bow", "category": "missile", "listCost": 10 },
+        { "name": "Longbow", "category": "missile", "listCost": 15 },
+        { "name": "Light armour", "category": "armour", "listCost": 20 },
+        { "name": "Shield", "category": "armour", "listCost": 5 },
+        { "name": "Helmet", "category": "armour", "listCost": 10 },
+        { "name": "Buckler", "category": "armour", "listCost": 5 },
+        { "name": "Horse", "category": "misc", "listCost": 40 }
+      ]
+    },
+    {
+      "id": "bowmen",
+      "name": "Bowmen equipment list",
+      "usedBy": "Bowmen",
+      "items": [
+        { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st free" },
+        { "name": "Sword", "category": "melee", "listCost": 10 },
+        { "name": "Axe", "category": "melee", "listCost": 5 },
+        { "name": "Bow", "category": "missile", "listCost": 10 },
+        { "name": "Longbow", "category": "missile", "listCost": 15 },
+        { "name": "Light armour", "category": "armour", "listCost": 20 },
+        { "name": "Helmet", "category": "armour", "listCost": 10 }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "questing-knight",
+      "name": "Questing Knight",
+      "kind": "hero",
+      "cost": 80,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": { "M": 4, "WS": 4, "BS": 3, "S": 4, "T": 3, "W": 1, "I": 4, "A": 1, "Ld": 8 },
+      "equipmentList": "knights",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": ["Combat", "Strength", "Speed", "Special"],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Leader", "text": "Any warrior within 6\" of the Questing Knight may use his Leadership when taking Leadership tests." },
+        { "name": "Knights Virtue", "text": "Never panics and breaks from combat, and does not have to pass a Leadership test for being all alone." }
+      ],
+      "notes": "Exactly one required. 'Special' skill list is the Bretonnian Special Skills (virtues)."
+    },
+    {
+      "id": "knight-errant",
+      "name": "Knight Errant",
+      "kind": "hero",
+      "cost": 50,
+      "min": 0,
+      "max": 2,
+      "startingExp": 8,
+      "profile": { "M": 4, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 7 },
+      "equipmentList": "knights",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": ["Combat", "Speed", "Special"],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Knights Virtue", "text": "Never panics and breaks from combat, and does not have to pass a Leadership test for being all alone." }
+      ],
+      "notes": "May not ride a warhorse unless the Questing Knight also rides one."
+    },
+    {
+      "id": "squire",
+      "name": "Squire",
+      "kind": "hero",
+      "cost": 15,
+      "min": 0,
+      "max": 3,
+      "startingExp": 0,
+      "profile": { "M": 4, "WS": 2, "BS": 2, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 6 },
+      "equipmentList": "squires",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": ["Combat", "Strength", "Special"],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "May not have more Squires than Knights. May not ride a horse unless the Questing Knight and any Knight Errant are riding warhorses."
+    },
+    {
+      "id": "men-at-arms",
+      "name": "Men-at-arms",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": 8,
+      "startingExp": 0,
+      "profile": { "M": 4, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 7 },
+      "equipmentList": "men-at-arms",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "Bought in groups of 1-5."
+    },
+    {
+      "id": "bowman",
+      "name": "Bowman",
+      "kind": "henchman",
+      "cost": 20,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": { "M": 4, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 6 },
+      "equipmentList": "bowmen",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "Bought in groups of 1-5."
+    }
+  ],
+  "spells": null,
+  "skillLists": {
+    "Special": [
+      { "name": "Virtue of Purity", "text": "Any spell cast against the knight is dispelled on a D12 roll of 7+." },
+      { "name": "Virtue of Valour", "text": "When fighting a model with higher Strength than himself, the Knight may re-roll failed to-hit rolls in hand-to-hand combat." },
+      { "name": "Virtue of Discipline", "text": "Once per game, if the knight is not out of action, stunned or knocked down, he may re-roll a failed rout test." },
+      { "name": "Virtue of Noble Disdain", "text": "Subject to Hatred of all enemies armed with shooting weapons." },
+      { "name": "Virtue of Impetuous", "text": "May add +D3\" to his move when charging; roll each time before moving." }
+    ]
+  },
+  "conversionNotes": [
+    "Blessing of the Lady: black powder 4+ on D6 -> 7+ on D12; shooting at Knights 4+ -> 7+.",
+    "Virtue of Purity dispel 4+ -> 7+.",
+    "Barding: mount killed on 1 (instead of 1 or 2) on D6 -> 1-2 (instead of 1-4) on D12 (proportional).",
+    "Squires are heroes in this warband (0-3, 15gc, 0 exp); the PDF lists them under Heroes with the Squires equipment list. Limit 'no more Squires than Knights' recorded in notes.",
+    "Special skill list is custom (Bretonnian Special Skills) and stored in the extra top-level skillLists field; 'Special' appears in skills for Questing Knight, Knight Errant and Squire.",
+    "Men-at-arms limit 0-8 per heading; Bowmen any number. Max 12 warband size.",
+    "Blessing of the Lady is a pre-game Leadership test against the leader; failure just means no blessing."
+  ]
+}

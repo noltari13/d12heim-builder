@@ -1,0 +1,434 @@
+{
+  "id": "maneaters",
+  "name": "Maneaters",
+  "source": "Maneaters.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 12,
+  "specialRules": [
+    {
+      "name": "Fear",
+      "text": "Ogres cause fear, except Youngbloods."
+    },
+    {
+      "name": "Large",
+      "text": "Except for Youngbloods and Half-growns, Ogres are Large targets: any model may shoot at them even if not the closest target, with +1 to hit."
+    },
+    {
+      "name": "Gluttony",
+      "text": "Each Ogre counts as two models when selling wyrdstone or treasure (but at least one toward the total). A captured model can be devoured, retaining his possessions and reducing the model count by one (two if a Large Target). An Ogre Hero devouring models gains 1 experience per model consumed. Any warband member or animal can be eaten; remove from roster immediately."
+    },
+    {
+      "name": "Slow Witted",
+      "text": "Ogres improve at half rate: they need twice the usual experience for each advance."
+    },
+    {
+      "name": "Difficult Customers",
+      "text": "Ogre Heroes suffer -1 when rolling to find Rare items not exclusive to Ogres."
+    },
+    {
+      "name": "Cannibals",
+      "text": "May never hire Hired Swords except Halflings (Scout, Thief, etc.) and the Ogre Bodyguard, or unless stated otherwise (devoured when the contract ends)."
+    },
+    {
+      "name": "No free dagger",
+      "text": "Ogres do not get a free dagger and never fight with daggers in close combat."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "ogre",
+      "name": "Ogre equipment list",
+      "usedBy": "Captain, Youngbloods, Bulls, Half-growns",
+      "items": [
+        {
+          "name": "Cleaver (counts as axe)",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Ogre club",
+          "category": "melee",
+          "listCost": 10,
+          "note": "Concussion: injury roll 2-4 treated as stunned (D6 wording, see conversionNotes); Crushing Attack with both hands: -1 to enemy armour saves and Strength counts one higher for parries"
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Morning star",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Iron fist",
+          "category": "melee",
+          "listCost": 15,
+          "note": "Parry; Gloved (occupies the hand, no double-handed weapon); Dual-role: re-roll failed parries if paired with a sword or another iron fist"
+        },
+        {
+          "name": "Cathayan longsword",
+          "category": "melee",
+          "listCost": 75,
+          "note": "Captain only"
+        },
+        {
+          "name": "Hand-held mortar",
+          "category": "missile",
+          "listCost": 70,
+          "note": "Rare 12 (Ogres only); special-equipment page says 80 + 2D6 gc. 24\" range, S4. Move or fire, Prepare shot, Save Modifier, Scatter, Experimental, Explosive Radius (S4 hit to target and models within 1.5\")"
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Heavy armour",
+          "category": "armour",
+          "listCost": 50
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Gnoblar Fighter",
+          "category": "misc",
+          "listCost": 15
+        },
+        {
+          "name": "Lookout-Gnoblar",
+          "category": "misc",
+          "listCost": 20,
+          "note": "Rare 8. Owner gains the Dodge skill. Claimed Gnoblar (up to two different per Ogre)"
+        },
+        {
+          "name": "Luck-Gnoblar",
+          "category": "misc",
+          "listCost": 25,
+          "note": "Rare 9. Owner may re-roll one die during the battle (never a re-roll)"
+        },
+        {
+          "name": "Sword-Gnoblar",
+          "category": "misc",
+          "listCost": 30,
+          "note": "Rare 10. Owner gains one extra Strength 2 attack at his own WS, directed at a model the Ogre is attacking"
+        }
+      ]
+    },
+    {
+      "id": "guide",
+      "name": "Guide equipment list",
+      "usedBy": "Mountain Guide",
+      "items": [
+        {
+          "name": "Cleaver (counts as axe)",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Ogre club",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Harpoon crossbow",
+          "category": "missile",
+          "listCost": 50,
+          "note": "Rare 10 (Ogres only). 30\" range, S5, Move or fire, Prepare shot"
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "captain",
+      "name": "Captain",
+      "kind": "hero",
+      "cost": 145,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 6,
+        "WS": 4,
+        "BS": 3,
+        "S": 4,
+        "T": 4,
+        "W": 3,
+        "I": 3,
+        "A": 2,
+        "Ld": 8
+      },
+      "equipmentList": "ogre",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Leader",
+          "text": "Any warrior within 6\" of the Captain may use his Leadership when taking Ld tests."
+        },
+        {
+          "name": "Fear",
+          "text": "Causes fear."
+        },
+        {
+          "name": "Large",
+          "text": "Large target: any model may shoot at it even if it is not the closest target, and gets +1 to hit."
+        }
+      ],
+      "notes": "Exactly one Captain. Special list is the Ogre special skills."
+    },
+    {
+      "id": "youngblood",
+      "name": "Youngblood",
+      "kind": "hero",
+      "cost": 45,
+      "min": 0,
+      "max": 3,
+      "startingExp": 0,
+      "profile": {
+        "M": 6,
+        "WS": 2,
+        "BS": 2,
+        "S": 3,
+        "T": 4,
+        "W": 2,
+        "I": 2,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipmentList": "ogre",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "Does not cause fear and is not Large."
+    },
+    {
+      "id": "mountain-guide",
+      "name": "Mountain Guide",
+      "kind": "hero",
+      "cost": 145,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": {
+        "M": 6,
+        "WS": 4,
+        "BS": 3,
+        "S": 4,
+        "T": 4,
+        "W": 3,
+        "I": 3,
+        "A": 2,
+        "Ld": 8
+      },
+      "equipmentList": "guide",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Ranger",
+          "text": "If not taken out of action, may roll two dice for Exploration and pick one (not a re-roll)."
+        },
+        {
+          "name": "Loner",
+          "text": "Never claims a Gnoblar or takes one as a pet; immune to All Alone tests; may never become warband leader."
+        },
+        {
+          "name": "Fear",
+          "text": "Causes fear."
+        },
+        {
+          "name": "Large",
+          "text": "Large target: any model may shoot at it even if it is not the closest target, and gets +1 to hit."
+        }
+      ],
+      "notes": "Cannot take the Maneater special skill."
+    },
+    {
+      "id": "bull",
+      "name": "Bull",
+      "kind": "henchman",
+      "cost": 140,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": {
+        "M": 6,
+        "WS": 3,
+        "BS": 2,
+        "S": 4,
+        "T": 4,
+        "W": 3,
+        "I": 2,
+        "A": 3,
+        "Ld": 7
+      },
+      "equipmentList": "ogre",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Bull Charge",
+          "text": "When charging, may make a single attack at +1 to hit instead of normal attacks; if successful the enemy is automatically knocked down."
+        },
+        {
+          "name": "Fear",
+          "text": "Causes fear."
+        },
+        {
+          "name": "Large",
+          "text": "Large target: any model may shoot at it even if it is not the closest target, and gets +1 to hit."
+        }
+      ],
+      "notes": "Listed under Henchmen on the PDF."
+    },
+    {
+      "id": "half-grown",
+      "name": "Half-grown",
+      "kind": "henchman",
+      "cost": 85,
+      "min": null,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 6,
+        "WS": 3,
+        "BS": 2,
+        "S": 4,
+        "T": 4,
+        "W": 2,
+        "I": 2,
+        "A": 2,
+        "Ld": 7
+      },
+      "equipmentList": "ogre",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Fear",
+          "text": "Causes fear."
+        }
+      ],
+      "notes": "Any number. Not Large."
+    },
+    {
+      "id": "sabretusk",
+      "name": "Sabretusk",
+      "kind": "henchman",
+      "cost": 125,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": {
+        "M": 8,
+        "WS": 4,
+        "BS": 0,
+        "S": 4,
+        "T": 4,
+        "W": 2,
+        "I": 4,
+        "A": 3,
+        "Ld": 4
+      },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [
+        "Natural weapons (tusks)"
+      ],
+      "specialRules": [
+        {
+          "name": "Trained",
+          "text": "Uses the Mountain Guide's Ld within 6\". Requires a Guide in the warband; without one it must be left at camp."
+        },
+        {
+          "name": "Feral Instinct",
+          "text": "At the start of the Ogre turn must pass a Ld test; if failed the opponent may move it this turn and it may charge models from its own warband."
+        },
+        {
+          "name": "Ignored",
+          "text": "Out of action Sabretusks do not count toward out of action models for Rout tests."
+        },
+        {
+          "name": "Fear",
+          "text": "Causes fear."
+        }
+      ],
+      "notes": "Only allowed if the warband includes a Mountain Guide."
+    }
+  ],
+  "spells": null,
+  "conversionNotes": [
+    "Gnoblar 'dead on 1-2 on D6' if owner goes out of action: converted to 1-4 on D12 in intent but the Gnoblar rule text is not in specialRules (equipment note only); schema only lists 1 -> 1-2, confirm.",
+    "Ogre club Concussion 'roll of 2-4 treated as stunned' on injury left as printed (D6 injury table); needs D12 mapping.",
+    "Bulls, Half-growns and Sabretusks follow the PDF's Henchmen heading; Captain, Youngbloods and Mountain Guide are Heroes.",
+    "Hand-held mortar listed 70 gc in the equipment list but 80 + 2D6 gc (Rare 12) in its special-equipment entry; list price used. Cathayan longsword is Captain only.",
+    "Gnoblar Fighter (15 gc) is in the list with no description in the PDF.",
+    "The PDF gives a maximum-characteristics Ogre profile (M6 WS6 BS5 S5 T5 W5 I6 A5 Ld9) that the schema does not store."
+  ]
+}

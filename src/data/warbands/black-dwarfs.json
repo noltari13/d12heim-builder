@@ -1,0 +1,429 @@
+{
+  "id": "black-dwarfs",
+  "name": "Black Dwarfs",
+  "source": "Black Dwarfs.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 15,
+  "specialRules": [
+    {
+      "name": "Hard to Kill",
+      "text": "(All warriors except Informers.) Can only be taken out of action on a natural 12 on the Injury chart (instead of 5-6 on D6). Treat 1-4 as knocked down, 5-11 as stunned, and 12 as out of action."
+    },
+    {
+      "name": "Hard Head",
+      "text": "(All warriors except Informers.) Ignore the special rules for clubs, maces, etc."
+    },
+    {
+      "name": "Armour",
+      "text": "(All warriors except Informers.) Chaos Dwarfs never suffer movement penalties for wearing armour."
+    },
+    {
+      "name": "Starting warband prices",
+      "text": "Starting warbands pay the listed special price for the Mechanical suit and the Engine of Chaos; later purchases pay full price (225 gc / 195 gc) and must roll to acquire them as normal."
+    },
+    {
+      "name": "Hired Swords",
+      "text": "May hire Ogre Bodyguard, Pit Fighter, Warlock, Imperial Assassin, Hobgoblin Scout and any Hired Sword described as 'all may hire' or allowed by Orc and Chaos warbands. May never hire Elves."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "chaos-dwarf",
+      "name": "Chaos Dwarf equipment list",
+      "usedBy": "Sorcerer, Bull Centaur, Gaolers, Chaos Dwarfs",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Mace",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Steel whip",
+          "category": "melee",
+          "listCost": 10,
+          "note": "Gaolers only"
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Man-catcher",
+          "category": "melee",
+          "listCost": 25,
+          "note": "Gaolers only. Rare 10, Chaos Dwarfs only. Strength as user; Capture, Two-handed. A model taken out of action by a Man-catcher is captured (no Serious Injury roll) and locked in the Engine of Chaos; if the warband has no Engine of Chaos, roll for Serious Injuries as normal. Large models and animals cannot be captured."
+        },
+        {
+          "name": "Pistol",
+          "category": "missile",
+          "listCost": 15,
+          "note": "30 gc for a brace"
+        },
+        {
+          "name": "Blunderbuss",
+          "category": "missile",
+          "listCost": 30
+        },
+        {
+          "name": "Handgun",
+          "category": "missile",
+          "listCost": 35
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Heavy armour",
+          "category": "armour",
+          "listCost": 50
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Mechanical suit",
+          "category": "armour",
+          "listCost": 175,
+          "note": "Sorcerer only. Special starting-warband price; full price 225 gc, Rare 14, Chaos Dwarfs only. Counts as Chaos armour. Sorcerer wearing it gets +3 Movement."
+        },
+        {
+          "name": "Engine of Chaos",
+          "category": "misc",
+          "listCost": 125,
+          "note": "Special starting-warband price; full price 195 gc, Rare 10, Chaos Dwarfs only. A wagon (Empire in Flames rules) with Daemon: Engine T8 W4, Wheel T6 W1, Daemon M6 T6 W3. A Chaos Dwarf must function as driver; up to six captives may be carried (large creatures count as two). Captives can be sacrificed to Hashut after a battle."
+        }
+      ]
+    },
+    {
+      "id": "informer",
+      "name": "Informer equipment list",
+      "usedBy": "Informers",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Mace",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Sling",
+          "category": "missile",
+          "listCost": 2
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "sorcerer",
+      "name": "Sorcerer",
+      "kind": "hero",
+      "cost": 85,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 3,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 2,
+        "A": 1,
+        "Ld": 9
+      },
+      "equipmentList": "chaos-dwarf",
+      "isLeader": true,
+      "spellcaster": "Rituals of Hashut",
+      "skills": [
+        "Combat",
+        "Academic",
+        "Strength",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Leader",
+          "text": "Any warrior within 6\" may use this model's Leadership when taking Leadership tests."
+        },
+        {
+          "name": "Wizard",
+          "text": "Follows the rules for wizards; may cast Rituals of Hashut."
+        },
+        {
+          "name": "Priest",
+          "text": "Starts with two rituals: the Sacrificial Ritual and one other determined as usual from the Rituals of Hashut."
+        },
+        {
+          "name": "Hard to Kill",
+          "text": "Can only be taken out of action on a natural 12 on the Injury chart (instead of 5-6 on D6). Treat 1-4 as knocked down, 5-11 as stunned, and 12 as out of action."
+        },
+        {
+          "name": "Hard Head",
+          "text": "Ignores the special rules for clubs, maces, etc."
+        },
+        {
+          "name": "Armour",
+          "text": "Never suffers movement penalties for wearing armour."
+        }
+      ],
+      "notes": "May be equipped with weapons from the Chaos Dwarf equipment list (including armour and the Mechanical suit)."
+    },
+    {
+      "id": "bull-centaur",
+      "name": "Bull Centaur",
+      "kind": "hero",
+      "cost": 100,
+      "min": 0,
+      "max": 1,
+      "startingExp": 10,
+      "profile": {
+        "M": 8,
+        "WS": 4,
+        "BS": 3,
+        "S": 4,
+        "T": 4,
+        "W": 1,
+        "I": 3,
+        "A": 2,
+        "Ld": 9
+      },
+      "equipmentList": "chaos-dwarf",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Large target",
+          "text": "Anyone shooting at the Bull Centaur gains +1 to hit and may shoot at it even if it is not the closest target. Adds an extra +20 to the warband's rating."
+        },
+        {
+          "name": "No missile weapons",
+          "text": "May never use any missile weapons."
+        },
+        {
+          "name": "Hard to Kill",
+          "text": "Can only be taken out of action on a natural 12 on the Injury chart (instead of 5-6 on D6). Treat 1-4 as knocked down, 5-11 as stunned, and 12 as out of action."
+        },
+        {
+          "name": "Hard Head",
+          "text": "Ignores the special rules for clubs, maces, etc."
+        },
+        {
+          "name": "Armour",
+          "text": "Never suffers movement penalties for wearing armour."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "gaoler",
+      "name": "Gaolers",
+      "kind": "hero",
+      "cost": 50,
+      "min": 0,
+      "max": 2,
+      "startingExp": 8,
+      "profile": {
+        "M": 3,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 2,
+        "A": 1,
+        "Ld": 9
+      },
+      "equipmentList": "chaos-dwarf",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Strength",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Nasty Reputation",
+          "text": "Causes fear in Humans (fear of being captured)."
+        },
+        {
+          "name": "Hard to Kill",
+          "text": "Can only be taken out of action on a natural 12 on the Injury chart (instead of 5-6 on D6). Treat 1-4 as knocked down, 5-11 as stunned, and 12 as out of action."
+        },
+        {
+          "name": "Hard Head",
+          "text": "Ignores the special rules for clubs, maces, etc."
+        },
+        {
+          "name": "Armour",
+          "text": "Never suffers movement penalties for wearing armour."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "chaos-dwarf",
+      "name": "Chaos Dwarfs",
+      "kind": "henchman",
+      "cost": 40,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": {
+        "M": 3,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 2,
+        "A": 1,
+        "Ld": 9
+      },
+      "equipmentList": "chaos-dwarf",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Hard to Kill",
+          "text": "Can only be taken out of action on a natural 12 on the Injury chart (instead of 5-6 on D6). Treat 1-4 as knocked down, 5-11 as stunned, and 12 as out of action."
+        },
+        {
+          "name": "Hard Head",
+          "text": "Ignores the special rules for clubs, maces, etc."
+        },
+        {
+          "name": "Armour",
+          "text": "Never suffers movement penalties for wearing armour."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "informer",
+      "name": "Informers",
+      "kind": "henchman",
+      "cost": 15,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "informer",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Drudgery",
+          "text": "Informers may never become Heroes. Re-roll all results of 'The lad's got talent' for them."
+        }
+      ],
+      "notes": "Informers do not have Hard to Kill, Hard Head or the Chaos Dwarf armour rule."
+    }
+  ],
+  "spells": {
+    "listName": "Rituals of Hashut",
+    "usedBy": [
+      "sorcerer"
+    ]
+  },
+  "conversionNotes": [
+    "Hard to Kill: 'out of action on a 6 instead of 5-6' -> natural 12; 'Treat 1-2 as knocked down, 3-5 as stunned, 6 as out of action' converted to 1-4 / 5-11 / 12 (1-2 -> 1-4 by doubling; 6 -> 12 per rule; remainder stunned). Check against the d12heim Injury chart.",
+    "Rituals: Fumes of Azgorh 'D6 score of 4+' -> 7+; Flickering Hide 'D6 roll of 4+' -> 7+ (spell text, not copied into fighter rules). Earthquake Initiative test and difficulty values left unchanged.",
+    "Skills (not copied into fighter rules): Thick Skull 3+ save -> 5+ (2+ with helmet -> 3+); True Grit 'roll of 1-3 knocked down, 4-5 stunned, 6 out of action' -> 1-6 / 7-11 / 12; Chaos Engineer +3 left unchanged. Skill table 'Special' column = Chaos Dwarf special skills (Extra Tough, Chaos Engineer, Thick Skull, Resource Hunter, Tyrant, True Grit); Tyrant is for the leader only.",
+    "Hashut's Reward table (1-3 / 4-5 / 6 captives) is a captive count, not a die roll; left unchanged and omitted from rules.",
+    "Equipment list prices for Mechanical suit (175) and Engine of Chaos (125) are the starting-warband prices; full prices (225, 195) in note. Engine of Chaos is not Sorcerer-only per the list but is listed under miscellaneous equipment; Mechanical suit and Steel whip/Man-catcher restrictions (Sorcerer only; Gaolers only) recorded in notes.",
+    "Sacrificial Ritual is listed as result '0' in the Rituals of Hashut table; kept as printed. Characteristic maximums printed (Chaos Dwarf 3/7/6/4/5/3/5/4/10, Bull Centaur 8/7/6/5/5/4/6/5/10) are not in the schema.",
+    "Max 15 warriors; Gaolers 0-2; Chaos Dwarfs 0-5; Bull Centaur 0-1; Informers unlimited."
+  ]
+}

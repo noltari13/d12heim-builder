@@ -1,0 +1,353 @@
+{
+  "id": "arabian-tomb-raiders",
+  "name": "Arabian Tomb Raiders",
+  "source": "TownCryer20.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 15,
+  "specialRules": [
+    {
+      "name": "Hate Undead",
+      "text": "Arab Heroes hate all Undead."
+    },
+    {
+      "name": "Special skills",
+      "text": "Arab Heroes may use the Special skill table instead of any of the standard tables. Sand Worm: the model can bury itself in sand and hide in open ground (not inside buildings). Hit and Run: the warrior can run and shoot, suffering -2 to hit instead of the -1 for moving. Weather Tolerant: weather conditions such as heat no longer affect the model."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "warrior",
+      "name": "Warrior equipment list",
+      "usedBy": "Sheikh, Champion, Mystic, Bedouins, Warriors",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free; printed 'Dagger (Jambiya)'"
+        },
+        {
+          "name": "Mace",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10,
+          "note": "Printed 'Sword (Scimitar)'"
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Flail",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Short bow",
+          "category": "missile",
+          "listCost": 5
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10
+        },
+        {
+          "name": "Tufenk",
+          "category": "missile",
+          "listCost": 15
+        },
+        {
+          "name": "Handgun",
+          "category": "missile",
+          "listCost": 35,
+          "note": "Printed 'Hand Gun'"
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Buckler",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        }
+      ]
+    },
+    {
+      "id": "slave",
+      "name": "Slave equipment list",
+      "usedBy": "Slaves",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free; printed 'Dagger (Jambiya)'"
+        },
+        {
+          "name": "Club",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Katar",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "sheikh",
+      "name": "Sheikh",
+      "kind": "hero",
+      "cost": 60,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "warrior",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Academic",
+        "Strength",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Leader",
+          "text": "The Sheikh is the leader of the warband (models within 6\" may use his Leadership). Printed as 'Skills: Leader'."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "champion",
+      "name": "Champion",
+      "kind": "hero",
+      "cost": 40,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "warrior",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "The PDF is inconsistent: the heading reads 0-2 Champions but the Choice of Warriors text says a single Champion. Set to 1 here."
+    },
+    {
+      "id": "mystic",
+      "name": "Nomadic Mystic",
+      "kind": "hero",
+      "cost": 40,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "warrior",
+      "isLeader": false,
+      "spellcaster": "Elemental Magic",
+      "skills": [
+        "Academic",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Wizard",
+          "text": "A Wizard using the Arabian Elemental Magic list. Starts with a single spell chosen at random from the list."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "bedouin",
+      "name": "Bedouin",
+      "kind": "henchman",
+      "cost": 35,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "warrior",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Desert Trader",
+          "text": "Add +1 to your search for Equipping/Trading result (only +1 even with two Bedouins)."
+        }
+      ],
+      "notes": "Bought in groups of 1-5."
+    },
+    {
+      "id": "nomad-warrior",
+      "name": "Warrior",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "warrior",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "Bought in groups of 1-5. Printed as 'Nomad Warriors' in the henchman header."
+    },
+    {
+      "id": "slave",
+      "name": "Slave",
+      "kind": "henchman",
+      "cost": 15,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipmentList": "slave",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Life of Slavery",
+          "text": "A Slave may gain experience, but if he rolls Lad's got Talent the leader executes the Slave and he is removed from the roster; the rest of the group may then re-roll their advance."
+        }
+      ],
+      "notes": "Bought in groups of 1-5."
+    }
+  ],
+  "spells": {
+    "listName": "Arabian Elemental Magic",
+    "usedBy": [
+      "mystic"
+    ]
+  },
+  "conversionNotes": [
+    "Champion limit: heading says 0-2, Choice of Warriors text says a single Champion; max set to 1, human should confirm.",
+    "Slaves: heading 0-5, text 'up to five'; Bedouins 0-2. Mystic 0-1.",
+    "Item names normalised: 'Dagger (Jambiya)' -> Dagger, 'Sword (Scimitar)' -> Sword, 'Hand Gun' -> Handgun; originals in notes.",
+    "Tufenk and Katar are warband-specific items without a d6 conversion needed; their rules are not printed in the pages read.",
+    "Hit and Run -2 to hit and other to-hit modifiers were left as printed.",
+    "Arabian Elemental Magic spells (PDF page 20) not captured by schema: Riding the Wind (6), Skin of Stone (7), Burning Hand (8; set on fire on a 4+ -> 7+ on D12), Quicksand (6), Storm of Magic (9), Blessing of the Elements (6). Table rolled on D6 (D12 in d12heim).",
+    "Special skills table has no named skills beyond Sand Worm, Hit and Run and Weather Tolerant; recorded as a warband rule."
+  ]
+}

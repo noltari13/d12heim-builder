@@ -1,0 +1,532 @@
+{
+  "id": "marauders-of-chaos",
+  "name": "Marauders of Chaos",
+  "source": "Marauders of Chaos.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 15,
+  "specialRules": [
+    {
+      "name": "Eye of the Gods",
+      "text": "Roll 2D6 after every battle (only if the leader took part). Spawn of Chaos: if you lost the battle add +1 for each Hero taken out of action; on 12+ the leader becomes a Chaos Spawn and loses experience, skills, injuries and equipment (just erased if the warband already has a Spawn; never more than one). Mark of Chaos: if you won add +1 for each enemy model the leader took out of action; on 12+ you may choose a Mark of Chaos for the leader. Once the leader has a Mark the test is no longer taken until he leaves."
+    },
+    {
+      "name": "Marks of the Dark Gods",
+      "text": "Marks: Undivided, Tchar (Eagle), Arkhar (Dog), Onogal (Crow), Shornaal (Serpent). Apart from Undivided there may never be two models with different Marks. A Seer chooses his Mark when hired; Leader and Seer effects differ (see conversionNotes)."
+    },
+    {
+      "name": "Hired Swords",
+      "text": "May only hire Pit Fighters, Ogres, Norse Shamans, Imperial Assassins and others that specify Marauders of Chaos. Witches and Warlocks may be hired except by warbands with warriors with the Mark of Arkhar."
+    },
+    {
+      "name": "Tribe (choose one at start)",
+      "text": "Norse: +1 to rarity rolls when searching; Eye of the Gods triggers on 13+. Kurgan: any number of Warhounds of Chaos; Heroes and Marauders may use Bows (10 gc, common); -1 to find Rare items except Great Axes and Barbed Whips. Hung: maximum 12 warriors; Warhorses always cost 40 gc; all Heroes have Ride Warhorse skill."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "hero",
+      "name": "Hero equipment list",
+      "usedBy": "Chieftain, Champions",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Halberd",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Morning star",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Barbed whip",
+          "category": "melee",
+          "listCost": 15,
+          "note": "Rare 9, one Hero only. Cannot be parried; whipcrack (as steel whip); Enrage: while not in close combat, Warhounds of Chaos within 4\" gain +1 attack"
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Flail",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Great axe",
+          "category": "melee",
+          "listCost": 25,
+          "note": "Rare 8, Heroes with the Chosen of Chaos skill only. Two-handed, +2 Strength, strikes last (unless Strongman), extra -1 save modifier"
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Heavy armour",
+          "category": "armour",
+          "listCost": 50
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10,
+          "note": "Kurgan warbands only (Bone Bows), common"
+        }
+      ]
+    },
+    {
+      "id": "seer",
+      "name": "Seer weapons (Hero list, weapons only)",
+      "usedBy": "Seer",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Halberd",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Morning star",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Barbed whip",
+          "category": "melee",
+          "listCost": 15,
+          "note": "Rare 9, one Hero only. Cannot be parried; whipcrack (as steel whip); Enrage: while not in close combat, Warhounds of Chaos within 4\" gain +1 attack"
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Flail",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Great axe",
+          "category": "melee",
+          "listCost": 25,
+          "note": "Rare 8, Heroes with the Chosen of Chaos skill only. Two-handed, +2 Strength, strikes last (unless Strongman), extra -1 save modifier"
+        }
+      ]
+    },
+    {
+      "id": "henchman",
+      "name": "Henchman equipment list",
+      "usedBy": "Chaos Marauders",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Morning star",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Flail",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Throwing axes",
+          "category": "missile",
+          "listCost": 15,
+          "note": "Treat as Throwing knives"
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10,
+          "note": "Kurgan warbands only (Bone Bows), common"
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "chieftain",
+      "name": "Marauder Chieftain",
+      "kind": "hero",
+      "cost": 95,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 4,
+        "WS": 5,
+        "BS": 3,
+        "S": 4,
+        "T": 4,
+        "W": 1,
+        "I": 5,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "hero",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Leader",
+          "text": "Any warrior within 6\" of the Chieftain may use his Leadership when taking Ld tests."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "seer",
+      "name": "Seer",
+      "kind": "hero",
+      "cost": 45,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "seer",
+      "isLeader": false,
+      "spellcaster": "Chaos Magic (per Mark)",
+      "skills": [
+        "Combat",
+        "Academic",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Wizard",
+          "text": "May use Chaos Magic; spell list depends on Mark (Undivided: Chaos Rituals; Tchar Rituals; Shornaal Rituals; Onogal Rituals). A Seer with the Mark of Arkhar is a Bloodfather and cannot cast spells."
+        },
+        {
+          "name": "Mark of Chaos",
+          "text": "Chooses a Mark when hired: Serpent, Crow, Eagle, Arkhar or Chaos Undivided."
+        }
+      ],
+      "notes": "Weapons only, no armour."
+    },
+    {
+      "id": "champion",
+      "name": "Champion",
+      "kind": "hero",
+      "cost": 45,
+      "min": 0,
+      "max": 2,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "hero",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "condemned",
+      "name": "Condemned",
+      "kind": "hero",
+      "cost": 55,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": null,
+        "BS": 3,
+        "S": null,
+        "T": null,
+        "W": 1,
+        "I": 4,
+        "A": null,
+        "Ld": 7
+      },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Strength",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Inconsistency",
+          "text": "WS, S, T and A are variable and determined whenever needed, once every turn (WS D6, S D6, T D6, A D3)."
+        },
+        {
+          "name": "Fear",
+          "text": "Causes fear."
+        },
+        {
+          "name": "Experience",
+          "text": "When it would increase a variable attribute, roll the die instead; if satisfied, set the attribute to the result, otherwise it stays variable (advance lost). Marauder maximums may be exceeded."
+        },
+        {
+          "name": "Fate",
+          "text": "May use no equipment until all variable attributes are set, then may use weapons, armour and misc equipment. At 90 Experience with variable attributes remaining it becomes a Spawn of Chaos (or wanders off if the warband already has one)."
+        }
+      ],
+      "notes": "Null profile values are the variable stats (WS D6, S D6, T D6, A D3). Fights without penalties; no equipment until Fate is resolved."
+    },
+    {
+      "id": "chaos-marauder",
+      "name": "Chaos Marauder",
+      "kind": "henchman",
+      "cost": 35,
+      "min": null,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "henchman",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "Any number."
+    },
+    {
+      "id": "warhound",
+      "name": "Warhound of Chaos",
+      "kind": "henchman",
+      "cost": 15,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": {
+        "M": 7,
+        "WS": 4,
+        "BS": 0,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 5
+      },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [
+        "Natural weapons"
+      ],
+      "specialRules": [
+        {
+          "name": "Animals",
+          "text": "Never gain experience."
+        }
+      ],
+      "notes": "Kurgan warbands may have any number."
+    },
+    {
+      "id": "spawn",
+      "name": "Spawn of Chaos",
+      "kind": "henchman",
+      "cost": 180,
+      "min": 0,
+      "max": 1,
+      "startingExp": 0,
+      "profile": {
+        "M": "2D6",
+        "WS": 3,
+        "BS": 0,
+        "S": 4,
+        "T": 5,
+        "W": 3,
+        "I": 2,
+        "A": "D6+1",
+        "Ld": 10
+      },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [
+        "Natural weapons (claws, tentacles)"
+      ],
+      "specialRules": [
+        {
+          "name": "Special Attacks",
+          "text": "Roll at the start of each close combat phase for the number of Attacks (D6+1)."
+        },
+        {
+          "name": "Fear",
+          "text": "Causes fear."
+        },
+        {
+          "name": "Special Movement",
+          "text": "Moves 2D6\" straight ahead each Movement phase (may be turned first); does not double movement for charging; contact with a model counts as a charge."
+        },
+        {
+          "name": "Psychology",
+          "text": "Automatically passes all Leadership-based tests."
+        },
+        {
+          "name": "No Brain",
+          "text": "Gains no experience."
+        },
+        {
+          "name": "Large",
+          "text": "Large target as per shooting rules."
+        }
+      ],
+      "notes": "Normally arrives by transformation but listed for hire at 180 gc."
+    }
+  ],
+  "spells": {
+    "listName": "Chaos Rituals / Tchar Rituals / Shornaal Rituals / Onogal Rituals",
+    "usedBy": [
+      "seer"
+    ]
+  },
+  "conversionNotes": [
+    "Variable stats (Condemned WS/S/T D6, A D3; Spawn M 2D6, A D6+1) have no fixed number: Condemned uses null, Spawn uses strings '2D6' and 'D6+1'. Decide handling and any D12 scaling.",
+    "Eye of the Gods 12+ on 2D6 left as printed (not a single d6). Tattooed body (10+; Norse 11+) and Norse Pantheon (13+) left as printed.",
+    "Mark effects (Leader / Seer): Undivided leader gives re-roll failed Ld within leader radius, Seer lets warband have 0-3 Gors (count to 15; Chaos Rituals); Tchar leader learns one Tchar spell (-1 Difficulty unless wizard), Seer starts with two Tchar spells; Arkhar leader subject to frenzy and spells targeting him fail on 7+ on D12 (printed 4+), Seer is a Bloodfather (no spells; Ld test after each out-of-action for +1 WS/S/T/I, once each; may take Strength skills); Onogal leader +1 T, re-roll one Serious Injury, immune to poison, Seer uses Nurgle Rituals with Touch of Onogal and is immune to poison; Shornaal leader: enemies must pass Ld (3D6 drop lowest) to attack him, Seer uses Shornaal Rituals and may brew Bugman's Ale instead of searching. The individual ritual spells (PDF pages 6-7) are not transcribed.",
+    "Tribe (Norse / Kurgan / Hung) and Mark are one-off choices recorded as warband specialRules, not separate files.",
+    "Seer equipment list is the Hero list's weapons only (no armour) per the PDF. Bow is a Kurgan-only addition added to Hero and Henchman lists.",
+    "Warhound max 5 (unlimited for Kurgan). Maximum 15 models (12 for Hung).",
+    "Chosen of Chaos skill grants maximum Warrior of Chaos profile (M4 WS8 BS8 S5 T5 W3 I8 A5 Ld9) vs Marauder max (M4 WS7 BS7 S4 T4 W3 I7 A4 Ld9); not stored. Special skills: Chosen of Chaos, Tattooed Body (leader only), Sweeping Blow, Mutant, Heart of the Warrior (leader only)."
+  ]
+}

@@ -1,0 +1,494 @@
+{
+  "id": "merchant-caravans",
+  "name": "Merchant Caravans",
+  "source": "Merchant Caravans.pdf",
+  "startingGold": 600,
+  "minModels": 3,
+  "maxModels": 12,
+  "specialRules": [
+    {
+      "name": "Merchant",
+      "text": "The Merchant is the warband's leader (any Warrior within 6\" of him may use his Leadership when taking Ld tests). If he leaves the caravan a new leader is determined as normal and gains the Merchant special rule (access to the Merchant special skills). If no model may become leader, an Apprentice must be bought as soon as possible."
+    },
+    {
+      "name": "Trade",
+      "text": "Instead of searching for rare items the Merchant may sell a rare item stored in the Trade Wagon during the preceding battle, before Heroes of either warband search. Roll a D12 for the price: 1-4 half the item's basic price, 5-8 full basic price, 9-12 full plus half the basic price. He may sell or retry after the next battle. Combined with the Wholesale skill he may sell up to D3+1 items per game."
+    },
+    {
+      "name": "Open for Business",
+      "text": "Any player may send a Hero to the Merchant instead of searching for rare items. The Hero may buy one item from the warband's stored equipment or sell any one item (rare, common, magical, treasure) if the players agree on a price; otherwise the visit is wasted."
+    },
+    {
+      "name": "Rarity",
+      "text": "Any rare item reduced to Rare 2 or below by the Trade Wagon's Reputation rule, the Streetwise skill etc. can be bought as Common."
+    },
+    {
+      "name": "Hired Swords",
+      "text": "May hire every Hired Sword available to Mercenary warbands."
+    },
+    {
+      "name": "Trade Wagon required",
+      "text": "A Merchant Caravan must include one Trade Wagon (bought from the Hero equipment list). Storage: all stored equipment and treasures (not gold) are kept in it and lost if it is destroyed. Reputation: +1 to rare-item search rolls per five different rare items stored. Abandoned: if the warband fails a Rout test with no model driving it, the wagon is abandoned to the winners."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "hero",
+      "name": "Hero equipment list",
+      "usedBy": "Merchant, Apprentice, Knights Vanguard, Magician",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Rapier",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Pistol",
+          "category": "missile",
+          "listCost": 15,
+          "note": "30 gc for a brace"
+        },
+        {
+          "name": "Duelling pistol",
+          "category": "missile",
+          "listCost": 30,
+          "note": "60 gc for a brace"
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Heavy armour",
+          "category": "armour",
+          "listCost": 50
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Cathayan silk cloak",
+          "category": "misc",
+          "listCost": 40
+        },
+        {
+          "name": "Warhorse",
+          "category": "misc",
+          "listCost": 40,
+          "note": "Knights Vanguard only. No profile printed in the PDF."
+        },
+        {
+          "name": "Trade wagon",
+          "category": "misc",
+          "listCost": 180,
+          "note": "A starting warband must always include one Trade Wagon. Cost includes two Draft Horses and a driver is needed from the warband. Profile rows as printed (columns M WS BS S T W I A Ld): Cart - - - - 8 4 - - -; Wheel - - - - 6 1 - - -; Draft Horse 8 1 0 3 3 1 3 0 5. Uses the Wagon rules from the Empire in Flames Supplement."
+        }
+      ]
+    },
+    {
+      "id": "henchman",
+      "name": "Henchman equipment list",
+      "usedBy": "Sell-swords, Marksmen",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Pike",
+          "category": "melee",
+          "listCost": 10,
+          "note": "Sell-swords only. Rare 8, Merchant Caravans only. Two-handed; Strike first (+1 Initiative in the first turn of combat); +1 armour save vs ranged attacks if it carries a shield."
+        },
+        {
+          "name": "Halberd",
+          "category": "melee",
+          "listCost": 10,
+          "note": "Sell-swords only"
+        },
+        {
+          "name": "Crossbow",
+          "category": "missile",
+          "listCost": 25
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Heavy armour",
+          "category": "armour",
+          "listCost": 50
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        }
+      ]
+    },
+    {
+      "id": "cathayan",
+      "name": "Cathayan equipment list",
+      "usedBy": "Knights Vanguard, Blackguards",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Club",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Katana",
+          "category": "melee",
+          "listCost": 20
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Heavy armour",
+          "category": "armour",
+          "listCost": 50
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "merchant",
+      "name": "Merchant",
+      "kind": "hero",
+      "cost": 50,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "hero",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": [
+        "Shooting",
+        "Academic",
+        "Merchant Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Merchant",
+          "text": "Always the warband's leader. Any model within 6\" may use his Leadership."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "apprentice",
+      "name": "Apprentice",
+      "kind": "hero",
+      "cost": 15,
+      "min": 0,
+      "max": 1,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipmentList": "hero",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Academic",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "knights-vanguard",
+      "name": "Knights Vanguard",
+      "kind": "hero",
+      "cost": 45,
+      "min": 0,
+      "max": 2,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": [
+        "hero",
+        "cathayan"
+      ],
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Lightning Reflexes",
+          "text": "If charged he strikes first against those that charged that turn; as chargers also strike first, order is determined by comparing Initiative."
+        },
+        {
+          "name": "Ride Warhorse",
+          "text": "Trained in riding Warhorses."
+        },
+        {
+          "name": "Hireling",
+          "text": "Paid by the Merchant; can never become the warband's leader."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "magician",
+      "name": "Magician",
+      "kind": "hero",
+      "cost": 40,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "hero",
+      "isLeader": false,
+      "spellcaster": "Lesser Magic",
+      "skills": [
+        "Academic",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Wizard",
+          "text": "A wizard who uses Lesser Magic."
+        },
+        {
+          "name": "Hireling",
+          "text": "Paid by the Merchant; can never become the warband's leader."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "sell-sword",
+      "name": "Sell-sword",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "henchman",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "marksman",
+      "name": "Marksman",
+      "kind": "henchman",
+      "cost": 30,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "henchman",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "blackguard",
+      "name": "Blackguard",
+      "kind": "henchman",
+      "cost": 35,
+      "min": 0,
+      "max": 3,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "cathayan",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Strongman",
+          "text": "May use a double-handed weapon without the penalty of always striking last."
+        },
+        {
+          "name": "Unreliable Hirelings",
+          "text": "May never become Heroes. Re-roll all 'The lad's got talent' results."
+        }
+      ],
+      "notes": ""
+    }
+  ],
+  "spells": {
+    "listName": "Lesser Magic",
+    "usedBy": [
+      "magician"
+    ]
+  },
+  "conversionNotes": [
+    "Trade table D6 results converted to D12 bands: 1-2 -> 1-4, 3-4 -> 5-8, 5-6 -> 9-12; the roll itself is changed from D6 to D12. Dubious Income and Wholesale use D6/D3 dice not converted.",
+    "Knights Vanguard hire cost: the page text layer shows both '45' and '5' overlaid; the page image reads 45 gold crowns.",
+    "Merchant skill access per the skill table is Shooting, Academic and Special (the Merchant special skills list: Bribery, Dubious Income, Wholesale, Deal Breaker, Connected). Recorded as 'Merchant Special'. The special skills are not otherwise transcribed here.",
+    "Apprentice skills per table: Combat, Shooting, Academic, Speed. Knights Vanguard: Combat, Strength, Speed. Magician: Academic, Speed.",
+    "Trade Wagon is a mandatory purchase (180 gc, Hero list) and is entered as a misc equipment item with its profile in the note; it is not a fighter and does not count toward the model limit unless the app decides so. The Hero list footnote says a starting warband must always include one.",
+    "Pike and Halberd appear on the Henchman list marked Sell-swords only; Pike also appears as Rare 8 special equipment. Warhorse (Knights Vanguard only) has no printed profile.",
+    "Henchman list Crossbow is not restricted in the PDF; Marksmen are intended users but Sell-swords may also buy it. Blackguards use the Cathayan list only; Knights Vanguard use the Hero list and the Cathayan list.",
+    "The Knights Vanguard 'Hirelings', Magician 'Hireling' and Blackguards' 'Unreliable Hirelings' rules are kept as fighter rules. Blackguards are henchmen that can never become Heroes.",
+    "Merchant Caravan special rules text is trimmed; the Connected skill table items and the Merchant special skills are not transcribed. Hired Sword access only noted."
+  ]
+}

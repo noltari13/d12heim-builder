@@ -1,0 +1,571 @@
+{
+  "id": "bretonnian-chapel-guard",
+  "name": "Bretonnian Chapel Guard",
+  "source": "Bretonnian Chapel Guard.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 15,
+  "specialRules": [
+    {
+      "name": "Chivalry",
+      "text": "No Knight may ever use any missile weapon, except Holy Water. Knights never use drugs or poison, nor learn any spells (prayers are allowed)."
+    },
+    {
+      "name": "Lord's Boon",
+      "text": "Each Knight may, at recruitment, start with ONE of: a Warhorse, Light armour, OR Heavy armour, bought at half cost. The item may not be traded, given away or sold. If the Knight dies, the item is removed from the warband."
+    },
+    {
+      "name": "Virtue of Purity",
+      "text": "Knights with the Virtue of Purity may never voluntarily break from combat unless knocked down. Immune to All Alone and any other mundane effect that would make him leave combat. Magical spells and effects that cause him to flee affect him normally."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "knights",
+      "name": "Knights' equipment list",
+      "usedBy": "Questing Knight, Knights Errant",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Mace",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Broadsword",
+          "category": "melee",
+          "listCost": 15,
+          "note": "Bretonnian Knights only. Strength as user +1; Difficult to Use (may not use a second weapon or buckler, may carry a shield or kite shield); Strike Last. Cannot Parry; counts as a sword for Expert Swordsman."
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Morning star",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Flail",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Lance",
+          "category": "melee",
+          "listCost": 20,
+          "note": "Not Questing Knight"
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Heavy armour",
+          "category": "armour",
+          "listCost": 50
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Kite shield",
+          "category": "armour",
+          "listCost": 10,
+          "note": "Bretonnian Knights only. Save 9+ on foot, natural 12 while mounted (if already wearing armour, +2 on foot and +1 while mounted); cannot bring a save over 1+."
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10,
+          "note": "Not Knight Errant"
+        },
+        {
+          "name": "Barding",
+          "category": "armour",
+          "listCost": 30
+        },
+        {
+          "name": "Warhorse",
+          "category": "misc",
+          "listCost": 80
+        },
+        {
+          "name": "Lucky Charm",
+          "category": "misc",
+          "listCost": 10
+        }
+      ]
+    },
+    {
+      "id": "pilgrims",
+      "name": "Pilgrims' equipment list",
+      "usedBy": "Battle Pilgrims, Squires",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Mace",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Shortsword",
+          "category": "melee",
+          "listCost": 7,
+          "note": "Parry; enemy gets +1 armour save bonus, and a natural 12 armour save if he has none normally. Counts as a sword for Expert Swordsman."
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Halberd",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Buckler",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Holy Relic",
+          "category": "misc",
+          "listCost": 25,
+          "note": "Pilgrim; the Battle Pilgrim gains Frenzy (immune to Hatred while frenzied). A Pilgrim with a relic breaks off into his own henchman group if there are not enough relics for the group."
+        }
+      ]
+    },
+    {
+      "id": "bowmen",
+      "name": "Bowmen equipment list",
+      "usedBy": "Bowmen, Damsel (non-missile, non-armour items only), Squires",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Shortsword",
+          "category": "melee",
+          "listCost": 7,
+          "note": "Parry; enemy gets +1 armour save bonus, and a natural 12 armour save if he has none normally. Counts as a sword for Expert Swordsman."
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10
+        },
+        {
+          "name": "Longbow",
+          "category": "missile",
+          "listCost": 15
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Horse",
+          "category": "misc",
+          "listCost": 40,
+          "note": "Damsel & Squire only"
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "questing-knight",
+      "name": "Questing Knight",
+      "kind": "hero",
+      "cost": 75,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "knights",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Academic",
+        "Strength",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Leader",
+          "text": "Any warrior within 6\" of the Questing Knight may use his Leadership when taking Leadership tests."
+        },
+        {
+          "name": "Knight",
+          "text": "Has the Chivalry, Lord's Boon and Virtue of Purity rules."
+        },
+        {
+          "name": "Ride",
+          "text": "Starts with the skill 'Ride Warhorse'."
+        },
+        {
+          "name": "Vow of Poverty",
+          "text": "May not take a Lance."
+        }
+      ],
+      "notes": "Exactly one Questing Knight is required. 'Special' skill list is the Knightly skills."
+    },
+    {
+      "id": "damsel",
+      "name": "Damsel",
+      "kind": "hero",
+      "cost": 35,
+      "min": 0,
+      "max": 1,
+      "startingExp": 12,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "bowmen",
+      "isLeader": false,
+      "spellcaster": "Lady's Prayers",
+      "skills": [
+        "Academic",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Prayercaster",
+          "text": "Begins with one prayer from the Lady's Prayers list and can learn additional prayers."
+        }
+      ],
+      "notes": "May only buy non-missile, non-armour items from the Bowmen list."
+    },
+    {
+      "id": "knight-errant",
+      "name": "Knight Errant",
+      "kind": "hero",
+      "cost": 35,
+      "min": 0,
+      "max": 3,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "knights",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Knight",
+          "text": "Has the Chivalry, Lord's Boon and Virtue of Purity rules."
+        },
+        {
+          "name": "Vain",
+          "text": "May not wear a helmet."
+        },
+        {
+          "name": "Impetuous",
+          "text": "In the Movement phase, after declaring charges, a Knight Errant not in combat who did not charge must charge a standing (not knocked down or stunned) enemy within range if able. A Knight Errant who declared a charge on a knocked down or stunned opponent must instead charge a viable standing opponent. He may instead take a Leadership test (may use Leader's Ld if in range); if passed he moves normally or charges his original target. A compelled charge automatically passes fear and other psychology tests that would prevent charging."
+        }
+      ],
+      "notes": "A promoted Squire may become a Knight Errant, allowing more than three."
+    },
+    {
+      "id": "squire",
+      "name": "Squire",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": [
+        "pilgrims",
+        "bowmen"
+      ],
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Knighthood",
+          "text": "When a Squire rolls 'The Lad's Got Talent', choose when promoting him: remain a Squire hero, or become a Knight Errant. A Squire hero may choose two skill lists from Combat, Academic, Strength or Speed and keeps his normal Squire equipment lists. A new Knight Errant gains Knight, Vain and Impetuous instead of an advancement, may learn Special skills plus two other skill sets, must switch to the Knight equipment list and may never use missile weapons."
+        }
+      ],
+      "notes": "May not ride a horse unless the Questing Knight and any Knight Errant in the warband are riding warhorses. Bought in groups of 1-5."
+    },
+    {
+      "id": "battle-pilgrim",
+      "name": "Battle Pilgrim",
+      "kind": "henchman",
+      "cost": 30,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "pilgrims",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Low Caste",
+          "text": "Gains experience and advances normally, but rerolls any result of 'The Lad's Got Talent' and may never become a hero."
+        },
+        {
+          "name": "Hatred",
+          "text": "Hatred against all enemies."
+        },
+        {
+          "name": "Stubborn",
+          "text": "Rerolls all failed Leadership rolls once, accepting the second result."
+        },
+        {
+          "name": "Holy Relics",
+          "text": "May be given a Holy Relic, which grants Frenzy (immune to Hatred while frenzied)."
+        }
+      ],
+      "notes": "Bought in groups of 1-5."
+    },
+    {
+      "id": "bowman",
+      "name": "Bowman",
+      "kind": "henchman",
+      "cost": 15,
+      "min": 0,
+      "max": 7,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 4
+      },
+      "equipmentList": "bowmen",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Low Caste",
+          "text": "Gains experience and advances normally, but rerolls any result of 'That Lad's Got Talent' and may never become a hero."
+        }
+      ],
+      "notes": "Bought in groups of 1-5."
+    }
+  ],
+  "spells": {
+    "listName": "Lady's Prayers",
+    "usedBy": [
+      "damsel"
+    ],
+    "prayers": [
+      {
+        "name": "Lady's Favors",
+        "difficulty": "Auto",
+        "text": "All your heroes count as having Lucky Charms for this battle and ignore the first hit against them on a 7+. If they already own Lucky Charms, they may reroll a failed Lucky Charm save."
+      },
+      {
+        "name": "Blessed Protection",
+        "difficulty": 8,
+        "text": "The Damsel and Bretonnians within 6\" gain an unmodified 7+ ward save against spells or prayers. Test each shooting phase: on a roll of 1-4, the spell dissipates."
+      },
+      {
+        "name": "Swiftstride",
+        "difficulty": 7,
+        "text": "A friendly hero or henchman within 12\" that charged or failed a charge this turn gains +1 to hit until end of turn. If not in combat, may also make an additional move of 1D6\" towards an enemy (base contact counts as a charge)."
+      },
+      {
+        "name": "Lady's Scorn",
+        "difficulty": 5,
+        "text": "Anyone shooting at the Damsel must first pass a Leadership test or be unable to fire this turn (includes Silver Arrows, pistols and template weapons she is within the path of). Lasts until end of game."
+      },
+      {
+        "name": "Elixir of Life",
+        "difficulty": 7,
+        "text": "Any one model within 4\" (including herself) is restored to full Wounds. Friendly models within 4\" that are stunned or knocked down immediately recover and stand up."
+      },
+      {
+        "name": "Guiding Vision",
+        "difficulty": 6,
+        "text": "A friendly hero or henchman within 8\" may re-roll one die roll until the start of your next shooting phase and add +1 or -1 to the result."
+      }
+    ]
+  },
+  "conversionNotes": [
+    "Knightly skills (Renowned Virtue, Questing Vow, Shield Bash, Bulging Muscles, Untiring) are listed as the 'Special' skill list; Questing Knight and Knight Errant may use it. Untiring: save cannot be reduced below 5+ on d6 (9+ on d12).",
+    "Kite shield: 5+ on foot -> 9+, 6+ mounted -> natural 12, 'cannot bring a save over 1+' left as printed (unclear on d12).",
+    "Shortsword: 6+ armour save -> natural 12.",
+    "Lady's Favors 4+ -> 7+. Blessed Protection ward 4+ -> 7+; dissipates on roll of 1-2 on d6 -> 1-4 (proportional; schema only gives 1 -> 1-2).",
+    "Prayer difficulties left as printed (not doubled); 'Swiftstride' 1D6 move left as d6.",
+    "Squires are henchmen that can be promoted to heroes; skills left [] for the henchman entry. Squire equipment: Pilgrims and Bowmen lists.",
+    "Lord's Boon half-cost applies only to Warhorse, Light armour or Heavy armour for Knights at recruitment.",
+    "Bowmen and Squire Ld printed as 4 for Bowmen; 7 for Squire. Damsel buys from Bowmen list but only non-missile non-armour items."
+  ],
+  "skillLists": {
+    "Special": [
+      {
+        "name": "Renowned Virtue",
+        "text": "May learn one Virtue from the original Bretonnian Warband list (Tom Merrigan). May only be taken once."
+      },
+      {
+        "name": "Questing Vow",
+        "text": "Questing Knight only. If charging, charged by, or in combat with a fear-causing enemy, may reroll any Leadership test once (including Rout tests), accepting the second result."
+      },
+      {
+        "name": "Shield Bash",
+        "text": "Each turn, may make an additional attack with a shield or kite shield, at -1 Strength; treat as a club."
+      },
+      {
+        "name": "Bulging Muscles",
+        "text": "Retains the +1/+2 Strength bonus from Flails and Morning Stars after the first round of combat."
+      },
+      {
+        "name": "Untiring",
+        "text": "Ignores movement penalties for armour on foot. Strength, axes, critical hits and similar modifiers cannot reduce his save lower than 9+, nor can it be ignored by non-magical means."
+      }
+    ]
+  }
+}

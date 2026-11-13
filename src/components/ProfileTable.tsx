@@ -17,7 +17,7 @@ export function ProfileTable({ p12 }: { p12: Profile }) {
       <tbody>
         <tr>
           {STAT_KEYS.map((k) => (
-            <td key={k}>{p12[k]}</td>
+            <td key={k}>{p12[k] ?? '-'}</td>
           ))}
           <td>{baseAP(p12)}</td>
         </tr>

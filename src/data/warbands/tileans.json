@@ -1,0 +1,183 @@
+{
+  "id": "tileans",
+  "name": "Tileans",
+  "source": "TownCryer14.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 15,
+  "specialRules": [
+    { "name": "City-state choice (Miraglean)", "text": "Choose one city-state when the warband is created. Miragleans: Heroes get +1 to hit when using crossbows only. Marksmen get +1 to hit with any missile weapon (already included in their profile). Hatred of Skaven (Hired Swords are not affected)." },
+    { "name": "City-state choice (Remasen)", "text": "Choose one city-state when the warband is created. Remasens: fight to the death against any Dark Elf warband. Once per game, the player may re-roll any rout test and must abide by the second roll (only vs Dark Elves). Leadership of Remasen Captain, Champions and Youngbloods is always 1 higher regardless of opponent." },
+    { "name": "City-state choice (Trantio)", "text": "Choose one city-state when the warband is created. Trantios: start a one-off match with an extra 100 gc (500 + 100 = 600 gc); in a Lustrian campaign start with an extra 20% gc." },
+    { "name": "Hired Swords", "text": "May use any Hired Sword available to Mercenary warbands, plus Shadow Warrior (Town Cryer 13), Big Game Hunter (Town Cryer 13) and Expert Marksman (Tilean Marksmen). Hired Swords do not benefit from city-state rules." },
+    { "name": "Maximum characteristics", "text": "Maximum characteristics for each type are the same as for any Mordheim mercenary warband." }
+  ],
+  "equipmentLists": [
+    {
+      "id": "main",
+      "name": "Tilean equipment list",
+      "usedBy": "Captain, Champions, Youngbloods, Warriors, Duellists",
+      "items": [
+        { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st free" },
+        { "name": "Hammer", "category": "melee", "listCost": 3 },
+        { "name": "Mace", "category": "melee", "listCost": 3 },
+        { "name": "Axe", "category": "melee", "listCost": 5 },
+        { "name": "Sword", "category": "melee", "listCost": 10 },
+        { "name": "Spear", "category": "melee", "listCost": 10 },
+        { "name": "Halberd", "category": "melee", "listCost": 10 },
+        { "name": "Pike", "category": "melee", "listCost": 12, "note": "Rare 7. Strikes first in the first round of combat even when charged by a spear; after that resolve in Initiative order and may change to normal hand-to-hand weapons. May attack a model up to 3\" away without being in melee. Two-handed, only 1 attack, cannot use a shield or buckler. Man-sized or larger creatures only (not Skaven, Skinks, Halflings etc.)." },
+        { "name": "Double-handed weapon", "category": "melee", "listCost": 15 },
+        { "name": "Morning star", "category": "melee", "listCost": 15 },
+        { "name": "Rapier", "category": "melee", "listCost": 15, "note": "Town Cryer 7" },
+        { "name": "Pistol", "category": "missile", "listCost": 15, "note": "30 for a brace" },
+        { "name": "Duelling pistol", "category": "missile", "listCost": 25, "note": "50 for a brace" },
+        { "name": "Bow", "category": "missile", "listCost": 10 },
+        { "name": "Crossbow", "category": "missile", "listCost": 25 },
+        { "name": "Helmet", "category": "armour", "listCost": 10 },
+        { "name": "Light armour", "category": "armour", "listCost": 20 },
+        { "name": "Shield", "category": "armour", "listCost": 5 },
+        { "name": "Buckler", "category": "armour", "listCost": 5 }
+      ]
+    },
+    {
+      "id": "marksman",
+      "name": "Marksman equipment list",
+      "usedBy": "Marksmen",
+      "items": [
+        { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st free" },
+        { "name": "Hammer", "category": "melee", "listCost": 3 },
+        { "name": "Axe", "category": "melee", "listCost": 5 },
+        { "name": "Mace", "category": "melee", "listCost": 3 },
+        { "name": "Sword", "category": "melee", "listCost": 10 },
+        { "name": "Pistol", "category": "missile", "listCost": 15, "note": "30 for a brace" },
+        { "name": "Duelling pistol", "category": "missile", "listCost": 25, "note": "50 for a brace" },
+        { "name": "Long bow", "category": "missile", "listCost": 15 },
+        { "name": "Crossbow", "category": "missile", "listCost": 25 },
+        { "name": "Handgun", "category": "missile", "listCost": 35 },
+        { "name": "Hunting rifle", "category": "missile", "listCost": 200 },
+        { "name": "Helmet", "category": "armour", "listCost": 10 },
+        { "name": "Light armour", "category": "armour", "listCost": 20 }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "captain",
+      "name": "Captain",
+      "kind": "hero",
+      "cost": 60,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": { "M": 4, "WS": 4, "BS": 4, "S": 3, "T": 3, "W": 1, "I": 4, "A": 2, "Ld": 8 },
+      "equipmentList": "main",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": ["Combat", "Shooting", "Academic", "Strength", "Speed"],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Leader", "text": "Any models in the warband within 6\" of the Captain may use his Leadership instead of their own." }
+      ],
+      "notes": "Skill tables are the same for all three city-states. Remasen Captain has Ld +1 (Ld 9)."
+    },
+    {
+      "id": "champion",
+      "name": "Champion",
+      "kind": "hero",
+      "cost": 35,
+      "min": 0,
+      "max": 2,
+      "startingExp": 8,
+      "profile": { "M": 4, "WS": 4, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 4, "A": 1, "Ld": 7 },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": ["Combat", "Shooting", "Academic", "Strength", "Speed"],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "Skills by city: Miragleans Combat, Shooting, Speed; Remasens Combat, Academic, Strength; Trantios Combat, Shooting, Speed. The skills array is the union across cities. Printed text says Champions use 'weapons' from the Tilean Equipment list."
+    },
+    {
+      "id": "youngblood",
+      "name": "Youngblood",
+      "kind": "hero",
+      "cost": 15,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": { "M": 4, "WS": 2, "BS": 2, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 6 },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": ["Combat", "Shooting", "Academic", "Strength", "Speed"],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "Skills by city: Miragleans Combat, Shooting, Strength; Remasens Combat, Academic, Speed; Trantios Combat, Shooting, Strength. The skills array is the union across cities."
+    },
+    {
+      "id": "warrior",
+      "name": "Warrior",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": { "M": 4, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 7 },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "Bought in groups of 1-5."
+    },
+    {
+      "id": "duellist",
+      "name": "Duellist",
+      "kind": "henchman",
+      "cost": 35,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": { "M": 4, "WS": 4, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 4, "A": 1, "Ld": 7 },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Cloak & Dagger", "text": "The Duellist counts as using a shield in close combat." }
+      ],
+      "notes": "Bought in groups of 1-5."
+    },
+    {
+      "id": "marksman",
+      "name": "Marksman",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": 7,
+      "startingExp": 0,
+      "profile": { "M": 4, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 4, "A": 1, "Ld": 7 },
+      "equipmentList": "marksman",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Marksman", "text": "+1 to hit with any missile weapon (already included in the profile's BS)." }
+      ],
+      "notes": "Bought in groups of 1-5. Uses the Marksman equipment list."
+    }
+  ],
+  "spells": null,
+  "conversionNotes": [
+    "TownCryer14.pdf prints ONE Tilean warband with three city-state options (Miragleans, Remasens, Trantios) rather than separate warbands, so a single tileans.json was written and the city choice is recorded as warband-level specialRules.",
+    "Trantio starting gold bonus (+100 gc one-off) is not applied to startingGold (kept 500); the app should offer it if the Trantio option is chosen.",
+    "Remasen 're-roll any rout test one time' is a once-per-game effect with no die-face threshold; no d12 conversion needed. Remasen Ld +1 is not applied to profiles.",
+    "Marksman BS is printed as 3 with the +1 already included, as the text states.",
+    "Skill tables differ by city; fighter skills are the union (all five tables for all heroes), per-city tables are in notes.",
+    "Pike is a Rare 7 item added by this warband; rapier references Town Cryer 7 (stats not in this PDF).",
+    "Source PDF page numbers differ from the requested pages by 2 (requested 22-28 = printed 20-26)."
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "id": "outlaws-of-stirwood",
+  "name": "The Outlaws of Stirwood Forest",
+  "source": "The Outlaws of Stirwood Forest.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 15,
+  "specialRules": [
+    {
+      "name": "Bows only",
+      "text": "Every warrior may have only one missile weapon at a time and must carry a type of bow (not crossbows) as part of his equipment, even if skills would allow other ballistic weapons. The Cleric may choose to carry a bow but is not compelled to."
+    },
+    {
+      "name": "Hired Swords",
+      "text": "Bounty Hunter, Wolf-Priest of Ulric, Norse Shaman and Dark Elf Assassin are not available."
+    },
+    {
+      "name": "Cleric slot",
+      "text": "The Cleric can only be taken instead of a Champion or a Petty Thief."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "outlaws",
+      "name": "Outlaws equipment list",
+      "usedBy": "All Outlaws fighters (Bandit Leader, Champions, Cleric, Petty Thieves, Marksmen, Outlaws)",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Staff",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Club",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Mace",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 30
+        },
+        {
+          "name": "Shortbow",
+          "category": "missile",
+          "listCost": 5
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10
+        },
+        {
+          "name": "Longbow",
+          "category": "missile",
+          "listCost": 15,
+          "note": "Heroes and Marksmen only"
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20,
+          "note": "Heroes and Marksmen only"
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Hunting arrows",
+          "category": "misc",
+          "listCost": 30,
+          "note": "Heroes and Marksmen only. Available to Heroes at initial recruitment without a Rarity roll."
+        },
+        {
+          "name": "Forest cloak",
+          "category": "misc",
+          "listCost": 50,
+          "note": "Heroes and Marksmen only. Rare 10, Outlaw Heroes only; no Rarity roll at initial recruitment. Wearer beside a tree, bush or hedge is -1 BS to hit by missile weapons; spellcasters must roll 7+ on a D12 to target him unless within Initiative range in inches."
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "bandit-leader",
+      "name": "Bandit Leader",
+      "kind": "hero",
+      "cost": 60,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "outlaws",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Academic",
+        "Strength",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Leader",
+          "text": "Any model within 6\" may use her Leadership instead of their own."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "champion",
+      "name": "Champion",
+      "kind": "hero",
+      "cost": 35,
+      "min": 0,
+      "max": 2,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "outlaws",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Strength"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "cleric",
+      "name": "Cleric",
+      "kind": "hero",
+      "cost": 35,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "outlaws",
+      "isLeader": false,
+      "spellcaster": "Prayers of Sigmar",
+      "skills": [
+        "Academic"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Disciple of Sigmar",
+          "text": "Starts knowing one Prayer of Sigmar. May wear armour (prayers are not spells). May learn neither Sorcery nor Arcane Lore."
+        }
+      ],
+      "notes": "Can only be taken instead of a Champion or a Petty Thief (counts against their limits)."
+    },
+    {
+      "id": "petty-thief",
+      "name": "Petty Thief",
+      "kind": "hero",
+      "cost": 20,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipmentList": "outlaws",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "marksman",
+      "name": "Marksman",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": 7,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "outlaws",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "outlaw",
+      "name": "Outlaw",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "outlaws",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    }
+  ],
+  "spells": {
+    "listName": "Prayers of Sigmar",
+    "usedBy": [
+      "cleric"
+    ]
+  },
+  "conversionNotes": [
+    "Forest cloak: 'rolling a 4+ on a D6' to target a camouflaged model -> 7+ on a D12 (4+ -> 7+).",
+    "Equipment list printed 'Staff/Clubb/Mace 3 gc' (sic); split into Staff, Club and Mace at 3 gc each.",
+    "Items marked * (Longbow, Light armour, Hunting arrows, Forest cloak) are available to Heroes and Marksmen only; Outlaws (plain henchmen) cannot buy them. Restriction recorded in item notes, not enforced by the file structure.",
+    "Marksmen are 0-7 and Outlaws unlimited, both Henchwomen/henchmen. The Cleric's slot is exclusive with a Champion or Petty Thief; max entered as 1 with the swap noted.",
+    "Printed double-handed weapon cost is 30 gc (not 15). Bandit Leader rule text says 'her Leadership'. Cleric's Prayers of Sigmar list is not included in the PDF; refers to Mordheim rulebook p.57.",
+    "The PDF title text and header disagree (Stirland/Stirwood); the file uses Stirwood."
+  ]
+}

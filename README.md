@@ -1,6 +1,6 @@
 # d12heim Warband Builder
 
-Builds a legal 500gc starting warband for the d12heim homebrew Mordheim rules. Runs in the browser and saves rosters in local storage, with JSON export/import and a printable landscape roster.
+Builds a legal starting warband (500gc unless a warband says otherwise) for the d12heim homebrew Mordheim rules, with 49 warbands. Runs in the browser and saves rosters in local storage, with JSON export/import and a printable landscape roster.
 
 **Live:** https://noltari13.github.io/d12heim-builder/ (deploys from `main` via GitHub Actions)
 
@@ -16,7 +16,7 @@ Run it locally: `npm install`, then `npm run dev` (http://localhost:3000). `npm 
 
 ## Data
 
-- `src/data/warbands/*.json`: one file per warband with original d6 profiles (see `src/data/WARBAND_SCHEMA.md`). Add a warband by writing a file and importing it in `src/data/index.ts`.
+- `src/data/warbands/*.json`: one file per warband with original d6 profiles (see `src/data/WARBAND_SCHEMA.md`). Add a warband by dropping a file in that folder; `npm run check` validates the data and lists equipment that isn't on the sheet.
 - `src/data/equipment.json`: generated from `../mordheim/Equipment.xlsx`.
 
 Campaign tracking (experience, injuries, advances, treasury) is planned for v2. The data already keeps `startingExp` per fighter type ready for it.

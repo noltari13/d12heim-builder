@@ -1,4 +1,4 @@
-import type { FighterType, GearOption, Profile, RosterEntry, WarbandDef } from '../types';
+import { statNum, type FighterType, type GearOption, type Profile, type RosterEntry, type WarbandDef } from '../types';
 import { isDagger, listsFor, resolveGear } from './equipment';
 
 /** Group ruling: only stats you roll against double (WS, BS, S, T, I). */
@@ -6,12 +6,16 @@ export const DOUBLED = new Set(['WS', 'BS', 'S', 'T', 'I']);
 
 export function d12Profile(p: Profile): Profile {
   const out = { ...p };
-  for (const k of Object.keys(out) as (keyof Profile)[]) if (DOUBLED.has(k)) out[k] = p[k] * 2;
+  for (const k of Object.keys(out) as (keyof Profile)[]) {
+    if (!DOUBLED.has(k)) continue;
+    const v = p[k];
+    out[k] = typeof v === 'number' ? v * 2 : v == null ? null : `(${v})×2`;
+  }
   return out;
 }
 
 /** Rulebook p.65 overlay: AP 1 if (doubled) Strength is 8+. */
-export const baseAP = (p12: Profile) => (p12.S >= 8 ? 1 : 0);
+export const baseAP = (p12: Profile) => (statNum(p12.S) >= 8 ? 1 : 0);
 
 export interface WeaponLine {
   name: string;
@@ -24,6 +28,7 @@ export interface WeaponLine {
 
 function weaponStrength(str: string | null, s12: number): string {
   if (!str) return '-';
+  if (Number.isNaN(s12) && /^\s*user/i.test(str)) return str;
   const t = str.replace(/\s+/g, '');
   if (/^user$/i.test(t)) return String(s12);
   const m = /^user([+-])(\d+)$/i.exec(t);
@@ -46,7 +51,7 @@ export function weaponLine(o: GearOption, p12: Profile): WeaponLine | null {
   return {
     name: o.label,
     kind: s.category === 'missile' ? 'missile' : 'melee',
-    strength: weaponStrength(s.strength, p12.S),
+    strength: weaponStrength(s.strength, statNum(p12.S)),
     ap: baseAP(p12) + ruleAP(s.rules),
     range: s.range ?? '',
     rules: [s.hands === '2' ? 'Two-handed' : '', s.rules].filter(Boolean).join(', '),
@@ -56,7 +61,7 @@ export function weaponLine(o: GearOption, p12: Profile): WeaponLine | null {
 export const DAGGER_LINE = (p12: Profile): WeaponLine => ({
   name: 'Dagger (free)',
   kind: 'melee',
-  strength: String(p12.S - 1),
+  strength: Number.isNaN(statNum(p12.S)) ? 'User -1' : String(statNum(p12.S) - 1),
   ap: baseAP(p12),
   range: '',
   rules: '',
@@ -99,7 +104,7 @@ export function computeEntry(wb: WarbandDef, e: RosterEntry): Computed | null {
     if (g.category !== 'armour') continue;
     if (g.sheet?.name === 'Helmet') helmet = true;
     av += g.sheet?.av ?? 0;
-    if (g.sheet && /need a 7 strength/i.test(g.sheet.rules) && p12.S < 7 && !/dwar/i.test(ft.name)) {
+    if (g.sheet && /need a 7 strength/i.test(g.sheet.rules) && statNum(p12.S) < 7 && !/dwar/i.test(ft.name)) {
       warnings.push(`${g.label} needs Strength 7 (has ${p12.S}).`);
     }
   }

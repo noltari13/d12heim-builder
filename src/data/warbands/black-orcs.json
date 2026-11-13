@@ -1,0 +1,462 @@
+{
+  "id": "black-orcs",
+  "name": "Black Orcs",
+  "source": "Black Orcs.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 12,
+  "specialRules": [
+    {
+      "name": "Animosity",
+      "text": "Standard rules for Animosity (Orc Mob Rules, Mordheim Annual 2002)."
+    },
+    {
+      "name": "Let the goons do the work",
+      "text": "Black Orcs do not ride mounts of any kind. Only normal Orcs may ride a boar or other mount."
+    },
+    {
+      "name": "Da Boss is Dead!",
+      "text": "If the Boss is killed a Black Orc always assumes leadership of the warband before any other type, regardless of experience; the replacement automatically acquires the 'Oi Behave!' skill."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "black-orc",
+      "name": "Black Orc list",
+      "usedBy": "Black Orc Boss, Black Orcs",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Choppa (counts as a Morning Star)",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Two-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10
+        },
+        {
+          "name": "Crossbow",
+          "category": "missile",
+          "listCost": 25
+        },
+        {
+          "name": "Light Armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Heavy Armour",
+          "category": "armour",
+          "listCost": 50
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Buckler",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        }
+      ]
+    },
+    {
+      "id": "henchman",
+      "name": "Henchman equipment list",
+      "usedBy": "Young'uns, Orc Boyz, Orc Shootaz, Orc Nuttaz",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Choppa (counts as a Morning Star)",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Two-handed weapon",
+          "category": "melee",
+          "listCost": 15,
+          "note": "Boyz and Nuttaz only"
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10
+        },
+        {
+          "name": "Crossbow",
+          "category": "missile",
+          "listCost": 25,
+          "note": "Shootaz only"
+        },
+        {
+          "name": "Light Armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "black-orc-boss",
+      "name": "Black Orc Boss",
+      "kind": "hero",
+      "cost": 90,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 4,
+        "S": 4,
+        "T": 4,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "black-orc",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Strength",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Leader",
+          "text": "Any warrior within 6\" of the Boss may use his Leadership when taking Leadership tests."
+        },
+        {
+          "name": "Black Orc",
+          "text": "Starts with a natural 6+ armour save (natural 12 on the d12), which can be combined with other equipment."
+        },
+        {
+          "name": "Oi Behave!",
+          "text": "If a Henchman fails his Animosity test within 6\" of the Boss, the Boss may slap him: automatic hit at a Strength the player chooses. If the Henchman is still on his feet he adds the slap's Strength to his Animosity effect roll."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "black-orc",
+      "name": "Black Orc",
+      "kind": "hero",
+      "cost": 60,
+      "min": 0,
+      "max": 2,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 4,
+        "T": 4,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "black-orc",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Strength",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Black Orc",
+          "text": "Starts with a 6+ armour save (natural 12 on the d12), which can be improved by equipment."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "younguns",
+      "name": "Young'un",
+      "kind": "hero",
+      "cost": 25,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 2,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 2,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipmentList": "henchman",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Black Orc Blood",
+          "text": "One Young'un may be upgraded to a Black Orc Young'un for 10gc, allowing him to take the 'Proven Warrior' skill and become a full Black Orc warrior."
+        }
+      ],
+      "notes": "Hero. Uses the Henchman equipment list. Limit 0-2 Young'uns."
+    },
+    {
+      "id": "orc-boy",
+      "name": "Orc Boy",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 2,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipmentList": "henchman",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Animosity",
+          "text": "At the start of every turn must take a Ld test for Animosity (Mordheim Annual 2002 rules)."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "orc-shoota",
+      "name": "Orc Shoota",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 2,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipmentList": "henchman",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Animosity",
+          "text": "At the start of every turn must take a Ld test for Animosity (Mordheim Annual 2002 rules)."
+        },
+        {
+          "name": "Uncommon",
+          "text": "May not hire more Shootaz than Boyz; if Shootaz outnumber Boyz the next hire must be a Boy."
+        }
+      ],
+      "notes": "Max = number of Orc Boyz in the warband."
+    },
+    {
+      "id": "orc-nutta",
+      "name": "Orc Nutta",
+      "kind": "henchman",
+      "cost": 40,
+      "min": 0,
+      "max": 4,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 2,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 2,
+        "A": 1,
+        "Ld": 5
+      },
+      "equipmentList": "henchman",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Unstable",
+          "text": "Not subject to Animosity."
+        },
+        {
+          "name": "Crazy",
+          "text": "Always passes Leadership-based tests; may never learn Academic skills."
+        },
+        {
+          "name": "Savage",
+          "text": "Must always run or charge maximum distance towards the nearest visible enemy (friendly models do not block line of sight); fights with an extra attack (not on profile, not counted for racial maximum). Never uses armour or ranged weapons. May never be Leader or use his Ld for rout tests unless the only models left."
+        }
+      ],
+      "notes": "Cannot use armour or missile weapons despite the Henchman list."
+    },
+    {
+      "id": "troll",
+      "name": "Troll",
+      "kind": "henchman",
+      "cost": 200,
+      "min": 0,
+      "max": 1,
+      "startingExp": 0,
+      "profile": {
+        "M": 6,
+        "WS": 3,
+        "BS": 1,
+        "S": 5,
+        "T": 4,
+        "W": 3,
+        "I": 1,
+        "A": 3,
+        "Ld": 4
+      },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [
+        "None (never given weapons or armour; may carry a big club)"
+      ],
+      "specialRules": [
+        {
+          "name": "Fear",
+          "text": "Causes fear."
+        },
+        {
+          "name": "Stupidity",
+          "text": "Subject to stupidity."
+        },
+        {
+          "name": "Large Target",
+          "text": "Large target for shooting."
+        },
+        {
+          "name": "Regeneration",
+          "text": "When wounded roll a D12; on 7+ the wound is ignored. Not vs fire or fire-based magic. Never rolls for injury after battle unless taken out by fire, then as a normal Henchman."
+        },
+        {
+          "name": "Dumb Monster",
+          "text": "Never learns skills or gains experience."
+        },
+        {
+          "name": "Always Hungry",
+          "text": "Upkeep 20gc after every game. If unpaid the Boss may count it as 2 members so it costs only 5gc, reducing max warband size to 11."
+        },
+        {
+          "name": "Vomit Attack",
+          "text": "Instead of normal attacks, a single automatic hit at Strength 5 ignoring armour saves."
+        }
+      ],
+      "notes": ""
+    }
+  ],
+  "spells": null,
+  "conversionNotes": [
+    "Black Orc natural 6+ armour save recorded as natural 12 (6+ -> 12 rule); flagged for a human to confirm the intended d12 save.",
+    "Troll Regeneration D6 4+ -> D12 7+.",
+    "'Da Boss is Dead' warband rule and Oi Behave! skill reference kept as printed.",
+    "Young'un is a hero (listed under Heroes) but uses the Henchman equipment list; fixed at 0-2, 25gc, 0 exp.",
+    "Two-handed weapon is 'Boyz and Nuttaz only' and Crossbow 'Shootaz only' per footnotes (footnote placement under the item). Nuttaz may not use armour or ranged weapons per Savage.",
+    "Orc Shootaz max (as many as Boyz) recorded as null; see notes.",
+    "Black Orc Special Skills ('Proven Warrior', 'Ard Ead', 'Waaagh!', 'Ere we go!', 'Da cunnin plan', 'Eadbasher) are not transcribed as fighter data; 'Ard Ead' 3+/2+ saves would convert to 5+/3+.",
+    "Max profile (not in schema): Black Orc M4 WS7 BS6 S5 T6 W3 I5 A4 Ld9; Orc M4 WS6 BS6 S4 T5 W3 I5 A4 Ld9.",
+    "Troll upkeep 20gc kept in rule text."
+  ]
+}

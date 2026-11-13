@@ -1,0 +1,234 @@
+{
+  "id": "court-of-profane-pleasures",
+  "name": "Court of Profane Pleasures",
+  "source": "Court of Profane Pleasures.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 15,
+  "specialRules": [
+    { "name": "Corruption of the Mind and Flesh", "text": "Whenever an enemy model (Hero or Henchman) or one of your own models dies, the warband may perform an obscene ritual to attach a body part of the dying warrior to a Slaaneshi Beastman, Cultist or Slaaneshi Hound: take one stat of the fallen warrior and replace the same stat of the Beastman, Cultist or Hound. The ritual costs 1 Wyrdstone, and 1 Hero cannot search for Rare items at the market while performing it." },
+    { "name": "Mutations", "text": "Any Hero may buy one of the following Mutations when recruited (see Cult of the Possessed rules): Extra arm, Tentacle, Great Claw." }
+  ],
+  "equipmentLists": [
+    {
+      "id": "court",
+      "name": "Court of Pleasures equipment list",
+      "usedBy": "Whipmaster, Danseuse, Flesh Merchant, Priest of Obscene, Devout, Slaaneshi Beastmen, Cultists",
+      "items": [
+        { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st free" },
+        { "name": "Sword", "category": "melee", "listCost": 10 },
+        { "name": "Mace", "category": "melee", "listCost": 3 },
+        { "name": "Hedonist Whip", "category": "melee", "listCost": 15, "note": "Heroes only. Common. Strength as user; cannot be parried; Whipcrack: wielder gains +1A when charging, or +1A (strikes first, only against the charger) when charged; +1A total if charged by two or more opponents. Two whips: +1A for the extra hand weapon but only the first whip gets the whipcrack +1A." },
+        { "name": "Slaaneshi Man-Catcher", "category": "melee", "listCost": 30, "note": "Whipmaster only. Rare 10. Close combat, Strength as user +1, requires two hands, Lock: if it hits and causes an unsaved wound, no injury roll; the enemy is knocked down and cannot stand while in melee with the wielder and cannot move away unless magic is used. Does not work on large creatures or steeds. Switching weapons lets the opponent stand up in recovery. At end of battle the target is captured (as result 61 of the Serious Injury chart) if still pinned, even a Henchman." },
+        { "name": "Double-handed weapon", "category": "melee", "listCost": 15 },
+        { "name": "Bow", "category": "missile", "listCost": 15 },
+        { "name": "Pistol", "category": "missile", "listCost": 15, "note": "30 for a brace" },
+        { "name": "Long Rifle", "category": "missile", "listCost": 200 },
+        { "name": "Crossbow Pistol", "category": "missile", "listCost": 35 },
+        { "name": "Light Armor", "category": "armour", "listCost": 20 },
+        { "name": "Shield", "category": "armour", "listCost": 5 },
+        { "name": "Buckler", "category": "armour", "listCost": 5 },
+        { "name": "Helmet", "category": "armour", "listCost": 10 },
+        { "name": "Crimson Shade", "category": "misc", "listCost": 35 }
+      ]
+    },
+    {
+      "id": "wretches",
+      "name": "Wretches equipment list",
+      "usedBy": "Slaaneshi Wretches (Thralls only)",
+      "items": [
+        { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st is not free" },
+        { "name": "Mace", "category": "melee", "listCost": 3 },
+        { "name": "Sword", "category": "melee", "listCost": 10 },
+        { "name": "Spear", "category": "melee", "listCost": 10 },
+        { "name": "Short bow", "category": "missile", "listCost": 10 },
+        { "name": "Shield", "category": "armour", "listCost": 5 },
+        { "name": "Buckler", "category": "armour", "listCost": 5 }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "whipmaster",
+      "name": "Slaaneshi Whipmaster",
+      "kind": "hero",
+      "cost": 70,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": { "M": 4, "WS": 4, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 4, "A": 1, "Ld": 8 },
+      "equipmentList": "court",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Agony and Ecstasy", "text": "If armed with a Hedonist Whip, may use one of its attacks to scourge one friendly model within 3\". It automatically hits and has +1 to wound; roll injuries as standard. The Whipmaster then doubles his Toughness. Take a Leadership test at the start of each of the Slaaneshi player's turns; on a failure the effect ends, though it can be re-activated." },
+        { "name": "Pain and Pleasure", "text": "Whenever he suffers an unsaved wound, he is subject to Frenzy until the end of his next turn; this Frenzy is not negated by being knocked down or stunned." }
+      ],
+      "notes": "The PDF lets you choose any Hero as the Leader; the Whipmaster is set as leader here by default. The PDF prints no skill tables."
+    },
+    {
+      "id": "danseuse",
+      "name": "Slaaneshi Danseuse",
+      "kind": "hero",
+      "cost": 70,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": { "M": 4, "WS": 4, "BS": 4, "S": 3, "T": 3, "W": 1, "I": 4, "A": 1, "Ld": 7 },
+      "equipmentList": "court",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Strange Allure", "text": "An enemy wishing to attack a Danseuse in melee or with a missile attack must pass a Leadership test first. On a failure, the model must re-roll any successful hits." }
+      ],
+      "notes": "May never wear armour."
+    },
+    {
+      "id": "flesh-merchant",
+      "name": "Slaaneshi Flesh Merchant",
+      "kind": "hero",
+      "cost": 65,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": { "M": 4, "WS": 4, "BS": 3, "S": 4, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 7 },
+      "equipmentList": "court",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Pound of Flesh", "text": "Before battle, you may give one Wretch to the Flesh Merchant to carry as a meat shield. When the Merchant suffers a wound he may let the slave take the hit instead; the Slave is taken Out of Action and removed from the game. The Wretch can make its normal attacks in melee. It has no base and cannot be targeted. If the Merchant dies, the Wretch is lost." },
+        { "name": "Cruel Fate", "text": "Any captives the warband gains through combat results or exploration can be turned into Wretches at no cost." }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "priest-of-obscene",
+      "name": "Slaaneshi Priest of Obscene",
+      "kind": "hero",
+      "cost": 50,
+      "min": 0,
+      "max": 1,
+      "startingExp": 6,
+      "profile": { "M": 4, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 4, "A": 1, "Ld": 8 },
+      "equipmentList": "court",
+      "isLeader": false,
+      "spellcaster": "Chaos Rituals",
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Flesh Reserve", "text": "Before battle, you may give one Wretch to the Priest to carry as a sacrificial pawn. When the Priest fails to cast a spell he can sacrifice the Wretch to reroll the spell roll. The Wretch can make its normal attacks in melee. It has no base and cannot be targeted. If the Priest dies, the Wretch is lost." },
+        { "name": "Wizard", "text": "Wizard; uses the Chaos Rituals spell list." }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "devout",
+      "name": "Slaaneshi Devout",
+      "kind": "hero",
+      "cost": 65,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": { "M": 4, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 7 },
+      "equipmentList": "court",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Fluctuating Form", "text": "At the start of the battle, and every Recovery phase if not engaged in close combat, choose male or female aspect. Male: +1 WS, S, A and T. Female: +1 BS, +2 I, +2 Ld and +2 M." },
+        { "name": "Immune to Psychology", "text": "Immune to Psychology and all alone tests." }
+      ],
+      "notes": "Printed profile is the base; the Fluctuating Form bonuses are applied on top of it."
+    },
+    {
+      "id": "chaos-hound",
+      "name": "Slaaneshi Chaos Hound",
+      "kind": "henchman",
+      "cost": 15,
+      "min": 0,
+      "max": 3,
+      "startingExp": 0,
+      "profile": { "M": 7, "WS": 4, "BS": 0, "S": 4, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 3 },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": ["Natural weapons (cannot use equipment, weapons or armour)"],
+      "specialRules": [
+        { "name": "Animal", "text": "Animals; never gain any experience." }
+      ],
+      "notes": "Bought in groups of 1-5."
+    },
+    {
+      "id": "beastman",
+      "name": "Slaaneshi Beastman",
+      "kind": "henchman",
+      "cost": 35,
+      "min": 0,
+      "max": 3,
+      "startingExp": 0,
+      "profile": { "M": 5, "WS": 4, "BS": 3, "S": 3, "T": 4, "W": 1, "I": 4, "A": 1, "Ld": 6 },
+      "equipmentList": "court",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "Bought in groups of 1-5."
+    },
+    {
+      "id": "wretch",
+      "name": "Slaaneshi Wretch",
+      "kind": "henchman",
+      "cost": 10,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": { "M": 4, "WS": 2, "BS": 2, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 5 },
+      "equipmentList": "wretches",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Slaves to Darkness", "text": "Immune to all psychology and All Alone tests if within 6\" of a friendly Hero. Wretches can't become heroes: if you roll 'The Lad's Got Talent', roll again on the chart; if you score it again, the model receives a Serious Injury as if it were a hero (roll immediately)." }
+      ],
+      "notes": "Bought in groups of 1-5. Can be given to the Flesh Merchant or Priest of Obscene."
+    },
+    {
+      "id": "cultist",
+      "name": "Cultist",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": { "M": 4, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 7 },
+      "equipmentList": "court",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "Bought in groups of 1-5."
+    }
+  ],
+  "spells": { "listName": "Chaos Rituals", "usedBy": ["priest-of-obscene"] },
+  "conversionNotes": [
+    "No d6 roll wording in this PDF, so no dice conversions were needed.",
+    "The PDF prints no skill tables, so heroes have skills [] (a human should assign them).",
+    "Leader: the PDF lets any Hero be chosen as Leader; Whipmaster flagged as isLeader (no Leader special rule text is given).",
+    "Mutations (Extra arm, Tentacle, Great Claw) refer to the Cult of the Possessed rules and are recorded as a warband-level rule only.",
+    "Agony and Ecstasy 'doubles Toughness' left as printed.",
+    "Man-Catcher 'result of 61 of Serious Injury chart' is a d66 table reference kept verbatim.",
+    "Hero limits are 0-1 each as 'only 1 of each type of Hero'; Slaaneshi Wretch and Cultist and others are henchmen. Equipment list headings in the PDF read 'Court of Pleasures' and 'Wretches' (Thralls only); the Man-Catcher is Whipmaster only and Hedonist Whip Heroes only.",
+    "Devout profile is marked '(Special, see below)'; printed base profile stored."
+  ]
+}

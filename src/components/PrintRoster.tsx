@@ -39,7 +39,7 @@ export function PrintRoster({ wb, r, s }: { wb: WarbandDef; r: Roster; s: Roster
                   </small>
                 </td>
                 {STAT_KEYS.map((k) => (
-                  <td key={k}>{c.p12[k]}</td>
+                  <td key={k}>{c.p12[k] ?? '-'}</td>
                 ))}
                 <td>{baseAP(c.p12)}</td>
                 <td>

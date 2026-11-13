@@ -1,0 +1,445 @@
+{
+  "id": "tomb-guardians",
+  "name": "Tomb Guardians",
+  "source": "tombguardians.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 15,
+  "specialRules": [
+    {
+      "name": "Home Ground",
+      "text": "The Tomb Guardians live in the Necropolises and easily locate hidden tombs: a Tomb Guardian warband always rolls one extra die in the Exploration phase."
+    },
+    {
+      "name": "Undead",
+      "text": "All Undead warriors cause fear, are immune to psychology (never leave combat), treat Stunned as Knocked Down (no pain), may not run (but may charge), are immune to poison, and never gain experience if they have no brain (Skeletons). Tomb Lords do not learn new skills but remember those they knew in life; Liche Priests and Acolytes retain a living mind and can learn from experience."
+    },
+    {
+      "name": "Flammable",
+      "text": "The Tomb Lord takes double the normal number of wounds from a hit by a fire-based attack."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "undead",
+      "name": "Undead equipment list",
+      "usedBy": "Tomb Lord, Skeleton Warriors, Tomb Guards",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Mace",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Halberd",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Morning star",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Flail",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10
+        },
+        {
+          "name": "Asp Arrows",
+          "category": "missile",
+          "listCost": 10,
+          "note": "Tomb Lords only. Made from mummified remains of poisonous snakes, guided by ancient magic. +1 to hit."
+        },
+        {
+          "name": "Nehekharan Javelin",
+          "category": "missile",
+          "listCost": 10,
+          "note": "Tomb Lords only. Range 8\", Strength as user, +1 to hit."
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        }
+      ]
+    },
+    {
+      "id": "liche-priest",
+      "name": "Liche Priest equipment list",
+      "usedBy": "Liche Priest, Acolytes (no missile weapons or armour)",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Mace",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Staff",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Morning star",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Serpent staff",
+          "category": "melee",
+          "listCost": 30,
+          "note": "Liche Priests only. Two-handed, may be used to Parry. The Liche Priest may forgo all normal attacks and parries in a round to use the staff: the serpent always attacks first in close combat with a single attack at WS4 and S4."
+        }
+      ]
+    },
+    {
+      "id": "chariot",
+      "name": "Skeleton Chariot",
+      "usedBy": "Warband (0-1); buyer not specified in the PDF",
+      "items": [
+        {
+          "name": "Skeleton Chariot",
+          "category": "misc",
+          "listCost": 200,
+          "note": "200 + 10D6 gc. 0-1. Profiles (M WS BS S T W I A Ld): Chariot - - - 4 4 3 - - -; Skeleton Steed (x2) 8 2 2 3 3 1 2 1 5. Pulled by two Skeleton Steeds, driven by a charioteer (requires the Drive Chariot (academic) skill to charge). Moves 8\", may not run, may double move when charging. Difficult ground: D3 Strength 4 hits (2D3 Strength 6 hits if charging). If one steed dies, half movement and charge but no impact hits; if both die the chariot is immobile and the charioteer fights on foot. Impact hits on a charge: each model in the path may take an Initiative test to dodge; otherwise one Strength 4 hit with -2 armour save. Enemies in contact may strike chariot or driver; shooting at a chariot gets +1 to hit, and a hit goes to steed on 1-4, chariot 5-8, charioteer 9-12 (D12)."
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "tomb-lord",
+      "name": "Tomb Lord",
+      "kind": "hero",
+      "cost": 150,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 4,
+        "T": 5,
+        "W": 3,
+        "I": 3,
+        "A": 2,
+        "Ld": 8
+      },
+      "equipmentList": "undead",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Strength"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Leader",
+          "text": "The Tomb Lord is the warband's Leader and follows all the rules for Leaders (models within 6\" may use his Leadership)."
+        },
+        {
+          "name": "Undead",
+          "text": "Follows all rules for the Undead (fear, immune to psychology, no pain, may not run, immune to poison)."
+        },
+        {
+          "name": "Flammable",
+          "text": "Takes double wounds from fire-based attacks."
+        },
+        {
+          "name": "Do Not Drink",
+          "text": "Does not need food and water (living animals that accompany Mummies follow the water rules as normal)."
+        }
+      ],
+      "notes": "Printed profile row is labelled 'Mummy'. Called Mummy Prince in the starting experience section."
+    },
+    {
+      "id": "liche-priest",
+      "name": "Liche Priest",
+      "kind": "hero",
+      "cost": 55,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "liche-priest",
+      "isLeader": false,
+      "spellcaster": "Mortuary Cult Scroll",
+      "skills": [
+        "Academic"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Wizard",
+          "text": "A Wizard that uses Mortuary Cult scrolls (cast like normal spells, must test to read the incantation correctly)."
+        },
+        {
+          "name": "Undead",
+          "text": "Follows all rules for the Undead but has retained a living mind and can learn from experience."
+        },
+        {
+          "name": "No armour",
+          "text": "May not wear armour as it interferes with spell casting."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "acolyte",
+      "name": "Acolyte",
+      "kind": "hero",
+      "cost": 20,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "liche-priest",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Academic"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Undead",
+          "text": "Follows all rules for the Undead but has retained a living mind and can learn from experience."
+        }
+      ],
+      "notes": "Printed rule text says 'The Liche Priest is undead' under Acolytes (copy error)."
+    },
+    {
+      "id": "skeleton-warrior",
+      "name": "Skeleton Warrior",
+      "kind": "henchman",
+      "cost": 20,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 2,
+        "A": 1,
+        "Ld": 5
+      },
+      "equipmentList": "undead",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Cause Fear",
+          "text": "Causes fear."
+        },
+        {
+          "name": "Immune to Psychology",
+          "text": "Not affected by psychology and never leaves combat."
+        },
+        {
+          "name": "No Pain",
+          "text": "Treats a 'stunned' result on the Injury chart as 'knocked down'."
+        },
+        {
+          "name": "May not run",
+          "text": "May not run (but may charge normally)."
+        },
+        {
+          "name": "Immune to Poison",
+          "text": "Not affected by poison."
+        },
+        {
+          "name": "No Brain",
+          "text": "Never gains experience."
+        }
+      ],
+      "notes": "Bought in groups of 1-5."
+    },
+    {
+      "id": "tomb-guard",
+      "name": "Tomb Guard",
+      "kind": "henchman",
+      "cost": 30,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 2,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 5
+      },
+      "equipmentList": "undead",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Cause Fear",
+          "text": "Causes fear."
+        },
+        {
+          "name": "Immune to Psychology",
+          "text": "Not affected by psychology and never leaves combat."
+        },
+        {
+          "name": "No Pain",
+          "text": "Treats a 'stunned' result on the Injury chart as 'knocked down'."
+        },
+        {
+          "name": "May not run",
+          "text": "May not run (but may charge normally)."
+        },
+        {
+          "name": "Immune to Poison",
+          "text": "Not affected by poison."
+        },
+        {
+          "name": "No Brain",
+          "text": "Never gains experience."
+        }
+      ],
+      "notes": "Bought in groups of 1-5. The PDF does not say whether Tomb Guards have No Brain; assumed yes like Skeletons."
+    },
+    {
+      "id": "tomb-scorpion",
+      "name": "Tomb Scorpion",
+      "kind": "henchman",
+      "cost": 15,
+      "min": 0,
+      "max": 3,
+      "startingExp": 0,
+      "profile": {
+        "M": 5,
+        "WS": 2,
+        "BS": 0,
+        "S": 2,
+        "T": 2,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 4
+      },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [
+        "Natural weapons (no weapons or armour); sting"
+      ],
+      "specialRules": [
+        {
+          "name": "Living",
+          "text": "Scorpions are living beings and are affected by psychology as normal, but do not need water."
+        },
+        {
+          "name": "Animal",
+          "text": "Does not gain experience."
+        },
+        {
+          "name": "Scorpion sting",
+          "text": "Sting attacks work exactly as if attacking with Black Lotus (Mordheim rulebook p. 52). Strength shown as 2*."
+        }
+      ],
+      "notes": "Bought in groups of 1-5. Also summonable by the Scorpion Ring."
+    }
+  ],
+  "spells": {
+    "listName": "Mortuary Cult Scroll",
+    "usedBy": [
+      "liche-priest"
+    ]
+  },
+  "conversionNotes": [
+    "tombguardians.pdf and warband_pdfs/TownCryer18.pdf are byte-identical (same md5), so there are no differences. Rules are on PDF pages 6-12 (printed 4-10) plus scrolls on page 15.",
+    "Skeleton Chariot hit location D6: 1-2 steed, 3-4 chariot, 5-6 charioteer -> D12: 1-4, 5-8, 9-12.",
+    "Mortuary Cult Scroll spell difficulties and effects are not captured in this schema. Menkare's Scroll of Urgency (6), Horrebe's Curse of the Mummy (8), Tawosret's Tomb Dust (7), Neferre's Quaking Horror (7), Merneptah's Scarab Song (7), Djedre's Vengeful Dead (5); the spell table is rolled on a D6 (becomes D12 in d12heim).",
+    "Scorpion sting uses Black Lotus poison rules; the Scorpion S is printed '2*'.",
+    "Skeleton Chariot is 200+10D6 gc and is a 0-1 special item; the PDF does not state who buys it. Cost note given in item note.",
+    "Skills: Mummy (Tomb Lord) Combat/Shooting/Strength; Liche Priest Academic; Acolyte Combat/Academic. The skill table marks Mummy/Liche/Acolyte only.",
+    "Maximum characteristics table (Tomb Lord and Liche Priest/Acolyte) printed in the PDF was not transcribed.",
+    "Tomb Lord max 1 / min 1; warband must include one Tomb Lord."
+  ]
+}

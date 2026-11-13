@@ -2,6 +2,7 @@
 // don't map to Equipment.xlsx (these fall back to the warband-list price in the app).
 import { WARBANDS } from '../src/data';
 import { gearOptions } from '../src/logic/equipment';
+import { summarise } from '../src/logic/validate';
 import { STAT_KEYS, type FighterType } from '../src/types';
 
 let problems = 0;
@@ -33,7 +34,11 @@ for (const w of WARBANDS) {
     fids.add(f.id);
     if (f.kind !== 'hero' && f.kind !== 'henchman') bad(w.id, `${f.id}: kind ${f.kind}`);
     if (typeof f.cost !== 'number') bad(w.id, `${f.id}: cost not a number`);
-    for (const s of STAT_KEYS) if (typeof f.profile?.[s] !== 'number' && !(s === 'M' && typeof f.profile?.[s] === 'string')) bad(w.id, `${f.id}: profile.${s} = ${f.profile?.[s]}`);
+    for (const s of STAT_KEYS) {
+      const v = f.profile?.[s];
+      if (v === undefined || (typeof v !== 'number' && typeof v !== 'string' && v !== null)) bad(w.id, `${f.id}: profile.${s} = ${v}`);
+      else if (typeof v !== 'number') console.log(`  · ${w.id}/${f.id}: ${s} = ${v} (non-numeric, shown as printed)`);
+    }
     const lists = f.equipmentList == null ? [] : Array.isArray(f.equipmentList) ? f.equipmentList : [f.equipmentList];
     for (const l of lists) if (!listIds.has(l)) bad(w.id, `${f.id}: unknown list ${l}`);
     if (!Array.isArray(f.specialRules) || !Array.isArray(f.skills) || !Array.isArray(f.fixedEquipment)) bad(w.id, `${f.id}: array field missing`);
@@ -45,6 +50,17 @@ for (const w of WARBANDS) {
         if (!arr.includes(w.id)) arr.push(w.id);
       }
     }
+  }
+}
+
+// Smoke test: one of every fighter carrying every option must compute without NaN.
+for (const w of WARBANDS) {
+  const entries = w.fighters.map((f, i) => ({ id: String(i), typeId: f.id, name: '', count: 1, gear: gearOptions(w, f, true).map((o) => o.key) }));
+  try {
+    const s = summarise(w, { id: 'x', name: 'x', warbandId: w.id, entries, notes: '', allowRareSubstitutes: true, updated: 0 });
+    if (Number.isNaN(s.spent)) bad(w.id, 'cost computes to NaN');
+  } catch (e) {
+    bad(w.id, `summarise threw: ${(e as Error).message}`);
   }
 }
 

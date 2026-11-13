@@ -1,0 +1,412 @@
+{
+  "id": "imperial-outriders",
+  "name": "Imperial Outriders",
+  "source": "Imperial Outriders.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 12,
+  "specialRules": [
+    {
+      "name": "Mounted warband",
+      "text": "Every model comes with a Riding Horse (upgradable to a Warhorse for +40 gc). Mounted warriors may not fight with two weapons (a shield or buckler may be used as normal; two-handed weapons not permitted; a pistol in the first round of combat replaces the usual weapon). Enemies may not target a ridden horse, only the rider; any mounted warrior may always be chosen as a shooting target even if enemies are closer, with no +1 to hit."
+    },
+    {
+      "name": "Dense terrain",
+      "text": "May ignore the normal warband limitation of two mounts in areas of dense terrain."
+    },
+    {
+      "name": "Dead mounts",
+      "text": "Dead horses must be replaced before any other income is spent; a model without a mount may not take part in the battle. A rider whose mount survives may be replaced on it, reducing its cost by 40 gc."
+    },
+    {
+      "name": "Hired Swords",
+      "text": "May only be accompanied by mounted Hired Swords."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "main",
+      "name": "Imperial Outriders equipment list (hand-to-hand weapons, armour, mount upgrade)",
+      "usedBy": "All Imperial Outriders fighters",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Morning Star",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Lance",
+          "category": "melee",
+          "listCost": 40
+        },
+        {
+          "name": "Barding",
+          "category": "armour",
+          "listCost": 80
+        },
+        {
+          "name": "Buckler",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Gromril Armour",
+          "category": "armour",
+          "listCost": 150
+        },
+        {
+          "name": "Heavy Armour",
+          "category": "armour",
+          "listCost": 50
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Ithilmar Armour",
+          "category": "armour",
+          "listCost": 90
+        },
+        {
+          "name": "Light Armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Warhorse upgrade",
+          "category": "misc",
+          "listCost": 40,
+          "note": "Mount upgrade: Riding Horse (included free with every model) may be upgraded to a Warhorse for +40 gc."
+        }
+      ]
+    },
+    {
+      "id": "outrider-missile",
+      "name": "Outrider Missile weapons",
+      "usedBy": "Outriders, Chasseurs",
+      "items": [
+        {
+          "name": "Pistol",
+          "category": "missile",
+          "listCost": 15
+        },
+        {
+          "name": "Handgun",
+          "category": "missile",
+          "listCost": 35
+        },
+        {
+          "name": "Blunderbuss",
+          "category": "missile",
+          "listCost": 30
+        },
+        {
+          "name": "Hochland Long Rifle",
+          "category": "missile",
+          "listCost": 200
+        }
+      ]
+    },
+    {
+      "id": "scout-missile",
+      "name": "Scout Missile weapons",
+      "usedBy": "Scouts, Grooms",
+      "items": [
+        {
+          "name": "Throwing Knives",
+          "category": "missile",
+          "listCost": 15
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "knight",
+      "name": "Knight",
+      "kind": "hero",
+      "cost": 85,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "main",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Academic",
+        "Strength",
+        "Speed",
+        "Cavalry"
+      ],
+      "fixedEquipment": [
+        "Riding Horse"
+      ],
+      "specialRules": [
+        {
+          "name": "Leader",
+          "text": "Any warrior within 6\" may use this model's Leadership when taking Leadership tests."
+        },
+        {
+          "name": "Ride",
+          "text": "Has the Ride skill as detailed in the Blazing Saddles article."
+        }
+      ],
+      "notes": "May only use hand-to-hand weapons and armour from the main list (no missile weapon list)."
+    },
+    {
+      "id": "outrider",
+      "name": "Outriders",
+      "kind": "hero",
+      "cost": 65,
+      "min": 0,
+      "max": 2,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": [
+        "main",
+        "outrider-missile"
+      ],
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Strength",
+        "Cavalry"
+      ],
+      "fixedEquipment": [
+        "Riding Horse"
+      ],
+      "specialRules": [
+        {
+          "name": "Ride",
+          "text": "Has the Ride skill as detailed in the Blazing Saddles article."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "scout",
+      "name": "Scouts",
+      "kind": "hero",
+      "cost": 45,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipmentList": [
+        "main",
+        "scout-missile"
+      ],
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Speed",
+        "Cavalry"
+      ],
+      "fixedEquipment": [
+        "Riding Horse"
+      ],
+      "specialRules": [
+        {
+          "name": "Ride",
+          "text": "Has the Ride skill as detailed in the Blazing Saddles article."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "chasseur",
+      "name": "Chasseurs",
+      "kind": "henchman",
+      "cost": 55,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": [
+        "main",
+        "outrider-missile"
+      ],
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [
+        "Riding Horse"
+      ],
+      "specialRules": [
+        {
+          "name": "Ride",
+          "text": "Has the Ride skill as detailed in the Blazing Saddles article."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "hussar",
+      "name": "Hussars",
+      "kind": "henchman",
+      "cost": 60,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [
+        "Riding Horse"
+      ],
+      "specialRules": [
+        {
+          "name": "Ride",
+          "text": "Has the Ride skill as detailed in the Blazing Saddles article."
+        },
+        {
+          "name": "Combat Riding",
+          "text": "Has the Combat Riding skill as detailed in the Blazing Saddles article."
+        }
+      ],
+      "notes": "The PDF refers to 'Horsemen' in the rules text; taken to mean Hussars. Riding Horse may be upgraded to a Warhorse for +40 gc."
+    },
+    {
+      "id": "groom",
+      "name": "Grooms",
+      "kind": "henchman",
+      "cost": 50,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipmentList": [
+        "main",
+        "scout-missile"
+      ],
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [
+        "Riding Horse"
+      ],
+      "specialRules": [
+        {
+          "name": "Ride",
+          "text": "Has the Ride skill as detailed in the Blazing Saddles article."
+        },
+        {
+          "name": "Horse Handling",
+          "text": "Has the Animal Handling skill as detailed in the Blazing Saddles article."
+        }
+      ],
+      "notes": ""
+    }
+  ],
+  "spells": null,
+  "conversionNotes": [
+    "No d6 thresholds appear in the warband rules, so no dice conversions were applied (the Whoa Boy! table and Blazing Saddles skills are external references).",
+    "Equipment is split into three lists: hand-to-hand weapons plus armour (shared), Outrider Missile weapons, Scout Missile weapons. Knight and Hussars take only the main list. Outriders and Chasseurs also take Outrider Missile; Scouts and Grooms also take Scout Missile.",
+    "Grooms' printed text says they may take missile weapons 'from the Imperial Outriders' Equipment List' and also 'from the Scouts' Missile Weapon List'; implemented as Scout Missile only, check.",
+    "Mounts: every fighter comes with a Riding Horse (cost included); Warhorse upgrade +40 gc listed as a misc item. Barding is printed in the armour section at 80 gc and kept as armour.",
+    "Skill table has a 'Cavalry' column (Blazing Saddles skills) in place of Special. Knight: all six; Outrider: Combat, Shooting, Strength, Cavalry; Scout: Combat, Shooting, Speed, Cavalry.",
+    "Max 12 warriors. Knight 1; Outriders 0-2; Scouts 0-2; Chasseurs 0-5; Hussars 0-5; Grooms 0-2."
+  ]
+}

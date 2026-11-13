@@ -1,6 +1,9 @@
 export type StatKey = 'M' | 'WS' | 'BS' | 'S' | 'T' | 'W' | 'I' | 'A' | 'Ld';
 export const STAT_KEYS: StatKey[] = ['M', 'WS', 'BS', 'S', 'T', 'W', 'I', 'A', 'Ld'];
-export type Profile = Record<StatKey, number>;
+/** Stats are numbers; a few fighters print dice ("2D6") or variable (null) values. */
+export type StatValue = number | string | null;
+export type Profile = Record<StatKey, StatValue>;
+export const statNum = (v: StatValue) => (typeof v === 'number' ? v : NaN);
 
 export interface Rule {
   name: string;
