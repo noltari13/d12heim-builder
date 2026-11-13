@@ -1,0 +1,16 @@
+{
+  "id": "amazon-rituals",
+  "name": "Amazon Rituals",
+  "aliases": ["Amazon Rituals"],
+  "kind": "ritual",
+  "source": "Amazons.pdf p.10 (Amazon Rituals)",
+  "notes": "Used by the Amazon Priestess, who starts with one ritual chosen at random. Original table is D6, kept as printed. Judgement call: the -1 to hit missile penalty (Wendala's Maelstrom) and -1 Ld (Siren's Dreams) are left unchanged as they are modifiers, not characteristics or Strength values.",
+  "spells": [
+    { "roll": "1", "name": "Singing Wind", "difficulty": "8", "text": "Any one model within 10\" is held until the start of the Amazon player's next turn: it cannot move, shoot or cast spells, but may defend itself in hand-to-hand combat, and automatically goes last in combat." },
+    { "roll": "2", "name": "Serpent's Strength", "difficulty": "9", "text": "Until the end of their next turn, every friendly model within 8\" of the Priestess (including herself) gets +2 Strength. Cannot be cast if the Priestess is in close combat during her Shooting phase. The effect continues after casting if the Priestess enters combat." },
+    { "roll": "3", "name": "Wendala's Maelstrom", "difficulty": "7", "text": "Until the start of the Amazon player's next turn, all enemy missile attacks made by models within 18\" of the Priestess are at -1 to hit." },
+    { "roll": "4", "name": "Shield of Thorns", "difficulty": "7", "text": "The Priestess is immune to ranged and magical attacks until the start of the Amazon player's next turn. Enemies can still charge her, but the thorns negate all strikes by the Priestess and her enemies in the first round of combat. Cannot be cast while the Priestess is in hand-to-hand combat." },
+    { "roll": "5", "name": "The Living Jungle", "difficulty": "6", "text": "One model within 12\" suffers D6 Strength 4 hits. No armour saves allowed (Ward saves only). Dodge saves cannot be used against a swarm." },
+    { "roll": "6", "name": "Siren's Dreams", "difficulty": "7", "text": "All Ld tests for the opposing warband's models within 12\" are at -1 until the end of the opposing player's next turn. Lizardmen and Undead are immune." }
+  ]
+}

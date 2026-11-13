@@ -3,6 +3,7 @@ import quickref from '../data/quickref.json';
 import type { Roster, WarbandDef } from '../types';
 import type { Computed } from '../logic/stats';
 import { Calculator } from './Calculator';
+import { SPELL_SCHOOLS, schoolFor } from '../data';
 
 type Block =
   | { type: 'p'; text: string }
@@ -142,6 +143,7 @@ export function Reference({ roster, wb, computed }: Props) {
               {s.title}
             </a>
           ))}
+          <a href="#ref-spells">Spells</a>
           <a href="#ref-glossary">Weapon rules</a>
         </nav>
       )}
@@ -162,6 +164,8 @@ export function Reference({ roster, wb, computed }: Props) {
         </details>
       ))}
 
+      <SpellsRef q={q} defaultSchool={roster && wb ? schoolFor(wb.fighters.find((f) => f.spellcaster && roster.entries.some((e) => e.typeId === f.id))?.spellcaster ?? wb.fighters.find((f) => f.spellcaster)?.spellcaster)?.id : undefined} />
+
       {terms.length > 0 && (
         <details id="ref-glossary" className="ref-section" open={!!q || undefined}>
           <summary>
@@ -179,7 +183,62 @@ export function Reference({ roster, wb, computed }: Props) {
         </details>
       )}
 
-      {q && sections.length === 0 && terms.length === 0 && <p className="muted empty">Nothing matches "{query}".</p>}
+      {q && sections.length === 0 && terms.length === 0 && !SPELL_SCHOOLS.some((sc) => sc.spells.some((sp) => `${sc.name} ${sp.name} ${sp.text}`.toLowerCase().includes(q))) && <p className="muted empty">Nothing matches "{query}".</p>}
     </div>
+  );
+}
+
+function SpellsRef({ q, defaultSchool }: { q: string; defaultSchool?: string }) {
+  const [school, setSchool] = useState(defaultSchool ?? SPELL_SCHOOLS[0]?.id ?? '');
+  const lists = q
+    ? SPELL_SCHOOLS.map((sc) => ({ sc, spells: sc.spells.filter((sp) => `${sc.name} ${sp.name} ${sp.text}`.toLowerCase().includes(q)) })).filter((x) => x.spells.length)
+    : SPELL_SCHOOLS.filter((sc) => sc.id === school).map((sc) => ({ sc, spells: sc.spells }));
+  if (q && lists.length === 0) return null;
+  return (
+    <details id="ref-spells" className="ref-section" open={!!q || undefined}>
+      <summary>
+        <span>Spells &amp; prayers</span>
+        <small>{SPELL_SCHOOLS.length} lists · difficulty is rolled on 2d6 (working rule)</small>
+      </summary>
+      {!q && (
+        <div className="school-pick">
+          <select value={school} onChange={(e) => setSchool(e.target.value)} aria-label="Spell list">
+            {SPELL_SCHOOLS.map((sc) => (
+              <option key={sc.id} value={sc.id}>
+                {sc.name} ({sc.spells.length})
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
+      {lists.map(({ sc, spells }) => (
+        <div key={sc.id}>
+          {(q || sc.notes) && (
+            <p className="ref-body muted small" style={{ paddingTop: 10 }}>
+              {q && <b>{sc.name}. </b>}
+              {sc.notes}
+            </p>
+          )}
+          {spells.length === 0 ? (
+            <p className="ref-body muted">This list isn't in the source PDF.</p>
+          ) : (
+            <ul className="spell-ref" style={{ paddingTop: 10 }}>
+              {spells.map((sp) => (
+                <li key={sp.name}>
+                  <div className="spell-title">
+                    <span>
+                      {sp.roll ? `${sp.roll}. ` : ''}
+                      {rich(sp.name, q)}
+                    </span>
+                    <span className="diff">Diff {sp.difficulty}</span>
+                  </div>
+                  <p>{rich(sp.text, q)}</p>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      ))}
+    </details>
   );
 }

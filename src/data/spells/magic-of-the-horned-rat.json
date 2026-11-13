@@ -1,0 +1,48 @@
+{
+  "id": "magic-of-the-horned-rat",
+  "name": "Magic of the Horned Rat",
+  "aliases": [
+    "Magic of the Horned Rat"
+  ],
+  "kind": "magic",
+  "source": "d12heim Rules doc, Magic section",
+  "notes": "Used by Skaven Sorcerers. Cast as a Shoot/Spell action, 2d6 equal to or over the difficulty. Each caster starts with one spell rolled on a d12 and may learn more; a duplicate is re-rolled or its difficulty lowered by 1. Judgement call: text taken from the group's rules doc, already converted to d12; the doc flags Black Fury as an open question (see its Contradictions section).",
+  "spells": [
+    {
+      "roll": "1-2",
+      "name": "Warpfire",
+      "difficulty": "8",
+      "text": "Range 8\". D3 S8 hits on the first model in its path, and one S6 hit on every other model within 2\" of it."
+    },
+    {
+      "roll": "3-4",
+      "name": "Children of the Horned Rat",
+      "difficulty": "Auto",
+      "text": "Cast before the game, once per battle. D3 Giant Rats are placed within 6\" of the Sorcerer. They do not count toward the warband's maximum size and leave after the battle."
+    },
+    {
+      "roll": "5-6",
+      "name": "Gnawdoom",
+      "difficulty": "7",
+      "text": "One model within 8\" suffers 2D6 S2 hits."
+    },
+    {
+      "roll": "7-8",
+      "name": "Black Fury",
+      "difficulty": "8",
+      "text": "The Sorcerer immediately charges any enemy within 12\", ignoring terrain and models in the way, and gains +2 Attacks and +1 S for that melee attack only."
+    },
+    {
+      "roll": "9-10",
+      "name": "Eye of the Warp",
+      "difficulty": "8",
+      "text": "Every standing model in base contact with the Sorcerer takes a Leadership test. Each one that fails suffers one S6 hit and runs 2D6\" directly away from him."
+    },
+    {
+      "roll": "11-12",
+      "name": "Sorcerer's Curse",
+      "difficulty": "6",
+      "text": "One model within 12\". Until the end of its next activation, it must re-roll successful armour saves and successful to-hit rolls."
+    }
+  ]
+}

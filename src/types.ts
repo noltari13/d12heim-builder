@@ -93,6 +93,8 @@ export interface RosterEntry {
   name: string;
   count: number;
   gear: string[];
+  /** Spell names known by this fighter (casters only). */
+  spells?: string[];
 }
 
 export interface Roster {
@@ -103,4 +105,21 @@ export interface Roster {
   notes: string;
   allowRareSubstitutes: boolean;
   updated: number;
+}
+
+export interface Spell {
+  roll: string;
+  name: string;
+  difficulty: string;
+  text: string;
+}
+
+export interface SpellSchool {
+  id: string;
+  name: string;
+  aliases: string[];
+  kind: 'magic' | 'prayer' | 'ritual';
+  source: string;
+  notes?: string;
+  spells: Spell[];
 }

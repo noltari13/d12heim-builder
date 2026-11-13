@@ -1,0 +1,48 @@
+{
+  "id": "mortuary-cult",
+  "name": "Mortuary Cult Scroll",
+  "aliases": [
+    "Mortuary Cult Scroll"
+  ],
+  "kind": "magic",
+  "source": "tombguardians.pdf p.15 (printed p.13)",
+  "notes": "Used by the Tomb Guardians Liche Priest; scrolls work like normal spells and the Priest must test to read the incantation correctly. Judgement call: Scarab Song's 2D6 Strength 1 hits became Strength 2.",
+  "spells": [
+    {
+      "roll": "1",
+      "name": "Menkare's Scroll of Urgency",
+      "difficulty": "6",
+      "text": "A single Skeleton Soldier within 6\" may immediately move again up to its maximum Movement distance (4\"). If this takes it into base contact with an enemy model, it counts as charging."
+    },
+    {
+      "roll": "2",
+      "name": "Horrebe's Curse of the Mummy",
+      "difficulty": "8",
+      "text": "Target a single enemy model in base contact with a Mummy and within 18\" of the Liche Priest. The target has -1 on all to hit rolls, to wound rolls, and on all armour saves until the start of the next Tomb Guardian Shooting phase."
+    },
+    {
+      "roll": "3",
+      "name": "Tawosret's Scroll of Tomb Dust",
+      "difficulty": "7",
+      "text": "A single living warrior within 12\" is automatically knocked down as he chokes on the sand. Only affects a living model."
+    },
+    {
+      "roll": "4",
+      "name": "Neferre's Scroll of Quaking Horror",
+      "difficulty": "7",
+      "text": "Select a warrior within 12\". He must pass a Leadership test or flee 2D6\" directly away from the Liche Priest, and continues to flee each Movement phase until he makes a successful Rally test in the Recovery phase. No effect on Undead models or models immune to psychology."
+    },
+    {
+      "roll": "5",
+      "name": "Merneptah's Scroll of the Scarab Song",
+      "difficulty": "7",
+      "text": "A single model within 8\" suffers 2D6 Strength 2 hits. In addition, for the rest of the Tomb Guardian Shooting phase it may not be shot at, nor may it fight or be fought in hand-to-hand combat. If already in combat, move it 1\" away from the combat. Unless it suffers an actual injury it counts as having just stood up in the next turn."
+    },
+    {
+      "roll": "6",
+      "name": "Djedre's Summonation of the Vengeful Dead",
+      "difficulty": "5",
+      "text": "The Liche Priest may re-animate a Skeleton Soldier that went out of action during the last turn. Place the model anywhere within 6\" of the Liche Priest, but not straight into hand-to-hand combat with an enemy model."
+    }
+  ]
+}

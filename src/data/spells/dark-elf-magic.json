@@ -1,0 +1,16 @@
+{
+  "id": "dark-elf-magic",
+  "name": "Dark Elf Magic",
+  "aliases": ["Dark Elf Magic"],
+  "kind": "magic",
+  "source": "Dark Elves, Errata'd.pdf p.22 (Lustria - Cities of Gold, Dark Elf Magic)",
+  "notes": "Used by the Dark Elf Sorceress, who may not cast spells while wearing armour. Original table is D6, kept as printed. Judgement calls: Doombolt's -1 Strength per jump is doubled to -2 and it stops when Strength drops to 2 or less (original: drops to one), keeping the same number of jumps; Flamesword's +2 Strength becomes +4.",
+  "spells": [
+    { "roll": "1", "name": "Doombolt", "difficulty": "9", "text": "Target any enemy model in line of sight within 18\"; Strength 10 hit. If the target is wounded, the next closest model within 6\" is also hit on a 7+ at -2 Strength than the previous hit, and so on until there are no more targets in range or Strength drops to 2 or less. Each model can only be hit once per turn. Armour saves as normal." },
+    { "roll": "2", "name": "Word of Pain", "difficulty": "8", "text": "Cast at an enemy model within 12\". The victim must re-roll all successful hand-to-hand or missile attacks and all to wound rolls. To charge, he must first pass a Leadership test. Lasts until the beginning of the next Dark Elf turn." },
+    { "roll": "3", "name": "Soul Stealer", "difficulty": "9", "text": "The Sorceress makes a to hit roll against a model in base contact. If it hits, the target suffers a wound with no armour save possible and she gains one wound. She can never have more than one extra wound from this spell; the extra wound is lost at the end of the battle." },
+    { "roll": "4", "name": "Flamesword", "difficulty": "8", "text": "Choose the hand-to-hand weapon of a warband member within 6\". It acts as a normal weapon of its type but adds +4 to the user's Strength. Hits from the weapon ignore armour saves. Lasts until the Sorceress' next shooting phase." },
+    { "roll": "5", "name": "Deathspasm", "difficulty": "10", "text": "Range 6\", must be cast on the closest enemy model. The affected model must roll on the injury chart. If successfully cast, the Sorceress is immediately knocked down." },
+    { "roll": "6", "name": "Witch Flight", "difficulty": "7", "text": "The Sorceress may immediately move anywhere within 12\" and may count as charging. If she engages a fleeing enemy in the close combat phase she scores 1 automatic hit and the opponent then flees again." }
+  ]
+}

@@ -1,6 +1,6 @@
 // Data checker: `npm run check`. Validates every warband file and lists equipment names that
 // don't map to Equipment.xlsx (these fall back to the warband-list price in the app).
-import { WARBANDS } from '../src/data';
+import { SPELL_SCHOOLS, WARBANDS, schoolFor } from '../src/data';
 import { gearOptions } from '../src/logic/equipment';
 import { summarise } from '../src/logic/validate';
 import { STAT_KEYS, type FighterType } from '../src/types';
@@ -41,6 +41,7 @@ for (const w of WARBANDS) {
     }
     const lists = f.equipmentList == null ? [] : Array.isArray(f.equipmentList) ? f.equipmentList : [f.equipmentList];
     for (const l of lists) if (!listIds.has(l)) bad(w.id, `${f.id}: unknown list ${l}`);
+    if (f.spellcaster && !schoolFor(f.spellcaster)) console.log(`  · ${w.id}/${f.id}: no spell list for "${f.spellcaster}"`);
     if (!Array.isArray(f.specialRules) || !Array.isArray(f.skills) || !Array.isArray(f.fixedEquipment)) bad(w.id, `${f.id}: array field missing`);
     for (const o of gearOptions(w, f, true)) {
       if (!o.sheet) {
@@ -64,7 +65,8 @@ for (const w of WARBANDS) {
   }
 }
 
-console.log(`\n${WARBANDS.length} warbands, ${problems} problems.`);
+for (const sc of SPELL_SCHOOLS) if (!sc.spells.length) console.log(`  · spells/${sc.id}: empty list`);
+console.log(`\n${WARBANDS.length} warbands, ${SPELL_SCHOOLS.length} spell lists, ${problems} problems.`);
 console.log(`\nEquipment names not on the sheet (use list price):`);
 for (const [k, ws] of [...unmatched].sort()) console.log(`  ${k}  [${ws.join(', ')}]`);
 process.exit(problems ? 1 : 0);

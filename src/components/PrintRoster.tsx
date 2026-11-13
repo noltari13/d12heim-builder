@@ -53,6 +53,12 @@ export function PrintRoster({ wb, r, s }: { wb: WarbandDef; r: Roster; s: Roster
                     .filter((g) => g.category !== 'melee' && g.category !== 'missile')
                     .map((g) => g.label)
                     .join('; ')}
+                  {(e.spells?.length ?? 0) > 0 && (
+                    <>
+                      <br />
+                      <b>Spells:</b> {e.spells!.join(', ')}
+                    </>
+                  )}
                   {c.ft.specialRules.length > 0 && (
                     <>
                       <br />

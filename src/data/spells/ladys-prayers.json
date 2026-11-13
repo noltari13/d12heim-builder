@@ -1,0 +1,48 @@
+{
+  "id": "ladys-prayers",
+  "name": "Lady's Prayers",
+  "aliases": [
+    "Lady's Prayers"
+  ],
+  "kind": "prayer",
+  "source": "Bretonnian Chapel Guard.pdf p.6",
+  "notes": "Used by the Bretonnian Damsel. Judgement calls: Lucky Charm and ward saves 4+ became 7+; the 'roll of 1 or 2' dissipation chance became 1-4 to keep the one-in-three odds on a d12; +1 to hit left unchanged.",
+  "spells": [
+    {
+      "roll": "1",
+      "name": "Lady's Favors",
+      "difficulty": "Auto",
+      "text": "All your heroes count as having Lucky Charms for this battle and ignore the first hit against them on a d12 roll of 7+. If they already own Lucky Charms, they may re-roll a failed Lucky Charm save, accepting the second result."
+    },
+    {
+      "roll": "2",
+      "name": "Blessed Protection",
+      "difficulty": "8",
+      "text": "The Damsel and any Bretonnians within 6\" of her gain an unmodified ward save of 7+ against the effects of spells or prayers. Test each shooting phase: on a roll of 1-4 the spell dissipates."
+    },
+    {
+      "roll": "3",
+      "name": "Swiftstride",
+      "difficulty": "7",
+      "text": "The Damsel picks a friendly hero or henchman (including herself) within 12\" that charged or failed a charge this turn. That warrior gains +1 to hit on all attacks until the end of the turn. In addition, if they are not in combat they may make an additional move of D6\" towards an enemy (if they move into base contact with an enemy this counts as a charge)."
+    },
+    {
+      "roll": "4",
+      "name": "Lady's Scorn",
+      "difficulty": "5",
+      "text": "Anyone attempting to shoot at the Damsel must first pass a Leadership test or be unable to fire this turn. This includes Silver Arrows, Crossbow Pistols, Hand-to-Hand Pistols and Template shot weapons that she is within the path of (like Blunderbusses). Lasts until the end of the game."
+    },
+    {
+      "roll": "5",
+      "name": "Elixir of Life",
+      "difficulty": "7",
+      "text": "Any one model within 4\" of the Damsel (including herself) may be healed: it is restored to its full quota of Wounds. In addition, any friendly models within 4\" that are stunned or knocked down immediately come to their senses, stand up and continue fighting as normal."
+    },
+    {
+      "roll": "6",
+      "name": "Guiding Vision",
+      "difficulty": "6",
+      "text": "The Damsel picks a friendly hero or henchman within 8\". Until the start of your next shooting phase, that warrior may re-roll one die roll they make and add +1 or -1 to the result."
+    }
+  ]
+}

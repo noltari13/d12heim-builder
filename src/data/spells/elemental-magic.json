@@ -1,0 +1,48 @@
+{
+  "id": "elemental-magic",
+  "name": "Elemental Magic",
+  "aliases": [
+    "Elemental Magic"
+  ],
+  "kind": "magic",
+  "source": "Town Cryer 20 p.18 (Arabian Elemental Magic)",
+  "notes": "Used by the Arabian Tomb Raiders Mystic. Judgement calls: Skin of Stone's -1 Initiative doubled to -2 I; Burning Hand's 'set on fire on 4+' converted to 7+; Strength tests left as written.",
+  "spells": [
+    {
+      "roll": "1",
+      "name": "Riding the Wind",
+      "difficulty": "6",
+      "text": "Cast at the start of the caster's Movement phase. The caster may move up to 12+D6\" anywhere on the battlefield, ignoring intervening terrain; this replaces his normal movement. May not end in base contact with an enemy. He may shoot as normal (-1 to hit for having moved)."
+    },
+    {
+      "roll": "2",
+      "name": "Skin of Stone",
+      "difficulty": "7",
+      "text": "Any friendly warrior within 6\" gains +2 to his armour save but suffers -2 Initiative. May be maintained each turn if the warrior stays within 6\" and the caster passes a Difficulty test; if the caster is more than 6\" away in the Recovery phase it wears off. Only one warrior may be affected at a time, but the caster may cast other spells while maintaining it."
+    },
+    {
+      "roll": "3",
+      "name": "Burning Hand",
+      "difficulty": "8",
+      "text": "Cast at the start of the Combat phase. The caster sacrifices all his normal attacks to make one hand-to-hand attack at Strength 10 causing 2 wounds. If it hits, the enemy is set on fire on a roll of 7+. Lasts one round only."
+    },
+    {
+      "roll": "4",
+      "name": "Quicksand",
+      "difficulty": "6",
+      "text": "Cast on any warrior within 6\". The area within 3\" of the target is flooded until the start of the caster's next Recovery phase. All warriors in it must pass a Strength test or be unable to move. Warriors in combat cannot attack but may defend themselves."
+    },
+    {
+      "roll": "5",
+      "name": "Storm of Magic",
+      "difficulty": "9",
+      "text": "Target any warrior within 12\". The target takes one Strength 10 hit. Armour saves may be taken as normal."
+    },
+    {
+      "roll": "6",
+      "name": "Blessing of the Elements",
+      "difficulty": "6",
+      "text": "In the post-battle sequence the player may re-roll any one die or modify one die by +1/-1. If the caster was taken out of action this spell may not be cast."
+    }
+  ]
+}

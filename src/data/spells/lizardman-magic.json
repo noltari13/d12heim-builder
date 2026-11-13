@@ -1,0 +1,48 @@
+{
+  "id": "lizardman-magic",
+  "name": "Lizardman Magic",
+  "aliases": [
+    "Lizardman Magic"
+  ],
+  "kind": "magic",
+  "source": "Lizardmen.pdf p.7 (Lustria Cities of Gold)",
+  "notes": "Used by the Skink Priest. Works like the Prayers of Sigmar: may be used even if the Skink Priest is wearing armour. Judgement calls: Chotec's Wrath S5 -> S10 and its +1 Strength vs armour -> +2 (injury roll +1 unchanged); Sotec's +1 BS and +1 T doubled, Initiative doubled, Movement not; 'to hit' bonus left at +1; Old Ones' Protection 4+ -> 7+; Sotec's effect table remains D6 as printed.",
+  "spells": [
+    {
+      "roll": "1",
+      "name": "Chotec's Wrath",
+      "difficulty": "8",
+      "text": "A lightning bolt strikes the closest enemy model within 10\" of the Skink Priest, causing a single Strength 10 hit. Add +2 to the Strength and +1 to the roll on the injury table if the model is wearing armour such as light armour, heavy armour, Ithilmar armour or Gromril armour."
+    },
+    {
+      "roll": "2",
+      "name": "Sotec's Blessing",
+      "difficulty": "7",
+      "text": "Cast on a single model within 6\" of the Skink Priest or on himself. Roll a D6 for the blessing: 1-2: +2 BS or +1 to hit in close combat; 3-4: +2 Toughness; 5-6: +1 Movement and +2 Initiative. Remains in play until the Priest or the model is stunned or taken out of action. Only a single model may be affected at any time."
+    },
+    {
+      "roll": "3",
+      "name": "Huanchi's Stealth",
+      "difficulty": "7",
+      "text": "Affects all Skinks within 6\" of the Skink Priest, including himself. Any affected model that is in cover may immediately go into hiding, even if it ran in the movement phase or has already shot with a missile weapon."
+    },
+    {
+      "roll": "4",
+      "name": "The Old Ones' Protection",
+      "difficulty": "6",
+      "text": "The Skink Priest and any Lizardmen within 4\" of him gain a save of 7+ against the effects of spells or prayers. Remains in play until the Skink Priest is taken out of action."
+    },
+    {
+      "roll": "5",
+      "name": "Tinci's Rage",
+      "difficulty": "8",
+      "text": "A single Lizardman within 6\" of the Skink Priest, or himself, follows the rules for Frenzy and also gains +2 Strength. Remains in play until the Skink Priest or the model is stunned or taken out of action. At the beginning of each turn the Skink Priest must pass a Leadership roll to keep the spell going. Only a single model may be affected at a time, but the Priest may release the spell at the start of his turn to recast it on another model later in the shooting phase."
+    },
+    {
+      "roll": "6",
+      "name": "Itzl's Speed",
+      "difficulty": "7",
+      "text": "A single Lizardman model within 6\" of the Skink Priest, or himself, may make an additional sprint of up to 4\". This counts as running, and a model may not move if he has already fired with a missile weapon. He may not charge with this extra move."
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import { gearOptions } from '../logic/equipment';
 import { saveText, type Computed } from '../logic/stats';
 import { MAX_GROUP } from '../logic/validate';
 import { ProfileTable } from './ProfileTable';
+import { SpellPicker } from './SpellPicker';
 
 const CAT_LABEL: Record<string, string> = { melee: 'Close combat', missile: 'Missile', armour: 'Armour', misc: 'Other' };
 
@@ -118,6 +119,8 @@ export function EntryCard({ wb, entry, c, allowRare, onChange, onRemove, onDupli
           ))}
         </ul>
       )}
+
+      <SpellPicker ft={ft} entry={entry} onChange={onChange} />
 
       <div className="defence">
         <span>

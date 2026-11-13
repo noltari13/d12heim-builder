@@ -258,3 +258,21 @@ table { border-collapse: collapse; }
 .calc-wrap .calc { border: none; background: none; padding: 0 12px 14px; }
 .row2 { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
 @media (min-width: 800px) { .roster-switch select { max-width: 420px; } }
+
+/* Spells */
+.spells { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; display: grid; gap: 8px; border-left: 3px solid var(--magic); }
+.spells-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.spells-head b { color: var(--magic); }
+.spell-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.spell-row { display: flex; gap: 4px; }
+.spell-name { flex: 1; display: flex; justify-content: space-between; align-items: center; gap: 8px; text-align: left; background: var(--panel-2); }
+.diff { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.chip-x { min-width: 40px; padding: 0; color: var(--muted); }
+.spell-text { margin: 4px 2px 6px; font-size: 14px; color: var(--muted); }
+.spell-add { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px; }
+.school-pick { padding: 0 16px; }
+.spell-ref { list-style: none; margin: 0; padding: 0 16px 14px; display: grid; gap: 10px; }
+.spell-ref li { border-bottom: 1px solid var(--line-soft); padding-bottom: 8px; }
+.spell-ref li:last-child { border-bottom: none; }
+.spell-ref .spell-title { display: flex; justify-content: space-between; gap: 8px; font-weight: 700; }
+.spell-ref p { margin: 4px 0 0; font-size: 14px; color: var(--muted); }

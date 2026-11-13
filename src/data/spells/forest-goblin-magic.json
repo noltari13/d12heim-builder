@@ -1,0 +1,48 @@
+{
+  "id": "forest-goblin-magic",
+  "name": "Forest Goblin Magic",
+  "aliases": [
+    "Forest Goblin Magic"
+  ],
+  "kind": "magic",
+  "source": "Forest Goblins.pdf p.5",
+  "notes": "Used by the Forest Goblin Shaman. Judgement calls: Wind of Gork's Toughness test left as a roll-under test, with its S2 hit doubled to S4; 'Eadbanger bolts use the Shaman's Toughness as Strength (unchanged); the 1 on the backfire roll becomes 1-2.",
+  "spells": [
+    {
+      "roll": "1",
+      "name": "Wind of Gork",
+      "difficulty": "6",
+      "text": "Range 12\". The first model in its path must roll under its Toughness or take a Strength 4 hit and be knocked down automatically."
+    },
+    {
+      "roll": "2",
+      "name": "Gaze of Mork",
+      "difficulty": "8",
+      "text": "Range 12\". D3 Strength 6 hits strike the first model in their path."
+    },
+    {
+      "roll": "3",
+      "name": "'Eadbanger",
+      "difficulty": "8",
+      "text": "Range 6\". Fire a number of bolts equal to the Shaman's Attacks, each resolved with Strength equal to the Shaman's Toughness, at the first model in their path. After the bolts are resolved, roll a die; on a 1-2 the Shaman collapses and goes out of action."
+    },
+    {
+      "roll": "4",
+      "name": "Leap of Waaagh!",
+      "difficulty": "7",
+      "text": "The Shaman or any other Goblin within 3\" may be moved up to 12\". If this brings them into close combat they count as charging in the close combat phase."
+    },
+    {
+      "roll": "5",
+      "name": "Idol of Gork",
+      "difficulty": "8",
+      "text": "The Shaman gains +2 WS, +2 S and +1 A until the Shaman takes a wound."
+    },
+    {
+      "roll": "6",
+      "name": "'Ere we go!",
+      "difficulty": "8",
+      "text": "All friendly models within 6\" of the Shaman treat stunned results on the injury table as knocked down instead. Lasts until the Shaman takes a wound."
+    }
+  ]
+}

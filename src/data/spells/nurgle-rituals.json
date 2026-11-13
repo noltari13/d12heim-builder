@@ -1,0 +1,48 @@
+{
+  "id": "nurgle-rituals",
+  "name": "Nurgle Rituals",
+  "aliases": [
+    "Nurgle Rituals"
+  ],
+  "kind": "ritual",
+  "source": "Empire in Flames pp.65 (PDF pp.58-59)",
+  "notes": "Used by the Carnival Master (and by Marauders Seers of Onogal, who replace Daemonic Vigour with Touch of Onogal, see chaos-marks). Roll D6. Judgement call: Daemonic Aura save 5+ -> 4+ converted to 9+ -> 7+, Scabrous Hide 2+ -> 3+; Toughness tests left as written. The Blessings of Nurgle page (Tainted Ones) is not a spell list and is omitted.",
+  "spells": [
+    {
+      "roll": "1",
+      "name": "Daemonic Vigour",
+      "difficulty": "8",
+      "text": "Plague Bearers or Nurglings within 8\" of the Master improve their Daemonic Aura save from 9+ to 7+ until the beginning of their next turn."
+    },
+    {
+      "roll": "2",
+      "name": "Buboes",
+      "difficulty": "7",
+      "text": "Range 8\", one enemy warrior. Must pass a Toughness test or lose a Wound. No armour saves."
+    },
+    {
+      "roll": "3",
+      "name": "Stench of Nurgle",
+      "difficulty": "8",
+      "text": "Range 6\", all living creatures, friend or foe. Each enemy warrior in range must pass a Toughness test or lose an Attack until their next turn."
+    },
+    {
+      "roll": "4",
+      "name": "Pestilence",
+      "difficulty": "10",
+      "text": "All enemy models within 12\" of the Master suffer a Strength 6 hit. No armour saves."
+    },
+    {
+      "roll": "5",
+      "name": "Scabrous Hide",
+      "difficulty": "8",
+      "text": "The Master has a 3+ armour save which replaces any normal armour save. Lasts until the beginning of his next Shooting phase."
+    },
+    {
+      "roll": "6",
+      "name": "Nurgle's Rot",
+      "difficulty": "9",
+      "text": "All enemy models in base contact with the Master must immediately test against their Toughness or contract Nurgle's Rot."
+    }
+  ]
+}

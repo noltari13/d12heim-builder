@@ -1,0 +1,48 @@
+{
+  "id": "waaagh-magic",
+  "name": "Waaagh! Magic",
+  "aliases": [
+    "Waaagh! Magic"
+  ],
+  "kind": "magic",
+  "source": "Orc Mob p.13 (PDF p.6)",
+  "notes": "Used by Orc Shamans. Night Goblins.pdf does not reproduce the list (it refers to the Mordheim Annual 2002), so the Orc Mob list is used for both. Roll D6. Judgement call: Oi! Gerroff! hit S3 -> S6; Clubba +2 Strength -> +4 Strength, the +1 Attack unchanged; Zzap! S4 -> S8; Fire of Gork S3 -> S6.",
+  "spells": [
+    {
+      "roll": "1",
+      "name": "Led'z go",
+      "difficulty": "9",
+      "text": "Any Orc or Goblin within 4\" of the Shaman automatically strikes first in hand-to-hand combat regardless of other circumstances. Lasts only until the caster is knocked down, stunned or taken out of action."
+    },
+    {
+      "roll": "2",
+      "name": "Oi! Gerroff!",
+      "difficulty": "7",
+      "text": "Range 8\". Moves any enemy model within range D6\" directly away from the Shaman. If the target collides with another model or a building, both suffer 1 S6 hit. May not be cast on models in hand-to-hand combat."
+    },
+    {
+      "roll": "3",
+      "name": "Zzap!",
+      "difficulty": "9",
+      "text": "Range 12\". Causes D3 S8 hits on the closest enemy target, with no armour saves allowed."
+    },
+    {
+      "roll": "4",
+      "name": "Fooled Ya!",
+      "difficulty": "6",
+      "text": "No enemy may charge the Shaman during their next turn. If the Shaman is engaged in hand-to-hand combat he may immediately move 4\" away."
+    },
+    {
+      "roll": "5",
+      "name": "Clubba",
+      "difficulty": "7",
+      "text": "The ectoplasmic club counts as a normal club with a +4 Strength bonus and gives the Shaman +1 Attack. Lasts until the Shaman suffers a Wound."
+    },
+    {
+      "roll": "6",
+      "name": "Fire of Gork",
+      "difficulty": "8",
+      "text": "Range 12\". Each of two bolts causes D3 S6 hits; the bolts can both be fired at the closest enemy target or split between the two closest enemy targets."
+    }
+  ]
+}

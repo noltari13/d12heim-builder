@@ -1,0 +1,48 @@
+{
+  "id": "lesser-magic",
+  "name": "Lesser Magic",
+  "aliases": [
+    "Lesser Magic"
+  ],
+  "kind": "magic",
+  "source": "d12heim Rules doc, Magic section",
+  "notes": "Used by Warlocks, Magicians and similar hired casters. Cast as a Shoot/Spell action, 2d6 equal to or over the difficulty. Each caster starts with one spell rolled on a d12 and may learn more; a duplicate is re-rolled or its difficulty lowered by 1. Judgement call: text taken from the group's rules doc, already converted to d12.",
+  "spells": [
+    {
+      "roll": "1-2",
+      "name": "Fires of U'Zhul",
+      "difficulty": "7",
+      "text": "Range 18\". One S8 hit on the first model in its path. Armour saves as normal."
+    },
+    {
+      "roll": "3-4",
+      "name": "Flight of Zimmeran",
+      "difficulty": "7",
+      "text": "The caster moves up to 12\" anywhere. If he ends in base contact with an enemy he counts as charging. If he contacts a Broken enemy he scores one automatic hit, then that enemy keeps fleeing if it survives."
+    },
+    {
+      "roll": "5-6",
+      "name": "Dread of Aramar",
+      "difficulty": "7",
+      "text": "One model within 12\" takes a Leadership test. On a fail it flees 2D6\" directly away from the caster, and tests again at the start of each of its activations, fleeing again until it passes. No effect on Undead or models immune to fear."
+    },
+    {
+      "roll": "7-8",
+      "name": "Silver Arrows of Arha",
+      "difficulty": "7",
+      "text": "Cannot be cast in melee. D6+2 arrows at one enemy model within 24\". Roll to hit with the caster's BS, ignoring range, cover and concealment modifiers. Each arrow is one S6 hit."
+    },
+    {
+      "roll": "9-10",
+      "name": "Luck of Shemtek",
+      "difficulty": "6",
+      "text": "The caster may re-roll all his failed rolls; the re-roll stands. Lasts until the start of his next activation."
+    },
+    {
+      "roll": "11-12",
+      "name": "Sword of Rezhebel",
+      "difficulty": "8",
+      "text": "The caster gains +1 Attack, +2 S and +2 WS. He takes a Leadership test at the start of each of his activations; on a fail the sword disappears."
+    }
+  ]
+}

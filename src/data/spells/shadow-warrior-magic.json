@@ -1,0 +1,16 @@
+{
+  "id": "shadow-warrior-magic",
+  "name": "Shadow Warrior Magic",
+  "aliases": ["Shadow Warrior Magic"],
+  "kind": "magic",
+  "source": "Shadow Warriors.pdf p.64 (Shadow Warrior Magic)",
+  "notes": "Used by the Shadow Weaver, who may not cast spells while wearing armour. Several spells need the target or caster to be within a set distance of a 'wall' (any terrain that could cast a man-sized shadow). Original table is D6, kept as printed. Judgement call: Shadowbind's Strength test on 1D6+1 is left as written.",
+  "spells": [
+    { "roll": "1", "name": "Pool of Shadow", "difficulty": "7", "text": "The mage and all within 6\" of him may Hide as if there were a wall or obstruction between them and their enemies, even after marching. Hiding is disrupted if any enemy enters the area of effect. Lasts until the start of the Shadow Weaver's next turn." },
+    { "roll": "2", "name": "The Living Shadows", "difficulty": "7", "text": "Cast at any enemy model within 12\" of him and within 2\" of a wall. The target suffers a single Strength 8 hit with no armour saves." },
+    { "roll": "3", "name": "Wings of Night", "difficulty": "6", "text": "Can only be cast if the Shadow Weaver is within 2\" of a wall. He is instantly moved up to 12\" to a place also within 2\" of a wall. If moved into contact with an enemy model, he counts as charging in the first round." },
+    { "roll": "4", "name": "Cloak of Darkness", "difficulty": "7", "text": "As long as he does not attack (cast spells, shoot or engage in close combat) any enemy models, the Shadow Weaver may not be attacked. He may intercept as normal if the player wishes, but does not have to (enemy warriors may charge past him). Lasts until he attacks an enemy model. A model engaged in close combat with an enemy warrior may never choose to not attack." },
+    { "roll": "5", "name": "Shadowbind", "difficulty": "9", "text": "Cast at any enemy model within 24\" of him and 2\" of a wall. The target may not move unless it first passes a Strength test on 1D6+1 at the start of its turn (before the Recovery phase). Lasts until the Shadow Weaver suffers a Wound or attempts to cast another spell. If attacked while affected, treat the target as if it were Stunned." },
+    { "roll": "6", "name": "Shield of Shadow", "difficulty": "7", "text": "Cast on himself or a warband member within 12\". The target receives a 9+ armour save that is not modified by the attacker's Strength. Lasts until the start of the Shadow Weaver's next turn." }
+  ]
+}

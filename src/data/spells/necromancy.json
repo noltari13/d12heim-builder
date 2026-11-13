@@ -1,0 +1,48 @@
+{
+  "id": "necromancy",
+  "name": "Necromancy",
+  "aliases": [
+    "Necromancy"
+  ],
+  "kind": "magic",
+  "source": "d12heim Rules doc, Magic section",
+  "notes": "Used by Necromancers. Cast as a Shoot/Spell action, 2d6 equal to or over the difficulty. Each caster starts with one spell rolled on a d12 and may learn more; a duplicate is re-rolled or its difficulty lowered by 1. Judgement call: text taken from the group's rules doc, which is already converted to d12; the doc flags Re-Animation as an open question (see its Contradictions section).",
+  "spells": [
+    {
+      "roll": "1-2",
+      "name": "Lifestealer",
+      "difficulty": "10",
+      "text": "One model within 6\" suffers one wound, no save. The Necromancer gains +1 Wound for the battle, which may take him over his starting maximum. No effect on Possessed or Undead."
+    },
+    {
+      "roll": "3-4",
+      "name": "Re-Animation",
+      "difficulty": "5",
+      "text": "One Zombie taken out of action since the Necromancer's last activation returns. Place it within 6\" of the Necromancer, not in base contact with an enemy."
+    },
+    {
+      "roll": "5-6",
+      "name": "Death Vision",
+      "difficulty": "6",
+      "text": "The Necromancer causes fear for the rest of the battle."
+    },
+    {
+      "roll": "7-8",
+      "name": "Spell of Doom",
+      "difficulty": "9",
+      "text": "One enemy model within 12\" takes a Strength test. On a fail, roll on the Injury chart for it."
+    },
+    {
+      "roll": "9-10",
+      "name": "Call of Vanhel",
+      "difficulty": "6",
+      "text": "One Zombie or Dire Wolf within 6\" of the Necromancer moves again, up to its full Movement. If it reaches base contact with an enemy it counts as charging."
+    },
+    {
+      "roll": "11-12",
+      "name": "Spell of Awakening",
+      "difficulty": "Auto",
+      "text": "Always succeeds. If an enemy Hero is killed (Dead result on the Serious Injury chart after the battle), the Necromancer may raise him as a Zombie. He keeps his characteristics, weapons and armour, but no other equipment or skills. He cannot run, is a Henchman group of one, gains no experience, and follows all Zombie rules (immune to poison, causes fear)."
+    }
+  ]
+}

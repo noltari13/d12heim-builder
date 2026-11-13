@@ -1,0 +1,17 @@
+{
+  "id": "rituals-of-hashut",
+  "name": "Rituals of Hashut",
+  "aliases": ["Rituals of Hashut"],
+  "kind": "ritual",
+  "source": "Black Dwarfs.pdf p.5 (Rituals of Hashut)",
+  "notes": "Used by the Black Dwarf Sorcerer, who starts with two rituals: the Sacrificial Ritual plus one determined as usual from this list. The Sacrificial Ritual is printed as result 0 on the D6 table and is always known by the Sorcerer. Judgement call: Earthquake's Initiative test (roll equal to or under Initiative) is left as written.",
+  "spells": [
+    { "roll": "0", "name": "Sacrificial Ritual", "difficulty": "10", "text": "The Sorcerer must be in contact with an Engine of Chaos. Remove one captive model from the Engine and the starting warband's roster. He may sacrifice additional captives before rolling to lower the difficulty by 1 per sacrifice. The Sorcerer gains +D3 Experience." },
+    { "roll": "1", "name": "Spirit of Hashut", "difficulty": "9", "text": "Draw a line 18\" from the Sorcerer. All models crossed by the line suffer one Strength 8 hit." },
+    { "roll": "2", "name": "Bellow of Doom", "difficulty": "8", "text": "All models in base contact with the Sorcerer must make an immediate Ld test or break from combat and run." },
+    { "roll": "3", "name": "Fumes of Azgorh", "difficulty": "7", "text": "Range 8\", hits all models in its path on a roll of 7+. Each model hit suffers a Strength 8 hit, rolled to wound as normal. No armour saves allowed." },
+    { "roll": "4", "name": "Flickering Hide", "difficulty": "10", "text": "Cast on himself or any one model within 6\". The flaming hide negates any one wound suffered on a roll of 7+. In hand-to-hand combat, any model that hits the flaming hide suffers one Strength 6 hit for each hit scored. Lasts until the beginning of the Sorcerer's next shooting phase." },
+    { "roll": "5", "name": "Lava Flow", "difficulty": "7", "text": "The Sorcerer may move 12\" in any direction, even into combat, counting as a charge. He may only reappear on or below the ground." },
+    { "roll": "6", "name": "Earthquake", "difficulty": "9", "text": "All models within 3\" of the Sorcerer, friend or foe, must roll equal to or under their Initiative or suffer D3 Strength 8 hits." }
+  ]
+}

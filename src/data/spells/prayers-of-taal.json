@@ -1,0 +1,48 @@
+{
+  "id": "prayers-of-taal",
+  "name": "Prayers of Taal",
+  "aliases": [
+    "Prayers of Taal"
+  ],
+  "kind": "prayer",
+  "source": "Ostlanders pp.47 (PDF p.8); cross-checked with Horned Hunters p.5",
+  "notes": "Work like the Prayers of Sigmar, but the Priest of Taal never wears armour. Roll D6. Horned Hunters version matches Ostlanders except Tanglefoot exempts friendly Zealots (Ostlanders: Ostlander Jaeger) and Earthshudder also removes the building from the board; the Ostlanders text is followed except where noted per spell. Judgement call: Initiative tests in Earthshudder left as written.",
+  "spells": [
+    {
+      "roll": "1",
+      "name": "Stag's Leap",
+      "difficulty": "7",
+      "text": "The Priest may immediately move anywhere within 9\", including into base contact with the enemy, counting as charging and gaining +2 Strength in his first round of attacks. If he engages a fleeing enemy he scores one automatic hit at +2 Strength in the close combat phase and the opponent will flee again (if he survives)."
+    },
+    {
+      "roll": "2",
+      "name": "Blessed Ale",
+      "difficulty": "5",
+      "text": "Heal any one model within 2\" of the Priest (including himself) to its full Wounds. Any living enemy models (not Undead or Possessed) within 2\" of the Priest lose 1 Attack during the next round of combat."
+    },
+    {
+      "roll": "3",
+      "name": "Bear's Paw",
+      "difficulty": "7",
+      "text": "The Priest or a single friendly model within 6\" gains +4 Strength until the Priest's next turn."
+    },
+    {
+      "roll": "4",
+      "name": "Earthshudder",
+      "difficulty": "9",
+      "text": "Cast on a single building within 4\". Enemy models touching the building suffer a single S6 hit. The building collapses and any models on it count as having fallen to the ground (e.g. a 5\" fall: pass two Initiative tests to avoid D3 S10 hits). Horned Hunters version also removes the terrain feature from the board for the rest of the game."
+    },
+    {
+      "roll": "5",
+      "name": "Tanglefoot",
+      "difficulty": "8",
+      "text": "All models (friend and foe) within 12\" of the Priest, except friendly Ostlander Jaegers (Horned Hunters: Zealots), can only move at 1/2 speed until the next Shooting phase."
+    },
+    {
+      "roll": "6",
+      "name": "Summon Squirrels",
+      "difficulty": "7",
+      "text": "One enemy within 12\" of the Priest suffers 2D6 Strength 2 hits. No armour saves."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "chaos-dwarf-magic",
+  "name": "Chaos Dwarf Magic",
+  "aliases": ["Chaos Dwarf Magic"],
+  "kind": "magic",
+  "source": "Sons of Hashut.pdf p.5 (Chaos Dwarfs Magic)",
+  "notes": "Used by the Apprentice Sorcerer (Sons of Hashut warband), who may learn a random spell from this list; a wizard in armour cannot cast. Original table is D6, kept as printed. Judgement calls: Eye of Hashut's 1D6 is treated as a d12 roll (1 -> 1-2, 2-5 -> 3-11, 6 -> 12); the Hobgoblin -1 to the roll is left unchanged. Its +1 to an attribute is doubled to +2 when it is WS, BS, S, T or I; +1 to all attributes becomes +2 to WS/BS/S/T/I and +1 to M/W/A/Ld. The -1 to hit for shooting a Stone Statue target is left unchanged.",
+  "spells": [
+    { "roll": "1", "name": "Spectre of Hashut", "difficulty": "9", "text": "The enemy model closest to the wizard within 10\" is automatically stunned." },
+    { "roll": "2", "name": "Stone Statue", "difficulty": "9", "text": "Choose an enemy model within 12\" and in line of sight. For the rest of the turn and the following turn it cannot do anything. If attacked in melee it suffers an automatic hit. Shooters targeting it get +1 to hit." },
+    { "roll": "3", "name": "Fireball", "difficulty": "7", "text": "Range 16\", requires line of sight. The target suffers an automatic Strength 8 hit." },
+    { "roll": "4", "name": "Vanish", "difficulty": "7", "text": "The wizard may immediately move up to 6\" in any direction and may enter or leave combat without penalty. If he enters combat he counts as charging." },
+    { "roll": "5", "name": "Eruption", "difficulty": "8", "text": "All models within 4\" (friend or foe) suffer an automatic Strength 8 hit. Afterwards the sorcerer cannot cast any more spells until the next turn and suffers -2 Toughness." },
+    { "roll": "6", "name": "Eye of Hashut", "difficulty": "6", "text": "Choose a friendly model within 12\" and roll a d12 (Hobgoblins subtract 1). May only be used successfully once per battle. 1-2: the model is immediately out of action (no serious injury roll after the battle). 3-11: the model gains +1 to one characteristic (+2 if WS, BS, S, T or I) for the rest of the game. 12: the model gains +2 WS, BS, S, T and I and +1 M, W, A and Ld for the rest of the game." }
+  ]
+}

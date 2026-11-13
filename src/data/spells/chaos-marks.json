@@ -1,0 +1,90 @@
+{
+  "id": "chaos-marks",
+  "name": "Chaos Magic (per Mark)",
+  "aliases": [
+    "Chaos Magic (per Mark)"
+  ],
+  "kind": "ritual",
+  "source": "Marauders of Chaos pp.5-7 (Marks of the Dark Gods, Shornaal, Tchar and Onogal Rituals)",
+  "notes": "Spells are grouped by Mark of Chaos. Seers of Tchar start with two Tchar spells (one chosen, one random). Seers of Onogal use the Nurgle Rituals (see nurgle-rituals) with Daemonic Vigour replaced by Touch of Onogal. Seers of Arkhar (Bloodfathers) cannot cast spells. Seers of Chaos Undivided use the Chaos Rituals from the Mordheim rulebook p.59, which is not in this PDF and is omitted. Roll column is the D6 result within each Mark. Judgement call: Slave to Chaos S2 -> S4; Tchar's Reward +1 to any stat doubles for WS/BS/S/T/I (+2) but not for M/W/A/Ld; Mystify and Wrath of the Great Eagle values left as written; -1 to hit and Ld/Initiative-test effects not doubled. A Chaos Undivided Seer uses the core Chaos Rituals list instead.",
+  "spells": [
+    {
+      "roll": "1",
+      "name": "Shornaal: Delicious Suffering",
+      "difficulty": "8",
+      "text": "All models (friend and foe, except the Seer) within 3\" must pass a Ld test or be knocked down."
+    },
+    {
+      "roll": "2",
+      "name": "Shornaal: Dance of the Serpent",
+      "difficulty": "8",
+      "text": "All enemy models not immune to psychology suffer -1 to hit against the Seer in close combat. Lasts until the Seer's next Shooting phase."
+    },
+    {
+      "roll": "3",
+      "name": "Shornaal: Endless Torment",
+      "difficulty": "9",
+      "text": "One enemy model within 8\" must roll for injury -1 after its Recovery phase. The Seer can do nothing else but end the spell at the start of his turn; if attacked in close combat he is hit automatically and the spell breaks."
+    },
+    {
+      "roll": "4",
+      "name": "Shornaal: Mystify",
+      "difficulty": "8",
+      "text": "Target enemy within 8\" has Initiative reduced to 1 and always strikes last in close combat, even if charging or armed with a spear or pike and charged. Lasts until the target passes a Ld test during its recovery phase."
+    },
+    {
+      "roll": "5",
+      "name": "Shornaal: A Thousand Voices",
+      "difficulty": "8",
+      "text": "One enemy model within 12\" reduces its Ld by D3+1 (minimum 2) if not immune to psychology. It must pass a Ld test at the start of its turn to end the spell. The spell breaks if the Seer loses a Wound. Only one model at a time."
+    },
+    {
+      "roll": "6",
+      "name": "Shornaal: Shornaal's Temptation",
+      "difficulty": "7",
+      "text": "One enemy model within 8\" not immune to psychology must pass a Ld test or the Seer gains control of it. The player may attempt to regain control at the start of its turn with a Ld test. Only one model at a time. If the Seer is hit by a missile or in close combat he must pass a Ld test or the spell ends."
+    },
+    {
+      "roll": "1",
+      "name": "Tchar: Tchar's Blessing",
+      "difficulty": "Auto",
+      "text": "Must be used before the game, once only. The Seer may not cast spells in the following battle. After the game he gains D3 Experience if not taken out of action."
+    },
+    {
+      "roll": "2",
+      "name": "Tchar: Dispel Magic",
+      "difficulty": "7",
+      "text": "The Seer ends all effects of currently active spells."
+    },
+    {
+      "roll": "3",
+      "name": "Tchar: Foresight",
+      "difficulty": "10",
+      "text": "Must be used before the game, once only. Choose a warband; one randomly determined Hero of that warband must miss the following game. Models that can cast spells or prayers are immune."
+    },
+    {
+      "roll": "4",
+      "name": "Tchar: Wrath of the Great Eagle",
+      "difficulty": "9",
+      "text": "One enemy model within 12\" is hit with Strength equal to the difference between the Seer's Experience and the model's Experience (maximum 10). Armour saves as normal. If the victim has more Experience than the Seer, the Seer is hit instead."
+    },
+    {
+      "roll": "5",
+      "name": "Tchar: Tchar's Reward",
+      "difficulty": "8",
+      "text": "The Seer gets +1 on any one stat per 10 Experience points he has (+2 for WS, BS, S, T or I; +1 for M, W, A or Ld). Each stat may be increased only once. Lasts until the end of the Seer's next Shooting phase and can be re-cast in that phase."
+    },
+    {
+      "roll": "6",
+      "name": "Tchar: Slave to Chaos",
+      "difficulty": "9",
+      "text": "Range 12\", one Strength 4 hit with no armour save. If the model is taken out of action, roll for Serious Injuries immediately; if it dies, replace it with a Horror of Tzeentch (see Bestiary) until the end of the game. If the Seer is stunned or taken out of action the Horror disappears."
+    },
+    {
+      "roll": "1",
+      "name": "Onogal: Touch of Onogal",
+      "difficulty": "10",
+      "text": "Used against one of the Seer's close combat opponents. If he takes the model out of action in the following hand-to-hand combat phase, roll for Serious Injuries immediately. If it dies permanently, replace it with a Nurgle Plague Bearer (see Bestiary) under the Seer's control for the rest of the game. If the Seer is stunned or taken out of action the Plague Bearer disappears. Only one Plague Bearer at a time. Replaces Daemonic Vigour in the Nurgle Rituals."
+    }
+  ]
+}
