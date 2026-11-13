@@ -128,13 +128,15 @@
           "name": "Vodka",
           "category": "misc",
           "listCost": 35,
-          "note": "35+2D6 gc / Rare 8; Kislevite Heroes only; one use, given to the whole warband before the game; not printed on the equipment list page"
+          "note": "35+2D6 gc / Rare 8; Kislevite Heroes only; one use, given to the whole warband before the game; not printed on the equipment list page",
+          "restrictedTo": ["druzhina-captain", "bear-tamer", "esaul", "youth"]
         },
         {
           "name": "Bear-Claw Necklace",
           "category": "misc",
           "listCost": 75,
-          "note": "75+3D6 gc / Rare 9; Kislevite Heroes only; wearer is subject to Frenzy; not printed on the equipment list page"
+          "note": "75+3D6 gc / Rare 9; Kislevite Heroes only; wearer is subject to Frenzy; not printed on the equipment list page",
+          "restrictedTo": ["druzhina-captain", "bear-tamer", "esaul", "youth"]
         }
       ]
     },

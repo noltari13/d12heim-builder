@@ -17,6 +17,10 @@ export interface ListItem {
   category: ListCategory;
   listCost: number;
   note?: string;
+  /** Fighter ids allowed to buy this item (all list users when absent). */
+  restrictedTo?: string[];
+  maxPerModel?: number;
+  maxPerModelFor?: Record<string, number>;
 }
 
 export interface EquipmentList {
@@ -42,6 +46,8 @@ export interface FighterType {
   fixedEquipment: string[];
   specialRules: Rule[];
   notes?: string;
+  /** Categories (melee, missile, armour, misc, shield) or exact item names this fighter may not buy. */
+  cannotBuy?: string[];
 }
 
 export interface WarbandDef {
@@ -73,6 +79,12 @@ export interface SheetItem {
   hands: string | null;
   range: string | null;
   av: number | null;
+  /** 'warband' = from src/data/warband-equipment (draft d12 stats for warband-only items). */
+  source?: 'sheet' | 'warband';
+  aliases?: string[];
+  warbands?: string[];
+  basis?: string;
+  reviewed?: boolean;
 }
 
 /** One purchasable choice: a warband-list entry resolved to a sheet item (or not). */

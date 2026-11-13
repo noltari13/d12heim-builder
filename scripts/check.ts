@@ -44,7 +44,7 @@ for (const w of WARBANDS) {
     if (f.spellcaster && !schoolFor(f.spellcaster)) console.log(`  · ${w.id}/${f.id}: no spell list for "${f.spellcaster}"`);
     if (!Array.isArray(f.specialRules) || !Array.isArray(f.skills) || !Array.isArray(f.fixedEquipment)) bad(w.id, `${f.id}: array field missing`);
     for (const o of gearOptions(w, f, true)) {
-      if (!o.sheet) {
+      if (!o.sheet && o.category !== 'misc') {
         const k = o.listItem.name;
         if (!unmatched.has(k)) unmatched.set(k, []);
         const arr = unmatched.get(k)!;
@@ -67,6 +67,6 @@ for (const w of WARBANDS) {
 
 for (const sc of SPELL_SCHOOLS) if (!sc.spells.length) console.log(`  · spells/${sc.id}: empty list`);
 console.log(`\n${WARBANDS.length} warbands, ${SPELL_SCHOOLS.length} spell lists, ${problems} problems.`);
-console.log(`\nEquipment names not on the sheet (use list price):`);
+console.log(`\nWeapons/armour with no d12 stats (not on the sheet or in warband-equipment):`);
 for (const [k, ws] of [...unmatched].sort()) console.log(`  ${k}  [${ws.join(', ')}]`);
 process.exit(problems ? 1 : 0);

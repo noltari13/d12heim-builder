@@ -1,14 +1,16 @@
 import type { FighterType, GearOption, ListItem, SheetItem, WarbandDef } from '../types';
-import { SHEET } from '../data';
+import { SHEET, WARBAND_ITEMS } from '../data';
 
 /**
  * Maps warband-list names (book names) to Equipment.xlsx items.
  * Order of matching:
  *  1. Exact sheet name (after normalising and aliases) -> that item.
- *  2. Sheet "RaW" column (the book item it replaces) -> every sheet item with that RaW.
+ *  2. Warband equipment file (warband-only weapons/armour with draft d12 stats) by name or alias.
+ *  3. Sheet "RaW" column (the book item it replaces) -> every sheet item with that RaW.
  *     Rare substitutes are hidden unless allowRare, except when nothing common exists.
- *  3. No match -> warband-specific item at the list price.
- * Sheet price always wins when the sheet has a numeric price (group ruling).
+ *  4. No match -> warband-specific item at the list price, no stats.
+ * Sheet price always wins when the sheet has a numeric price (group ruling); warband items use the list price.
+ * Price-multiplier items (sheet cost "X4", e.g. Gromril Weapon) expand into one option per melee weapon in the list.
  */
 
 const norm = (s: string) =>
@@ -33,10 +35,15 @@ const ALIASES: Record<string, string> = {
   gromrilarmor: 'gromrilplate',
 };
 
-const isCommon = (s: SheetItem) => /common/i.test(s.availability) || s.availability === '';
+const isCommon = (s: SheetItem) => /common/i.test(s.availability) || s.availability === '' || s.source === 'warband';
+const multiplierOf = (s: SheetItem) => {
+  const m = /^x\s*(\d+)$/i.exec(s.costText.trim());
+  return m ? Number(m[1]) : null;
+};
 
 // Sheet names like "Hunting Arrows (bows)" compare without their parenthetical.
 const sheetKey = (s: SheetItem) => norm(s.name.replace(/\(.*?\)/g, ''));
+const wbKeys = (s: SheetItem) => [s.name, ...(s.aliases ?? [])].map(norm);
 
 function matchSheet(name: string, allowRare: boolean): SheetItem[] {
   // "Cutlass (Sword)", "Stone Axe (counts as a club)": try the full name, then the bracketed item.
@@ -45,12 +52,14 @@ function matchSheet(name: string, allowRare: boolean): SheetItem[] {
     const first = matchSheet(paren[1], allowRare);
     return first.length ? first : matchSheet(paren[2], allowRare);
   }
-  let n = norm(name);
-  n = ALIASES[n] ?? n;
+  const raw = norm(name);
+  const n = ALIASES[raw] ?? raw;
   let exact = SHEET.filter((s) => sheetKey(s) === n);
   // Plural list names ("Javelins") match a singular sheet name.
   if (!exact.length && n.endsWith('s')) exact = SHEET.filter((s) => sheetKey(s) === n.slice(0, -1));
   if (exact.length) return exact;
+  const wb = WARBAND_ITEMS.find((s) => wbKeys(s).includes(raw) || (raw.endsWith('s') && wbKeys(s).includes(raw.slice(0, -1))));
+  if (wb) return [wb];
   const byRaw = SHEET.filter((s) => s.raw.split(',').map(norm).includes(n));
   if (!byRaw.length) return [];
   if (allowRare) return byRaw;
@@ -87,53 +96,83 @@ function optionsForItem(item: ListItem, allowRare: boolean): GearOption[] {
         quantity,
         cost: item.listCost,
         category: item.category,
-        flags: ['Warband item: list price'],
+        flags: ['Warband item: list price, no d12 stats yet'],
       });
       continue;
     }
     for (const s of matches) {
       const flags: string[] = [];
-      let cost = s.cost;
-      if (cost == null) {
+      let cost: number;
+      if (s.source === 'warband') {
+        cost = item.listCost * (quantity > 1 && !brace ? quantity : 1);
+        if (!s.reviewed) flags.push('Draft d12 stats');
+      } else if (s.cost == null) {
         cost = item.listCost * quantity;
-        flags.push(`Sheet price "${s.costText}": using list price`);
-      } else cost = cost * quantity;
+        if (!multiplierOf(s)) flags.push(`Sheet price "${s.costText}": using list price`);
+      } else cost = s.cost * quantity;
       if (!isCommon(s)) flags.push(s.availability);
-      if (quantity > 1) flags.push('Brace: 2x sheet price');
-      const label = quantity > 1 ? `Brace of ${s.name}s` : s.name;
-      out.push({
-        key: `${item.name}::${s.name}`,
-        label,
-        listItem: item,
-        sheet: s,
-        quantity,
-        cost,
-        category: item.category,
-        flags,
-      });
+      if (quantity > 1) flags.push('Brace: 2x price');
+      const label = quantity > 1 ? `Brace of ${s.name.replace(/s$/, '')}s` : s.name;
+      out.push({ key: `${item.name}::${s.name}`, label, listItem: item, sheet: s, quantity, cost, category: item.category, flags });
     }
   }
   return out;
 }
 
-export function gearOptions(wb: WarbandDef, ft: FighterType, allowRare: boolean): GearOption[] {
+const isShield = (o: GearOption) => !!o.sheet && /shield|buckler/i.test(`${o.sheet.raw} ${o.sheet.name}`);
+
+/** True when a fighter's restrictions allow this option. */
+export function allowedFor(ft: FighterType, o: GearOption): boolean {
+  const r = o.listItem.restrictedTo;
+  if (r && r.length && !r.includes(ft.id)) return false;
+  for (const c of ft.cannotBuy ?? []) {
+    const cl = c.toLowerCase();
+    if (cl === o.category) return false;
+    if (cl === 'shield' && isShield(o)) return false;
+    if (cl === o.listItem.name.toLowerCase() || cl === o.label.toLowerCase()) return false;
+  }
+  return true;
+}
+
+/** Every purchasable option for a fighter. `enforce` drops options the fighter's restrictions forbid. */
+export function gearOptions(wb: WarbandDef, ft: FighterType, allowRare: boolean, enforce = true): GearOption[] {
   const seen = new Set<string>();
   const out: GearOption[] = [];
+  const multipliers: GearOption[] = [];
   for (const list of listsFor(wb, ft)) {
     for (const item of list.items) {
       for (const o of optionsForItem(item, allowRare)) {
         if (seen.has(o.key)) continue;
         seen.add(o.key);
-        out.push(o);
+        if (o.sheet && multiplierOf(o.sheet)) multipliers.push(o);
+        else out.push(o);
       }
     }
   }
-  return out;
+  // Gromril / Ithilmar weapons: one option per melee weapon the fighter could buy, at base cost x multiplier.
+  const bases = [...out];
+  for (const m of multipliers) {
+    const mult = multiplierOf(m.sheet!)!;
+    const prefix = m.sheet!.name.replace(/\s*weapon$/i, '');
+    for (const b of bases) {
+      if (b.category !== 'melee' || !b.sheet || b.sheet.name === 'Dagger' || b.sheet.source === 'warband') continue;
+      const sheet: SheetItem = {
+        ...b.sheet,
+        name: `${prefix} ${b.sheet.name}`,
+        costText: String(b.cost * mult),
+        cost: b.cost * mult,
+        availability: m.sheet!.availability,
+        rules: [b.sheet.rules, m.sheet!.rules].filter(Boolean).join(', '),
+      };
+      out.push({ ...m, key: `${m.key}::${b.sheet.name}`, label: sheet.name, sheet, cost: b.cost * mult, category: 'melee', flags: [`${mult}x ${b.sheet.name}`, m.sheet!.availability] });
+    }
+  }
+  return enforce ? out.filter((o) => allowedFor(ft, o)) : out;
 }
 
-/** Resolve a saved gear key regardless of the rare toggle, so a saved roster never loses items. */
+/** Resolve a saved gear key regardless of the rare toggle or restrictions, so a saved roster never loses items. */
 export function resolveGear(wb: WarbandDef, ft: FighterType, key: string): GearOption | undefined {
-  return gearOptions(wb, ft, true).find((o) => o.key === key);
+  return gearOptions(wb, ft, true, false).find((o) => o.key === key);
 }
 
 export const isDagger = (o: GearOption) => o.sheet?.name === 'Dagger';

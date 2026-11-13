@@ -53,7 +53,10 @@
           "name": "Sigmarite warhammer",
           "category": "melee",
           "listCost": 15,
-          "note": "Close combat, Strength as user +1. Concussion: an Injury roll of 3-8 is treated as stunned (only 1-2 is knocked down). Holy Weapon: +1 to wound vs Possessed or Undead; still need a natural 12 before modifiers for a critical hit. Only Matriarchs and Sister Superiors may carry two."
+          "note": "Close combat, Strength as user +1. Concussion: an Injury roll of 3-8 is treated as stunned (only 1-2 is knocked down). Holy Weapon: +1 to wound vs Possessed or Undead; still need a natural 12 before modifiers for a critical hit. Only Matriarchs and Sister Superiors may carry two.",
+          "restrictedTo": ["sigmarite-matriarch", "sister-superior", "augur", "sigmarite-sister", "novice"],
+          "maxPerModel": 1,
+          "maxPerModelFor": { "sigmarite-matriarch": 2, "sister-superior": 2 }
         },
         {
           "name": "Flail",
@@ -105,19 +108,22 @@
           "name": "Holy tome",
           "category": "misc",
           "listCost": 120,
-          "note": "Heroes only"
+          "note": "Heroes only",
+          "restrictedTo": ["sigmarite-matriarch", "sister-superior", "augur"]
         },
         {
           "name": "Blessed water",
           "category": "misc",
           "listCost": 10,
-          "note": "Heroes only"
+          "note": "Heroes only",
+          "restrictedTo": ["sigmarite-matriarch", "sister-superior", "augur"]
         },
         {
           "name": "Holy relic",
           "category": "misc",
           "listCost": 15,
-          "note": "Heroes only"
+          "note": "Heroes only",
+          "restrictedTo": ["sigmarite-matriarch", "sister-superior", "augur"]
         }
       ]
     }
@@ -236,7 +242,8 @@
           "text": "Never wears armour."
         }
       ],
-      "notes": ""
+      "notes": "",
+      "cannotBuy": ["armour"]
     },
     {
       "id": "sigmarite-sister",

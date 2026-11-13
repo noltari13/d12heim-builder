@@ -80,13 +80,15 @@
           "name": "Longbow",
           "category": "missile",
           "listCost": 15,
-          "note": "Heroes and Marksmen only"
+          "note": "Heroes and Marksmen only",
+          "restrictedTo": ["bandit-leader", "champion", "cleric", "petty-thief", "marksman"]
         },
         {
           "name": "Light armour",
           "category": "armour",
           "listCost": 20,
-          "note": "Heroes and Marksmen only"
+          "note": "Heroes and Marksmen only",
+          "restrictedTo": ["bandit-leader", "champion", "cleric", "petty-thief", "marksman"]
         },
         {
           "name": "Helmet",
@@ -102,13 +104,15 @@
           "name": "Hunting arrows",
           "category": "misc",
           "listCost": 30,
-          "note": "Heroes and Marksmen only. Available to Heroes at initial recruitment without a Rarity roll."
+          "note": "Heroes and Marksmen only. Available to Heroes at initial recruitment without a Rarity roll.",
+          "restrictedTo": ["bandit-leader", "champion", "cleric", "petty-thief", "marksman"]
         },
         {
           "name": "Forest cloak",
           "category": "misc",
           "listCost": 50,
-          "note": "Heroes and Marksmen only. Rare 10, Outlaw Heroes only; no Rarity roll at initial recruitment. Wearer beside a tree, bush or hedge is -1 BS to hit by missile weapons; spellcasters must roll 7+ on a D12 to target him unless within Initiative range in inches."
+          "note": "Heroes and Marksmen only. Rare 10, Outlaw Heroes only; no Rarity roll at initial recruitment. Wearer beside a tree, bush or hedge is -1 BS to hit by missile weapons; spellcasters must roll 7+ on a D12 to target him unless within Initiative range in inches.",
+          "restrictedTo": ["bandit-leader", "champion", "cleric", "petty-thief", "marksman"]
         }
       ]
     }

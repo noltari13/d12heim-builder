@@ -20,3 +20,9 @@ Run it locally: `npm install`, then `npm run dev` (http://localhost:3000). `npm 
 - `src/data/equipment.json`: generated from `../mordheim/Equipment.xlsx`.
 
 Campaign tracking (experience, injuries, advances, treasury) is planned for v2. The data already keeps `startingExp` per fighter type ready for it.
+
+## Warband-only equipment
+
+Weapons and armour that appear in warband lists but not in Equipment.xlsx have draft d12 stats in `src/data/warband-equipment/*.json` (schema: `src/data/WARBAND_EQUIPMENT_SCHEMA.md`). They show a "draft" tag in the builder until `reviewed` is set to true. `python scripts/export-review.py out.xlsx` (needs openpyxl) exports them to a spreadsheet for the group to review.
+
+Equipment restrictions from the warband PDFs are encoded as `restrictedTo` / `maxPerModel` on list items and `cannotBuy` on fighters; the builder hides forbidden items and warns about any already bought.

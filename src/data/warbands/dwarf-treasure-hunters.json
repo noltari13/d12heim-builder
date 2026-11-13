@@ -316,7 +316,8 @@
           "text": "May never carry or use missile weapons or any form of armour."
         }
       ],
-      "notes": "Troll Slayer skills: Ferocious Charge (doubles attacks on the turn he charges, -1 to hit that turn); Monster Slayer (always wounds on a 7+ regardless of Toughness unless his Strength would need a lower roll); Berserker (+1 to close combat to-hit rolls on the turn he charges)."
+      "notes": "Troll Slayer skills: Ferocious Charge (doubles attacks on the turn he charges, -1 to hit that turn); Monster Slayer (always wounds on a 7+ regardless of Toughness unless his Strength would need a lower roll); Berserker (+1 to close combat to-hit rolls on the turn he charges).",
+      "cannotBuy": ["missile", "armour"]
     },
     {
       "id": "dwarf-clansman",

@@ -1,5 +1,5 @@
 import { statNum, type FighterType, type GearOption, type Profile, type RosterEntry, type WarbandDef } from '../types';
-import { isDagger, listsFor, resolveGear } from './equipment';
+import { allowedFor, isDagger, listsFor, resolveGear } from './equipment';
 
 /** Group ruling: only stats you roll against double (WS, BS, S, T, I). */
 export const DOUBLED = new Set(['WS', 'BS', 'S', 'T', 'I']);
@@ -24,6 +24,8 @@ export interface WeaponLine {
   ap: number;
   range: string;
   rules: string;
+  /** Stats come from the unreviewed warband-equipment draft. */
+  draft?: boolean;
 }
 
 function weaponStrength(str: string | null, s12: number): string {
@@ -54,6 +56,7 @@ export function weaponLine(o: GearOption, p12: Profile): WeaponLine | null {
     strength: weaponStrength(s.strength, statNum(p12.S)),
     ap: baseAP(p12) + ruleAP(s.rules),
     range: s.range ?? '',
+    draft: s.source === 'warband' && !s.reviewed,
     rules: [s.hands === '2' ? 'Two-handed' : '', s.rules].filter(Boolean).join(', '),
   };
 }
@@ -121,6 +124,16 @@ export function computeEntry(wb: WarbandDef, e: RosterEntry): Computed | null {
   const shields = gear.filter((g) => g.sheet && /shield/i.test(g.sheet.raw));
   if (shields.length > 1) warnings.push('More than one shield.');
   if (!canBuy && gear.length) warnings.push(`${ft.name} cannot buy equipment.`);
+  const seenNames = new Map<string, number>();
+  for (const g of gear) {
+    if (!allowedFor(ft, g)) warnings.push(`${ft.name} can't take ${g.label}${g.listItem.note ? ` (${g.listItem.note.slice(0, 80)})` : ''}.`);
+    seenNames.set(g.listItem.name, (seenNames.get(g.listItem.name) ?? 0) + 1);
+  }
+  for (const [name, count] of seenNames) {
+    const item = gear.find((g) => g.listItem.name === name)!.listItem;
+    const max = item.maxPerModelFor?.[ft.id] ?? item.maxPerModel;
+    if (max != null && count > max) warnings.push(`Only ${max} ${name} per ${ft.name}.`);
+  }
 
   const count = ft.kind === 'hero' ? 1 : e.count;
   const perModelCost = ft.cost + gearCost;

@@ -276,3 +276,4 @@ table { border-collapse: collapse; }
 .spell-ref li:last-child { border-bottom: none; }
 .spell-ref .spell-title { display: flex; justify-content: space-between; gap: 8px; font-weight: 700; }
 .spell-ref p { margin: 4px 0 0; font-size: 14px; color: var(--muted); }
+.w-name .tag { margin-left: 6px; vertical-align: 1px; }

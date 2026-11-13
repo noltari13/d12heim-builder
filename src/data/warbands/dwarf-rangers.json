@@ -288,7 +288,8 @@
           "text": "May never carry or use missile weapons or any form of armour."
         }
       ],
-      "notes": ""
+      "notes": "",
+      "cannotBuy": ["missile", "armour"]
     },
     {
       "id": "dwarf-longbeard",

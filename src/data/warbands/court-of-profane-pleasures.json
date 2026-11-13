@@ -18,8 +18,8 @@
         { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st free" },
         { "name": "Sword", "category": "melee", "listCost": 10 },
         { "name": "Mace", "category": "melee", "listCost": 3 },
-        { "name": "Hedonist Whip", "category": "melee", "listCost": 15, "note": "Heroes only. Common. Strength as user; cannot be parried; Whipcrack: wielder gains +1A when charging, or +1A (strikes first, only against the charger) when charged; +1A total if charged by two or more opponents. Two whips: +1A for the extra hand weapon but only the first whip gets the whipcrack +1A." },
-        { "name": "Slaaneshi Man-Catcher", "category": "melee", "listCost": 30, "note": "Whipmaster only. Rare 10. Close combat, Strength as user +1, requires two hands, Lock: if it hits and causes an unsaved wound, no injury roll; the enemy is knocked down and cannot stand while in melee with the wielder and cannot move away unless magic is used. Does not work on large creatures or steeds. Switching weapons lets the opponent stand up in recovery. At end of battle the target is captured (as result 61 of the Serious Injury chart) if still pinned, even a Henchman." },
+        { "name": "Hedonist Whip", "category": "melee", "listCost": 15, "note": "Heroes only. Common. Strength as user; cannot be parried; Whipcrack: wielder gains +1A when charging, or +1A (strikes first, only against the charger) when charged; +1A total if charged by two or more opponents. Two whips: +1A for the extra hand weapon but only the first whip gets the whipcrack +1A.", "restrictedTo": ["whipmaster", "danseuse", "flesh-merchant", "priest-of-obscene", "devout"] },
+        { "name": "Slaaneshi Man-Catcher", "category": "melee", "listCost": 30, "note": "Whipmaster only. Rare 10. Close combat, Strength as user +1, requires two hands, Lock: if it hits and causes an unsaved wound, no injury roll; the enemy is knocked down and cannot stand while in melee with the wielder and cannot move away unless magic is used. Does not work on large creatures or steeds. Switching weapons lets the opponent stand up in recovery. At end of battle the target is captured (as result 61 of the Serious Injury chart) if still pinned, even a Henchman.", "restrictedTo": ["whipmaster"] },
         { "name": "Double-handed weapon", "category": "melee", "listCost": 15 },
         { "name": "Bow", "category": "missile", "listCost": 15 },
         { "name": "Pistol", "category": "missile", "listCost": 15, "note": "30 for a brace" },
@@ -85,7 +85,8 @@
       "specialRules": [
         { "name": "Strange Allure", "text": "An enemy wishing to attack a Danseuse in melee or with a missile attack must pass a Leadership test first. On a failure, the model must re-roll any successful hits." }
       ],
-      "notes": "May never wear armour."
+      "notes": "May never wear armour.",
+      "cannotBuy": ["armour"]
     },
     {
       "id": "flesh-merchant",

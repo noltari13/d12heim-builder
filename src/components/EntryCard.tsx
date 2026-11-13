@@ -107,7 +107,10 @@ export function EntryCard({ wb, entry, c, allowRare, onChange, onRemove, onDupli
           {c.weapons.map((w, i) => (
             <li key={i}>
               <div className="w-main">
-                <span className="w-name">{w.name}</span>
+                <span className="w-name">
+                  {w.name}
+                  {w.draft && <span className="tag working" title="Draft d12 stats, not yet reviewed by the group">draft</span>}
+                </span>
                 <span className="w-stats">
                   <span>S {w.strength}</span>
                   <span>AP {w.ap}</span>

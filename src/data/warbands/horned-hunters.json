@@ -279,7 +279,8 @@
           "text": "May never wear armour."
         }
       ],
-      "notes": ""
+      "notes": "",
+      "cannotBuy": ["armour"]
     },
     {
       "id": "zealot",
@@ -311,7 +312,8 @@
           "text": "May never wear armour."
         }
       ],
-      "notes": ""
+      "notes": "",
+      "cannotBuy": ["armour"]
     },
     {
       "id": "drunken-gang",

@@ -59,7 +59,8 @@
           "name": "Cat O' Nine Tails",
           "category": "melee",
           "listCost": 8,
-          "note": "Heroes only. Common. 4\" range, user's Strength, cannot be parried by swords or bucklers, target gets +1 armour save (6+ if none)"
+          "note": "Heroes only. Common. 4\" range, user's Strength, cannot be parried by swords or bucklers, target gets +1 armour save (6+ if none)",
+          "restrictedTo": ["captain", "mate", "cabin-boy"]
         },
         {
           "name": "Cutlass (Sword)",
@@ -230,7 +231,8 @@
           "name": "Swivel Gun",
           "category": "missile",
           "listCost": 65,
-          "note": "Rare 8; one per warband; Gunners only; wielder must be an individual model. -1 I and -1 M, no firing twice or after moving, blackpowder optional rules always apply; uses special ammo bought per game"
+          "note": "Rare 8; one per warband; Gunners only; wielder must be an individual model. -1 I and -1 M, no firing twice or after moving, blackpowder optional rules always apply; uses special ammo bought per game",
+          "restrictedTo": ["gunner"]
         },
         {
           "name": "Swivel Gun Ball Shot",
@@ -289,19 +291,22 @@
           "name": "Hook Hand",
           "category": "misc",
           "listCost": 4,
-          "note": "Common. One per model; counts as a dagger in that hand, no two-handed weapons; ignores Hand Injury/Arm Wound on 7+"
+          "note": "Common. One per model; counts as a dagger in that hand, no two-handed weapons; ignores Hand Injury/Arm Wound on 7+",
+          "maxPerModel": 1
         },
         {
           "name": "Jolly Roger",
           "category": "misc",
           "listCost": 40,
-          "note": "40+2D6 gc, Rare 9. One per warband; Heroes only; pirates within 12\" never All Alone; takes one hand"
+          "note": "40+2D6 gc, Rare 9. One per warband; Heroes only; pirates within 12\" never All Alone; takes one hand",
+          "restrictedTo": ["captain", "mate", "cabin-boy"]
         },
         {
           "name": "Parrot",
           "category": "misc",
           "listCost": 15,
-          "note": "Rare 8. Captain and Mates only; enemies in base contact -1 to hit in first round unless they pass a Leadership test"
+          "note": "Rare 8. Captain and Mates only; enemies in base contact -1 to hit in first round unless they pass a Leadership test",
+          "restrictedTo": ["captain", "mate"]
         },
         {
           "name": "Peg Leg",

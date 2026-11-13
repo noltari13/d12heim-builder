@@ -63,7 +63,8 @@
           "name": "Steel whip",
           "category": "melee",
           "listCost": 10,
-          "note": "Gaolers only"
+          "note": "Gaolers only",
+          "restrictedTo": ["gaoler"]
         },
         {
           "name": "Double-handed weapon",
@@ -74,7 +75,8 @@
           "name": "Man-catcher",
           "category": "melee",
           "listCost": 25,
-          "note": "Gaolers only. Rare 10, Chaos Dwarfs only. Strength as user; Capture, Two-handed. A model taken out of action by a Man-catcher is captured (no Serious Injury roll) and locked in the Engine of Chaos; if the warband has no Engine of Chaos, roll for Serious Injuries as normal. Large models and animals cannot be captured."
+          "note": "Gaolers only. Rare 10, Chaos Dwarfs only. Strength as user; Capture, Two-handed. A model taken out of action by a Man-catcher is captured (no Serious Injury roll) and locked in the Engine of Chaos; if the warband has no Engine of Chaos, roll for Serious Injuries as normal. Large models and animals cannot be captured.",
+          "restrictedTo": ["gaoler"]
         },
         {
           "name": "Pistol",
@@ -116,7 +118,8 @@
           "name": "Mechanical suit",
           "category": "armour",
           "listCost": 175,
-          "note": "Sorcerer only. Special starting-warband price; full price 225 gc, Rare 14, Chaos Dwarfs only. Counts as Chaos armour. Sorcerer wearing it gets +3 Movement."
+          "note": "Sorcerer only. Special starting-warband price; full price 225 gc, Rare 14, Chaos Dwarfs only. Counts as Chaos armour. Sorcerer wearing it gets +3 Movement.",
+          "restrictedTo": ["sorcerer"]
         },
         {
           "name": "Engine of Chaos",
@@ -287,7 +290,8 @@
           "text": "Never suffers movement penalties for wearing armour."
         }
       ],
-      "notes": ""
+      "notes": "",
+      "cannotBuy": ["missile"]
     },
     {
       "id": "gaoler",

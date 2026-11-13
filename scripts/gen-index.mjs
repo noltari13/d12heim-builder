@@ -1,7 +1,7 @@
 // Regenerates index.ts files for the JSON data folders (warbands, spells).
 import { readdirSync, writeFileSync } from 'node:fs';
 
-function gen(folder, typeName, exportName) {
+function gen(folder, typeName, exportName, elem = typeName) {
   const dir = new URL(`../src/data/${folder}/`, import.meta.url);
   const files = readdirSync(dir).filter((f) => f.endsWith('.json')).sort();
   const ident = (f) => 'd_' + f.replace(/\.json$/, '').replace(/[^a-z0-9]/gi, '_');
@@ -10,7 +10,7 @@ function gen(folder, typeName, exportName) {
     `import type { ${typeName} } from '../../types';`,
     ...files.map((f) => `import ${ident(f)} from './${f}';`),
     '',
-    `export const ${exportName} = [${files.map(ident).join(', ')}] as unknown as ${typeName}[];`,
+    `export const ${exportName} = [${files.map(ident).join(', ')}] as unknown as ${elem}[];`,
     '',
   ].join('\n');
   writeFileSync(new URL('index.ts', dir), out);
@@ -19,3 +19,4 @@ function gen(folder, typeName, exportName) {
 
 gen('warbands', 'WarbandDef', 'ALL_WARBANDS');
 gen('spells', 'SpellSchool', 'ALL_SPELL_SCHOOLS');
+gen('warband-equipment', 'SheetItem', 'ALL_WARBAND_ITEM_FILES', 'SheetItem[]');

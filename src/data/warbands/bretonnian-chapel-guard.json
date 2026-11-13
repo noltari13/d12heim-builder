@@ -50,7 +50,8 @@
           "name": "Broadsword",
           "category": "melee",
           "listCost": 15,
-          "note": "Bretonnian Knights only. Strength as user +1; Difficult to Use (may not use a second weapon or buckler, may carry a shield or kite shield); Strike Last. Cannot Parry; counts as a sword for Expert Swordsman."
+          "note": "Bretonnian Knights only. Strength as user +1; Difficult to Use (may not use a second weapon or buckler, may carry a shield or kite shield); Strike Last. Cannot Parry; counts as a sword for Expert Swordsman.",
+          "restrictedTo": ["questing-knight", "knight-errant"]
         },
         {
           "name": "Double-handed weapon",
@@ -92,7 +93,8 @@
           "name": "Kite shield",
           "category": "armour",
           "listCost": 10,
-          "note": "Bretonnian Knights only. Save 9+ on foot, natural 12 while mounted (if already wearing armour, +2 on foot and +1 while mounted); cannot bring a save over 1+."
+          "note": "Bretonnian Knights only. Save 9+ on foot, natural 12 while mounted (if already wearing armour, +2 on foot and +1 while mounted); cannot bring a save over 1+.",
+          "restrictedTo": ["questing-knight", "knight-errant"]
         },
         {
           "name": "Helmet",
@@ -248,7 +250,8 @@
           "name": "Horse",
           "category": "misc",
           "listCost": 40,
-          "note": "Damsel & Squire only"
+          "note": "Damsel & Squire only",
+          "restrictedTo": ["damsel", "squire"]
         }
       ]
     }
@@ -302,7 +305,8 @@
           "text": "May not take a Lance."
         }
       ],
-      "notes": "Exactly one Questing Knight is required. 'Special' skill list is the Knightly skills."
+      "notes": "Exactly one Questing Knight is required. 'Special' skill list is the Knightly skills.",
+      "cannotBuy": ["missile", "Lance"]
     },
     {
       "id": "damsel",
@@ -337,7 +341,8 @@
           "text": "Begins with one prayer from the Lady's Prayers list and can learn additional prayers."
         }
       ],
-      "notes": "May only buy non-missile, non-armour items from the Bowmen list."
+      "notes": "May only buy non-missile, non-armour items from the Bowmen list.",
+      "cannotBuy": ["missile", "armour"]
     },
     {
       "id": "knight-errant",
@@ -382,7 +387,8 @@
           "text": "In the Movement phase, after declaring charges, a Knight Errant not in combat who did not charge must charge a standing (not knocked down or stunned) enemy within range if able. A Knight Errant who declared a charge on a knocked down or stunned opponent must instead charge a viable standing opponent. He may instead take a Leadership test (may use Leader's Ld if in range); if passed he moves normally or charges his original target. A compelled charge automatically passes fear and other psychology tests that would prevent charging."
         }
       ],
-      "notes": "A promoted Squire may become a Knight Errant, allowing more than three."
+      "notes": "A promoted Squire may become a Knight Errant, allowing more than three.",
+      "cannotBuy": ["missile", "Helmet"]
     },
     {
       "id": "squire",

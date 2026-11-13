@@ -317,7 +317,8 @@
           "text": "Chooses a Mark when hired: Serpent, Crow, Eagle, Arkhar or Chaos Undivided."
         }
       ],
-      "notes": "Weapons only, no armour."
+      "notes": "Weapons only, no armour.",
+      "cannotBuy": ["armour"]
     },
     {
       "id": "champion",

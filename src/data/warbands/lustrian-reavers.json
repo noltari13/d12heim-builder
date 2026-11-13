@@ -133,31 +133,36 @@
           "name": "Lizardmen skin cloak",
           "category": "misc",
           "listCost": 10,
-          "note": "Saurus Slayer only. Grants 12+ ward save (printed 6+), not reduced by strength or other modifiers"
+          "note": "Saurus Slayer only. Grants 12+ ward save (printed 6+), not reduced by strength or other modifiers",
+          "restrictedTo": ["saurus-slayer"]
         },
         {
           "name": "Skull Mask",
           "category": "misc",
           "listCost": 15,
-          "note": "Saurus Slayer only. Causes fear"
+          "note": "Saurus Slayer only. Causes fear",
+          "restrictedTo": ["saurus-slayer"]
         },
         {
           "name": "Lizardman Sword upgrade",
           "category": "melee",
           "listCost": 30,
-          "note": "Saurus Slayer only. Upgrades any sword; +1 to wound rolls due to Poison"
+          "note": "Saurus Slayer only. Upgrades any sword; +1 to wound rolls due to Poison",
+          "restrictedTo": ["saurus-slayer"]
         },
         {
           "name": "Trophy Slann Holy headdress",
           "category": "armour",
           "listCost": 35,
-          "note": "Saurus Slayer only. +2 bonus to armour saves (as printed)"
+          "note": "Saurus Slayer only. +2 bonus to armour saves (as printed)",
+          "restrictedTo": ["saurus-slayer"]
         },
         {
           "name": "Tilean Hunting Hawk",
           "category": "misc",
           "listCost": 30,
-          "note": "Beastmaster only (0-1). M12 WS4 BS0 S4 T3 W- I5 A1 Ld-. Part of the equipment: attacks any enemy within 12\" as a melee attack, even out of line of sight (unless Hidden), then returns to the Beastmaster. Cannot be targeted separately. Does not attack if the Beastmaster is in hand-to-hand combat. Animal rules; no experience"
+          "note": "Beastmaster only (0-1). M12 WS4 BS0 S4 T3 W- I5 A1 Ld-. Part of the equipment: attacks any enemy within 12\" as a melee attack, even out of line of sight (unless Hidden), then returns to the Beastmaster. Cannot be targeted separately. Does not attack if the Beastmaster is in hand-to-hand combat. Animal rules; no experience",
+          "restrictedTo": ["beastmaster"]
         }
       ]
     },

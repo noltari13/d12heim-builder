@@ -1,0 +1,645 @@
+[
+ {
+  "name": "Misericordia",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "lustrian-reavers",
+   "cursed-cavalcade"
+  ],
+  "costText": "10 (5 in Cursed Cavalcade)",
+  "cost": 10,
+  "availability": "Rare 9",
+  "strength": "User -1",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Coup de grace: vs knocked down enemies ignores armour saves and roll 2D6 taking the highest to-wound roll, causes indescribable pain but does not kill outright",
+  "basis": "Dagger (uses dagger rules in the Reavers book, S as user -1 like the sheet Dagger) plus the book's coup de grace rule.",
+  "reviewed": false
+ },
+ {
+  "name": "Ogre club",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "maneaters"
+  ],
+  "costText": "10",
+  "cost": 10,
+  "availability": null,
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Extra Stun (Concussion: injury 3-8 counts as stunned), Crushing Attack with both hands: +1 AP and enemy parry Strength counts one higher",
+  "basis": "Club/Hammer: Concussion mapped to Extra Stun like the sheet Hammer; the two-handed crushing attack gives Mace-level +1 AP.",
+  "reviewed": false
+ },
+ {
+  "name": "Iron fist",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "maneaters"
+  ],
+  "costText": "15",
+  "cost": 15,
+  "availability": null,
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Parry (1), Gloved (occupies the hand, no double-handed weapon), re-roll failed parries if paired with a sword or another iron fist",
+  "basis": "Buckler-style Parry (1) on a one-handed melee item, priced like a Flail; re-roll rule copied from the book.",
+  "reviewed": false
+ },
+ {
+  "name": "Harpoon crossbow",
+  "aliases": [],
+  "category": "missile",
+  "warbands": [
+   "maneaters"
+  ],
+  "costText": "50",
+  "cost": 50,
+  "availability": "Rare 10 (Ogres only)",
+  "strength": "5",
+  "hands": null,
+  "range": "30\"",
+  "av": null,
+  "rules": "Steady Aim (move or shoot), Reload (2), +2 AP, Prepare shot",
+  "basis": "Crossbow (+1 AP, Reload (2)) with S5 instead of S4 so +1 more AP; Prepare Shot mapped to Reload and Steady Aim.",
+  "reviewed": false
+ },
+ {
+  "name": "Barbed whip",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "marauders-of-chaos"
+  ],
+  "costText": "15",
+  "cost": 15,
+  "availability": "Rare 9 (one Hero only)",
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Cannot be parried, Whipcrack (as steel whip), Enrage: while not in close combat, Warhounds of Chaos within 4\" gain +1 attack",
+  "basis": "No sheet whip; modelled as a plain one-handed User-strength weapon with the book's special rules.",
+  "reviewed": false
+ },
+ {
+  "name": "Great axe",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "marauders-of-chaos"
+  ],
+  "costText": "25",
+  "cost": 25,
+  "availability": "Rare 8 (Chosen of Chaos skill only)",
+  "strength": "User +2",
+  "hands": "2",
+  "range": null,
+  "av": null,
+  "rules": "+4 AP, +1 Crit result, Strike last (unless Strongman)",
+  "basis": "2H Axe (+3 AP, +1 Crit, User +2) with the book's extra -1 save modifier as +1 AP, plus strikes last.",
+  "reviewed": false
+ },
+ {
+  "name": "Throwing axes",
+  "aliases": [],
+  "category": "missile",
+  "warbands": [
+   "marauders-of-chaos",
+   "norse"
+  ],
+  "costText": "15",
+  "cost": 15,
+  "availability": "Common",
+  "strength": "User",
+  "hands": null,
+  "range": "8\"",
+  "av": null,
+  "rules": "Skirmish (no pen move), H2H, Double Shot",
+  "basis": "Book says treat as Throwing knives, so copied from the sheet Throwing knives.",
+  "reviewed": false
+ },
+ {
+  "name": "Pike",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "merchant-caravans",
+   "tileans"
+  ],
+  "costText": "10 (12 in Tileans)",
+  "cost": 10,
+  "availability": "Rare 8 (Merchant Caravans), Rare 7 (Tileans)",
+  "strength": "User",
+  "hands": "2",
+  "range": null,
+  "av": null,
+  "rules": "Strike first (first round even when charged by a spear), Reach 3\" (may attack without being in melee, Tileans), only 1 attack, no shield or buckler (Tileans), man-sized or larger targets only (Tileans); Caravans version +1 armour save vs ranged if it carries a shield",
+  "basis": "Spear (User, Strike first) made two-handed; no AP since it is spear-family not polearm.",
+  "reviewed": false
+ },
+ {
+  "name": "Staff",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "mootlanders",
+   "outlaws-of-stirwood",
+   "tomb-guardians"
+  ],
+  "costText": "3",
+  "cost": 3,
+  "availability": "Common",
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Parry (1)",
+  "basis": "Club-grade price weapon; core-book staff gives Parry, mapped to Parry (1) like a Sword.",
+  "reviewed": false
+ },
+ {
+  "name": "Cooking Pot Helmet",
+  "aliases": [],
+  "category": "armour",
+  "warbands": [
+   "mootlanders"
+  ],
+  "costText": "8",
+  "cost": 8,
+  "availability": null,
+  "strength": null,
+  "hands": null,
+  "range": null,
+  "av": 0,
+  "rules": "9+ stun save, never modified",
+  "basis": "Helmet (AV 0 with a stun save); printed 5+ converted to 9+ per the group conversion.",
+  "reviewed": false
+ },
+ {
+  "name": "Kitchen Knife",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "mootlanders"
+  ],
+  "costText": "2",
+  "cost": 2,
+  "availability": null,
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "+1 AP",
+  "basis": "Dagger priced 2gc; book -1 save modifier is +1 AP; Strength as user rather than the Dagger's -1.",
+  "reviewed": false
+ },
+ {
+  "name": "Cleaver",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "mootlanders"
+  ],
+  "costText": "3",
+  "cost": 3,
+  "availability": null,
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "+1 AP",
+  "basis": "Axe/Mace-like one-hander with the book's -1 save modifier as +1 AP.",
+  "reviewed": false
+ },
+ {
+  "name": "Ladle",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "mootlanders"
+  ],
+  "costText": "2",
+  "cost": 2,
+  "availability": null,
+  "strength": "User -1",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Target gets no armour save except shields and skills, Knuckle Cracking: natural 12 to wound makes the enemy drop his weapon",
+  "basis": "Dagger (User -1); ignoring armour represented in text since no sheet analogue.",
+  "reviewed": false
+ },
+ {
+  "name": "Tenderiser",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "mootlanders"
+  ],
+  "costText": "3",
+  "cost": 3,
+  "availability": null,
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Extra Stun",
+  "basis": "Hammer (Extra Stun) since the book says it stuns on 2-4.",
+  "reviewed": false
+ },
+ {
+  "name": "Poison daggers",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "night-goblins"
+  ],
+  "costText": "25",
+  "cost": 25,
+  "availability": "Common (Fanatics only)",
+  "strength": "User -1",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Pair (+1 attack), Black lotus: auto wound on 11+ to-hit, re-applied free after every game",
+  "basis": "Pair of Daggers with the sheet's Black lotus effect built in.",
+  "reviewed": false
+ },
+ {
+  "name": "Ball & chain",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "night-goblins",
+   "orc-mob"
+  ],
+  "costText": "15",
+  "cost": 15,
+  "availability": "Common (Fanatics and Goblins only)",
+  "strength": "User +2",
+  "hands": "2",
+  "range": null,
+  "av": null,
+  "rules": "+3 AP, Random, Cumbersome, Unwieldy (no dual wield, no shield), Incredible Force, only usable under the influence of Mad Cap Mushrooms (Orc Mob goblins)",
+  "basis": "Flail (+1 AP) scaled up as a 2H weapon at User +2 with +3 AP like other 2H weapons.",
+  "reviewed": false
+ },
+ {
+  "name": "Double-Barrelled Pistol",
+  "aliases": [
+   "Double Barrelled Pistol"
+  ],
+  "category": "missile",
+  "warbands": [
+   "ostlanders"
+  ],
+  "costText": "30 (60 per brace)",
+  "cost": 30,
+  "availability": "Rare 10",
+  "strength": "4",
+  "hands": null,
+  "range": "10\"",
+  "av": null,
+  "rules": "Reload (2), +3 AP, H2H, Two barrels: each hit is two blasts, each barrel takes a full turn to reload",
+  "basis": "Pistol (S4, 10\", +3 AP, Reload (2)) with the two-barrel rule.",
+  "reviewed": false
+ },
+ {
+  "name": "Double-Barrelled Hunting rifle",
+  "aliases": [
+   "Double-Barrelled Hunting Rifle",
+   "Double Barrelled Hunting rifle"
+  ],
+  "category": "missile",
+  "warbands": [
+   "ostlanders"
+  ],
+  "costText": "300",
+  "cost": 300,
+  "availability": "Rare 12",
+  "strength": "4",
+  "hands": null,
+  "range": "48\"",
+  "av": null,
+  "rules": "Steady Aim (move or shoot), Reload (2), +4 AP, Two barrels: each hit is two blasts, each barrel takes a full turn to reload",
+  "basis": "Long Rifle (S4, 48\", +4 AP, Reload (2)) with the two-barrel rule.",
+  "reviewed": false
+ },
+ {
+  "name": "Boat Hook",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "pirates"
+  ],
+  "costText": "8",
+  "cost": 8,
+  "availability": "Common",
+  "strength": "User -1",
+  "hands": "2",
+  "range": null,
+  "av": null,
+  "rules": "Strike first (first round of close combat), no other weapon or shield/buckler",
+  "basis": "Spear (Strike first) at S -1 and two-handed per the Pirates book.",
+  "reviewed": false
+ },
+ {
+  "name": "Cat O' Nine Tails",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "pirates"
+  ],
+  "costText": "8",
+  "cost": 8,
+  "availability": "Common (Heroes only)",
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Reach 4\", cannot be parried by swords or bucklers, target gets +1 armour save (12 if none)",
+  "basis": "No sheet whip; one-handed User weapon with the book's reach and save rules.",
+  "reviewed": false
+ },
+ {
+  "name": "Belaying Pin",
+  "aliases": [],
+  "category": "missile",
+  "warbands": [
+   "pirates"
+  ],
+  "costText": "3",
+  "cost": 3,
+  "availability": "Common",
+  "strength": "User -1",
+  "hands": null,
+  "range": "6\"",
+  "av": null,
+  "rules": "Thrown, no range penalties, target gets +1 armour save",
+  "basis": "Javelin/Throwing weapon with short range per the book.",
+  "reviewed": false
+ },
+ {
+  "name": "Swivel Gun",
+  "aliases": [],
+  "category": "missile",
+  "warbands": [
+   "pirates"
+  ],
+  "costText": "65",
+  "cost": 65,
+  "availability": "Rare 8 (one per warband, Gunners only)",
+  "strength": "5",
+  "hands": null,
+  "range": "36\"",
+  "av": null,
+  "rules": "Reload (2), +3 AP, no firing twice or after moving, -2 I and -1 M for the wielder; ammo bought per game: Ball Shot 36\" S5 +3 AP (Extra Stun), Chain Shot 24\" S4 +1 AP (knocked down on 7+), Grape Shot 24\" S3 no AP (D6 other enemies within 4\" also hit, never hits pirates)",
+  "basis": "Blackpowder gun modelled on Handgun/Pistol; defaults to Ball Shot (S5, -2 save = +3 AP); ammo profiles in rules.",
+  "reviewed": false
+ },
+ {
+  "name": "Spiked Gauntlet",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "pit-fighters"
+  ],
+  "costText": "15",
+  "cost": 15,
+  "availability": null,
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "+1 AP, Gloved (occupies the hand)",
+  "basis": "No note in the list and the PDF was not checked; modelled on Mace-grade one-handed weapon.",
+  "reviewed": false
+ },
+ {
+  "name": "Sigmarite warhammer",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "sisters-of-sigmar"
+  ],
+  "costText": "15",
+  "cost": 15,
+  "availability": null,
+  "strength": "User +1",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Extra Stun (Concussion: injury 3-8 counts as stunned, only 1-2 knocked down), Holy Weapon: +1 to wound vs Possessed or Undead, natural 12 still needed for crits, only Matriarchs and Sister Superiors may carry two",
+  "basis": "Hammer (Extra Stun) at User +1 as in the book.",
+  "reviewed": false
+ },
+ {
+  "name": "Weeping Blades",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "skaven"
+  ],
+  "costText": "50",
+  "cost": 50,
+  "availability": "Rare 9",
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "+1 AP, Parry (1), Pair (+1 attack), Venomous: Black lotus permanently (auto wound on 11+ to-hit), no other poison",
+  "basis": "Pair of Swords: Parry like Sword, Black lotus per the sheet; +1 AP for the poisoned edge.",
+  "reviewed": false
+ },
+ {
+  "name": "Fighting Claws",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "skaven"
+  ],
+  "costText": "35",
+  "cost": 35,
+  "availability": "Rare 7",
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "+1 AP, Parry (1) with re-roll of a failed parry, Pair (+1 attack), Climb: +2 I for Climbing tests, Cumbersome: no other weapons all battle",
+  "basis": "Pair of Swords-style Parry (re-roll like sword and buckler); book -1 save modifier is +1 AP.",
+  "reviewed": false
+ },
+ {
+  "name": "Warplock pistol",
+  "aliases": [],
+  "category": "missile",
+  "warbands": [
+   "skaven"
+  ],
+  "costText": "35 (70 per brace)",
+  "cost": 35,
+  "availability": "Rare 11",
+  "strength": "5",
+  "hands": null,
+  "range": "8\"",
+  "av": null,
+  "rules": "Reload (2), +4 AP",
+  "basis": "Pistol at S5 with the book's -3 save modifier (+4 AP); fires every other turn is Reload (2).",
+  "reviewed": false
+ },
+ {
+  "name": "Obsidian weapon",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "sons-of-hashut"
+  ],
+  "costText": "60 (printed 30/60)",
+  "cost": 60,
+  "availability": "Rare 10",
+  "strength": "User +1",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Only swords, axes and hammers, -2 I in melee, keeps the base weapon's rules",
+  "basis": "Applies a flat User +1 to a standard sword/axe/hammer; initiative malus doubled to -2 I.",
+  "reviewed": false
+ },
+ {
+  "name": "Chaos Dwarf Blunderbuss",
+  "aliases": [],
+  "category": "missile",
+  "warbands": [
+   "sons-of-hashut"
+  ],
+  "costText": "40",
+  "cost": 40,
+  "availability": "Rare 9",
+  "strength": "3",
+  "hands": null,
+  "range": "16\"",
+  "av": null,
+  "rules": "Shotgun, Reload (6), Steady Aim (move or shoot), Line shot: 16\" x 1\" line, every model in it is hit automatically",
+  "basis": "Blunderbuss (S3, 16\", Reload (6)) copied from the sheet.",
+  "reviewed": false
+ },
+ {
+  "name": "Poisoned daggers",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "sons-of-hashut"
+  ],
+  "costText": "15",
+  "cost": 15,
+  "availability": "Rare 9",
+  "strength": "User -1",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Pair (+1 attack), Swift (+2 I for combat order), Black lotus: auto wound on 11+ to-hit",
+  "basis": "Pair of Daggers with Black lotus built in; Swift +1 I doubled to +2.",
+  "reviewed": false
+ },
+ {
+  "name": "Boar Spear",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "cursed-cavalcade"
+  ],
+  "costText": "30 (item text says 20)",
+  "cost": 30,
+  "availability": "Rare 10",
+  "strength": "User +1",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Strike first, Cavalry Bonus (+1 S on the turn a mounted wielder charges), Cross Guard (when charged reduces first assailant's attacks by 1, minimum 1), Unwieldy (no dual wield, shield ok)",
+  "basis": "Spear (Strike first, Unwieldy) at User +1 with book bonuses.",
+  "reviewed": false
+ },
+ {
+  "name": "Cathayan Quilted Silk Armor",
+  "aliases": [
+   "Cathayan Quilted Silk Armour"
+  ],
+  "category": "armour",
+  "warbands": [
+   "cursed-cavalcade"
+  ],
+  "costText": "15",
+  "cost": 15,
+  "availability": "Rare 10",
+  "strength": null,
+  "hands": null,
+  "range": null,
+  "av": 1,
+  "rules": "Stacks with any other armour",
+  "basis": "Gambeson (AV 1, stacks) since the book adds +1 to saves.",
+  "reviewed": false
+ },
+ {
+  "name": "Trophy Slann Holy headdress",
+  "aliases": [],
+  "category": "armour",
+  "warbands": [
+   "lustrian-reavers"
+  ],
+  "costText": "35",
+  "cost": 35,
+  "availability": null,
+  "strength": null,
+  "hands": null,
+  "range": null,
+  "av": 2,
+  "rules": "Saurus Slayer only, stacks with other armour",
+  "basis": "Small Shield-grade AV 2 since the book gives +2 to armour saves.",
+  "reviewed": false
+ },
+ {
+  "name": "Nehekharan Javelin",
+  "aliases": [],
+  "category": "missile",
+  "warbands": [
+   "tomb-guardians"
+  ],
+  "costText": "10",
+  "cost": 10,
+  "availability": "Tomb Lords only",
+  "strength": "User",
+  "hands": null,
+  "range": "8\"",
+  "av": null,
+  "rules": "Skirmish (no pen move), +1 to hit",
+  "basis": "Javelin (User, 8\") with the book's +1 to hit.",
+  "reviewed": false
+ },
+ {
+  "name": "Serpent staff",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "tomb-guardians"
+  ],
+  "costText": "30",
+  "cost": 30,
+  "availability": "Liche Priests only",
+  "strength": "4",
+  "hands": "2",
+  "range": null,
+  "av": null,
+  "rules": "Parry (1), Serpent: may forgo all normal attacks and parries to have the serpent attack first with one attack at WS4 S4",
+  "basis": "Staff-like 2H with Parry (1); static serpent profile S4 as printed.",
+  "reviewed": false
+ }
+]

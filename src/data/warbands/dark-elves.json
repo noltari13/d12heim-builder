@@ -22,16 +22,16 @@
         { "name": "Double-handed weapon", "category": "melee", "listCost": 15 },
         { "name": "Halberd", "category": "melee", "listCost": 10 },
         { "name": "Spear", "category": "melee", "listCost": 10 },
-        { "name": "Beastlash", "category": "melee", "listCost": 10, "note": "Beastmaster only. Full cost 10 + D6 gc / Rare 8. Close combat, Strength as user -1, Beastbane, Reach (attacks up to 4\" away). Beastbane: animals charged by or wishing to charge a Beastmaster with one must first pass a Fear test." },
+        { "name": "Beastlash", "category": "melee", "listCost": 10, "note": "Beastmaster only. Full cost 10 + D6 gc / Rare 8. Close combat, Strength as user -1, Beastbane, Reach (attacks up to 4\" away). Beastbane: animals charged by or wishing to charge a Beastmaster with one must first pass a Fear test.", "restrictedTo": ["beastmaster"] },
         { "name": "Repeater Crossbow", "category": "missile", "listCost": 35 },
         { "name": "Crossbow Pistol", "category": "missile", "listCost": 35 },
         { "name": "Helmet", "category": "armour", "listCost": 10 },
         { "name": "Light armour", "category": "armour", "listCost": 20 },
         { "name": "Shield", "category": "armour", "listCost": 5 },
         { "name": "Buckler", "category": "armour", "listCost": 5 },
-        { "name": "Dark Elf Blade", "category": "melee", "listCost": 15, "note": "Heroes only. Printed 15 gc in list; item text says +20 gc to the weapon (Rare 9). Upgrade a sword or dagger; keeps its abilities. Critical Damage (+1 on critical hit chart), Wicked Edge (injury roll of 2-4 is Stunned)." },
-        { "name": "Dark Venom", "category": "misc", "listCost": 15, "note": "Heroes only." },
-        { "name": "Sea Dragon Cloak", "category": "armour", "listCost": 50, "note": "Heroes and Corsairs only. Full cost 50 + 2D6 gc / Rare 10. Scales: 5+ armour save in close combat, 4+ against missiles." }
+        { "name": "Dark Elf Blade", "category": "melee", "listCost": 15, "note": "Heroes only. Printed 15 gc in list; item text says +20 gc to the weapon (Rare 9). Upgrade a sword or dagger; keeps its abilities. Critical Damage (+1 on critical hit chart), Wicked Edge (injury roll of 2-4 is Stunned).", "restrictedTo": ["high-born", "fellblade", "beastmaster", "sorceress"] },
+        { "name": "Dark Venom", "category": "misc", "listCost": 15, "note": "Heroes only.", "restrictedTo": ["high-born", "fellblade", "beastmaster", "sorceress"] },
+        { "name": "Sea Dragon Cloak", "category": "armour", "listCost": 50, "note": "Heroes and Corsairs only. Full cost 50 + 2D6 gc / Rare 10. Scales: 5+ armour save in close combat, 4+ against missiles.", "restrictedTo": ["high-born", "fellblade", "beastmaster", "sorceress", "corsair"] }
       ]
     },
     {
@@ -85,7 +85,8 @@
       "specialRules": [
         { "name": "Melee Specialists", "text": "May not use missile weapons of any sort." }
       ],
-      "notes": ""
+      "notes": "",
+      "cannotBuy": ["missile"]
     },
     {
       "id": "beastmaster",

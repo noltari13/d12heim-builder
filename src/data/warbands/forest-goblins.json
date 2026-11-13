@@ -140,7 +140,8 @@
           "name": "Magic Gubbinz",
           "category": "misc",
           "listCost": 50,
-          "note": "Rare 9. Shaman only: may re-roll a failed magic test on a D12 roll of 7+."
+          "note": "Rare 9. Shaman only: may re-roll a failed magic test on a D12 roll of 7+.",
+          "restrictedTo": ["shaman"]
         },
         {
           "name": "Red Toof Tribal Jewellery",

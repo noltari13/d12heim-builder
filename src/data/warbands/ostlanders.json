@@ -342,7 +342,8 @@
           "text": "May never wear heavy armour."
         }
       ],
-      "notes": "Prayers of Taal work like the Prayers of Sigmar; the Priest never wears armour (per prayer text) and may not wear heavy armour (per unit entry)."
+      "notes": "Prayers of Taal work like the Prayers of Sigmar; the Priest never wears armour (per prayer text) and may not wear heavy armour (per unit entry).",
+      "cannotBuy": ["Heavy armour"]
     },
     {
       "id": "kin",
@@ -409,7 +410,8 @@
           "text": "Never uses missile weapons, even if an Advance would allow it."
         }
       ],
-      "notes": ""
+      "notes": "",
+      "cannotBuy": ["missile"]
     },
     {
       "id": "jaeger",

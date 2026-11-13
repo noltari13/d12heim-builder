@@ -128,7 +128,8 @@
           "name": "Two-handed weapon",
           "category": "melee",
           "listCost": 15,
-          "note": "Boyz and Nuttaz only"
+          "note": "Boyz and Nuttaz only",
+          "restrictedTo": ["orc-boy", "orc-nutta"]
         },
         {
           "name": "Bow",
@@ -139,7 +140,8 @@
           "name": "Crossbow",
           "category": "missile",
           "listCost": 25,
-          "note": "Shootaz only"
+          "note": "Shootaz only",
+          "restrictedTo": ["orc-shoota"]
         },
         {
           "name": "Light Armour",
@@ -386,7 +388,8 @@
           "text": "Must always run or charge maximum distance towards the nearest visible enemy (friendly models do not block line of sight); fights with an extra attack (not on profile, not counted for racial maximum). Never uses armour or ranged weapons. May never be Leader or use his Ld for rout tests unless the only models left."
         }
       ],
-      "notes": "Cannot use armour or missile weapons despite the Henchman list."
+      "notes": "Cannot use armour or missile weapons despite the Henchman list.",
+      "cannotBuy": ["armour", "missile"]
     },
     {
       "id": "troll",

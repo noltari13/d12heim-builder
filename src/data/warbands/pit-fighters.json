@@ -42,13 +42,13 @@
         { "name": "Mace", "category": "melee", "listCost": 3 },
         { "name": "Hammer", "category": "melee", "listCost": 3 },
         { "name": "Axe", "category": "melee", "listCost": 5 },
-        { "name": "Dwarf Axe", "category": "melee", "listCost": 15, "note": "Only available to the Dwarf Troll Slayer" },
+        { "name": "Dwarf Axe", "category": "melee", "listCost": 15, "note": "Only available to the Dwarf Troll Slayer", "restrictedTo": ["troll-slayer"] },
         { "name": "Sword", "category": "melee", "listCost": 10 },
         { "name": "Flail", "category": "melee", "listCost": 15 },
         { "name": "Spiked Gauntlet", "category": "melee", "listCost": 15 },
-        { "name": "Gromril Weapon", "category": "melee", "listCost": 0, "note": "3 times the cost. Only available to the Dwarf Troll Slayer" },
-        { "name": "Helmet", "category": "armour", "listCost": 10, "note": "Only available to the Ogre" },
-        { "name": "Light Armour", "category": "armour", "listCost": 20, "note": "Only available to the Ogre" }
+        { "name": "Gromril Weapon", "category": "melee", "listCost": 0, "note": "3 times the cost. Only available to the Dwarf Troll Slayer", "restrictedTo": ["troll-slayer"] },
+        { "name": "Helmet", "category": "armour", "listCost": 10, "note": "Only available to the Ogre", "restrictedTo": ["ogre-pit-fighter"] },
+        { "name": "Light Armour", "category": "armour", "listCost": 20, "note": "Only available to the Ogre", "restrictedTo": ["ogre-pit-fighter"] }
       ]
     }
   ],
@@ -96,7 +96,8 @@
         { "name": "Grudgebearers", "text": "If the warband hires any Elven Hired Sword, he leaves the warband immediately." },
         { "name": "Death Wish", "text": "Immune to all psychology and never needs to test if fighting alone." }
       ],
-      "notes": "May use the Troll Slayer Special Skills list (Ferocious Charge, Monster Slayer, Berserker) as well as standard Dwarf skill tables."
+      "notes": "May use the Troll Slayer Special Skills list (Ferocious Charge, Monster Slayer, Berserker) as well as standard Dwarf skill tables.",
+      "cannotBuy": ["missile", "armour"]
     },
     {
       "id": "pit-veteran",

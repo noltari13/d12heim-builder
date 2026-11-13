@@ -22,7 +22,7 @@
         { "name": "Sword", "category": "melee", "listCost": 10 },
         { "name": "Hammer", "category": "melee", "listCost": 3 },
         { "name": "Double-handed weapon", "category": "melee", "listCost": 15 },
-        { "name": "Boar Spear", "category": "melee", "listCost": 30, "note": "Aristocrat only. Rare 10. Equipment list prints 30 gc, the item description prints 20 gc. Strength as user +1; Strike First (first turn of combat even when charged), Cavalry Bonus (+1 S on the turn a mounted wielder charges), Cross Guard (when charged, reduces first assailant's attacks by 1 down to a minimum of 1; base stats unaffected), Unwieldy (only a shield or buckler in the other hand)." },
+        { "name": "Boar Spear", "category": "melee", "listCost": 30, "note": "Aristocrat only. Rare 10. Equipment list prints 30 gc, the item description prints 20 gc. Strength as user +1; Strike First (first turn of combat even when charged), Cavalry Bonus (+1 S on the turn a mounted wielder charges), Cross Guard (when charged, reduces first assailant's attacks by 1 down to a minimum of 1; base stats unaffected), Unwieldy (only a shield or buckler in the other hand).", "restrictedTo": ["aristocrat"] },
         { "name": "Lance", "category": "melee", "listCost": 20 },
         { "name": "Longbow", "category": "missile", "listCost": 15 },
         { "name": "Dueling Pistol", "category": "missile", "listCost": 25, "note": "50 for a brace" },
@@ -35,13 +35,13 @@
         { "name": "Helmet", "category": "armour", "listCost": 10 },
         { "name": "Cathayan Quilted Silk Armor", "category": "armour", "listCost": 15, "note": "Rare 10. Adds +1 to the armour saves against any type of attack; can be combined with any other armour." },
         { "name": "Superior Black Powder", "category": "misc", "listCost": 30 },
-        { "name": "Nightmare", "category": "misc", "listCost": 95, "note": "Aristocrat only. Rare 11. Undead steed: M8 WS2 BS0 S3 T3 W1 I2 A1 Ld5. May not run (may charge); immune to poison; immune to psychology, never takes Leadership tests, always stands still if left leaderless; rider rolls on the Whoa Boy! table if wounded." },
-        { "name": "Bird of Prey", "category": "misc", "listCost": 30, "note": "Aristocrat only. Rare 10. Used in the shooting phase like a missile weapon: range 18\", no line of sight needed (not against hidden targets), ignores penalties for moving, long range and cover; uses owner's BS; Strength 4 hit." },
-        { "name": "Sun King Mask", "category": "misc", "listCost": 70, "note": "Cursed Mask, Aristocrat only. Wearer cannot be knocked down or stunned, nor by effects or Injury table results." },
+        { "name": "Nightmare", "category": "misc", "listCost": 95, "note": "Aristocrat only. Rare 11. Undead steed: M8 WS2 BS0 S3 T3 W1 I2 A1 Ld5. May not run (may charge); immune to poison; immune to psychology, never takes Leadership tests, always stands still if left leaderless; rider rolls on the Whoa Boy! table if wounded.", "restrictedTo": ["aristocrat"] },
+        { "name": "Bird of Prey", "category": "misc", "listCost": 30, "note": "Aristocrat only. Rare 10. Used in the shooting phase like a missile weapon: range 18\", no line of sight needed (not against hidden targets), ignores penalties for moving, long range and cover; uses owner's BS; Strength 4 hit.", "restrictedTo": ["aristocrat"] },
+        { "name": "Sun King Mask", "category": "misc", "listCost": 70, "note": "Cursed Mask, Aristocrat only. Wearer cannot be knocked down or stunned, nor by effects or Injury table results.", "restrictedTo": ["aristocrat"] },
         { "name": "Silver Death Mask", "category": "misc", "listCost": 50, "note": "Cursed Mask. If wearer is taken Out of Action he may reroll any Serious Injury result, accepting the second." },
         { "name": "Fish Head Mask", "category": "misc", "listCost": 60, "note": "Cursed Mask. Each time wearer takes an opponent Out of Action he regains a lost wound or gains an additional wound up to a maximum of 5, lasting to end of battle." },
         { "name": "Faceless Mask", "category": "misc", "listCost": 30, "note": "Cursed Mask. Wearer may stop one model from Intercepting his charge once per game. Models immune to psychology (Undead, Flagellants) are unaffected by this." },
-        { "name": "Plague Doctor Mask", "category": "misc", "listCost": 45, "note": "Cursed Mask, Twisted Scholar only. Once per game in the shooting phase, unleash a black cloud: first turn it hits any enemy within 3\" at Strength 1; the distance and Strength rise by 1 at the start of each of your turns up to 7\" and Strength 5. No range or cover penalties, wounds as usual, no critical hits." },
+        { "name": "Plague Doctor Mask", "category": "misc", "listCost": 45, "note": "Cursed Mask, Twisted Scholar only. Once per game in the shooting phase, unleash a black cloud: first turn it hits any enemy within 3\" at Strength 1; the distance and Strength rise by 1 at the start of each of your turns up to 7\" and Strength 5. No range or cover penalties, wounds as usual, no critical hits.", "restrictedTo": ["twisted-scholar"] },
         { "name": "Evil Jester Mask", "category": "misc", "listCost": 70, "note": "Cursed Mask. At the start of the battle roll a D12: 1-2 subject to Stupidity for the battle; 3-11 hates all enemies for the battle; 12 Frenzy." }
       ]
     },
@@ -143,7 +143,8 @@
       "specialRules": [
         { "name": "Danse Macabre", "text": "In the shooting phase the Piper can direct his flute against one enemy model he can see within 6\". It must pass a Leadership test or be cursed: the Piper can move it in any direction he wishes (including out of close combat or to fall from height). At the start of the enemy's turn in the recovery phase it must pass a Leadership test or remain under the Piper's control and cannot shoot, charge or cast spells. If engaged in close combat the model cannot attack. Only one enemy at a time; targeting another frees the previous one." }
       ],
-      "notes": "Must hold a flute or other one-handed instrument; may not use an off-hand weapon, double-handed weapon, brace of pistols, Bows or Crossbows."
+      "notes": "Must hold a flute or other one-handed instrument; may not use an off-hand weapon, double-handed weapon, brace of pistols, Bows or Crossbows.",
+      "cannotBuy": ["Double-handed weapon", "Longbow"]
     },
     {
       "id": "thrall",

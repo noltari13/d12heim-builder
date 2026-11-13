@@ -186,7 +186,8 @@
           "name": "Poisoned daggers",
           "category": "melee",
           "listCost": 15,
-          "note": "Rare 9, Hobgoblins only. Pair (+1 Attack), Swift (+1 Initiative for combat order), permanently poisoned (black lotus), +1 enemy armour save as a dagger (a natural 12 save if none)."
+          "note": "Rare 9, Hobgoblins only. Pair (+1 Attack), Swift (+1 Initiative for combat order), permanently poisoned (black lotus), +1 enemy armour save as a dagger (a natural 12 save if none).",
+          "restrictedTo": ["hobgoblin"]
         },
         {
           "name": "Short bow",

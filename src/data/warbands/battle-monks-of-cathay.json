@@ -54,7 +54,8 @@
           "name": "Cathayan longsword",
           "category": "melee",
           "listCost": 75,
-          "note": "Emissary only"
+          "note": "Emissary only",
+          "restrictedTo": ["emissary"]
         },
         {
           "name": "Duelling pistol",
@@ -101,13 +102,15 @@
           "name": "Cathayan silk cloak",
           "category": "misc",
           "listCost": 40,
-          "note": "Emissary only"
+          "note": "Emissary only",
+          "restrictedTo": ["emissary"]
         },
         {
           "name": "Horse",
           "category": "misc",
           "listCost": 30,
-          "note": "Emissary only"
+          "note": "Emissary only",
+          "restrictedTo": ["emissary"]
         }
       ]
     },
@@ -135,7 +138,8 @@
           "name": "Quarter staff",
           "category": "melee",
           "listCost": 15,
-          "note": "Common, Battle Monks only. Strength as user; Balanced (+1 Initiative in close combat), Parry, Freestyle (can be combined with the monk's bare-hand attacks, still gaining +1 Attack)."
+          "note": "Common, Battle Monks only. Strength as user; Balanced (+1 Initiative in close combat), Parry, Freestyle (can be combined with the monk's bare-hand attacks, still gaining +1 Attack).",
+          "restrictedTo": ["dragon-monk", "warrior-monk"]
         },
         {
           "name": "Katana",
@@ -146,13 +150,15 @@
           "name": "Chain sticks",
           "category": "melee",
           "listCost": 20,
-          "note": "Rare 7, Battle Monks only. Strength as user; Flurry (+2 Attacks in the first turn of each hand-to-hand combat; otherwise counts as two hand weapons), Two-handed."
+          "note": "Rare 7, Battle Monks only. Strength as user; Flurry (+2 Attacks in the first turn of each hand-to-hand combat; otherwise counts as two hand weapons), Two-handed.",
+          "restrictedTo": ["dragon-monk", "warrior-monk"]
         },
         {
           "name": "Fish-hook shot",
           "category": "missile",
           "listCost": 10,
-          "note": "Rare 7, Battle Monks only. Range 3\"; Strength 3; Thrown weapon (no range/move penalties), Precise (may attack enemies engaged in close combat; useless if the monk is in close combat), Caused fall (after a successful hit, enemy must pass a Strength test or is knocked down; +1 to the test vs large models; a mount knocked down makes the rider fall)."
+          "note": "Rare 7, Battle Monks only. Range 3\"; Strength 3; Thrown weapon (no range/move penalties), Precise (may attack enemies engaged in close combat; useless if the monk is in close combat), Caused fall (after a successful hit, enemy must pass a Strength test or is knocked down; +1 to the test vs large models; a mount knocked down makes the rider fall).",
+          "restrictedTo": ["dragon-monk", "warrior-monk"]
         },
         {
           "name": "Throwing stars",
@@ -284,7 +290,8 @@
           "text": "Fighting unarmed, causes a critical hit on a roll to wound of 9-12 instead of a natural 12. If wielding a quarter staff, only the unarmed attacks cause a critical hit, on 9+."
         }
       ],
-      "notes": ""
+      "notes": "",
+      "cannotBuy": ["armour"]
     },
     {
       "id": "soldier",
@@ -343,7 +350,8 @@
           "text": "No penalties for fighting unarmed and receives +1 Attack when doing so."
         }
       ],
-      "notes": ""
+      "notes": "",
+      "cannotBuy": ["armour"]
     },
     {
       "id": "raging-peasant",

@@ -244,7 +244,8 @@
           "text": "Subject to Frenzy."
         }
       ],
-      "notes": "May never wear armour (no helmet, light armour or shield)."
+      "notes": "May never wear armour (no helmet, light armour or shield).",
+      "cannotBuy": ["armour", "shield"]
     },
     {
       "id": "wulfen",

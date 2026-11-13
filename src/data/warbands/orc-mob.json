@@ -142,13 +142,15 @@
           "name": "Squig Prodder",
           "category": "misc",
           "listCost": 15,
-          "note": "Common (Goblins only). Treated as a spear; lets a Goblin keep all Cave Squigs within 12\" from going wild instead of 6\"."
+          "note": "Common (Goblins only). Treated as a spear; lets a Goblin keep all Cave Squigs within 12\" from going wild instead of 6\".",
+          "restrictedTo": ["goblin-warrior"]
         },
         {
           "name": "Ball & Chain",
           "category": "misc",
           "listCost": 15,
-          "note": "Common (Goblins only). Close combat, Strength as user +2; Incredible Force, Random, Two-handed, Cumbersome, Unwieldy. Only usable under the influence of Mad Cap Mushrooms."
+          "note": "Common (Goblins only). Close combat, Strength as user +2; Incredible Force, Random, Two-handed, Cumbersome, Unwieldy. Only usable under the influence of Mad Cap Mushrooms.",
+          "restrictedTo": ["goblin-warrior"]
         },
         {
           "name": "Mad Cap Mushrooms",
@@ -235,7 +237,8 @@
           "text": "May not wear armour."
         }
       ],
-      "notes": ""
+      "notes": "",
+      "cannotBuy": ["armour"]
     },
     {
       "id": "orc-big-un",

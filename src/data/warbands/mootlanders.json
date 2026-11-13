@@ -72,7 +72,8 @@
           "name": "Pistol",
           "category": "missile",
           "listCost": 15,
-          "note": "Moot Elder only"
+          "note": "Moot Elder only",
+          "restrictedTo": ["moot-elder"]
         }
       ]
     },

@@ -79,7 +79,8 @@
           "name": "Poison daggers",
           "category": "melee",
           "listCost": 25,
-          "note": "Common (Fanatics only). Pair of daggers coated in Death Cap juice, re-applied free after every game; same effect as Black Lotus."
+          "note": "Common (Fanatics only). Pair of daggers coated in Death Cap juice, re-applied free after every game; same effect as Black Lotus.",
+          "restrictedTo": ["fanatic"]
         },
         {
           "name": "Double handed weapon",
@@ -90,7 +91,8 @@
           "name": "Ball & chain",
           "category": "melee",
           "listCost": 15,
-          "note": "Common (Fanatics only). Rules as Mordheim Annual 2002."
+          "note": "Common (Fanatics only). Rules as Mordheim Annual 2002.",
+          "restrictedTo": ["fanatic"]
         },
         {
           "name": "Madcap Mushrooms",

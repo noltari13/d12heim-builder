@@ -1,0 +1,722 @@
+[
+ {
+  "name": "Claw of the Old Ones",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "amazons"
+  ],
+  "costText": "30",
+  "cost": 30,
+  "availability": "Rare 12",
+  "strength": "User +1",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "+6 AP (no armour save), Parry (1)",
+  "basis": "Sword (Parry 1) with User +1 like Morning Star/Flail; book 'no armour save' has no sheet analogue so set to an AP high enough to ignore any armour.",
+  "reviewed": false
+ },
+ {
+  "name": "Sunstaff",
+  "aliases": [],
+  "category": "missile",
+  "warbands": [
+   "amazons"
+  ],
+  "costText": "50",
+  "cost": 50,
+  "availability": "Rare 12",
+  "strength": "4",
+  "hands": null,
+  "range": "24\"",
+  "av": null,
+  "rules": "+2 to hit (Accurate), +6 AP (no armour save)",
+  "basis": "Bow-range (24\") S4 missile like Crossbow; book Accurate +1 to hit doubled to +2, no armour save as +6 AP.",
+  "reviewed": false
+ },
+ {
+  "name": "Sun Gauntlet",
+  "aliases": [],
+  "category": "missile",
+  "warbands": [
+   "amazons"
+  ],
+  "costText": "40",
+  "cost": 40,
+  "availability": "Rare 12",
+  "strength": "4",
+  "hands": null,
+  "range": "12\"",
+  "av": null,
+  "rules": "H2H, +2 to hit (Accurate), +6 AP (no armour save), extra S4 attack each round of hand-to-hand, no save",
+  "basis": "Pistol-class (12\" like Dueling Pistol, H2H) with Accurate +1 to hit doubled; book no-save as +6 AP.",
+  "reviewed": false
+ },
+ {
+  "name": "Tufenk",
+  "aliases": [],
+  "category": "missile",
+  "warbands": [
+   "arabian-tomb-raiders"
+  ],
+  "costText": "15",
+  "cost": 15,
+  "availability": "Rare 8",
+  "strength": "3",
+  "hands": null,
+  "range": "16\"",
+  "av": null,
+  "rules": "Reload (2), Steady Aim (move or shoot), +3 AP",
+  "basis": "Rules not printed in the PDF; guessed as a cheap primitive gun modelled on Blunderbuss/Handgun, S3, 16\", AP between Crossbow and Handgun.",
+  "reviewed": false
+ },
+ {
+  "name": "Katar",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "arabian-tomb-raiders"
+  ],
+  "costText": "5",
+  "cost": 5,
+  "availability": "Common",
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "None",
+  "basis": "Rules not printed; punch dagger modelled on Dagger/Club at 5 gc, Strength as user with no AP.",
+  "reviewed": false
+ },
+ {
+  "name": "Katana",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "battle-monks-of-cathay",
+   "merchant-caravans"
+  ],
+  "costText": "20",
+  "cost": 20,
+  "availability": "Common",
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "+1 AP, Parry (1)",
+  "basis": "No rules text found; Sword (Parry 1) with +1 AP for a finer edge, priced 20 gc vs Sword 10.",
+  "reviewed": false
+ },
+ {
+  "name": "Cathayan longsword",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "battle-monks-of-cathay",
+   "maneaters"
+  ],
+  "costText": "75",
+  "cost": 75,
+  "availability": "Rare 10",
+  "strength": "User +1",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "+1 AP, Parry (2)",
+  "basis": "No rules text found; premium blade modelled on Rapier (Parry 2) plus Katana's +1 AP and User +1 as Morning Star.",
+  "reviewed": false
+ },
+ {
+  "name": "Quarter staff",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "battle-monks-of-cathay"
+  ],
+  "costText": "15",
+  "cost": 15,
+  "availability": "Common",
+  "strength": "User",
+  "hands": "2",
+  "range": null,
+  "av": null,
+  "rules": "Parry (1), +2 Initiative in close combat (Balanced), Freestyle (combines with bare-hand attacks, still gaining +1 Attack)",
+  "basis": "Staff held in two hands with no AP; Parry (1) like Sword/Buckler and book +1 I doubled to +2.",
+  "reviewed": false
+ },
+ {
+  "name": "Chain sticks",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "battle-monks-of-cathay"
+  ],
+  "costText": "20",
+  "cost": 20,
+  "availability": "Rare 7",
+  "strength": "User",
+  "hands": "2",
+  "range": null,
+  "av": null,
+  "rules": "Flurry (+2 Attacks in the first turn of each hand-to-hand combat, otherwise counts as two hand weapons)",
+  "basis": "No AP in the book; Flurry attacks do not double (Attacks are not doubled); modelled as a Pair weapon like Weeping Blades.",
+  "reviewed": false
+ },
+ {
+  "name": "Fish-hook shot",
+  "aliases": [],
+  "category": "missile",
+  "warbands": [
+   "battle-monks-of-cathay"
+  ],
+  "costText": "10",
+  "cost": 10,
+  "availability": "Rare 7",
+  "strength": "3",
+  "hands": null,
+  "range": "3\"",
+  "av": null,
+  "rules": "Skirmish (no pen move), Precise (may target enemies in close combat; useless if the monk is in close combat), Knockdown (on hit target takes a Strength check or is knocked down, +2 vs large models; a mount knocked down makes the rider fall)",
+  "basis": "Thrown weapon like Net/Bolas (no range/move penalties) at book range 3\" and S3; +1 to test doubled to +2.",
+  "reviewed": false
+ },
+ {
+  "name": "Steel whip",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "black-dwarfs",
+   "sisters-of-sigmar"
+  ],
+  "costText": "10",
+  "cost": 10,
+  "availability": "Common",
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Cannot be parried, Whipcrack (+1 Attack when the wielder charges; +1 Attack striking first against the charger when charged; max +1 Attack total if charged by several; with two whips only the first gets Whipcrack)",
+  "basis": "Plain hand weapon with no AP (like Club/Axe); book special rules transcribed as-is since Attacks do not double.",
+  "reviewed": false
+ },
+ {
+  "name": "Man-catcher",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "black-dwarfs"
+  ],
+  "costText": "25",
+  "cost": 25,
+  "availability": "Rare 10",
+  "strength": "User",
+  "hands": "2",
+  "range": null,
+  "av": null,
+  "rules": "Capture (a model taken out of action by it is captured with no Serious Injury roll and locked in the Engine of Chaos; normal injury roll if no Engine of Chaos; large models and animals cannot be captured)",
+  "basis": "Two-handed pole weapon without the +2 Strength of 2H weapons as the book gives User; no AP.",
+  "reviewed": false
+ },
+ {
+  "name": "Mechanical suit",
+  "aliases": [],
+  "category": "armour",
+  "warbands": [
+   "black-dwarfs"
+  ],
+  "costText": "175",
+  "cost": 175,
+  "availability": "Rare 14",
+  "strength": null,
+  "hands": null,
+  "range": null,
+  "av": 4,
+  "rules": "+3 Movement, counts as Chaos armour, Sorcerer only (full price 225 gc)",
+  "basis": "Chaos armour counted as Plate-class AV 4 (Plate/Ithilmar Chainmail 4); +3 M not doubled as Movement does not double.",
+  "reviewed": false
+ },
+ {
+  "name": "Broadsword",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "bretonnian-chapel-guard"
+  ],
+  "costText": "15",
+  "cost": 15,
+  "availability": "Common",
+  "strength": "User +1",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Strike last, Unwieldy (no second weapon or buckler, shield ok), Cannot Parry, counts as a sword for Expert Swordsman",
+  "basis": "Sword body with User +1 like Morning Star/Flail; no AP, no Parry, Strike last as a 2H-style penalty.",
+  "reviewed": false
+ },
+ {
+  "name": "Lance",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "bretonnian-chapel-guard",
+   "bretonnian-knights",
+   "imperial-outriders",
+   "lustrian-reavers",
+   "cursed-cavalcade"
+  ],
+  "costText": "20",
+  "cost": 20,
+  "availability": "Rare 8",
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Mounted models only, +2 Strength on the charge only, Strike first on the charge",
+  "basis": "No rules text found; classic Mordheim lance: +2 S on the charge, mounted only; modelled like Spear for Strike first. Price 20 gc in most lists, 40 gc in Imperial Outriders and Lustrian Reavers.",
+  "reviewed": false
+ },
+ {
+  "name": "Kite shield",
+  "aliases": [],
+  "category": "armour",
+  "warbands": [
+   "bretonnian-chapel-guard"
+  ],
+  "costText": "10",
+  "cost": 10,
+  "availability": "Common",
+  "strength": null,
+  "hands": null,
+  "range": null,
+  "av": 3,
+  "rules": "AV 3 on foot, AV 2 while mounted (Bretonnian Knights only), cannot bring a save over 1+",
+  "basis": "Book save 9+ on foot / natural 12 mounted modelled as Large Shield AV 3 on foot and Small Shield AV 2 mounted.",
+  "reviewed": false
+ },
+ {
+  "name": "Shortsword",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "bretonnian-chapel-guard"
+  ],
+  "costText": "7",
+  "cost": 7,
+  "availability": "Common",
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Parry (1), enemy armour save +1 (natural 12 save if none), counts as a sword for Expert Swordsman",
+  "basis": "Sword (Parry 1) with the book's armour-save bonus for the enemy; no sheet analogue so noted as a rule.",
+  "reviewed": false
+ },
+ {
+  "name": "Disease Dagger",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "pestilens"
+  ],
+  "costText": "15",
+  "cost": 15,
+  "availability": "Rare 8",
+  "strength": "User - 1",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Pair (+1 attack with two), enemy armour save +1 (natural 12 save if none), Infecting (natural 12 to hit infects; target must roll above Toughness on a D12 or take an automatic wound; undead and possessed immune)",
+  "basis": "Dagger (User -1) with book armour bonus and Infecting; Toughness test written in d12 terms.",
+  "reviewed": false
+ },
+ {
+  "name": "Censer",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "pestilens"
+  ],
+  "costText": "40",
+  "cost": 40,
+  "availability": "Rare 9",
+  "strength": "User",
+  "hands": "2",
+  "range": null,
+  "av": null,
+  "rules": "+2 Strength in the first turn of combat only, Fog of Death (a model hit rolls a D12; above its Toughness is an automatic wound, natural 12 always wounds; the wielder also takes the test, wounded on a natural 12; undead and possessed immune)",
+  "basis": "Two-handed flail-like weapon with first-turn +2 S (Flail-style, no AP); Toughness test in d12 terms.",
+  "reviewed": false
+ },
+ {
+  "name": "Hedonist Whip",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "court-of-profane-pleasures"
+  ],
+  "costText": "15",
+  "cost": 15,
+  "availability": "Common",
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Cannot be parried, Whipcrack (+1 Attack when charging; +1 Attack striking first against the charger when charged; max +1 Attack total if charged by several; with two whips only the first gets Whipcrack), Heroes only",
+  "basis": "Same rules as Steel whip at 15 gc; kept as its own entry because the names differ.",
+  "reviewed": false
+ },
+ {
+  "name": "Slaaneshi Man-Catcher",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "court-of-profane-pleasures"
+  ],
+  "costText": "30",
+  "cost": 30,
+  "availability": "Rare 10",
+  "strength": "User +1",
+  "hands": "2",
+  "range": null,
+  "av": null,
+  "rules": "Lock (on an unsaved wound no injury roll; enemy is knocked down and cannot stand or move away while in melee with the wielder unless by magic; no effect on large creatures or steeds; at end of battle captured as Serious Injury result 61 if still pinned, even a Henchman)",
+  "basis": "Man-catcher with User +1 as the book; Lock transcribed since the sheet has no capture analogue.",
+  "reviewed": false
+ },
+ {
+  "name": "Beastlash",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "dark-elves"
+  ],
+  "costText": "10",
+  "cost": 10,
+  "availability": "Rare 8",
+  "strength": "User - 1",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Reach (attacks up to 4\" away), Beastbane (animals charged by or wishing to charge the wielder must first pass a Fear test), Beastmaster only (full cost 10 + D6 gc)",
+  "basis": "Dagger-class weapon (User -1) with Reach; no AP.",
+  "reviewed": false
+ },
+ {
+  "name": "Repeater Crossbow",
+  "aliases": [],
+  "category": "missile",
+  "warbands": [
+   "dark-elves"
+  ],
+  "costText": "35",
+  "cost": 35,
+  "availability": "Rare 9",
+  "strength": "3",
+  "hands": null,
+  "range": "24\"",
+  "av": null,
+  "rules": "Double Shot, +1 AP",
+  "basis": "No rules text found (PDF is scanned); crossbow-class repeater: S3 24\", Double Shot like Throwing knives, +1 AP like Crossbow.",
+  "reviewed": false
+ },
+ {
+  "name": "Dark Elf Blade",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "dark-elves"
+  ],
+  "costText": "15",
+  "cost": 15,
+  "availability": "Rare 9",
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "+1 Crit result, Wicked Edge (injury roll of 2-4 is Stunned), upgrade to a sword or dagger that keeps its abilities (item text +20 gc)",
+  "basis": "Sword/dagger upgrade; Critical Damage as Axe's +1 Crit result, list price 15 gc printed in warband list.",
+  "reviewed": false
+ },
+ {
+  "name": "Sea Dragon Cloak",
+  "aliases": [],
+  "category": "armour",
+  "warbands": [
+   "dark-elves"
+  ],
+  "costText": "50",
+  "cost": 50,
+  "availability": "Rare 10",
+  "strength": null,
+  "hands": null,
+  "range": null,
+  "av": 3,
+  "rules": "AV 4 against missiles (full cost 50 + 2D6 gc)",
+  "basis": "Book 5+ close combat / 4+ missiles; heavy-armour 5+ is Chainmail AV 3, so 4+ is one step up at AV 4.",
+  "reviewed": false
+ },
+ {
+  "name": "Dwarf Axe",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "dwarf-rangers",
+   "dwarf-treasure-hunters",
+   "pit-fighters"
+  ],
+  "costText": "15",
+  "cost": 15,
+  "availability": "Common",
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "+1 Crit result, +1 AP, Dwarves only",
+  "basis": "No rules text found in the PDFs; Axe (+1 Crit result) upgraded by +1 AP given the 15 gc price against 5 gc.",
+  "reviewed": false
+ },
+ {
+  "name": "Boss Pole",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "forest-goblins"
+  ],
+  "costText": "20",
+  "cost": 20,
+  "availability": "Common",
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Strike first (with -2 OS), Unwieldy (no dual wield, shield ok), the hero and Goblin henchmen within 6\" ignore animosity",
+  "basis": "Acts as a Spear per the book note; animosity rule added.",
+  "reviewed": false
+ },
+ {
+  "name": "Throwing Weapons",
+  "aliases": [],
+  "category": "missile",
+  "warbands": [
+   "forest-goblins"
+  ],
+  "costText": "15",
+  "cost": 15,
+  "availability": "Common",
+  "strength": "User",
+  "hands": null,
+  "range": "8\"",
+  "av": null,
+  "rules": "Skirmish (no pen move), H2H, Double Shot",
+  "basis": "Generic throwing weapons modelled on Throwing knives (same 15 gc and range).",
+  "reviewed": false
+ },
+ {
+  "name": "Double Barrelled Pistol",
+  "aliases": [],
+  "category": "missile",
+  "warbands": [
+   "nuln"
+  ],
+  "costText": "20",
+  "cost": 20,
+  "availability": "Rare 9",
+  "strength": "4",
+  "hands": null,
+  "range": "10\"",
+  "av": null,
+  "rules": "Reload (2), +3 AP, H2H, Double-barrelled (fire one or both barrels; both barrels = one to-hit roll and separate wound rolls; after both reload 2 turns; brace 35 gc)",
+  "basis": "Pistol (10\", +3 AP, H2H) with the book double-barrelled rule; brace price 35 gc.",
+  "reviewed": false
+ },
+ {
+  "name": "Double Barrelled Duelling Pistol",
+  "aliases": [
+   "D. B. Duelling Pistol",
+   "Double Barrelled Dueling Pistol"
+  ],
+  "category": "missile",
+  "warbands": [
+   "nuln"
+  ],
+  "costText": "35",
+  "cost": 35,
+  "availability": "Rare 11",
+  "strength": "4",
+  "hands": null,
+  "range": "12\"",
+  "av": null,
+  "rules": "Rifled (no malus long range), Reload (2), +3 AP, H2H, Double-barrelled (as Double Barrelled Pistol; brace 65 gc)",
+  "basis": "Dueling Pistol (12\", Rifled, +3 AP) with the double-barrelled rule.",
+  "reviewed": false
+ },
+ {
+  "name": "Double Barrelled Handgun",
+  "aliases": [],
+  "category": "missile",
+  "warbands": [
+   "nuln"
+  ],
+  "costText": "45",
+  "cost": 45,
+  "availability": "Rare 10",
+  "strength": "4",
+  "hands": null,
+  "range": "32\"",
+  "av": null,
+  "rules": "Reload (2), Steady Aim (move or shoot), +4 AP, Double-barrelled (as Double Barrelled Pistol)",
+  "basis": "Handgun (32\", Steady Aim, +4 AP) with the double-barrelled rule.",
+  "reviewed": false
+ },
+ {
+  "name": "Repeater Pistol",
+  "aliases": [],
+  "category": "missile",
+  "warbands": [
+   "nuln"
+  ],
+  "costText": "25",
+  "cost": 25,
+  "availability": "Rare 9",
+  "strength": "4",
+  "hands": null,
+  "range": "10\"",
+  "av": null,
+  "rules": "+3 AP, Fire Thrice (up to 3 shots, -2 to hit if more than one, later shots may target a model within 3\" of previous), Experimental (misfire: any result other than BOOM! means jammed/must reload), Quick Reload (can always fire one shot; after multiple shots must skip a shooting phase), Not a Club (pistol in first round of combat only)",
+  "basis": "Pistol (10\", +3 AP) with book repeater rules; the -1 to hit doubled to -2.",
+  "reviewed": false
+ },
+ {
+  "name": "Repeater Handgun",
+  "aliases": [],
+  "category": "missile",
+  "warbands": [
+   "nuln"
+  ],
+  "costText": "50",
+  "cost": 50,
+  "availability": "Rare 11",
+  "strength": "4",
+  "hands": null,
+  "range": "32\"",
+  "av": null,
+  "rules": "Steady Aim (move or shoot), +4 AP, Fire Thrice (up to 3 shots, -2 to hit if more than one, later shots within 3\" of previous target), Experimental (any result other than BOOM! = jammed/must reload), Slow Reload (reload takes a whole turn doing nothing)",
+  "basis": "Handgun (32\", +4 AP) with book repeater rules; -1 to hit doubled to -2.",
+  "reviewed": false
+ },
+ {
+  "name": "Hand-Held Mortar",
+  "aliases": [],
+  "category": "missile",
+  "warbands": [
+   "nuln",
+   "maneaters"
+  ],
+  "costText": "70",
+  "cost": 70,
+  "availability": "Rare 12",
+  "strength": "4",
+  "hands": null,
+  "range": "24\"",
+  "av": null,
+  "rules": "Steady Aim (move or shoot), +4 AP, Scatter (on a miss the shot lands 2D6\" in a random direction), Experimental (misfire as Repeater Handgun), Explosive Radius (target and all models within 1.5\" of the landing point take a single S4 hit), Reload (2)",
+  "basis": "Handgun-class gun at the book's 24\" range (not the sheet's 32\" handgun) with Scatter and Explosive Radius; Reload (2) added as Prepared Shot.",
+  "reviewed": false
+ },
+ {
+  "name": "Pigeon Bombs",
+  "aliases": [],
+  "category": "missile",
+  "warbands": [
+   "nuln"
+  ],
+  "costText": "25",
+  "cost": 25,
+  "availability": "Rare 8",
+  "strength": "4",
+  "hands": null,
+  "range": "Unlimited",
+  "av": null,
+  "rules": "Steady Aim (move or shoot), +4 AP, Explosive Radius (as Hand-Held Mortar), Tempermental (do not use BS; roll D12: 9-12 hits target, 3-8 explodes harmlessly, 1-2 explodes in the bearer's hands, bearer and all within 1.5\" take a S4 hit), Pigeon Roost (one purchase lasts the whole game and is replenished each game)",
+  "basis": "Mortar-class explosive with unlimited range; d6 roll 5+ mapped to 9+, 3-4 to 5-8 and 1-2 to 1-2.",
+  "reviewed": false
+ },
+ {
+  "name": "Throwing Axe",
+  "aliases": [
+   "Throwing axes"
+  ],
+  "category": "missile",
+  "warbands": [
+   "hochland-bandits"
+  ],
+  "costText": "15",
+  "cost": 15,
+  "availability": "Common",
+  "strength": "User",
+  "hands": null,
+  "range": "8\"",
+  "av": null,
+  "rules": "Skirmish (no pen move), +1 Crit result",
+  "basis": "Javelin range/Skirmish with Axe's +1 Crit result; 15 gc like Throwing knives.",
+  "reviewed": false
+ },
+ {
+  "name": "Main Gauche",
+  "aliases": [],
+  "category": "melee",
+  "warbands": [
+   "hochland-bandits"
+  ],
+  "costText": "7",
+  "cost": 7,
+  "availability": "Rare 7",
+  "strength": "User",
+  "hands": "1",
+  "range": null,
+  "av": null,
+  "rules": "Parry (1), enemy armour save +1",
+  "basis": "Sword (Parry 1) with the book's armour bonus for the enemy, like Shortsword.",
+  "reviewed": false
+ },
+ {
+  "name": "Toughened Leathers",
+  "aliases": [
+   "Toughened leathers"
+  ],
+  "category": "armour",
+  "warbands": [
+   "horned-hunters",
+   "pirates"
+  ],
+  "costText": "5",
+  "cost": 5,
+  "availability": "Common",
+  "strength": null,
+  "hands": null,
+  "range": null,
+  "av": 1,
+  "rules": "Combinable only with helmet or buckler (not shield), cannot be given away or sold",
+  "basis": "Works like light armour at 5 gc: Gambeson AV 1.",
+  "reviewed": false
+ },
+ {
+  "name": "Bone Helmet",
+  "aliases": [],
+  "category": "armour",
+  "warbands": [
+   "lizardmen"
+  ],
+  "costText": "10",
+  "cost": 10,
+  "availability": "Common",
+  "strength": null,
+  "hands": null,
+  "range": null,
+  "av": 0,
+  "rules": "4+ stun save",
+  "basis": "Helmet (AV 0, 4+ stun save) at the same 10 gc.",
+  "reviewed": false
+ }
+]

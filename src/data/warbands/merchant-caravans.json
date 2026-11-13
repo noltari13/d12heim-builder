@@ -99,7 +99,8 @@
           "name": "Warhorse",
           "category": "misc",
           "listCost": 40,
-          "note": "Knights Vanguard only. No profile printed in the PDF."
+          "note": "Knights Vanguard only. No profile printed in the PDF.",
+          "restrictedTo": ["knights-vanguard"]
         },
         {
           "name": "Trade wagon",
@@ -139,13 +140,15 @@
           "name": "Pike",
           "category": "melee",
           "listCost": 10,
-          "note": "Sell-swords only. Rare 8, Merchant Caravans only. Two-handed; Strike first (+1 Initiative in the first turn of combat); +1 armour save vs ranged attacks if it carries a shield."
+          "note": "Sell-swords only. Rare 8, Merchant Caravans only. Two-handed; Strike first (+1 Initiative in the first turn of combat); +1 armour save vs ranged attacks if it carries a shield.",
+          "restrictedTo": ["sell-sword"]
         },
         {
           "name": "Halberd",
           "category": "melee",
           "listCost": 10,
-          "note": "Sell-swords only"
+          "note": "Sell-swords only",
+          "restrictedTo": ["sell-sword"]
         },
         {
           "name": "Crossbow",

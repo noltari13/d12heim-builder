@@ -82,7 +82,8 @@
           "name": "Cathayan longsword",
           "category": "melee",
           "listCost": 75,
-          "note": "Captain only"
+          "note": "Captain only",
+          "restrictedTo": ["captain"]
         },
         {
           "name": "Hand-held mortar",

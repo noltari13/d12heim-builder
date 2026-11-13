@@ -80,13 +80,15 @@
           "name": "Asp Arrows",
           "category": "missile",
           "listCost": 10,
-          "note": "Tomb Lords only. Made from mummified remains of poisonous snakes, guided by ancient magic. +1 to hit."
+          "note": "Tomb Lords only. Made from mummified remains of poisonous snakes, guided by ancient magic. +1 to hit.",
+          "restrictedTo": ["tomb-lord"]
         },
         {
           "name": "Nehekharan Javelin",
           "category": "missile",
           "listCost": 10,
-          "note": "Tomb Lords only. Range 8\", Strength as user, +1 to hit."
+          "note": "Tomb Lords only. Range 8\", Strength as user, +1 to hit.",
+          "restrictedTo": ["tomb-lord"]
         },
         {
           "name": "Shield",
@@ -135,7 +137,8 @@
           "name": "Serpent staff",
           "category": "melee",
           "listCost": 30,
-          "note": "Liche Priests only. Two-handed, may be used to Parry. The Liche Priest may forgo all normal attacks and parries in a round to use the staff: the serpent always attacks first in close combat with a single attack at WS4 and S4."
+          "note": "Liche Priests only. Two-handed, may be used to Parry. The Liche Priest may forgo all normal attacks and parries in a round to use the staff: the serpent always attacks first in close combat with a single attack at WS4 and S4.",
+          "restrictedTo": ["liche-priest"]
         }
       ]
     },
@@ -242,7 +245,8 @@
           "text": "May not wear armour as it interferes with spell casting."
         }
       ],
-      "notes": ""
+      "notes": "",
+      "cannotBuy": ["armour"]
     },
     {
       "id": "acolyte",
@@ -277,7 +281,8 @@
           "text": "Follows all rules for the Undead but has retained a living mind and can learn from experience."
         }
       ],
-      "notes": "Printed rule text says 'The Liche Priest is undead' under Acolytes (copy error)."
+      "notes": "Printed rule text says 'The Liche Priest is undead' under Acolytes (copy error).",
+      "cannotBuy": ["missile", "armour"]
     },
     {
       "id": "skeleton-warrior",

@@ -136,7 +136,8 @@
           "name": "Sword",
           "category": "melee",
           "listCost": 10,
-          "note": "Heroes only"
+          "note": "Heroes only",
+          "restrictedTo": ["skink-priest", "skink-great-crest"]
         },
         {
           "name": "Spear",
@@ -172,7 +173,8 @@
           "name": "Bone Helmet",
           "category": "armour",
           "listCost": 10,
-          "note": "Skink Priest only"
+          "note": "Skink Priest only",
+          "restrictedTo": ["skink-priest"]
         },
         {
           "name": "Buckler",
@@ -262,7 +264,8 @@
           "text": "One extra attack: a bite at own Strength, strikes last."
         }
       ],
-      "notes": "Printed A is 1+1; the +1 is the bite attack, profile A recorded as 1."
+      "notes": "Printed A is 1+1; the +1 is the bite attack, profile A recorded as 1.",
+      "cannotBuy": ["missile"]
     },
     {
       "id": "skink-great-crest",
@@ -352,7 +355,8 @@
           "text": "One extra attack: a bite at own Strength, strikes last."
         }
       ],
-      "notes": "Printed A is 1+1; the +1 is the bite attack, profile A recorded as 1. Never more Saurus than Skink braves."
+      "notes": "Printed A is 1+1; the +1 is the bite attack, profile A recorded as 1. Never more Saurus than Skink braves.",
+      "cannotBuy": ["missile"]
     },
     {
       "id": "kroxigor",

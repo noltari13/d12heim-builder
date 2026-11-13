@@ -137,7 +137,8 @@
           "name": "Longbow",
           "category": "missile",
           "listCost": 15,
-          "note": "Bergjaeger only"
+          "note": "Bergjaeger only",
+          "restrictedTo": ["bergjaeger"]
         },
         {
           "name": "Light armour",
@@ -158,7 +159,8 @@
           "name": "Hunting arrows",
           "category": "misc",
           "listCost": 35,
-          "note": "Bergjaeger only"
+          "note": "Bergjaeger only",
+          "restrictedTo": ["bergjaeger"]
         }
       ]
     },

@@ -200,7 +200,8 @@
           "text": "On an advance roll of +1 Wound, may instead pick a new skill from his available lists."
         }
       ],
-      "notes": "May not carry non-magical weapons and suffers no penalties; may wear any armour from the Undead Equipment list (modelled as an armour-only list). Exactly one Liche per warband."
+      "notes": "May not carry non-magical weapons and suffers no penalties; may wear any armour from the Undead Equipment list (modelled as an armour-only list). Exactly one Liche per warband.",
+      "cannotBuy": ["melee", "missile"]
     },
     {
       "id": "necromancer",

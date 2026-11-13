@@ -83,7 +83,8 @@
         { "name": "Wizard", "text": "A Beastmen Shaman is a Wizard and uses Chaos Rituals." },
         { "name": "No armour", "text": "May choose weapons from the Beastman equipment list but never wears armour." }
       ],
-      "notes": ""
+      "notes": "",
+      "cannotBuy": ["armour"]
     },
     {
       "id": "bestigor",

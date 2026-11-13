@@ -22,19 +22,19 @@
         { "name": "Sword", "category": "melee", "listCost": 10 },
         { "name": "Double-handed weapon", "category": "melee", "listCost": 15 },
         { "name": "Spear", "category": "melee", "listCost": 10 },
-        { "name": "Ithilmar weapon", "category": "melee", "listCost": 0, "note": "Heroes only. 2 x price of the base weapon." },
+        { "name": "Ithilmar weapon", "category": "melee", "listCost": 0, "note": "Heroes only. 2 x price of the base weapon.", "restrictedTo": ["shadow-master", "shadow-walker", "shadow-weaver"] },
         { "name": "Bow", "category": "missile", "listCost": 10 },
         { "name": "Longbow", "category": "missile", "listCost": 15 },
         { "name": "Elf Bow", "category": "missile", "listCost": 35 },
         { "name": "Helmet", "category": "armour", "listCost": 10 },
         { "name": "Light armour", "category": "armour", "listCost": 20 },
         { "name": "Shield", "category": "armour", "listCost": 5 },
-        { "name": "Ithilmar armour", "category": "armour", "listCost": 60, "note": "Heroes only." },
-        { "name": "Standard of Nagarythe", "category": "misc", "listCost": 75, "note": "Heroes only. Full cost 75 + 3D6 gc / Rare 9. Only at warband creation. Shadow Warriors only. Models within 12\" re-roll failed Ld tests; if captured/taken out of action, all warband gains Hatred for the rest of the game and may not voluntarily rout. Carrier needs one hand free; may be used as a spear at -1 to hit." },
-        { "name": "War Horn of Nagarythe", "category": "misc", "listCost": 25, "note": "Heroes only. Full cost 25 + 1D6 gc / Rare 6. Once per game at start of own turn, all models +1 Ld (max 10) until start of next turn; may be used before a Rout test." },
+        { "name": "Ithilmar armour", "category": "armour", "listCost": 60, "note": "Heroes only.", "restrictedTo": ["shadow-master", "shadow-walker", "shadow-weaver"] },
+        { "name": "Standard of Nagarythe", "category": "misc", "listCost": 75, "note": "Heroes only. Full cost 75 + 3D6 gc / Rare 9. Only at warband creation. Shadow Warriors only. Models within 12\" re-roll failed Ld tests; if captured/taken out of action, all warband gains Hatred for the rest of the game and may not voluntarily rout. Carrier needs one hand free; may be used as a spear at -1 to hit.", "restrictedTo": ["shadow-master", "shadow-walker", "shadow-weaver"] },
+        { "name": "War Horn of Nagarythe", "category": "misc", "listCost": 25, "note": "Heroes only. Full cost 25 + 1D6 gc / Rare 6. Once per game at start of own turn, all models +1 Ld (max 10) until start of next turn; may be used before a Rout test.", "restrictedTo": ["shadow-master", "shadow-walker", "shadow-weaver"] },
         { "name": "Elven Cloak", "category": "misc", "listCost": 75, "note": "Full cost 75 + D6x10 gc / Rare 12." },
-        { "name": "Elven Wine", "category": "misc", "listCost": 30, "note": "Heroes only. Full cost 30 + 3D6 gc / Rare 10. One use; warband immune to Fear for the whole battle. Shadow Warriors only." },
-        { "name": "Elven Runestones", "category": "misc", "listCost": 50, "note": "Heroes only. Full cost 50 + 2D6 gc / Rare 11. Mage may attempt to dispel a successfully cast spell (roll equal or above caster's score). Shadow Weavers only." }
+        { "name": "Elven Wine", "category": "misc", "listCost": 30, "note": "Heroes only. Full cost 30 + 3D6 gc / Rare 10. One use; warband immune to Fear for the whole battle. Shadow Warriors only.", "restrictedTo": ["shadow-master", "shadow-walker", "shadow-weaver"] },
+        { "name": "Elven Runestones", "category": "misc", "listCost": 50, "note": "Heroes only. Full cost 50 + 2D6 gc / Rare 11. Mage may attempt to dispel a successfully cast spell (roll equal or above caster's score). Shadow Weavers only.", "restrictedTo": ["shadow-weaver"] }
       ]
     }
   ],

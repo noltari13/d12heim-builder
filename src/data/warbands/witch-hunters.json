@@ -327,7 +327,8 @@
           "text": "Never uses missile weapons, even if an Advance roll would otherwise allow it."
         }
       ],
-      "notes": ""
+      "notes": "",
+      "cannotBuy": ["missile"]
     },
     {
       "id": "zealot",
