@@ -11,7 +11,8 @@ export default function App() {
   const [rosters, setRosters] = useState<Roster[]>(loadRosters);
   const [activeId, setActiveId] = useState<string | null>(() => loadActive());
   const [creating, setCreating] = useState(false);
-  const [filter, setFilter] = useState('');
+  const [pick, setPick] = useState('');
+  const pickWb = pick ? getWarband(pick) : undefined;
   const fileRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => saveRosters(rosters), [rosters]);
@@ -33,6 +34,7 @@ export default function App() {
     setRosters((rs) => [...rs, r]);
     setActiveId(r.id);
     setCreating(false);
+    setPick('');
   };
 
   const importFile = async (f: File) => {
@@ -98,36 +100,46 @@ export default function App() {
 
       {showPicker && (
         <main className="picker no-print">
-          <div className="picker-head">
-            <h2>Choose a warband</h2>
-            <input
-              type="search"
-              placeholder={`Search ${WARBANDS.length} warbands…`}
-              value={filter}
-              onChange={(e) => setFilter(e.target.value)}
-              aria-label="Search warbands"
-              autoFocus
-            />
-          </div>
-          <div className="picker-grid">
-            {WARBANDS.filter((w) => !filter || `${w.name} ${w.fighters.map((f) => f.name).join(' ')}`.toLowerCase().includes(filter.toLowerCase())).map((w) => {
-              const leader = w.fighters.find((f) => f.isLeader);
-              return (
-                <button key={w.id} className="picker-card" onClick={() => create(w.id)}>
-                  <b>{w.name}</b>
-                  <span>
-                    {w.startingGold} gc · {w.minModels}-{w.maxModels} models
-                  </span>
-                  {leader && <small>Led by a {leader.name}</small>}
-                </button>
-              );
-            })}
-          </div>
-          {creating && roster && (
-            <button className="link" onClick={() => setCreating(false)}>
-              Cancel
-            </button>
+          <h2>New warband</h2>
+          <label className="picker-field">
+            Warband
+            <select value={pick} onChange={(e) => setPick(e.target.value)} autoFocus>
+              <option value="">Choose one of {WARBANDS.length} warbands…</option>
+              {WARBANDS.map((w) => (
+                <option key={w.id} value={w.id}>
+                  {w.name}
+                </option>
+              ))}
+            </select>
+          </label>
+          {pickWb && (
+            <div className="picker-preview">
+              <p className="muted">
+                {pickWb.startingGold} gc · {pickWb.minModels}-{pickWb.maxModels} models
+                {pickWb.fighters.find((f) => f.isLeader) && <> · led by a {pickWb.fighters.find((f) => f.isLeader)!.name}</>}
+              </p>
+              <ul>
+                {pickWb.fighters.map((f) => (
+                  <li key={f.id}>
+                    <span>
+                      {f.name} <small>{f.kind === 'hero' ? 'Hero' : 'Henchmen'}{f.max != null ? `, max ${f.max}` : ''}</small>
+                    </span>
+                    <b>{f.cost} gc</b>
+                  </li>
+                ))}
+              </ul>
+            </div>
           )}
+          <div className="picker-actions">
+            <button className="primary" disabled={!pickWb} onClick={() => pickWb && create(pickWb.id)}>
+              Create warband
+            </button>
+            {creating && roster && (
+              <button className="link" onClick={() => setCreating(false)}>
+                Cancel
+              </button>
+            )}
+          </div>
         </main>
       )}
 
