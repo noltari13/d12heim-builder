@@ -277,3 +277,6 @@ table { border-collapse: collapse; }
 .spell-ref .spell-title { display: flex; justify-content: space-between; gap: 8px; font-weight: 700; }
 .spell-ref p { margin: 4px 0 0; font-size: 14px; color: var(--muted); }
 .w-name .tag { margin-left: 6px; vertical-align: 1px; }
+.spells.blocked { border-left-color: var(--bad); }
+.spells.blocked .spell-list, .spells.blocked .spells-head { opacity: 0.5; }
+.spell-block { margin: 0; font-size: 14px; color: var(--bad); }

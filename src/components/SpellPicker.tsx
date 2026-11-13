@@ -3,13 +3,15 @@ import type { FighterType, RosterEntry } from '../types';
 import { schoolFor } from '../data';
 
 interface Props {
+  /** True when the fighter wears armour (supplement: can't cast). */
+  blocked?: boolean;
   ft: FighterType;
   entry: RosterEntry;
   onChange: (e: RosterEntry) => void;
 }
 
 /** Lets a caster record the spells it knows, limited to its own school. */
-export function SpellPicker({ ft, entry, onChange }: Props) {
+export function SpellPicker({ ft, entry, onChange, blocked }: Props) {
   const [open, setOpen] = useState<string | null>(null);
   const school = schoolFor(ft.spellcaster);
   const known = entry.spells ?? [];
@@ -35,7 +37,13 @@ export function SpellPicker({ ft, entry, onChange }: Props) {
   };
 
   return (
-    <div className="spells">
+    <div className={`spells ${blocked ? 'blocked' : ''}`}>
+      {blocked && (
+        <p className="spell-block">
+          <b>Can't cast while wearing armour.</b> Remove the armour to use these {word}s.
+          {school.kind === 'prayer' && ' (The book exempts prayers; the group applies the ban to them too until ruled otherwise.)'}
+        </p>
+      )}
       <div className="spells-head">
         <b>{school.name}</b>
         <span className="muted small">

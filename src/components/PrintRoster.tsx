@@ -57,6 +57,7 @@ export function PrintRoster({ wb, r, s }: { wb: WarbandDef; r: Roster; s: Roster
                     <>
                       <br />
                       <b>Spells:</b> {e.spells!.join(', ')}
+                      {c.castingBlocked && <i> (can't cast: wearing armour)</i>}
                     </>
                   )}
                   {c.ft.specialRules.length > 0 && (

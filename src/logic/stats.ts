@@ -79,6 +79,8 @@ export interface Computed {
   weapons: WeaponLine[];
   av: number;
   helmet: boolean;
+  /** Supplement: models cannot wear armour and cast spells. */
+  castingBlocked: boolean;
   warnings: string[];
 }
 
@@ -135,9 +137,13 @@ export function computeEntry(wb: WarbandDef, e: RosterEntry): Computed | null {
     if (max != null && count > max) warnings.push(`Only ${max} ${name} per ${ft.name}.`);
   }
 
+  const armourWorn = gear.filter((g) => g.category === 'armour');
+  const castingBlocked = !!ft.spellcaster && armourWorn.length > 0;
+  if (castingBlocked) warnings.push(`Wearing ${armourWorn.map((g) => g.label).join(', ')}: can't cast spells (supplement: models cannot wear armour and cast).`);
+
   const count = ft.kind === 'hero' ? 1 : e.count;
   const perModelCost = ft.cost + gearCost;
-  return { ft, p12, gear, perModelCost, totalCost: perModelCost * count, weapons, av, helmet, warnings };
+  return { ft, p12, gear, perModelCost, totalCost: perModelCost * count, weapons, av, helmet, castingBlocked, warnings };
 }
 
 /** Armour save: d12 >= 13 - AV + AP; no save if AP > AV. */

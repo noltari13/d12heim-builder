@@ -92,6 +92,7 @@ export function EntryCard({ wb, entry, c, allowRare, onChange, onRemove, onDupli
                   <option key={o.key} value={o.key}>
                     {o.label} ({o.cost} gc){o.label.toLowerCase() !== o.listItem.name.toLowerCase() ? ` · list: ${o.listItem.name}` : ''}
                     {o.flags.length ? ` · ${o.flags.join(', ')}` : ''}
+                    {ft.spellcaster && o.category === 'armour' ? ' · stops spellcasting' : ''}
                   </option>
                 ))}
               </optgroup>
@@ -123,7 +124,7 @@ export function EntryCard({ wb, entry, c, allowRare, onChange, onRemove, onDupli
         </ul>
       )}
 
-      <SpellPicker ft={ft} entry={entry} onChange={onChange} />
+      <SpellPicker ft={ft} entry={entry} onChange={onChange} blocked={c.castingBlocked} />
 
       <div className="defence">
         <span>
