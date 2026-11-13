@@ -1,0 +1,422 @@
+{
+  "id": "lizardmen",
+  "name": "Lizardmen",
+  "source": "Lizardmen.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 20,
+  "specialRules": [
+    {
+      "name": "Scaly Skin",
+      "text": "Natural save: Saurus 9+, Skinks natural 12. Cannot be modified beyond that by Strength, and any 'no save' result on the injury chart negates it. Light armour adds +1 to the save, as does a shield."
+    },
+    {
+      "name": "Armour",
+      "text": "Light armour always costs 50 gc, even when bought from the Equipment chart."
+    },
+    {
+      "name": "Bite Attack",
+      "text": "Saurus have a bite attack at their own Strength with no penalty for not using a weapon. It always strikes last, even after double-handed weapons."
+    },
+    {
+      "name": "Cold Blooded",
+      "text": "Roll 3D6 and take the lowest two dice on psychology and Rout tests. The warband may never use the Leadership of Saurus or Kroxigor for Rout tests."
+    },
+    {
+      "name": "Aquatic",
+      "text": "Skinks move through water with no penalty and count as in cover while in water."
+    },
+    {
+      "name": "Jungle born",
+      "text": "All Skinks move through jungle terrain without penalty."
+    },
+    {
+      "name": "Saurus Rarity",
+      "text": "Never more Saurus braves than Skink braves in the warband."
+    },
+    {
+      "name": "Poisoned Weapons",
+      "text": "Skink heroes may buy Dark Venom (20 gc) and Black Lotus (10 gc) as common items, for missile weapons only. Only Saurus may use them on close combat weapons, buying them normally from the Trading chart. Skink henchmen may buy Reptile Venom for 5 gc per missile weapon (common): +1 Strength, no save modifier, lasts one battle, whole group armed alike."
+    },
+    {
+      "name": "Sacred Markings",
+      "text": "A Hero may have a single Sacred Marking, bought only when recruited. Oversized Jaws (40 gc, Saurus only): bite at +1 Strength. Poison Glands (40 gc, Skinks only): may make any number of teeth attacks instead of weapon attacks, treated as Saurus bites, +1 save modifier regardless of Strength and +1 to the Injury roll. Mark of the Old Ones (50 gc): once per battle change one of the hero's own failed dice rolls into a success (may be used on a failed Rout test)."
+    },
+    {
+      "name": "Special skills: Skinks Only",
+      "text": "Infiltration: set up anywhere on the table no closer than 12\" to an enemy, starting in hiding. Great Hunter (Skink Great Crest): an additional -1 to hit him in cover, i.e. -2 total."
+    },
+    {
+      "name": "Special skills: Saurus Only",
+      "text": "Saurus cannot take Academic skills or use missile weapons. Bellowing Battle Roar: enemies in base contact are -1 to hit in the first round of combat. Toughened Hide: only taken out of action on a natural 12."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "saurus",
+      "name": "Saurus equipment list",
+      "usedBy": "Saurus Totem Warrior, Saurus Braves",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Stone Axe (counts as a club)",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Halberd",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Bone Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 50,
+          "note": "Always 50 gc for Lizardmen"
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        }
+      ]
+    },
+    {
+      "id": "skinks",
+      "name": "Skinks equipment list",
+      "usedBy": "Skink Priest, Skink Great Crests, Skink Braves",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Stone Axe (counts as a club)",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10,
+          "note": "Heroes only"
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Shortbow",
+          "category": "missile",
+          "listCost": 5
+        },
+        {
+          "name": "Bolas",
+          "category": "missile",
+          "listCost": 5
+        },
+        {
+          "name": "Javelins",
+          "category": "missile",
+          "listCost": 10
+        },
+        {
+          "name": "Throwing Knives",
+          "category": "missile",
+          "listCost": 15
+        },
+        {
+          "name": "Blowpipe",
+          "category": "missile",
+          "listCost": 25
+        },
+        {
+          "name": "Bone Helmet",
+          "category": "armour",
+          "listCost": 10,
+          "note": "Skink Priest only"
+        },
+        {
+          "name": "Buckler",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "skink-priest",
+      "name": "Skink Priest",
+      "kind": "hero",
+      "cost": 60,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 6,
+        "WS": 3,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 5,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "skinks",
+      "isLeader": true,
+      "spellcaster": "Lizardman Magic",
+      "skills": [
+        "Academic",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Leader",
+          "text": "Lizardmen within 6\" may use his Leadership for any Leadership test. If killed, a new Priest may be recruited after at least one game without a leader."
+        },
+        {
+          "name": "Wizard",
+          "text": "Uses Lizardmen magic; spells work like Prayers of Sigmar and may be cast in armour."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "saurus-totem-warrior",
+      "name": "Saurus Totem Warrior",
+      "kind": "hero",
+      "cost": 60,
+      "min": 0,
+      "max": 1,
+      "startingExp": 11,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 0,
+        "S": 4,
+        "T": 4,
+        "W": 1,
+        "I": 2,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "saurus",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Bite Attack",
+          "text": "One extra attack: a bite at own Strength, strikes last."
+        }
+      ],
+      "notes": "Printed A is 1+1; the +1 is the bite attack, profile A recorded as 1."
+    },
+    {
+      "id": "skink-great-crest",
+      "name": "Skink Great Crest",
+      "kind": "hero",
+      "cost": 30,
+      "min": 0,
+      "max": 2,
+      "startingExp": 8,
+      "profile": {
+        "M": 6,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 2,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "skinks",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Shooting",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "skink-brave",
+      "name": "Skink Brave",
+      "kind": "henchman",
+      "cost": 20,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 6,
+        "WS": 2,
+        "BS": 3,
+        "S": 3,
+        "T": 2,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipmentList": "skinks",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "saurus-brave",
+      "name": "Saurus Brave",
+      "kind": "henchman",
+      "cost": 40,
+      "min": 0,
+      "max": 4,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 0,
+        "S": 4,
+        "T": 4,
+        "W": 1,
+        "I": 1,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "saurus",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Bite Attack",
+          "text": "One extra attack: a bite at own Strength, strikes last."
+        }
+      ],
+      "notes": "Printed A is 1+1; the +1 is the bite attack, profile A recorded as 1. Never more Saurus than Skink braves."
+    },
+    {
+      "id": "kroxigor",
+      "name": "Kroxigor",
+      "kind": "henchman",
+      "cost": 200,
+      "min": 0,
+      "max": 1,
+      "startingExp": 0,
+      "profile": {
+        "M": 6,
+        "WS": 3,
+        "BS": 0,
+        "S": 5,
+        "T": 4,
+        "W": 3,
+        "I": 1,
+        "A": 3,
+        "Ld": 8
+      },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [
+        "Halberd"
+      ],
+      "specialRules": [
+        {
+          "name": "Scaly skin",
+          "text": "Natural save of 7+."
+        },
+        {
+          "name": "Aquatic",
+          "text": "Moves through water with no penalty and counts as in cover in water."
+        },
+        {
+          "name": "Cause Fear",
+          "text": "Causes fear."
+        },
+        {
+          "name": "Large",
+          "text": "May be picked out by an archer even if not the closest model."
+        },
+        {
+          "name": "Animal",
+          "text": "Never gains experience."
+        }
+      ],
+      "notes": "Always equipped with a halberd; cannot buy equipment."
+    }
+  ],
+  "spells": {
+    "listName": "Lizardman Magic",
+    "usedBy": [
+      "skink-priest"
+    ]
+  },
+  "conversionNotes": [
+    "Scaly Skin: Saurus 5+ -> 9+, Skinks 6+ -> natural 12, Kroxigor 4+ -> 7+ (5+ -> 9+ and 6+ -> natural 12 per group ruling).",
+    "Toughened Hide 'taken out of action on a 6+' -> natural 12 (group ruling: natural 6 = natural 12).",
+    "Saurus Totem Warrior and Brave A printed as '1+1' (bite); recorded A as 1 with the bite as a rule.",
+    "Brave 'Kroxigor' is a henchman in the PDF, bought as a single model (max 1).",
+    "Weather Variables table (scenario content) omitted. Special skill list contents are not given in the PDF except Infiltration, Great Hunter, Battle Roar, Toughened Hide.",
+    "Skink Priest wizard difficulties not converted."
+  ]
+}

@@ -35,7 +35,7 @@ h1, h2, h3 { font-family: Cinzel, Georgia, serif; margin: 0; }
 .top-actions select { max-width: 280px; }
 
 .picker { padding: 32px 0; }
-.picker h2 { margin-bottom: 16px; }
+
 .picker-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-bottom: 16px; }
 .picker-card { display: flex; flex-direction: column; gap: 4px; align-items: flex-start; text-align: left; padding: 16px; background: var(--panel); }
 .picker-card b { font-family: Cinzel, Georgia, serif; font-size: 18px; color: var(--accent); }
@@ -128,3 +128,6 @@ table { border-collapse: collapse; }
   .print-rules p { margin: 3px 0; font-size: 9px; }
   @page { size: landscape; margin: 10mm; }
 }
+.picker-head { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.picker-head h2 { margin: 0; }
+.picker-head input { min-width: 240px; flex: 0 1 320px; }

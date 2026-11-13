@@ -1,0 +1,372 @@
+{
+  "id": "amazons",
+  "name": "Amazons",
+  "source": "Amazons.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 15,
+  "specialRules": [
+    {
+      "name": "Sacrifice",
+      "text": "Follow the rules for Possessed in the Rulebook when it comes to captives."
+    },
+    {
+      "name": "Not one of us",
+      "text": "May not have any Hired Swords or Dramatis Personae unless they are Amazons themselves."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "heroine",
+      "name": "Heroines equipment list",
+      "usedBy": "Priestess, Champions, Totem Warriors",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Club",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Claw of the Old Ones",
+          "category": "melee",
+          "listCost": 30,
+          "note": "Rare 12. S+1, no armour save, parry"
+        },
+        {
+          "name": "Sunstaff",
+          "category": "missile",
+          "listCost": 50,
+          "note": "Rare 12. Range 24\", S4, accurate, no armour save"
+        },
+        {
+          "name": "Sun Gauntlet",
+          "category": "missile",
+          "listCost": 40,
+          "note": "Rare 12. Range 12\", S4, accurate, no armour save; can be used in hand-to-hand as an extra S4 attack each round, no save"
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Buckler",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Amulet of the Moon",
+          "category": "misc",
+          "listCost": 50,
+          "note": "Rare 12. -1 to hit from missile fire; special save 9+ against missile fire"
+        },
+        {
+          "name": "Healing Herbs",
+          "category": "misc",
+          "listCost": 35,
+          "note": "Common for Amazons"
+        }
+      ]
+    },
+    {
+      "id": "henchwomen",
+      "name": "Henchwomen equipment list",
+      "usedBy": "Amazon Warriors",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Club",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Sling",
+          "category": "missile",
+          "listCost": 5
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Buckler",
+          "category": "armour",
+          "listCost": 5
+        }
+      ]
+    },
+    {
+      "id": "scout",
+      "name": "Scout equipment list",
+      "usedBy": "Scouts",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Club",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Sling",
+          "category": "missile",
+          "listCost": 5
+        },
+        {
+          "name": "Javelins",
+          "category": "missile",
+          "listCost": 5,
+          "note": "Range 8\", S as user, thrown weapon"
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Buckler",
+          "category": "armour",
+          "listCost": 5
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "priestess",
+      "name": "Priestess",
+      "kind": "hero",
+      "cost": 70,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "heroine",
+      "isLeader": true,
+      "spellcaster": "Amazon Rituals",
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Academic",
+        "Strength",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Leader",
+          "text": "Models within 6\" may use her Leadership."
+        },
+        {
+          "name": "Wizard",
+          "text": "Uses Amazon Rituals; starts with one ritual chosen at random."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "champion",
+      "name": "Champion",
+      "kind": "hero",
+      "cost": 35,
+      "min": 0,
+      "max": 2,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "heroine",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "Printed as using the Heroines and special equipment lists (all in the heroine list)."
+    },
+    {
+      "id": "totem-warrior",
+      "name": "Totem Warrior",
+      "kind": "hero",
+      "cost": 30,
+      "min": 0,
+      "max": 2,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "heroine",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Frenzy",
+          "text": "Subject to the rules for Frenzy."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "amazon-warrior",
+      "name": "Amazon Warrior",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 1,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "henchwomen",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "Must have at least 1 Warrior in the warband."
+    },
+    {
+      "id": "scout",
+      "name": "Scout",
+      "kind": "henchman",
+      "cost": 30,
+      "min": 0,
+      "max": 3,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "scout",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Stealthy",
+          "text": "May deploy twice the distance onto the battlefield and may start the battle Hiding."
+        }
+      ],
+      "notes": ""
+    }
+  ],
+  "spells": {
+    "listName": "Amazon Rituals",
+    "usedBy": [
+      "priestess"
+    ]
+  },
+  "conversionNotes": [
+    "Amulet of the Moon special save 5+ converted to 9+ (5+ not in the given table; extrapolated from the d6->d12 doubling).",
+    "Rarity (Rare 12 / Common) printed on special items is recorded in item notes.",
+    "Amazon Rituals are a d6 table in the PDF; difficulty values not converted.",
+    "Max characteristics are same as any other human warband (not recorded as a rule)."
+  ]
+}

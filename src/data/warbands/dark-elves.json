@@ -1,0 +1,200 @@
+{
+  "id": "dark-elves",
+  "name": "Dark Elves",
+  "source": "Dark Elves, Errata'd.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 12,
+  "specialRules": [
+    { "name": "Kindred Hatred", "text": "Dark Elves Hate any High Elf warriors including High Elf Hired Swords." },
+    { "name": "Excellent Sight", "text": "Elves spot Hidden enemies from twice as far away as normal (twice their Initiative in inches)." },
+    { "name": "Black Powder Weapons", "text": "Dark Elves may never use black powder weapons." }
+  ],
+  "equipmentLists": [
+    {
+      "id": "main",
+      "name": "Dark Elf equipment list",
+      "usedBy": "High Born, Fellblades, Beastmaster, Sorceress, Corsairs",
+      "items": [
+        { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st free" },
+        { "name": "Axe", "category": "melee", "listCost": 5 },
+        { "name": "Sword", "category": "melee", "listCost": 10 },
+        { "name": "Double-handed weapon", "category": "melee", "listCost": 15 },
+        { "name": "Halberd", "category": "melee", "listCost": 10 },
+        { "name": "Spear", "category": "melee", "listCost": 10 },
+        { "name": "Beastlash", "category": "melee", "listCost": 10, "note": "Beastmaster only. Full cost 10 + D6 gc / Rare 8. Close combat, Strength as user -1, Beastbane, Reach (attacks up to 4\" away). Beastbane: animals charged by or wishing to charge a Beastmaster with one must first pass a Fear test." },
+        { "name": "Repeater Crossbow", "category": "missile", "listCost": 35 },
+        { "name": "Crossbow Pistol", "category": "missile", "listCost": 35 },
+        { "name": "Helmet", "category": "armour", "listCost": 10 },
+        { "name": "Light armour", "category": "armour", "listCost": 20 },
+        { "name": "Shield", "category": "armour", "listCost": 5 },
+        { "name": "Buckler", "category": "armour", "listCost": 5 },
+        { "name": "Dark Elf Blade", "category": "melee", "listCost": 15, "note": "Heroes only. Printed 15 gc in list; item text says +20 gc to the weapon (Rare 9). Upgrade a sword or dagger; keeps its abilities. Critical Damage (+1 on critical hit chart), Wicked Edge (injury roll of 2-4 is Stunned)." },
+        { "name": "Dark Venom", "category": "misc", "listCost": 15, "note": "Heroes only." },
+        { "name": "Sea Dragon Cloak", "category": "armour", "listCost": 50, "note": "Heroes and Corsairs only. Full cost 50 + 2D6 gc / Rare 10. Scales: 5+ armour save in close combat, 4+ against missiles." }
+      ]
+    },
+    {
+      "id": "shades",
+      "name": "Shades equipment list",
+      "usedBy": "Shades",
+      "items": [
+        { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st free" },
+        { "name": "Axe", "category": "melee", "listCost": 5 },
+        { "name": "Sword", "category": "melee", "listCost": 10 },
+        { "name": "Repeater Crossbow", "category": "missile", "listCost": 35 },
+        { "name": "Helmet", "category": "armour", "listCost": 10 },
+        { "name": "Light armour", "category": "armour", "listCost": 20 }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "high-born",
+      "name": "High Born",
+      "kind": "hero",
+      "cost": 70,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": { "M": 5, "WS": 5, "BS": 4, "S": 3, "T": 3, "W": 1, "I": 6, "A": 1, "Ld": 9 },
+      "equipmentList": "main",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": ["Combat", "Shooting", "Academic", "Speed", "Special"],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Leader", "text": "Any models within 6\" may use his Leadership instead of their own." }
+      ],
+      "notes": "Exactly one per warband."
+    },
+    {
+      "id": "fellblade",
+      "name": "Fellblade",
+      "kind": "hero",
+      "cost": 40,
+      "min": 0,
+      "max": 2,
+      "startingExp": 12,
+      "profile": { "M": 5, "WS": 5, "BS": 4, "S": 3, "T": 3, "W": 1, "I": 6, "A": 1, "Ld": 8 },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": ["Combat", "Speed", "Special"],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Melee Specialists", "text": "May not use missile weapons of any sort." }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "beastmaster",
+      "name": "Beastmaster",
+      "kind": "hero",
+      "cost": 45,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": { "M": 5, "WS": 4, "BS": 4, "S": 3, "T": 3, "W": 1, "I": 6, "A": 1, "Ld": 8 },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": ["Combat", "Speed", "Special"],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Cold One Beasthound", "text": "May be accompanied by up to two Cold One Beasthounds, bought as henchmen." }
+      ],
+      "notes": "Only one that may use the Beastlash."
+    },
+    {
+      "id": "sorceress",
+      "name": "Dark Elf Sorceress",
+      "kind": "hero",
+      "cost": 55,
+      "min": 0,
+      "max": 1,
+      "startingExp": 12,
+      "profile": { "M": 5, "WS": 4, "BS": 4, "S": 3, "T": 3, "W": 1, "I": 6, "A": 1, "Ld": 8 },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": "Dark Elf Magic",
+      "skills": ["Academic", "Speed", "Special"],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Wizard", "text": "Wizard; uses Dark Elf Magic. May not cast spells if wearing armour." }
+      ],
+      "notes": "May not take the Powerful Build skill."
+    },
+    {
+      "id": "corsair",
+      "name": "Corsair",
+      "kind": "henchman",
+      "cost": 35,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": { "M": 5, "WS": 4, "BS": 4, "S": 3, "T": 3, "W": 1, "I": 6, "A": 1, "Ld": 8 },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "Bought in groups of 1-5. May wear Sea Dragon Cloaks even though not heroes."
+    },
+    {
+      "id": "shade",
+      "name": "Shade",
+      "kind": "henchman",
+      "cost": 30,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": { "M": 5, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 5, "A": 1, "Ld": 8 },
+      "equipmentList": "shades",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Natural Stealth", "text": "If a Dark Elf is Hiding, enemy models suffer -1 to their Initiative for determining if they can detect him." }
+      ],
+      "notes": "Bought in groups of 1-5."
+    },
+    {
+      "id": "cold-one-beasthound",
+      "name": "Cold One Beasthound",
+      "kind": "henchman",
+      "cost": 30,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": { "M": 6, "WS": 3, "BS": 0, "S": 4, "T": 4, "W": 1, "I": 1, "A": 1, "Ld": 4 },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": ["Natural weapons (claws and jaws)"],
+      "specialRules": [
+        { "name": "Animals", "text": "All animal rules apply; never gains experience." },
+        { "name": "Beastmaster", "text": "If the Beastmaster dies the beasts escape and are removed from the roster. If the Beastmaster cannot participate in a battle, neither can the beasts." },
+        { "name": "Stupidity", "text": "May use the basic Leadership of the Beastmaster if within 6\" of him. May never use the warband leader's Leadership, nor the Beastmaster's increased Leadership if he is within 6\" of the leader." },
+        { "name": "Scaly Skin", "text": "Natural-12 armour save (d6 6+), cannot be modified beyond that due to Strength; a 'no save' injury result negates it." },
+        { "name": "Fear", "text": "Causes Fear." }
+      ],
+      "notes": "Only with a Beastmaster in the warband; max 2."
+    }
+  ],
+  "spells": { "listName": "Dark Elf Magic", "usedBy": ["sorceress"] },
+  "conversionNotes": [
+    "PDF is the errata'd Lustria Cities of Gold version; read from images (no text layer).",
+    "Dark Elf Blade: list shows 15 gc but item text says +20 gc over the weapon (Rare 9). Check which applies.",
+    "Dark Venom is listed at 15 gc heroes-only; no rules text in the PDF other than Master of Poisons skill.",
+    "Fey Quickness (Special skill, not copied as a fighter rule): roll of 6 -> 12, 4+ -> 7+.",
+    "Scaly Skin 6+ armour save -> natural 12 (group ruling: 6 = natural 12). Sea Dragon Cloak 5+ / 4+ would become 9+ / 7+ in d12; text left as printed in the equipment note.",
+    "Wicked Edge (injury roll 2-4 = Stunned) and Dark Elf Blade dagger save of 6 not converted; injury-table ranges depend on d12 injury chart.",
+    "Dark Elf Magic is a D6 spell list (Doombolt hits 4+ etc.) left to the app.",
+    "Cold One Beasthounds: max 2, only with a Beastmaster; the Beastlash is Beastmaster only.",
+    "Special skills: Fury of Khaine, Powerful Build (no Sorceress, max two warriors), Fey Quickness, Infiltration, Master of Poisons."
+  ]
+}

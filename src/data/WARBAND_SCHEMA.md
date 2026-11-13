@@ -53,6 +53,16 @@ Field rules:
 - `listCost`: the gc cost printed in the warband list (number). If the cost has a dice part like "35 + 2D6", put the base number in listCost and the full text in `note`.
 - `spellcaster`: null, or the spell list name (e.g. "Necromancy", "Chaos Rituals", "Magic of the Horned Rat").
 - `skills`: the skill tables that fighter can use (heroes only; [] for henchmen).
-- `specialRules`: keep text short and mechanical; replace any "on a 6" / "4+" d6 wording with the d12 equivalent using these conversions: natural 6 -> natural 12, 5-6 -> 9-12, 4+ -> 7+, 3+ -> 5+, 2+ -> 3+. Record each such conversion in `conversionNotes`.
+- `specialRules`: keep text short and mechanical; replace any "on a 6" / "4+" d6 wording with the d12 equivalent using these conversions: natural 6 -> natural 12, 6+ -> natural 12, 5-6 or 5+ -> 9-12 (9+), 4+ -> 7+, 3+ -> 5+, 2+ -> 3+; a roll of 1 -> 1-2. Record each such conversion in `conversionNotes`.
 - Include every fighter type and every equipment list in the PDF (some warbands have separate hero and henchman lists, or extra lists for specific fighters).
 - Hired swords, dramatis personae and campaign-only content are out of scope.
+
+## Extra guidance for batch extraction
+
+- Always verify profiles, costs, limits and lists against the PDF page images (Read tool with `pages`); text extracts of these PDFs are often jumbled, and some PDFs are scanned with no text layer at all.
+- One PDF can hold several warbands (e.g. Mercenaries = Reikland, Middenheim, Marienburg). Write one file per warband; repeat shared content in each.
+- If a warband offers a one-off choice (e.g. a Mark of Chaos, a city, a god), record it as a warband-level `specialRules` entry and note it in `conversionNotes`; don't split the file.
+- Mounts, war animals and vehicles that are bought as equipment go in the equipment list with category "misc" and their profile/rules in `note`.
+- Item names: copy them exactly as printed (e.g. "Light armour", "Double-handed weapon", "Crossbow pistol", "Brace of pistols"); the app maps them to Equipment.xlsx itself.
+- Fighters with a `max` given as a number of models per warband rating, or other conditional limits: put the simplest starting-warband number in `max` and explain in `notes`.
+- File names: lowercase-hyphenated id, e.g. `sisters-of-sigmar.json`; `id` matches the file name.

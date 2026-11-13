@@ -1,0 +1,593 @@
+{
+  "id": "pirates",
+  "name": "Pirates",
+  "source": "Pirates, Errata'd.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 15,
+  "specialRules": [
+    {
+      "name": "Swabbies",
+      "text": "Only humans can be recruited. Enemy human Heroes who are Captured after a game may be offered a place: both players roll 2D6 adding Leadership (Captain vs captured Hero); each side that won the game adds +1. If the Pirate wins, the Hero becomes a Crewman (equipment sold off, stats reset to starting Crewman, joins a Crew group of 4 or fewer or starts a new one); otherwise he becomes a Swabbie, keeping skills and characteristics but only using the Swabbie list. Enemy human Henchmen lost for good (1-2 post-game) are taken on a roll of 7+ on D12 (4+ on D6), only if the Pirates won, and test the same way. Stragglers: a Leadership test makes him a Swabbie. Prisoners: D3 rescued, separate Leadership test each to join as Crew (starting stats, 0 exp, player pays for equipment), else Swabbie. Hired Swords and Special Characters can never be recruited."
+    },
+    {
+      "name": "Hired Swords and items",
+      "text": "Unless noted otherwise, same access to Hired Swords and items as a regular human Mercenary warband. +20 gc upkeep if both Dwarfs and Elves are in the warband."
+    },
+    {
+      "name": "Starting Swabbies",
+      "text": "In a one-off game the warband starts with two Swabbies for free."
+    },
+    {
+      "name": "Succession",
+      "text": "If the Captain is killed, a Mate takes over as a Champion would in a Mercenary warband."
+    },
+    {
+      "name": "Pirate special skills",
+      "text": "Cutlass Master: with a Sword, may also parry on a roll equal to the to-hit roll, only when in cover or in a building or within 2\" of a wall/tree etc. Booming Voice (Captain only): once per turn, one pirate within 8\" who failed a test to flee combat or to stop fleeing may re-roll it; Captain must be standing and not in close combat. Hardy Constitution: ignores a Critical Hit on a roll of 9-12. Swashbuckler: Leadership test at end of any hand-to-hand phase when in base contact; if passed may move away (no run/charge) without being struck. Sea Shanty Singer: at start of his Close Combat phase one opponent in base contact must pass a Leadership test or lose 1 Attack that turn (not Undead or non-living creatures). Sea Legs: when he Falls, ignores the D3 hits on a roll of 7+ (single roll); if knocked down or stunned within 1\" of a precipice may re-roll his Initiative test to see if he falls."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "pirate",
+      "name": "Pirate equipment list",
+      "usedBy": "Captain, Mates, Cabin Boys, Crew, Boatswains",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Hammer/Mace",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Boat Hook",
+          "category": "melee",
+          "listCost": 8,
+          "note": "Common. S as user -1, strike first in first round of close combat, two-handed (no other weapon or shield/buckler)"
+        },
+        {
+          "name": "Cat O' Nine Tails",
+          "category": "melee",
+          "listCost": 8,
+          "note": "Heroes only. Common. 4\" range, user's Strength, cannot be parried by swords or bucklers, target gets +1 armour save (6+ if none)"
+        },
+        {
+          "name": "Cutlass (Sword)",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Belaying Pin",
+          "category": "missile",
+          "listCost": 3,
+          "note": "Common. Range 6\", S as user -1, thrown, target +1 armour save, no range penalties"
+        },
+        {
+          "name": "Pistol",
+          "category": "missile",
+          "listCost": 15,
+          "note": "30 gc for a brace"
+        },
+        {
+          "name": "Crossbow",
+          "category": "missile",
+          "listCost": 25
+        },
+        {
+          "name": "Dueling Pistol",
+          "category": "missile",
+          "listCost": 30,
+          "note": "60 gc for a brace"
+        },
+        {
+          "name": "Buckler",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Toughened leathers",
+          "category": "armour",
+          "listCost": 5,
+          "note": "Common. Works like light armour; combinable only with helmet or buckler (not shield); cannot be given away or sold"
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        }
+      ]
+    },
+    {
+      "id": "swabbie",
+      "name": "Swabbie equipment list",
+      "usedBy": "Swabbies",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Hammer/Mace",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Boat Hook",
+          "category": "melee",
+          "listCost": 8,
+          "note": "Common. S as user -1, strike first in first round of close combat, two-handed (no other weapon or shield/buckler)"
+        },
+        {
+          "name": "Cutlass (Sword)",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Belaying Pin",
+          "category": "missile",
+          "listCost": 3,
+          "note": "Common. Range 6\", S as user -1, thrown, target +1 armour save, no range penalties"
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10
+        },
+        {
+          "name": "Buckler",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Toughened leathers",
+          "category": "armour",
+          "listCost": 5,
+          "note": "Common. Works like light armour; combinable only with helmet or buckler (not shield); cannot be given away or sold"
+        }
+      ]
+    },
+    {
+      "id": "gunner",
+      "name": "Gunner equipment list",
+      "usedBy": "Gunners",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Hammer/Mace",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Cutlass (Sword)",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Pistol",
+          "category": "missile",
+          "listCost": 15,
+          "note": "30 gc for a brace"
+        },
+        {
+          "name": "Blunderbuss",
+          "category": "missile",
+          "listCost": 30
+        },
+        {
+          "name": "Dueling Pistol",
+          "category": "missile",
+          "listCost": 30,
+          "note": "60 gc for a brace"
+        },
+        {
+          "name": "Handgun",
+          "category": "missile",
+          "listCost": 35
+        },
+        {
+          "name": "Swivel Gun",
+          "category": "missile",
+          "listCost": 65,
+          "note": "Rare 8; one per warband; Gunners only; wielder must be an individual model. -1 I and -1 M, no firing twice or after moving, blackpowder optional rules always apply; uses special ammo bought per game"
+        },
+        {
+          "name": "Swivel Gun Ball Shot",
+          "category": "missile",
+          "listCost": 5,
+          "note": "Swivel Gun ammo, one game. Range 36\", S5, -2 save, Injury rolls of 2-4 become stunned (d6 value, not converted)"
+        },
+        {
+          "name": "Swivel Gun Chain Shot",
+          "category": "missile",
+          "listCost": 2,
+          "note": "Swivel Gun ammo, one game. Range 24\", S4, -1 save, unwounded hit enemies knocked down on 7+"
+        },
+        {
+          "name": "Swivel Gun Grape Shot",
+          "category": "missile",
+          "listCost": 2,
+          "note": "Swivel Gun ammo, one game. Range 24\", S3, no save modifier, D6 other enemies within 4\" in line of sight also take a hit; never hits pirates"
+        },
+        {
+          "name": "Toughened leathers",
+          "category": "armour",
+          "listCost": 5,
+          "note": "Common. Works like light armour; combinable only with helmet or buckler (not shield); cannot be given away or sold"
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        }
+      ]
+    },
+    {
+      "id": "pirate-special",
+      "name": "Special pirate equipment (Price Chart)",
+      "usedBy": "Pirates (Pirate equipment list users); bought mainly in after-game trading",
+      "items": [
+        {
+          "name": "Compass",
+          "category": "misc",
+          "listCost": 45,
+          "note": "45+2D6 gc, Rare 9. Re-roll deployment roll once"
+        },
+        {
+          "name": "Hardtack Biscuits",
+          "category": "misc",
+          "listCost": 5,
+          "note": "Common. One per model, one use: +1 Toughness for the turn and enemy turn; roll afterwards, on 1-2 the pirate misses the next game"
+        },
+        {
+          "name": "Hook Hand",
+          "category": "misc",
+          "listCost": 4,
+          "note": "Common. One per model; counts as a dagger in that hand, no two-handed weapons; ignores Hand Injury/Arm Wound on 7+"
+        },
+        {
+          "name": "Jolly Roger",
+          "category": "misc",
+          "listCost": 40,
+          "note": "40+2D6 gc, Rare 9. One per warband; Heroes only; pirates within 12\" never All Alone; takes one hand"
+        },
+        {
+          "name": "Parrot",
+          "category": "misc",
+          "listCost": 15,
+          "note": "Rare 8. Captain and Mates only; enemies in base contact -1 to hit in first round unless they pass a Leadership test"
+        },
+        {
+          "name": "Peg Leg",
+          "category": "misc",
+          "listCost": 8,
+          "note": "Common. One per model; -1 Movement (and max); special save of natural 12 when failing any save, unmodified"
+        },
+        {
+          "name": "Spy Glass",
+          "category": "misc",
+          "listCost": 20,
+          "note": "Rare 8. Detect one hidden enemy on 7+; cannot run or charge"
+        },
+        {
+          "name": "Treasure Map",
+          "category": "misc",
+          "listCost": 75,
+          "note": "75+4D6 gc, Rare 10. One use"
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "captain",
+      "name": "Pirate Captain",
+      "kind": "hero",
+      "cost": 60,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": [
+        "pirate",
+        "pirate-special"
+      ],
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Academic",
+        "Strength",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Leader",
+          "text": "Any pirate within 6\" may use his Leadership for any Leadership test."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "mate",
+      "name": "Ship's Mate",
+      "kind": "hero",
+      "cost": 35,
+      "min": 0,
+      "max": 2,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": [
+        "pirate",
+        "pirate-special"
+      ],
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Strength",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "cabin-boy",
+      "name": "Cabin Boy",
+      "kind": "hero",
+      "cost": 15,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipmentList": [
+        "pirate",
+        "pirate-special"
+      ],
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "crew",
+      "name": "Crew",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": [
+        "pirate",
+        "pirate-special"
+      ],
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "gunner",
+      "name": "Gunner",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": 7,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "gunner",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Swivel Guns is Dangerous, Matey!",
+          "text": "A Gunner with a Swivel Gun is always an individual model (new Gunner or split from a group, keeping experience and skills)."
+        }
+      ],
+      "notes": "Special equipment list not stated for Gunners; only the Gunner list is used."
+    },
+    {
+      "id": "boatswain",
+      "name": "Boatswain",
+      "kind": "henchman",
+      "cost": 32,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": [
+        "pirate",
+        "pirate-special"
+      ],
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [
+        "Rope & Hook"
+      ],
+      "specialRules": [
+        {
+          "name": "Expert Riggers",
+          "text": "May re-roll failed Initiative tests for Leaping over Gaps, Jumping Down, Diving Charge, and Climbing with a Rope."
+        }
+      ],
+      "notes": "Rope & Hook can never be sold or given away."
+    },
+    {
+      "id": "swabbie",
+      "name": "Swabbie",
+      "kind": "henchman",
+      "cost": 0,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipmentList": "swabbie",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Not Hired",
+          "text": "Not hired; follow the special recruitment rules."
+        },
+        {
+          "name": "Never Gain Experience",
+          "text": "Never gain experience."
+        },
+        {
+          "name": "Rabble",
+          "text": "Need not be armed alike; only Swabbie list items; can never use magic."
+        },
+        {
+          "name": "Blimey, they got away!",
+          "text": "Swabbies who already left the table when the warband Routs escape and are removed from the roster. Swabbies running away or out of action do not count toward Rout tests."
+        }
+      ],
+      "notes": "No hire cost (not hired). Never more Swabbies than Crew. Warband limit 5."
+    }
+  ],
+  "spells": null,
+  "conversionNotes": [
+    "Sea Legs 4+ -> 7+; Hardy Constitution 5+ -> 9+; Hardtack Biscuits tainted on roll of 1 -> 1-2; Peg Leg and Hook Hand 4+/6+ -> 7+/natural 12; Spy Glass 4+ -> 7+; Chain Shot knockdown 4+ -> 7+; Swabbie henchman recovery 4+ -> 7+ (6+ -> natural 12 per group ruling).",
+    "Toughened leathers: PDF says 6+ armour save like light armour; recorded as 'works like light armour'.",
+    "Price Chart special items (Compass, Hardtack, Hook Hand, Jolly Roger, Parrot, Peg Leg, Spy Glass, Treasure Map) put in a separate 'pirate-special' list attached to Captain/Mates/Cabin Boys/Crew/Boatswains; PDF says they are mainly after-game purchases, so whether they are available at warband creation is unclear. Swivel Gun, Belaying Pin, Boat Hook, Cat O' Nine Tails and Toughened leathers are in the starting lists.",
+    "Pistol and Dueling Pistol brace prices recorded in notes.",
+    "Swabbie cost 0 (not hired); count toward the 15 model limit. Treasure Map table and Mordheim background omitted.",
+    "Swivel Gun Ball Shot concussion (Injury rolls of 2-4 stunned) left unconverted; d12 injury table needs a human decision."
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "id": "hochland-bandits",
+  "name": "Hochland Bandits",
+  "source": "Hochland Bandits.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 12,
+  "specialRules": [
+    { "name": "Hired Swords", "text": "May hire any Hired Swords allowed to a Human Mercenary warband." },
+    { "name": "Powder's Expensive", "text": "Bandits are too poor for black powder weapons; only Bandit heroes can buy them (at higher costs) and henchmen cannot purchase them at all." },
+    { "name": "Foragers", "text": "When determining Income always use the next lower warband size category (a warband of 1-3 members still uses the first column)." },
+    { "name": "Know Who To Sell To", "text": "When selling equipment, the warband gets half of any random element of the equipment cost in addition to the normal half of the item's basic cost." }
+  ],
+  "equipmentLists": [
+    {
+      "id": "bandit",
+      "name": "Bandit equipment list",
+      "usedBy": "Bandit Prince, Footpads, Thugs, Blackhearts",
+      "items": [
+        { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st free" },
+        { "name": "Hammer", "category": "melee", "listCost": 3 },
+        { "name": "Battle Axe", "category": "melee", "listCost": 5 },
+        { "name": "Sword", "category": "melee", "listCost": 10 },
+        { "name": "Spear", "category": "melee", "listCost": 10 },
+        { "name": "Two-handed weapon", "category": "melee", "listCost": 15 },
+        { "name": "Throwing Axe", "category": "missile", "listCost": 15 },
+        { "name": "Light Armour", "category": "armour", "listCost": 20 },
+        { "name": "Shield", "category": "armour", "listCost": 5 },
+        { "name": "Helmet", "category": "armour", "listCost": 10 }
+      ]
+    },
+    {
+      "id": "duelist",
+      "name": "Duelist equipment list",
+      "usedBy": "Duelist",
+      "items": [
+        { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st free" },
+        { "name": "Rapier", "category": "melee", "listCost": 15, "note": "Rare 5; close combat, Strength as user, Parry, Barrage, +1 enemy armour save. Barrage: if you hit but fail to wound, you may attack again at -1 to hit (to a maximum of needing 6 to hit), repeating as long as you hit." },
+        { "name": "Main Gauche", "category": "melee", "listCost": 7, "note": "Rare 7; close combat, Strength as user, Parry, +1 enemy armour save." },
+        { "name": "Sword", "category": "melee", "listCost": 10 },
+        { "name": "Spear", "category": "melee", "listCost": 10 },
+        { "name": "Pistol", "category": "missile", "listCost": 20, "note": "40 gc for a brace" },
+        { "name": "Duelling Pistol", "category": "missile", "listCost": 30, "note": "60 gc for a brace" },
+        { "name": "Shield", "category": "armour", "listCost": 5 },
+        { "name": "Buckler", "category": "armour", "listCost": 5 }
+      ]
+    },
+    {
+      "id": "coward",
+      "name": "Coward equipment list",
+      "usedBy": "Huckster, Looters, Gutterscum",
+      "items": [
+        { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st free" },
+        { "name": "Spear", "category": "melee", "listCost": 10 },
+        { "name": "Sling", "category": "missile", "listCost": 2 }
+      ]
+    },
+    {
+      "id": "poacher",
+      "name": "Poacher equipment list",
+      "usedBy": "Poachers",
+      "items": [
+        { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st free" },
+        { "name": "Spear", "category": "melee", "listCost": 10 },
+        { "name": "Short bow", "category": "missile", "listCost": 5 },
+        { "name": "Bow", "category": "missile", "listCost": 10 },
+        { "name": "Longbow", "category": "missile", "listCost": 15 },
+        { "name": "Crossbow", "category": "missile", "listCost": 25 },
+        { "name": "Helmet", "category": "armour", "listCost": 10 }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "bandit-prince",
+      "name": "Bandit Prince",
+      "kind": "hero",
+      "cost": 60,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": { "M": 4, "WS": 4, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 4, "A": 1, "Ld": 8 },
+      "equipmentList": "bandit",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": ["Combat", "Shooting", "Strength", "Speed", "Special"],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Leader", "text": "Any warrior within 6\" may use his Leadership characteristic when taking any Leadership tests." }
+      ],
+      "notes": "Exactly one per warband. PDF says 'Bandit Heroes Equipment list' which is not printed; Bandit equipment list assumed."
+    },
+    {
+      "id": "footpad",
+      "name": "Footpad",
+      "kind": "hero",
+      "cost": 45,
+      "min": 0,
+      "max": 2,
+      "startingExp": 8,
+      "profile": { "M": 4, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 7 },
+      "equipmentList": "bandit",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": ["Combat", "Shooting", "Speed", "Special"],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Concealment", "text": "An enemy charging a Footpad it cannot see (but who was not declared Hidden) subtracts 1 from Initiative before the Initiative test; a roll of 12 always fails when charging a Footpad the warrior cannot see. Models halve their Initiative when checking range to detect a Hiding Footpad." }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "duelist",
+      "name": "Duelist",
+      "kind": "hero",
+      "cost": 45,
+      "min": 0,
+      "max": 1,
+      "startingExp": 12,
+      "profile": { "M": 4, "WS": 4, "BS": 4, "S": 3, "T": 3, "W": 1, "I": 4, "A": 1, "Ld": 7 },
+      "equipmentList": "duelist",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": ["Combat", "Shooting", "Speed", "Special"],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Swordmaster", "text": "A Duelist parries an enemy blow on a roll equal to or over the roll to hit, not just over it (must be armed with a weapon or armour that allows him to Parry)." },
+        { "name": "Weapon Knowledge", "text": "May use any close combat or missile weapon the warband members can get hold of; the equipment list only shows what he may start with." }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "huckster",
+      "name": "Huckster",
+      "kind": "hero",
+      "cost": 40,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": { "M": 4, "WS": 2, "BS": 3, "S": 2, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 6 },
+      "equipmentList": "coward",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": ["Combat", "Academic", "Special"],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Convincing Manner", "text": "An enemy charging a member of the huckster's warband within 12\" of the huckster must first pass a Leadership test; on a failure it stays stationary (treat as a failed charge, as for Fear). Models subject to Stupidity and animals are immune." },
+        { "name": "Slick Operator", "text": "Between games, the player may have the huckster run a con: roll a D12; on 3-12 the warband gains 2D6 gold, on 1-2 the con backfires, he misses the next game and no gold is received. May not be combined with the Banditry skill." }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "thug",
+      "name": "Thug",
+      "kind": "henchman",
+      "cost": 30,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": { "M": 4, "WS": 3, "BS": 3, "S": 4, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 7 },
+      "equipmentList": "bandit",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "looter",
+      "name": "Looter",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": 4,
+      "startingExp": 0,
+      "profile": { "M": 4, "WS": 2, "BS": 4, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 6 },
+      "equipmentList": "coward",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Looting the Dead", "text": "After a battle, for each Looter roll a D12 for any warrior of any warband taken Out of Action who is to be removed from his roster; on 7+ the Looter takes all of his equipment for the Bandit player. A warrior may only be looted once." }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "blackheart",
+      "name": "Blackheart",
+      "kind": "henchman",
+      "cost": 35,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": { "M": 4, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 7 },
+      "equipmentList": "bandit",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Hardened", "text": "Immune to Fear and never has to take All Alone tests." }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "poacher",
+      "name": "Poacher",
+      "kind": "henchman",
+      "cost": 35,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": { "M": 4, "WS": 3, "BS": 4, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 7 },
+      "equipmentList": "poacher",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Trailblazers", "text": "The warband may re-roll one D6 for each Poacher in the Exploration phase (Poachers re-roll one exploration die each)." }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "gutterscum",
+      "name": "Gutterscum",
+      "kind": "henchman",
+      "cost": 10,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": { "M": 4, "WS": 2, "BS": 2, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 6 },
+      "equipmentList": "coward",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Utterly Inept", "text": "Gutterscum do not gain experience." }
+      ],
+      "notes": ""
+    }
+  ],
+  "spells": null,
+  "conversionNotes": [
+    "Bandit Prince's list is called 'Bandit Heroes Equipment list' in the PDF but only a Bandit equipment list is printed; used it for him. Powder's Expensive says heroes may buy black powder weapons, but pistols only appear on the Duelist list, so only the Duelist can buy them as written.",
+    "Special skills in PDF: Banditry (D6 2-6 success / 1 failure, adds D6+1 gold), Hide in Shadows, Jump Back, Sniper, Throw Voice (D6 4+ -> 7+). Banditry D6 2-6 would be 3-12 by analogy; not applied since skills are not copied into fighters.",
+    "Conversions applied: Looting the Dead 4+ -> 7+; Footpad Concealment roll of 6 -> 12; Slick Operator D6 2-6 / 1 -> D12 3-12 / 1-2 (judgement call, the schema table has no 2-6 entry).",
+    "Trailblazers: original says re-roll one D6 for each Poacher in the Exploration phase; left as D6 exploration dice (not a to-hit/save roll).",
+    "Poacher/Blackheart/Gutterscum 'groups of 1-5' henchman rule from the PDF header is assumed; limits 0-2 Blackhearts, 0-2 Poachers, 0-4 Looters are warband-wide."
+  ]
+}

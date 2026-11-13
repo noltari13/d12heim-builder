@@ -1,0 +1,423 @@
+{
+  "id": "norse",
+  "name": "Norse Explorers",
+  "source": "Norse Explorers, TC13 Errata'd.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 15,
+  "specialRules": [
+    {
+      "name": "Seamen",
+      "text": "All Norse warriors get +2 Strength when trying to row a boat."
+    },
+    {
+      "name": "Norse special skills",
+      "text": "Shield Master: with a shield may parry with it in addition to the natural-12 save (6+ in d6). Berserk Charge: with an axe or double-handed weapon, re-roll all failed to-hit rolls when charging. Crushing Blow: no enemy may parry this hero's attacks. Battle Tongue (leader skill only): models within 12\" use his Leadership. Barbarian Courage: never takes all alone tests and may re-roll failed fear tests."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "hero",
+      "name": "Hero equipment list",
+      "usedBy": "Jarl, Berserkers, Bondsmen",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Flail",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Throwing Axes",
+          "category": "missile",
+          "listCost": 15,
+          "note": "Same as knives"
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        }
+      ]
+    },
+    {
+      "id": "henchmen",
+      "name": "Henchmen equipment list",
+      "usedBy": "Marauders",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        }
+      ]
+    },
+    {
+      "id": "hunters",
+      "name": "Hunters equipment list",
+      "usedBy": "Hunters",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Javelins",
+          "category": "missile",
+          "listCost": 5
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "jarl",
+      "name": "Jarl",
+      "kind": "hero",
+      "cost": 70,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 2,
+        "Ld": 8
+      },
+      "equipmentList": "hero",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Leader",
+          "text": "Models within 6\" may use his Leadership instead of their own."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "berserker",
+      "name": "Berserker",
+      "kind": "hero",
+      "cost": 50,
+      "min": 0,
+      "max": 2,
+      "startingExp": 11,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "hero",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Berserker",
+          "text": "Subject to Frenzy."
+        }
+      ],
+      "notes": "May never wear armour (no helmet, light armour or shield)."
+    },
+    {
+      "id": "wulfen",
+      "name": "Wulfen",
+      "kind": "hero",
+      "cost": 90,
+      "min": 0,
+      "max": 1,
+      "startingExp": 11,
+      "profile": {
+        "M": 6,
+        "WS": 4,
+        "BS": 0,
+        "S": 4,
+        "T": 4,
+        "W": 1,
+        "I": 4,
+        "A": 2,
+        "Ld": 7
+      },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [
+        "Claws and fangs (no penalty for being unarmed)"
+      ],
+      "specialRules": [
+        {
+          "name": "Fear",
+          "text": "Causes fear."
+        },
+        {
+          "name": "Bestial",
+          "text": "Immune to psychology; too feral to be warband leader."
+        }
+      ],
+      "notes": "May never use weapons or armour."
+    },
+    {
+      "id": "bondsman",
+      "name": "Bondsman",
+      "kind": "hero",
+      "cost": 15,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 2,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipmentList": "hero",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "marauder",
+      "name": "Marauder",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "henchmen",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "PDF says weapons and armour from the Henchmen list, but that list contains no armour."
+    },
+    {
+      "id": "hunter",
+      "name": "Hunter",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "hunters",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "PDF text says Henchman Equipment list, but a separate Hunters list is printed and used here."
+    },
+    {
+      "id": "wolf",
+      "name": "Wolf",
+      "kind": "henchman",
+      "cost": 15,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": {
+        "M": 9,
+        "WS": 3,
+        "BS": 0,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 5
+      },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [
+        "Natural weapons"
+      ],
+      "specialRules": [
+        {
+          "name": "Animals",
+          "text": "Do not gain experience."
+        },
+        {
+          "name": "Pack Leader",
+          "text": "Cannot be used while the warband has no Wulfen."
+        }
+      ],
+      "notes": "Maximum 5, only if the warband includes a Wulfen. Cannot use weapons."
+    }
+  ],
+  "spells": null,
+  "conversionNotes": [
+    "Shield Master '6+ save' converted to natural 12 (group ruling: 6 = natural 12).",
+    "PDF is a scanned image; all values read from page images.",
+    "Wolf, Hunter and Marauder equipment-list ambiguities noted in fighter notes."
+  ]
+}

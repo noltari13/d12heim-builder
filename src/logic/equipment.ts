@@ -28,14 +28,28 @@ const ALIASES: Record<string, string> = {
   lightarmor: 'light',
   heavyarmor: 'heavy',
   doublehandedweapon: 'doublehandedweapon',
+  twohandedweapon: 'doublehandedweapon',
+  ithilmararmor: 'ithilmarchainmail',
+  gromrilarmor: 'gromrilplate',
 };
 
 const isCommon = (s: SheetItem) => /common/i.test(s.availability) || s.availability === '';
 
+// Sheet names like "Hunting Arrows (bows)" compare without their parenthetical.
+const sheetKey = (s: SheetItem) => norm(s.name.replace(/\(.*?\)/g, ''));
+
 function matchSheet(name: string, allowRare: boolean): SheetItem[] {
+  // "Cutlass (Sword)", "Stone Axe (counts as a club)": try the full name, then the bracketed item.
+  const paren = /^(.*?)\s*\((?:counts as (?:an? )?)?(.+?)\)\s*$/i.exec(name);
+  if (paren) {
+    const first = matchSheet(paren[1], allowRare);
+    return first.length ? first : matchSheet(paren[2], allowRare);
+  }
   let n = norm(name);
   n = ALIASES[n] ?? n;
-  const exact = SHEET.filter((s) => norm(s.name) === n && s.category !== 'ammo');
+  let exact = SHEET.filter((s) => sheetKey(s) === n);
+  // Plural list names ("Javelins") match a singular sheet name.
+  if (!exact.length && n.endsWith('s')) exact = SHEET.filter((s) => sheetKey(s) === n.slice(0, -1));
   if (exact.length) return exact;
   const byRaw = SHEET.filter((s) => s.raw.split(',').map(norm).includes(n));
   if (!byRaw.length) return [];

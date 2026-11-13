@@ -1,0 +1,405 @@
+{
+  "id": "ostermark",
+  "name": "League of Ostermark",
+  "source": "19TheLeagueOfOstermark.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 15,
+  "specialRules": [
+    {
+      "name": "Mercenary warband",
+      "text": "Follows the rules for Mercenary warbands (Mordheim rulebook p.48); this PDF reprints no roster, so the Mercenary (Reikland) roster is used."
+    },
+    {
+      "name": "Stubborn Defenders",
+      "text": "Heroes and Henchmen may re-roll a failed Leadership test for being all alone and routing; the second roll must be accepted regardless of the result."
+    },
+    {
+      "name": "Farm Hounds",
+      "text": "The Captain may have a wardog as part of his starting equipment."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "main",
+      "name": "Mercenary equipment list",
+      "usedBy": "Captain, Champions, Youngbloods, Warriors, Swordsmen",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Mace",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Morning star",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Halberd",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Crossbow",
+          "category": "missile",
+          "listCost": 25
+        },
+        {
+          "name": "Pistol",
+          "category": "missile",
+          "listCost": 15,
+          "note": "30 for a brace"
+        },
+        {
+          "name": "Duelling pistol",
+          "category": "missile",
+          "listCost": 25,
+          "note": "50 for a brace"
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Heavy armour",
+          "category": "armour",
+          "listCost": 50
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Buckler",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        }
+      ]
+    },
+    {
+      "id": "marksman",
+      "name": "Marksman equipment list",
+      "usedBy": "Marksmen only",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Mace",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Crossbow",
+          "category": "missile",
+          "listCost": 25
+        },
+        {
+          "name": "Pistol",
+          "category": "missile",
+          "listCost": 15,
+          "note": "30 for a brace"
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10
+        },
+        {
+          "name": "Long bow",
+          "category": "missile",
+          "listCost": 15
+        },
+        {
+          "name": "Blunderbuss",
+          "category": "missile",
+          "listCost": 30
+        },
+        {
+          "name": "Handgun",
+          "category": "missile",
+          "listCost": 35
+        },
+        {
+          "name": "Hunting rifle",
+          "category": "missile",
+          "listCost": 200
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "mercenary-captain",
+      "name": "Mercenary Captain",
+      "kind": "hero",
+      "cost": 60,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "main",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Academic",
+        "Strength",
+        "Speed"
+      ],
+      "fixedEquipment": [
+        "Wardog (optional, as part of starting equipment)"
+      ],
+      "specialRules": [
+        {
+          "name": "Leader",
+          "text": "Any warrior within 6\" of the Captain may use his Leadership characteristic when taking Leadership tests."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "champion",
+      "name": "Champion",
+      "kind": "hero",
+      "cost": 35,
+      "min": 0,
+      "max": 2,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Strength"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "youngblood",
+      "name": "Youngblood",
+      "kind": "hero",
+      "cost": 15,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "warrior",
+      "name": "Warrior",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "marksman",
+      "name": "Marksman",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": 7,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "marksman",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "swordsman",
+      "name": "Swordsman",
+      "kind": "henchman",
+      "cost": 35,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Expert Swordsmen",
+          "text": "May re-roll any failed hits when charging, only when armed with normal swords (not double-handed swords or other weapons)."
+        }
+      ],
+      "notes": ""
+    }
+  ],
+  "spells": null,
+  "conversionNotes": [
+    "The Ostermark PDF contains NO roster, profiles, costs or equipment lists: it says Ostermarkers 'follow the rules for Mercenary warbands as given on page 48 of the Mordheim rulebook'. Roster, profiles, limits and lists were taken from Mercenaries.pdf (Reikland Mercenaries text, no city rules applied) and checked against its page images. A human should confirm this is the intended reading.",
+    "Skill tables use the Reikland Mercenary table (Captain all five; Champion Combat, Shooting, Strength; Youngblood Combat, Speed) since p.48 is the Reikland entry; Reikland Archery Tradition (+1 BS Marksmen) and Military Discipline (12\") are NOT applied.",
+    "Wardog is described only as a free starting option for the Captain (rulebook p.54 profile not in this PDF); recorded as fixedEquipment text.",
+    "No d6 'roll of X' wording in the warband rules; the all-alone re-roll needs no conversion. Scenario content (Eerie Downs, Battle for the Farm, wyrdstone note) is out of scope.",
+    "Starting experience (Captain 20, Champion 8, Youngblood 0, henchmen 0) follows the Mercenary base entry as used in reikland.json; not printed in the Ostermark PDF."
+  ]
+}

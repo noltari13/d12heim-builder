@@ -1,0 +1,413 @@
+{
+  "id": "dwarf-treasure-hunters",
+  "name": "Dwarf Treasure Hunters",
+  "source": "Dwarf Treasure Hunters.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 12,
+  "specialRules": [
+    {
+      "name": "Hard to Kill",
+      "text": "All Dwarfs are taken out of action only on a roll of 12 on the Injury chart (instead of 9-12). Treat 1-4 as knocked down, 5-11 as stunned, 12 as out of action."
+    },
+    {
+      "name": "Hard Head",
+      "text": "Dwarfs ignore the special rules for maces, clubs, etc."
+    },
+    {
+      "name": "Armour",
+      "text": "Dwarfs never suffer movement penalties for wearing armour."
+    },
+    {
+      "name": "Hate Orcs and Goblins",
+      "text": "All Dwarfs hate Orcs and Goblins."
+    },
+    {
+      "name": "Grudgebearers",
+      "text": "A Dwarf warband may never include any kind of Elven Hired Sword or Dramatis Personae."
+    },
+    {
+      "name": "Incomparable Miners",
+      "text": "Add +1 to the number of wyrdstone pieces found when checking for wyrdstone at the end of a game."
+    },
+    {
+      "name": "Dwarf axe",
+      "text": "Rare 8 (Dwarfs only), 15 gc. Close combat, Strength as user. Cutting Edge: extra -1 save modifier (S4 user has -2). Parry: when the opponent rolls to hit, roll a D12; if greater than the opponent's highest to-hit score that attack is discarded. May not parry attacks made with double or more his own Strength; only one parry per Close Combat phase; with two Dwarf axes may instead re-roll a failed parry."
+    },
+    {
+      "name": "Dwarf special skills",
+      "text": "Dwarf Heroes may use this Skill table instead of any standard table: Master of Blades: When using a weapon with the Parry special rule, parries successfully if he beats or matches his opponent's highest to-hit roll. With two Parry weapons he may parry two attacks (if his two dice match or beat the two highest Attack dice); with two Dwarf axes he may re-roll any failed parries. Extra Tough: When rolling on the Heroes Serious Injury chart after a game in which he was taken out of action, the dice may be re-rolled once; the second result must be accepted. Resource Hunter: When rolling on the Exploration chart, may modify one dice roll by +1/-1. True Grit: On the Injury table: 1-6 knocked down, 7-11 stunned, 12 out of action. Thick Skull: Has a 5+ save to avoid being stunned; if made, treat stunned as knocked down. With a helmet the save is 3+ (replaces the normal Helmet rule)."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "warrior",
+      "name": "Dwarf Warrior Equipment List",
+      "usedBy": "Dwarf Noble, Troll Slayers, Dwarf Clansmen, Beardlings",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Mace",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Dwarf axe",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Halberd",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Gromril weapon",
+          "category": "melee",
+          "listCost": 0,
+          "note": "3 times the cost of the weapon (starting warband only)"
+        },
+        {
+          "name": "Pistol",
+          "category": "missile",
+          "listCost": 15
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Heavy armour",
+          "category": "armour",
+          "listCost": 50
+        },
+        {
+          "name": "Gromril armour",
+          "category": "armour",
+          "listCost": 75,
+          "note": "Starting warband price only"
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        }
+      ]
+    },
+    {
+      "id": "thunderer",
+      "name": "Thunderer Equipment List",
+      "usedBy": "Dwarf Engineer, Dwarf Thunderers",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Mace",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Crossbow",
+          "category": "missile",
+          "listCost": 25
+        },
+        {
+          "name": "Handgun",
+          "category": "missile",
+          "listCost": 35
+        },
+        {
+          "name": "Pistol",
+          "category": "missile",
+          "listCost": 15,
+          "note": "30 for a brace"
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Heavy armour",
+          "category": "armour",
+          "listCost": 50
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "dwarf-noble",
+      "name": "Dwarf Noble",
+      "kind": "hero",
+      "cost": 85,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 3,
+        "WS": 5,
+        "BS": 4,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 2,
+        "A": 1,
+        "Ld": 9
+      },
+      "equipmentList": "warrior",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Strength",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Leader",
+          "text": "Any models in the warband within 6\" of the Dwarf Noble may use his Leadership instead of their own."
+        }
+      ],
+      "notes": "Exactly one per warband."
+    },
+    {
+      "id": "dwarf-engineer",
+      "name": "Dwarf Engineer",
+      "kind": "hero",
+      "cost": 50,
+      "min": 0,
+      "max": 1,
+      "startingExp": 10,
+      "profile": {
+        "M": 3,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 2,
+        "A": 1,
+        "Ld": 9
+      },
+      "equipmentList": "thunderer",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Expert Weaponsmith",
+          "text": "Missile weapons bought from the warband's basic equipment lists have their range increased by 3\" for pistols and 6\" for crossbows and handguns. Applies in battles the Engineer takes part in, even if not yet on the battlefield or already out of action. No effect on Hired Sword equipment."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "dwarf-troll-slayer",
+      "name": "Dwarf Troll Slayer",
+      "kind": "hero",
+      "cost": 50,
+      "min": 0,
+      "max": 2,
+      "startingExp": 8,
+      "profile": {
+        "M": 3,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 2,
+        "A": 1,
+        "Ld": 9
+      },
+      "equipmentList": "warrior",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Deathwish",
+          "text": "Immune to all psychology and never needs to test if fighting alone."
+        },
+        {
+          "name": "Slayer Skills",
+          "text": "May choose a skill from the Troll Slayer Skill table instead of the normal Skill tables when gaining a new skill."
+        },
+        {
+          "name": "No missiles or armour",
+          "text": "May never carry or use missile weapons or any form of armour."
+        }
+      ],
+      "notes": "Troll Slayer skills: Ferocious Charge (doubles attacks on the turn he charges, -1 to hit that turn); Monster Slayer (always wounds on a 7+ regardless of Toughness unless his Strength would need a lower roll); Berserker (+1 to close combat to-hit rolls on the turn he charges)."
+    },
+    {
+      "id": "dwarf-clansman",
+      "name": "Dwarf Clansman",
+      "kind": "henchman",
+      "cost": 40,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 3,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 2,
+        "A": 1,
+        "Ld": 9
+      },
+      "equipmentList": "warrior",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "Bought in groups of 1-5. Any number allowed."
+    },
+    {
+      "id": "dwarf-thunderer",
+      "name": "Dwarf Thunderer",
+      "kind": "henchman",
+      "cost": 40,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": {
+        "M": 3,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 2,
+        "A": 1,
+        "Ld": 9
+      },
+      "equipmentList": "thunderer",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "Bought in groups of 1-5."
+    },
+    {
+      "id": "beardling",
+      "name": "Beardling",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 3,
+        "WS": 3,
+        "BS": 2,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 2,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "warrior",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "Bought in groups of 1-5. Any number allowed. Uses the Dwarf Warrior list."
+    }
+  ],
+  "spells": null,
+  "conversionNotes": [
+    "Hard to Kill: out of action on 6 (instead of 5-6) -> natural 12 (instead of 9-12); the knocked down/stunned ranges were scaled 1-2 -> 1-4 and 3-5 -> 5-11. Human to confirm the scaling.",
+    "True Grit (1-3 knocked down, 4-5 stunned, 6 OOA) scaled to 1-6 / 7-11 / 12.",
+    "Monster Slayer 4+ -> 7+; Thick Skull 3+ -> 5+ and 2+ -> 3+; Dwarf axe Parry D6 -> D12 (assumed).",
+    "Gromril weapon is listed as '3 times the cost' with listCost 0 (cost depends on the base weapon); Gromril armour is 75 gc for starting warband only.",
+    "Dwarf special skills and Troll Slayer skills are included as warband / fighter special rules text; skills arrays list 'Special' for the Dwarf table.",
+    "The Dwarf axe is listed in the Warrior list at 15 gc; the Engineer/Thunderer list has no Dwarf axe, Halberd or Spear.",
+    "Starting-warband Gromril prices are only valid at warband creation."
+  ]
+}

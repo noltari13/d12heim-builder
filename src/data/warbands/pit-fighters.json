@@ -1,0 +1,194 @@
+{
+  "id": "pit-fighters",
+  "name": "Pit Fighters",
+  "source": "Pit Fighters.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 15,
+  "specialRules": [
+    { "name": "Pit Fighter", "text": "All Pit Fighters have the Pit Fighter skill (Strength skill list): +1 WS and +1 A when fighting in ruins, buildings and the Pit." },
+    { "name": "Free the Slaves!", "text": "Pit Fighters hate all slavers and never sell captured opponents to slavers." },
+    { "name": "In the Pit!", "text": "A captured opponent may be made to fight a warband fighter in the Cutthroat's Haven pits. If the warband fighter wins he gains +2 Experience and the warband gets all the captive's armour and weapons plus 50gc. If he loses, roll for dead or injured as normal (ignoring Robbed, Captured, Hardened, Sold to the Pits and Survives against the Odds); he does not lose equipment, the captive still gets the 50gc and +2 Experience. If the captive wins, roll a D12; on 7+ he goes free, on 1-6 he remains captive and may be fielded in the pits later." },
+    { "name": "Hired Swords", "text": "May hire all Hired Swords except the Elf Ranger." },
+    { "name": "Fighting styles", "text": "Pit Fighters, Veterans, Pit King and Pursuers must buy a fighting style (a fixed weapon and armour bundle) instead of individual items. A style may be changed at any time by swapping with another warrior or buying a new one. Henchman groups may mix styles. Troll Slayer and Ogre buy individual items from their own list." }
+  ],
+  "equipmentLists": [
+    {
+      "id": "pit-fighter",
+      "name": "Pit Fighter Equipment List",
+      "usedBy": "Pit King, Pit Veterans, Pit Fighters",
+      "items": [
+        { "name": "Orc Style", "category": "misc", "listCost": 20, "note": "Helmet, Dagger, Axe, Shield" },
+        { "name": "Undead Style", "category": "misc", "listCost": 35, "note": "Helmet, Dagger, Spiked Gauntlet, Sword" },
+        { "name": "Empire Style", "category": "misc", "listCost": 45, "note": "Helmet, Dagger, Double-handed Weapon, Light Armour" },
+        { "name": "Chaos Style", "category": "misc", "listCost": 50, "note": "Helmet, Dagger, Flail, Shield, Light Armour" }
+      ]
+    },
+    {
+      "id": "pursuer",
+      "name": "Pursuer Equipment List",
+      "usedBy": "Pursuers",
+      "items": [
+        { "name": "Skink Style", "category": "misc", "listCost": 25, "note": "Helmet, Dagger, Trident or Javelins, Net or Buckler. Trident 15gc, Rare 7 (Pit Fighters only), close combat, Strength as user, Strike first, Parry. Javelins 10gc, range 10\", Strength as user, Thrown Weapon." },
+        { "name": "Witch Elf Style", "category": "misc", "listCost": 30, "note": "Helmet, Dagger, 2 x Swords or Spear & Net" }
+      ]
+    },
+    {
+      "id": "ogre-slayer",
+      "name": "Ogre & Slayer Equipment List",
+      "usedBy": "Ogre Pit Fighter, Dwarf Troll Slayer",
+      "items": [
+        { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st free" },
+        { "name": "Mace", "category": "melee", "listCost": 3 },
+        { "name": "Hammer", "category": "melee", "listCost": 3 },
+        { "name": "Axe", "category": "melee", "listCost": 5 },
+        { "name": "Dwarf Axe", "category": "melee", "listCost": 15, "note": "Only available to the Dwarf Troll Slayer" },
+        { "name": "Sword", "category": "melee", "listCost": 10 },
+        { "name": "Flail", "category": "melee", "listCost": 15 },
+        { "name": "Spiked Gauntlet", "category": "melee", "listCost": 15 },
+        { "name": "Gromril Weapon", "category": "melee", "listCost": 0, "note": "3 times the cost. Only available to the Dwarf Troll Slayer" },
+        { "name": "Helmet", "category": "armour", "listCost": 10, "note": "Only available to the Ogre" },
+        { "name": "Light Armour", "category": "armour", "listCost": 20, "note": "Only available to the Ogre" }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "pit-king",
+      "name": "Pit King",
+      "kind": "hero",
+      "cost": 80,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": { "M": 4, "WS": 4, "BS": 3, "S": 4, "T": 4, "W": 1, "I": 4, "A": 2, "Ld": 8 },
+      "equipmentList": "pit-fighter",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": ["Combat", "Strength", "Speed", "Special"],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Leader", "text": "Any models in the warband within 6\" may use his Leadership instead of their own." },
+        { "name": "Pit Fighter", "text": "+1 WS and +1 A when fighting in ruins, buildings and the Pit." }
+      ],
+      "notes": "Exactly one per warband."
+    },
+    {
+      "id": "troll-slayer",
+      "name": "Dwarf Troll Slayer",
+      "kind": "hero",
+      "cost": 50,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": { "M": 3, "WS": 4, "BS": 3, "S": 3, "T": 4, "W": 1, "I": 2, "A": 1, "Ld": 9 },
+      "equipmentList": "ogre-slayer",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": ["Combat", "Strength", "Special", "Troll Slayer Special Skills"],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "No missile weapons or armour", "text": "May never carry or use missile weapons or any form of armour." },
+        { "name": "Pit Fighter", "text": "+1 WS and +1 A when fighting in ruins, buildings and the Pit." },
+        { "name": "Hard to Kill", "text": "Only taken out of action on a roll of 12 (instead of 9-12) on the Injury chart. Treat 1-4 as knocked down, 5-11 as stunned, 12 as out of action." },
+        { "name": "Hard Head", "text": "Ignores the special rules for maces, clubs, etc. Not easily knocked out." },
+        { "name": "Hate Orcs and Goblins", "text": "Hates Orcs and Goblins." },
+        { "name": "Grudgebearers", "text": "If the warband hires any Elven Hired Sword, he leaves the warband immediately." },
+        { "name": "Death Wish", "text": "Immune to all psychology and never needs to test if fighting alone." }
+      ],
+      "notes": "May use the Troll Slayer Special Skills list (Ferocious Charge, Monster Slayer, Berserker) as well as standard Dwarf skill tables."
+    },
+    {
+      "id": "pit-veteran",
+      "name": "Pit Veteran",
+      "kind": "hero",
+      "cost": 35,
+      "min": 0,
+      "max": 2,
+      "startingExp": 8,
+      "profile": { "M": 4, "WS": 4, "BS": 3, "S": 4, "T": 3, "W": 1, "I": 4, "A": 1, "Ld": 7 },
+      "equipmentList": "pit-fighter",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": ["Combat", "Strength", "Speed", "Special"],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Pit Fighter", "text": "+1 WS and +1 A when fighting in ruins, buildings and the Pit." }
+      ],
+      "notes": "Profile row is mislabelled 'Pit King' in the PDF."
+    },
+    {
+      "id": "ogre-pit-fighter",
+      "name": "Ogre Pit Fighter",
+      "kind": "henchman",
+      "cost": 165,
+      "min": 0,
+      "max": 1,
+      "startingExp": 0,
+      "profile": { "M": 6, "WS": 3, "BS": 2, "S": 4, "T": 4, "W": 3, "I": 3, "A": 2, "Ld": 7 },
+      "equipmentList": "ogre-slayer",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Pit Fighter", "text": "+1 WS and +1 A when fighting in ruins, buildings and the Pit." },
+        { "name": "Fear", "text": "Causes Fear." },
+        { "name": "Large", "text": "Any model may shoot at the Ogre Pit Fighter, even if he is not the closest target." },
+        { "name": "Skills", "text": "If he becomes a Hero (The Lad's Got Talent) he may choose from Combat, Strength and Pit Fighter Special skills." },
+        { "name": "Slow Witted", "text": "Gains advances at half the normal rate (needs twice the experience)." }
+      ],
+      "notes": "Ogre maximum profile: M6 WS5 BS4 S6 T6 W4 I5 A4 Ld7."
+    },
+    {
+      "id": "pursuer",
+      "name": "Pursuer",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": 7,
+      "startingExp": 0,
+      "profile": { "M": 4, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 7 },
+      "equipmentList": "pursuer",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Pit Fighter", "text": "+1 WS and +1 A when fighting in ruins, buildings and the Pit." },
+        { "name": "Evade", "text": "When charged by an enemy he may try to evade; on a successful Initiative test it counts as a failed charge." }
+      ],
+      "notes": "Bought in groups of 1-5."
+    },
+    {
+      "id": "pit-fighter",
+      "name": "Pit Fighter",
+      "kind": "henchman",
+      "cost": 35,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": { "M": 4, "WS": 4, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 7 },
+      "equipmentList": "pit-fighter",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Pit Fighter", "text": "+1 WS and +1 A when fighting in ruins, buildings and the Pit." }
+      ],
+      "notes": "Bought in groups of 1-5."
+    }
+  ],
+  "spells": null,
+  "conversionNotes": [
+    "Fighting styles are fixed bundles with a single price, so they are listed as items with category misc and the contents in note; the app may need to expand them into component items.",
+    "Pit Fighter special skill table (Bulging Biceps, Force of Will, Arms Master, Body Slam, Grizzled Veteran) and Troll Slayer skills (Ferocious Charge, Monster Slayer 4+ -> 7+, Berserker) are in the PDF; Body Slam critical on 5+ -> 9+; Force of Will D6 roll under Toughness left as printed.",
+    "Troll Slayer Hard to Kill: d6 injury 6 = out of action -> 12; 1-2 / 3-5 bands converted to 1-4 / 5-11 as a judgement call.",
+    "In the Pit! release roll D6 4+ -> D12 7+.",
+    "Pit Veteran profile row is labelled 'Pit King' in the PDF but is the Veteran profile (Ld 7, A 1, T 3).",
+    "Ogre Pit Fighter has no skill tables until it becomes a Hero; skills [] left empty. Slayer skills list includes the Troll Slayer Special Skills.",
+    "Dwarf Axe and Gromril Weapon (3 x cost) are Slayer only; Helmet and Light Armour are Ogre only; Slayers may never wear armour. Gromril listCost 0 with rule in note.",
+    "spells is null: no spell list in this warband."
+  ]
+}

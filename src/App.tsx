@@ -11,6 +11,7 @@ export default function App() {
   const [rosters, setRosters] = useState<Roster[]>(loadRosters);
   const [activeId, setActiveId] = useState<string | null>(() => loadActive());
   const [creating, setCreating] = useState(false);
+  const [filter, setFilter] = useState('');
   const fileRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => saveRosters(rosters), [rosters]);
@@ -97,9 +98,19 @@ export default function App() {
 
       {showPicker && (
         <main className="picker no-print">
-          <h2>Choose a warband</h2>
+          <div className="picker-head">
+            <h2>Choose a warband</h2>
+            <input
+              type="search"
+              placeholder={`Search ${WARBANDS.length} warbands…`}
+              value={filter}
+              onChange={(e) => setFilter(e.target.value)}
+              aria-label="Search warbands"
+              autoFocus
+            />
+          </div>
           <div className="picker-grid">
-            {WARBANDS.map((w) => {
+            {WARBANDS.filter((w) => !filter || `${w.name} ${w.fighters.map((f) => f.name).join(' ')}`.toLowerCase().includes(filter.toLowerCase())).map((w) => {
               const leader = w.fighters.find((f) => f.isLeader);
               return (
                 <button key={w.id} className="picker-card" onClick={() => create(w.id)}>

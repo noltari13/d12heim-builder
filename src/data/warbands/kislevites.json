@@ -1,0 +1,530 @@
+{
+  "id": "kislevites",
+  "name": "Kislevites",
+  "source": "Kislevites.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 15,
+  "specialRules": [
+    {
+      "name": "May Hire",
+      "text": "May hire the same Hired Swords as Human Mercenary warbands."
+    },
+    {
+      "name": "Ancient Enemies",
+      "text": "May never ally with Possessed, Beastman, Skaven, Dark Elf, Chaos Dwarf or any other Chaotic warband."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "kislev-warrior",
+      "name": "Kislev Warrior Equipment List",
+      "usedBy": "Druzhina Captain, Bear Tamer, Esaul, Youths, Warriors, Cossacks",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Mace",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Morning Star",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Halberd",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Throwing Knives",
+          "category": "missile",
+          "listCost": 15
+        },
+        {
+          "name": "Shortbow",
+          "category": "missile",
+          "listCost": 5
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10
+        },
+        {
+          "name": "Crossbow",
+          "category": "missile",
+          "listCost": 25
+        },
+        {
+          "name": "Pistol",
+          "category": "missile",
+          "listCost": 15,
+          "note": "30 for a brace"
+        },
+        {
+          "name": "Duelling Pistol",
+          "category": "missile",
+          "listCost": 25,
+          "note": "50 for a brace"
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Buckler",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Light Armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Heavy Armour",
+          "category": "armour",
+          "listCost": 50
+        },
+        {
+          "name": "Vodka",
+          "category": "misc",
+          "listCost": 35,
+          "note": "35+2D6 gc / Rare 8; Kislevite Heroes only; one use, given to the whole warband before the game; not printed on the equipment list page"
+        },
+        {
+          "name": "Bear-Claw Necklace",
+          "category": "misc",
+          "listCost": 75,
+          "note": "75+3D6 gc / Rare 9; Kislevite Heroes only; wearer is subject to Frenzy; not printed on the equipment list page"
+        }
+      ]
+    },
+    {
+      "id": "streltsi",
+      "name": "Streltsi Equipment List",
+      "usedBy": "Streltsi",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Mace",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Morning Star",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Halberd",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10
+        },
+        {
+          "name": "Crossbow",
+          "category": "missile",
+          "listCost": 25
+        },
+        {
+          "name": "Pistol",
+          "category": "missile",
+          "listCost": 15,
+          "note": "30 for a brace"
+        },
+        {
+          "name": "Duelling Pistol",
+          "category": "missile",
+          "listCost": 25,
+          "note": "50 for a brace"
+        },
+        {
+          "name": "Handgun",
+          "category": "missile",
+          "listCost": 35
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Light Armour",
+          "category": "armour",
+          "listCost": 20
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "druzhina-captain",
+      "name": "Druzhina Captain",
+      "kind": "hero",
+      "cost": 60,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "kislev-warrior",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Academic",
+        "Strength",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Leader",
+          "text": "Any warrior within 6\" may use his Leadership when taking any Leadership tests."
+        },
+        {
+          "name": "Inheritance",
+          "text": "When the warband is created, may buy one item from the Kislev Warrior list at half cost (ancestral item). If lost it must be replaced at 150% of normal price; until then -1 to all tests and rolls to hit."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "bear-tamer",
+      "name": "Bear Tamer",
+      "kind": "hero",
+      "cost": 35,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "kislev-warrior",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Bear Handler",
+          "text": "May purchase a Trained Bear as a henchman; the Bear automatically passes Stupidity tests while within 6\" of the Bear Tamer (even if Knocked Down or Stunned)."
+        },
+        {
+          "name": "Fiercely Loyal",
+          "text": "While his Bear is not Out of Action, ignores Sold to the Pits, Robbed and Captured on the Serious Injury table (treat as Full Recovery)."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "esaul",
+      "name": "Esaul",
+      "kind": "hero",
+      "cost": 35,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "kislev-warrior",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "youth",
+      "name": "Youth",
+      "kind": "hero",
+      "cost": 15,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipmentList": "kislev-warrior",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "Starting experience not printed for Youths (only Captain 20, Bear Tamer 8, Esaul 8); 0 assumed."
+    },
+    {
+      "id": "warrior",
+      "name": "Warrior",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "kislev-warrior",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "cossack",
+      "name": "Cossack",
+      "kind": "henchman",
+      "cost": 30,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "kislev-warrior",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Hate Chaos",
+          "text": "Subject to Hatred against all forces of Chaos (any warband the Ancient Enemies rule applies to)."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "streltsi",
+      "name": "Streltsi",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": 3,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "streltsi",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Gun-Rest",
+          "text": "A Streltsi armed with halberd and handgun may use the halberd as a gun-rest: +1 to hit with the handgun if he did not move that turn."
+        }
+      ],
+      "notes": "Only Kislevite warriors trained in the use of handguns."
+    },
+    {
+      "id": "trained-bear",
+      "name": "Trained Bear",
+      "kind": "henchman",
+      "cost": 125,
+      "min": 0,
+      "max": 1,
+      "startingExp": 0,
+      "profile": {
+        "M": 6,
+        "WS": 3,
+        "BS": 0,
+        "S": 5,
+        "T": 5,
+        "W": 2,
+        "I": 2,
+        "A": 2,
+        "Ld": 6
+      },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [
+        "Natural weapons (claws and teeth; no weapons or armour)"
+      ],
+      "specialRules": [
+        {
+          "name": "Trained",
+          "text": "Subject to Stupidity, but automatically passes if the warband's Bear Tamer is within 6\". Never uses the leader's Leadership; may use the Bear Tamer's if within 6\". Cannot be fielded without the Bear Tamer."
+        },
+        {
+          "name": "Fearsome",
+          "text": "Causes Fear."
+        },
+        {
+          "name": "Bear Hug",
+          "text": "If the Bear hits the same enemy with both attacks in a round, it may instead make one Bear Hug: each side rolls a d12 and adds its (doubled) Strength; if the Bear's total is higher or equal the enemy takes one automatic wound, no armour save."
+        },
+        {
+          "name": "Animal",
+          "text": "Does not gain experience."
+        }
+      ],
+      "notes": "Requires a Bear Tamer in the warband."
+    }
+  ],
+  "spells": null,
+  "conversionNotes": [
+    "Bear Hug is an opposed D6 + Strength roll, not a 'natural 6' style check; converted to d12 + doubled Strength so the dice scale with the doubled stats.",
+    "Youths are 0-2 Heroes (not henchmen) costing 15 gc; starting experience not printed, assumed 0.",
+    "Vodka and Bear-Claw Necklace are special equipment (Kislevite Heroes only) described in the text, not on the printed equipment list; added to the Kislev Warrior list as misc with the base cost and dice part in the note. Streltsi and henchmen cannot take them.",
+    "Item names copied as printed (Kislev list capitalises 'Morning Star', 'Light Armour', 'Heavy Armour', 'Throwing Knives', 'Duelling Pistol'). Sample warband mentions clubs but Club is not on any printed list.",
+    "Warband has 'Hated' Cossacks flagged as Hatred (rule name Hate Chaos). Ancient Enemies prevents alliances with chaotic warbands only.",
+    "Skill tables read from the grid: Druzhina Captain = Combat, Shooting, Academic, Strength, Speed; Esaul = Combat, Shooting, Speed; Bear Tamer = Combat, Strength, Speed; Youth = Combat, Strength, Speed.",
+    "Druzhina Captain's inherited item and 'Heavy Armour' cost not doubled; the full ancestral-item rules are summarised."
+  ]
+}

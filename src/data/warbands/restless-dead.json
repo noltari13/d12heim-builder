@@ -1,0 +1,550 @@
+{
+  "id": "restless-dead",
+  "name": "The Restless Dead",
+  "source": "The Restless Dead.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 12,
+  "specialRules": [
+    {
+      "name": "Undead skills",
+      "text": "Liches and Necromancers may use this Skill list instead of any standard list (Special): Corpse Bomb: Secretly nominate one Zombie at the start of the battle. If the enemy charges or is charged by it, it detonates: all models within D6\" take D3 Strength 4 hits. Zombies killed by shooting do not detonate. One at a time, though both Necromancer and Liche may take the skill. Deathspeaker: At the start of the battle deploy D3 Zombies for free. They do not count toward the maximum model count but increase warband rating; cannot be Corpse Bombs; last only for the battle. Wraith Touch: Instead of normal attacks, makes a single unarmed Wraith Touch that wounds automatically if it hits. A Liche that wounds may regain one lost wound (not above starting total); Necromancers do not. No effect on the Possessed or Undead. Forbidden Rite: If the hero did not search for rare items last exploration phase, he starts the next battle with a pool of D3+1 (+1) modifiers to add to casting rolls, as many as desired at a time. Summoner: Maximum warband size is increased by 1."
+    },
+    {
+      "name": "Necromancy",
+      "text": "Necromancy spells: Spell of Awakening (Auto), Lifestealer (10), Reanimation (5), Spell of Doom (9), Call of Vanhel (6), Deathly Visage (Necromancers only, 6), Living Horror (Liche only, 8). See Necromancy list; Liche starts with two random spells, Necromancer one of the Liche's two."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "main",
+      "name": "Undead equipment list",
+      "usedBy": "Necromancer, Grave Guards, Skeletons, Wights",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Mace",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Halberd",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Shortbow",
+          "category": "missile",
+          "listCost": 5
+        },
+        {
+          "name": "Bow",
+          "category": "missile",
+          "listCost": 10
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Heavy armour",
+          "category": "armour",
+          "listCost": 50
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Buckler",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        }
+      ]
+    },
+    {
+      "id": "liche-armour",
+      "name": "Undead equipment list (armour only, for the Liche)",
+      "usedBy": "Liche",
+      "items": [
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Heavy armour",
+          "category": "armour",
+          "listCost": 50
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Buckler",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "liche",
+      "name": "Liche",
+      "kind": "hero",
+      "cost": 125,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 2,
+        "S": 2,
+        "T": 2,
+        "W": 4,
+        "I": 4,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "liche-armour",
+      "isLeader": true,
+      "spellcaster": "Necromancy",
+      "skills": [
+        "Academic",
+        "Special"
+      ],
+      "fixedEquipment": [
+        "Magical weapons only (may not carry non-magical weapons; no penalty)"
+      ],
+      "specialRules": [
+        {
+          "name": "Wizard",
+          "text": "Uses Necromantic magic and starts with two spells randomly generated from the Necromantic magic list."
+        },
+        {
+          "name": "Cause Fear",
+          "text": "Causes fear."
+        },
+        {
+          "name": "Immune to Psychology",
+          "text": "Not affected by psychology and never leaves combat."
+        },
+        {
+          "name": "No Pain",
+          "text": "Treats a 'stunned' result on the Injury chart as 'knocked down'."
+        },
+        {
+          "name": "Immune to Poison",
+          "text": "Not affected by poison."
+        },
+        {
+          "name": "Eternal",
+          "text": "May ignore any result on the Serious Injury chart except Killed by taking a permanent -1 on starting Wounds (not possible with 1 Wound). A Killed result instead takes a permanent -D3 Wounds; if starting Wounds reach 0 or less he is Killed."
+        },
+        {
+          "name": "Feed Upon Magic",
+          "text": "Between battles, with the consumption of D3 Treasures, may gain a permanent +1 Wound on his starting profile. Cannot be used if the Liche searched for rare items or was put out of action in the previous battle. If the warband lacks Treasures the Treasures are consumed anyway and no Wound is gained."
+        },
+        {
+          "name": "Warrior Wizard",
+          "text": "May wear armour and cast spells."
+        },
+        {
+          "name": "Advancement",
+          "text": "On an advance roll of +1 Wound, may instead pick a new skill from his available lists."
+        }
+      ],
+      "notes": "May not carry non-magical weapons and suffers no penalties; may wear any armour from the Undead Equipment list (modelled as an armour-only list). Exactly one Liche per warband."
+    },
+    {
+      "id": "necromancer",
+      "name": "Necromancer",
+      "kind": "hero",
+      "cost": 40,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": "Necromancy",
+      "skills": [
+        "Academic",
+        "Speed",
+        "Special"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Wizard",
+          "text": "Uses Necromantic magic; starts knowing one of the two spells known by his Liche master."
+        },
+        {
+          "name": "Apprentices",
+          "text": "May only ever know spells known by the Liche (exception: Deathly Visage if the Liche has Horror). If the Liche is killed the Necromancer learns spells as a normal wizard."
+        },
+        {
+          "name": "Gofer",
+          "text": "When searching for rare items, rolls 3D6 and picks the two highest."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "grave-guard",
+      "name": "Grave Guard",
+      "kind": "hero",
+      "cost": 35,
+      "min": 0,
+      "max": 3,
+      "startingExp": 6,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 2,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Strength"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Wight Blades",
+          "text": "All close combat to-hit rolls of a natural 12 automatically wound. May roll to wound normally to determine a critical hit, but even a failed to-wound still causes a wound if a 12 was rolled to hit."
+        },
+        {
+          "name": "Cause Fear",
+          "text": "Causes fear."
+        },
+        {
+          "name": "Immune to Poison",
+          "text": "Not affected by poison."
+        },
+        {
+          "name": "Immune to Psychology",
+          "text": "Not affected by psychology and never leaves combat."
+        },
+        {
+          "name": "No Pain",
+          "text": "Treats a 'stunned' result on the Injury chart as 'knocked down'."
+        },
+        {
+          "name": "May not run",
+          "text": "May not run (but may charge normally)."
+        },
+        {
+          "name": "No deal",
+          "text": "May not search for rare items."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "zombie",
+      "name": "Zombie",
+      "kind": "henchman",
+      "cost": 15,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 0,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 1,
+        "A": 1,
+        "Ld": 5
+      },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [
+        "None (may not carry weapons or wear armour; no penalties)"
+      ],
+      "specialRules": [
+        {
+          "name": "Cause Fear",
+          "text": "Causes fear."
+        },
+        {
+          "name": "May not run",
+          "text": "May not run (but may charge normally)."
+        },
+        {
+          "name": "Immune to Psychology",
+          "text": "Not affected by psychology and never leaves combat."
+        },
+        {
+          "name": "Immune to Poison",
+          "text": "Not affected by poison."
+        },
+        {
+          "name": "No Pain",
+          "text": "Treats a 'stunned' result on the Injury chart as 'knocked down'."
+        },
+        {
+          "name": "No Brain",
+          "text": "Never gains experience."
+        }
+      ],
+      "notes": "Bought in groups of 1-5. Any number allowed."
+    },
+    {
+      "id": "skeleton",
+      "name": "Skeleton",
+      "kind": "henchman",
+      "cost": 20,
+      "min": 0,
+      "max": 8,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 2,
+        "A": 1,
+        "Ld": 5
+      },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Cause Fear",
+          "text": "Causes fear."
+        },
+        {
+          "name": "May not run",
+          "text": "May not run (but may charge normally)."
+        },
+        {
+          "name": "Immune to Psychology",
+          "text": "Not affected by psychology and never leaves combat."
+        },
+        {
+          "name": "Immune to Poison",
+          "text": "Not affected by poison."
+        },
+        {
+          "name": "No Pain",
+          "text": "Treats a 'stunned' result on the Injury chart as 'knocked down'."
+        },
+        {
+          "name": "No Brain",
+          "text": "Never gains experience."
+        }
+      ],
+      "notes": "Bought in groups of 1-5."
+    },
+    {
+      "id": "wight",
+      "name": "Wight",
+      "kind": "henchman",
+      "cost": 30,
+      "min": 0,
+      "max": 3,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 2,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 2,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Cause Fear",
+          "text": "Causes fear."
+        },
+        {
+          "name": "Immune to Poison",
+          "text": "Not affected by poison."
+        },
+        {
+          "name": "Immune to Psychology",
+          "text": "Not affected by psychology and never leaves combat."
+        },
+        {
+          "name": "No Pain",
+          "text": "Treats a 'stunned' result on the Injury chart as 'knocked down'."
+        },
+        {
+          "name": "May not run",
+          "text": "May not run (but may charge normally)."
+        },
+        {
+          "name": "Experience",
+          "text": "May gain experience, but a Wight promoted to Hero (via 'The lad's got talent') cannot search for rare items like Grave Guards, must choose Combat and Strength skill lists, and gains Wight Blades."
+        }
+      ],
+      "notes": "Bought in groups of 1-5."
+    },
+    {
+      "id": "scarecrow",
+      "name": "Scarecrow",
+      "kind": "henchman",
+      "cost": 65,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": {
+        "M": 5,
+        "WS": 3,
+        "BS": 0,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 2,
+        "Ld": 10
+      },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [
+        "None (carries no equipment and suffers no penalties)"
+      ],
+      "specialRules": [
+        {
+          "name": "Cause Fear",
+          "text": "Causes fear."
+        },
+        {
+          "name": "Immune to Psychology",
+          "text": "Not affected by psychology and never leaves combat."
+        },
+        {
+          "name": "Immune to Poison",
+          "text": "Not affected by poison."
+        },
+        {
+          "name": "No Pain",
+          "text": "Treats a 'stunned' result on the Injury chart as 'knocked down'."
+        },
+        {
+          "name": "No Brain",
+          "text": "Never gains experience."
+        },
+        {
+          "name": "No Substance",
+          "text": "Counts as T6 against all shooting and magical missiles and is immune to critical hits caused by shooting; exception: fire-based missile weapons and spells deal damage as normal."
+        },
+        {
+          "name": "Flammable",
+          "text": "Counts as flammable; catches fire on 5+ instead of the normal 7+."
+        },
+        {
+          "name": "Construct",
+          "text": "May re-roll any rolls on the injury table except for wounds caused by fire."
+        },
+        {
+          "name": "Animated Construct",
+          "text": "Controlled by the Liche or the Necromancer (recorded on the roster), each controlling one at a time; only a warband with both Liche and Necromancer may have two Scarecrows. If the controller cannot participate the Scarecrow cannot either. If the controller loses a wound, he must pass an unmodified Leadership test or the bond is broken and the Scarecrow is taken out of action."
+        }
+      ],
+      "notes": "Printed T is 3(6): T3 normally, counts as T6 vs shooting/magic missiles. Max 2 (one per Liche/Necromancer controller). Henchman section; starting experience not given (0)."
+    }
+  ],
+  "spells": {
+    "listName": "Necromancy",
+    "usedBy": [
+      "liche",
+      "necromancer"
+    ]
+  },
+  "conversionNotes": [
+    "Wight Blades: to-hit 6 -> natural 12. Flammable: 'fire' on 3+ -> 5+ (normal 4+ -> 7+).",
+    "The Liche may not carry non-magical weapons: modelled as a separate armour-only equipment list (liche-armour), not a list in the PDF.",
+    "Necromancy spell list is D6-based (Spell of Doom 'roll equal or less than Strength on D6', Living Horror D6+3, Reanimation, Spell of Awakening '11-15 on serious injury chart'); not converted, spell list only referenced by name. Forbidden Rite D3+1 and Corpse Bomb D3/D6 also unchanged.",
+    "Scarecrow T printed 3(6); stored T3 with the T6-vs-shooting rule in text.",
+    "Buckler appears in the PDF equipment list (armour section).",
+    "Scarecrows and Skeletons/Zombies: PDF gives no starting experience for them; 0 assumed. Scarecrow bought as henchman, max 2 (one per controller).",
+    "Experience chart maxima: Liche M5 WS4 BS4 S4 T4 W8 I6 A3 Ld10; Grave Guard M5 WS5 BS5 S4 T4 W4 I5 A4 Ld10 (only given for these two).",
+    "Warband max is 12 (+1 with Summoner skill)."
+  ]
+}
