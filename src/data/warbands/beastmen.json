@@ -1,0 +1,211 @@
+{
+  "id": "beastmen",
+  "name": "Beastmen Raiders",
+  "source": "Beastmen, Errata'd.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 15,
+  "specialRules": [
+    { "name": "Animals (no Hired Swords)", "text": "A Beastmen warband may never hire any Hired Swords unless specifically stated with the Hired Sword." },
+    { "name": "Special skill: Shaggy Hide", "text": "The model gains a 12 Armour Save that can be combined with other armour as normal." },
+    { "name": "Special skill: Mutant", "text": "The Beastman may buy one mutation (see Mutants special rules)." },
+    { "name": "Special skill: Fearless", "text": "Immune to fear, terror and All Alone tests." },
+    { "name": "Special skill: Horned One", "text": "Makes an additional Attack with its basic Strength on a turn it charges." },
+    { "name": "Special skill: Bellowing Roar", "text": "Beastmen Chief only. May re-roll any failed Rout tests." },
+    { "name": "Special skill: Manhater", "text": "Affected by the rules of hatred when fighting any Human warbands." }
+  ],
+  "equipmentLists": [
+    {
+      "id": "main",
+      "name": "Beastman equipment list",
+      "usedBy": "Beastmen Chieftain, Shaman, Bestigors, Centigors, Gor, Minotaur",
+      "items": [
+        { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st free" },
+        { "name": "Mace", "category": "melee", "listCost": 3 },
+        { "name": "Hammer", "category": "melee", "listCost": 3 },
+        { "name": "Battle Axe", "category": "melee", "listCost": 5 },
+        { "name": "Sword", "category": "melee", "listCost": 10 },
+        { "name": "Double-handed Weapon", "category": "melee", "listCost": 15 },
+        { "name": "Halberd", "category": "melee", "listCost": 10 },
+        { "name": "Light Armour", "category": "armour", "listCost": 20 },
+        { "name": "Heavy Armour", "category": "armour", "listCost": 50 },
+        { "name": "Shield", "category": "armour", "listCost": 5 },
+        { "name": "Helmet", "category": "armour", "listCost": 10 }
+      ]
+    },
+    {
+      "id": "ungor",
+      "name": "Ungor equipment list",
+      "usedBy": "Ungor",
+      "items": [
+        { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st free" },
+        { "name": "Mace", "category": "melee", "listCost": 3 },
+        { "name": "Hammer", "category": "melee", "listCost": 3 },
+        { "name": "Battle Axe", "category": "melee", "listCost": 5 },
+        { "name": "Spear", "category": "melee", "listCost": 10 },
+        { "name": "Shield", "category": "armour", "listCost": 5 }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "chieftain",
+      "name": "Beastmen Chieftain",
+      "kind": "hero",
+      "cost": 65,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": { "M": 5, "WS": 4, "BS": 3, "S": 4, "T": 4, "W": 1, "I": 4, "A": 1, "Ld": 7 },
+      "equipmentList": "main",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": ["Combat", "Strength", "Speed", "Beastmen Special"],
+      "fixedEquipment": [],
+      "specialRules": [{ "name": "Leader", "text": "Any warrior within 6\" of the Chieftain may use his Leadership when taking Ld tests." }],
+      "notes": ""
+    },
+    {
+      "id": "shaman",
+      "name": "Beastmen Shaman",
+      "kind": "hero",
+      "cost": 45,
+      "min": 0,
+      "max": 1,
+      "startingExp": 11,
+      "profile": { "M": 5, "WS": 4, "BS": 3, "S": 3, "T": 4, "W": 1, "I": 3, "A": 1, "Ld": 6 },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": "Chaos Rituals",
+      "skills": ["Combat", "Speed", "Beastmen Special"],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Wizard", "text": "A Beastmen Shaman is a Wizard and uses Chaos Rituals." },
+        { "name": "No armour", "text": "May choose weapons from the Beastman equipment list but never wears armour." }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "bestigor",
+      "name": "Bestigor",
+      "kind": "hero",
+      "cost": 45,
+      "min": 0,
+      "max": 2,
+      "startingExp": 8,
+      "profile": { "M": 5, "WS": 4, "BS": 3, "S": 4, "T": 4, "W": 1, "I": 3, "A": 1, "Ld": 7 },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": ["Combat", "Strength", "Beastmen Special"],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "Weapons/Armour text says 'weapons chosen from the Beastmen Equipment list' (armour not mentioned)."
+    },
+    {
+      "id": "centigor",
+      "name": "Centigor",
+      "kind": "hero",
+      "cost": 80,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": { "M": 8, "WS": 4, "BS": 3, "S": 4, "T": 4, "W": 1, "I": 2, "A": 1, "Ld": 7 },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": ["Combat", "Strength", "Beastmen Special"],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Drunken", "text": "Roll 1D12 at the start of each turn. On a 1 it must test for stupidity that turn; on 2-11 nothing happens; on a natural 12 it is subject to frenzy that turn. While subject to both stupidity and frenzy it is immune to all other psychology." },
+        { "name": "Woodland Dwelling", "text": "No movement penalties for moving through wooded areas." },
+        { "name": "Trample", "text": "Hooves give an additional attack which does not benefit from weapon bonuses or penalties (profile A printed as 1(2))." }
+      ],
+      "notes": "Profile Attacks printed as 1(2): 1 base attack, 2 including Trample."
+    },
+    {
+      "id": "ungor",
+      "name": "Ungor",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": { "M": 5, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 6 },
+      "equipmentList": "ungor",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [{ "name": "Lowest of the Low", "text": "Can never become a Hero; if an Ungor rolls 'That lad's got talent' it must be re-rolled." }],
+      "notes": ""
+    },
+    {
+      "id": "gor",
+      "name": "Gor",
+      "kind": "henchman",
+      "cost": 35,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": { "M": 5, "WS": 4, "BS": 3, "S": 3, "T": 4, "W": 1, "I": 3, "A": 1, "Ld": 6 },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "warhound",
+      "name": "Warhound of Chaos",
+      "kind": "henchman",
+      "cost": 15,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": { "M": 7, "WS": 4, "BS": 0, "S": 4, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 5 },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": ["Fangs (natural weapons, fights without penalties)"],
+      "specialRules": [{ "name": "Animals", "text": "Chaos Hounds are animals and never gain Experience." }],
+      "notes": ""
+    },
+    {
+      "id": "minotaur",
+      "name": "Minotaur",
+      "kind": "henchman",
+      "cost": 200,
+      "min": 0,
+      "max": 1,
+      "startingExp": 0,
+      "profile": { "M": 6, "WS": 4, "BS": 3, "S": 4, "T": 4, "W": 3, "I": 4, "A": 3, "Ld": 8 },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Fear", "text": "Causes fear." },
+        { "name": "Bloodgreed", "text": "If it puts all of its enemies out of action in hand-to-hand combat, it becomes frenzied on a D12 roll of 7+." },
+        { "name": "Animal", "text": "May gain Experience but may never become a Hero." },
+        { "name": "Large", "text": "Any model may shoot at a Minotaur, even if it is not the closest target." }
+      ],
+      "notes": ""
+    }
+  ],
+  "spells": { "listName": "Chaos Rituals", "usedBy": ["shaman"] },
+  "conversionNotes": [
+    "Shaggy Hide: d6 6+ armour save converted to natural 12 per the 'natural 6 -> natural 12' rule (an 11+ would match the d6 odds better).",
+    "Centigor Drunken: d6 '1 / 2-5 / 6' converted to d12 '1 / 2-11 / natural 12' using natural 6 -> natural 12; the 1 result was left as a natural 1 since no conversion is defined for it (odds of the 1 result drop from 1/6 to 1/12).",
+    "Minotaur Bloodgreed: D6 4+ converted to D12 7+.",
+    "Skill table also has a 'Special' column = Beastmen Special Skills (Shaggy Hide, Mutant, Fearless, Horned One, Bellowing Roar, Manhater), recorded as 'Beastmen Special'. Bellowing Roar is Chief only.",
+    "Centigor Attacks printed as 1(2); stored A=1 with Trample as an extra attack.",
+    "Bestigor Weapons/Armour text mentions only weapons from the Beastman list; armour left available since the app uses list ids. Verify intent.",
+    "Maximum characteristics: Bestigors as Gor but M5, Centigors as Gor but M9 (not modelled in schema).",
+    "Minotaur listed under henchmen with Animal rule (gains Exp, never becomes Hero)."
+  ]
+}

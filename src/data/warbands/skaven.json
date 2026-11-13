@@ -1,0 +1,199 @@
+{
+  "id": "skaven",
+  "name": "Skaven",
+  "source": "Skaven.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 20,
+  "specialRules": [
+    { "name": "Skaven special skills", "text": "Skaven Heroes with access to the Special skill table may choose from: Black Hunger, Tail Fighting, Wall Runner, Infiltration, Art of Silent Death." },
+    { "name": "Black Hunger (skill)", "text": "Declare at the start of own turn: +1 A and +D3\" to total move for the turn; at end of turn suffer D3 S3 hits with no armour save possible." },
+    { "name": "Tail Fighting (skill)", "text": "May wield a shield, knife or sword with its tail: gains an extra attack with that weapon, or +1 to its armour save." },
+    { "name": "Wall Runner (skill)", "text": "Does not need to take an Initiative test when climbing walls and other sheer surfaces." },
+    { "name": "Infiltration (skill)", "text": "Set up after the opposing warband, anywhere out of enemy sight and more than 12\" from any enemy model. If both sides infiltrate, each rolls a D6; lowest sets up first." },
+    { "name": "Art of Silent Death (skill)", "text": "Fights bare-pawed without penalty and counts as having two weapons (+1 A). Causes a critical hit on a To Wound roll of 9-12. Usable with Fighting Claws (+2 A instead of +1)." }
+  ],
+  "equipmentLists": [
+    {
+      "id": "heroes",
+      "name": "Heroes equipment list",
+      "usedBy": "Assassin Adept, Black Skaven, Eshin Sorcerer",
+      "items": [
+        { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st free" },
+        { "name": "Sword", "category": "melee", "listCost": 10 },
+        { "name": "Flail", "category": "melee", "listCost": 15 },
+        { "name": "Spear", "category": "melee", "listCost": 10 },
+        { "name": "Halberd", "category": "melee", "listCost": 10 },
+        { "name": "Weeping Blades", "category": "melee", "listCost": 50, "note": "Per pair. Rare 9, Skaven only. Close combat, Strength as user. Pair: +1 attack. Venomous: permanently coated in black lotus; no other poison may be applied. Parry: count as swords for parrying." },
+        { "name": "Fighting Claws", "category": "melee", "listCost": 35, "note": "Per pair. Rare 7, Skaven only. Close combat, Strength as user, no save modifier. Pair: +1 attack. Climb: +1 I for Climbing tests. Parry: may parry and re-roll a failed parry once, like sword and buckler. Cumbersome: may not use any other weapons in the entire battle." },
+        { "name": "Sling", "category": "missile", "listCost": 2 },
+        { "name": "Throwing stars", "category": "missile", "listCost": 15 },
+        { "name": "Blowpipe", "category": "missile", "listCost": 25, "note": "Rare 7, Skaven only. Range 8\", S1, save modifier +1. Poison: natural 12 to hit wounds automatically; cannot cause critical hits. Positive save modifier: models with no save still get the worst possible save (6+ in d6). Stealthy: may fire while hidden without revealing position; target may take an Initiative test to spot the firer, ending hidden on a pass." },
+        { "name": "Warplock pistol", "category": "missile", "listCost": 35, "note": "70 gc for a brace. Rare 11, Skaven only. Range 8\", S5, save modifier -3. Fire every other turn." },
+        { "name": "Light armour", "category": "armour", "listCost": 20 },
+        { "name": "Buckler", "category": "armour", "listCost": 5 },
+        { "name": "Helmet", "category": "armour", "listCost": 10 }
+      ]
+    },
+    {
+      "id": "henchmen",
+      "name": "Henchmen equipment list",
+      "usedBy": "Verminkin, Night Runners",
+      "items": [
+        { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st free" },
+        { "name": "Club", "category": "melee", "listCost": 3 },
+        { "name": "Sword", "category": "melee", "listCost": 10 },
+        { "name": "Spear", "category": "melee", "listCost": 10 },
+        { "name": "Sling", "category": "missile", "listCost": 2 },
+        { "name": "Light armour", "category": "armour", "listCost": 20 },
+        { "name": "Shield", "category": "armour", "listCost": 5 },
+        { "name": "Helmet", "category": "armour", "listCost": 10 }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "assassin-adept",
+      "name": "Assassin Adept",
+      "kind": "hero",
+      "cost": 60,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": { "M": 6, "WS": 4, "BS": 4, "S": 4, "T": 3, "W": 1, "I": 5, "A": 1, "Ld": 7 },
+      "equipmentList": "heroes",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": ["Combat", "Shooting", "Academic", "Strength", "Speed", "Skaven Special"],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Leader", "text": "Any warrior within 6\" may use his Leadership instead of their own." },
+        { "name": "Perfect Killer", "text": "Extra -1 modifier to any armour save against wounds he inflicts (shooting and close combat)." }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "black-skaven",
+      "name": "Black Skaven",
+      "kind": "hero",
+      "cost": 40,
+      "min": 0,
+      "max": 2,
+      "startingExp": 8,
+      "profile": { "M": 6, "WS": 4, "BS": 3, "S": 4, "T": 3, "W": 1, "I": 5, "A": 1, "Ld": 6 },
+      "equipmentList": "heroes",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": ["Combat", "Shooting", "Strength", "Speed", "Skaven Special"],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "eshin-sorcerer",
+      "name": "Eshin Sorcerer",
+      "kind": "hero",
+      "cost": 45,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": { "M": 5, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 4, "A": 1, "Ld": 6 },
+      "equipmentList": "heroes",
+      "isLeader": false,
+      "spellcaster": "Magic of the Horned Rat",
+      "skills": ["Academic", "Speed", "Skaven Special"],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Wizard", "text": "Is a wizard and uses the Magic of the Horned Rat." }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "night-runner",
+      "name": "Night Runner",
+      "kind": "hero",
+      "cost": 20,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": { "M": 6, "WS": 2, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 4, "A": 1, "Ld": 4 },
+      "equipmentList": "henchmen",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": ["Combat", "Shooting", "Skaven Special"],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": "Hero that buys from the Skaven Henchmen Equipment list."
+    },
+    {
+      "id": "verminkin",
+      "name": "Verminkin",
+      "kind": "henchman",
+      "cost": 20,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": { "M": 5, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 4, "A": 1, "Ld": 5 },
+      "equipmentList": "henchmen",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "giant-rat",
+      "name": "Giant Rat",
+      "kind": "henchman",
+      "cost": 15,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": { "M": 6, "WS": 2, "BS": 0, "S": 3, "T": 3, "W": 1, "I": 4, "A": 1, "Ld": 4 },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": ["Natural weapons (never use armour or weapons)"],
+      "specialRules": [
+        { "name": "Pack size", "text": "You can recruit as many Giant Rats as you wish." },
+        { "name": "Experience", "text": "Animals; do not gain experience." }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "rat-ogre",
+      "name": "Rat Ogre",
+      "kind": "henchman",
+      "cost": 210,
+      "min": 0,
+      "max": 1,
+      "startingExp": 0,
+      "profile": { "M": 6, "WS": 3, "BS": 3, "S": 5, "T": 5, "W": 3, "I": 4, "A": 3, "Ld": 4 },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": ["Jaws, claws and brute force (never use weapons or armour)"],
+      "specialRules": [
+        { "name": "Fear", "text": "Causes fear." },
+        { "name": "Stupidity", "text": "Subject to stupidity unless a Skaven Hero is within 6\"." },
+        { "name": "Experience", "text": "Does not gain experience." },
+        { "name": "Large Target", "text": "Is a Large Target." }
+      ],
+      "notes": ""
+    }
+  ],
+  "spells": { "listName": "Magic of the Horned Rat", "usedBy": ["eshin-sorcerer"] },
+  "conversionNotes": [
+    "Blowpipe Poison: 'roll a 6 on the To Hit roll' converted to natural 12.",
+    "Art of Silent Death: critical hit on To Wound 5-6 converted to 9-12.",
+    "Blowpipe: printed example (5+ save becomes 4+ vs blowpipe; models with no save get 6+) left unconverted; +1 save modifier needs a d12 equivalent (6+ has no entry in the conversion table).",
+    "Infiltration roll-off (D6 each, lowest sets up first) left as printed; it is a plain roll-off, not a target number.",
+    "Black Hunger D3 values (+D3\" move, D3 S3 hits) left as printed.",
+    "Skaven special skill table recorded as skill name 'Skaven Special'; ticked for all four hero types.",
+    "Night Runners are heroes but buy from the Henchmen Equipment list, as printed.",
+    "Weeping Blades, Fighting Claws and Warplock pistol are priced per pair/brace as printed; warplock brace (70 gc) is in the note only."
+  ]
+}

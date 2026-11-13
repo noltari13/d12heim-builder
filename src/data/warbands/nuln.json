@@ -1,0 +1,492 @@
+{
+  "id": "nuln",
+  "name": "Gunnery School of Nuln",
+  "source": "Gunnery School Of Nuln.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 15,
+  "specialRules": [
+    {
+      "name": "Impeccable Care",
+      "text": "Always buys black powder weapons at the reduced cost printed in the warband's starting equipment lists. +2 on rare rolls to find any black powder weapon."
+    },
+    {
+      "name": "Properly Used",
+      "text": "When using the optional Misfire rules, if a 1 is rolled, roll a second dice: on a 5+ the misfire is ignored (the shot still misses but the weapon does not explode)."
+    },
+    {
+      "name": "Proud To A Fault!",
+      "text": "Members of this warband never use non-black powder ranged weapons (does not apply to hired swords or dramatis personae)."
+    }
+  ],
+  "equipmentLists": [
+    {
+      "id": "main",
+      "name": "Gunnery School equipment list",
+      "usedBy": "Senior Gunnery Officer, Instructor, Senior Student, Underclassmen, Sons of the Guns, Pistoliers",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Mace/Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Double-handed weapon",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Spear",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Halberd",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Morning Star",
+          "category": "melee",
+          "listCost": 15
+        },
+        {
+          "name": "Pistol",
+          "category": "missile",
+          "listCost": 10,
+          "note": "20 gc for a brace"
+        },
+        {
+          "name": "Double Barrelled Pistol",
+          "category": "missile",
+          "listCost": 20,
+          "note": "35 gc for a brace. Warband special weapon (Trading Post 25+D6 gc, brace 46+2D6; Rare 9, Rare 10 brace). Range 6\", S4. Prepared Shot, Save Modifier, Hand-to-hand, Double-barrelled. Double-barrelled: declare one or both barrels; both = one to-hit roll, roll to wound separately for each shot (Critical Hits separately); after firing both place 2 reload tokens, remove 1 at end of each of your shooting phases, cannot shoot in a phase you reload. Firing both guns of a brace with both barrels: 4 tokens, 2 per pistol, remove one per pistol each turn."
+        },
+        {
+          "name": "Duelling Pistol",
+          "category": "missile",
+          "listCost": 20,
+          "note": "35 gc for a brace"
+        },
+        {
+          "name": "Double Barrelled Duelling Pistol",
+          "category": "missile",
+          "listCost": 35,
+          "note": "Printed 'D. B. Duelling Pistol'. 65 gc for a brace. Warband special weapon (Trading Post 45+2D6 gc, brace 80+4D6; Rare 11, Rare 12 brace). Range 9\", S4. Accuracy, Prepared Shot, Save Modifier, Hand-to-hand, Double-barrelled (see Double Barrelled Pistol)."
+        },
+        {
+          "name": "Handgun",
+          "category": "missile",
+          "listCost": 25
+        },
+        {
+          "name": "Double Barrelled Handgun",
+          "category": "missile",
+          "listCost": 45,
+          "note": "Warband special weapon (Trading Post 60+2D6 gc; Rare 10). Range 24\", S4. Prepared Shot, Save Modifier, Move or Fire, Double-barrelled (see Double Barrelled Pistol)."
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Heavy armour",
+          "category": "armour",
+          "listCost": 50
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Buckler",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Superior Black Powder",
+          "category": "misc",
+          "listCost": 25
+        }
+      ]
+    },
+    {
+      "id": "marksmen",
+      "name": "Marksmen equipment list",
+      "usedBy": "Marksmen (Instructor may also choose from this list)",
+      "items": [
+        {
+          "name": "Dagger",
+          "category": "melee",
+          "listCost": 2,
+          "note": "1st free"
+        },
+        {
+          "name": "Mace/Hammer",
+          "category": "melee",
+          "listCost": 3
+        },
+        {
+          "name": "Axe",
+          "category": "melee",
+          "listCost": 5
+        },
+        {
+          "name": "Sword",
+          "category": "melee",
+          "listCost": 10
+        },
+        {
+          "name": "Pistol",
+          "category": "missile",
+          "listCost": 10,
+          "note": "20 gc for a brace"
+        },
+        {
+          "name": "Double Barrelled Pistol",
+          "category": "missile",
+          "listCost": 20,
+          "note": "35 gc for a brace. Warband special weapon (Trading Post 25+D6 gc, brace 46+2D6; Rare 9, Rare 10 brace). Range 6\", S4. Prepared Shot, Save Modifier, Hand-to-hand, Double-barrelled. Double-barrelled: declare one or both barrels; both = one to-hit roll, roll to wound separately for each shot (Critical Hits separately); after firing both place 2 reload tokens, remove 1 at end of each of your shooting phases, cannot shoot in a phase you reload. Firing both guns of a brace with both barrels: 4 tokens, 2 per pistol, remove one per pistol each turn."
+        },
+        {
+          "name": "Repeater Pistol",
+          "category": "missile",
+          "listCost": 25,
+          "note": "Warband special weapon (Trading Post 30+2D6 gc; Rare 9). Range 6\", S4. Save Modifier, Fire Thrice, Experimental, Quick Reload, Not a Club. Fire Thrice: up to 3 shots, -1 to hit if more than one, later shots may target a model within 3\" of the previous target. Experimental: always uses optional Blackpowder misfire rules; any result other than BOOM! means jammed/must reload. Quick Reload: can always fire one shot; after firing multiple shots must spend a full shooting phase not shooting and not in combat before firing multiple shots again. Not a Club: counts as a pistol in the first round of combat only; afterwards gives no additional hand weapon."
+        },
+        {
+          "name": "Blunderbuss",
+          "category": "missile",
+          "listCost": 20
+        },
+        {
+          "name": "Handgun",
+          "category": "missile",
+          "listCost": 25
+        },
+        {
+          "name": "Double Barrelled Handgun",
+          "category": "missile",
+          "listCost": 45,
+          "note": "Warband special weapon (Trading Post 60+2D6 gc; Rare 10). Range 24\", S4. Prepared Shot, Save Modifier, Move or Fire, Double-barrelled (see Double Barrelled Pistol)."
+        },
+        {
+          "name": "Hochland Long Rifle",
+          "category": "missile",
+          "listCost": 100
+        },
+        {
+          "name": "Repeater Handgun",
+          "category": "missile",
+          "listCost": 50,
+          "note": "Warband special weapon (Trading Post 60+2D6 gc; Rare 11). Range 24\", S4. Save Modifier, Move or Fire, Fire Thrice (up to 3 shots, -1 to hit if more than one, later shots within 3\" of previous target), Experimental (always uses optional Blackpowder misfire rules; any result other than BOOM! = jammed/must reload). Slow Reload: to reload, the warrior must do nothing (no moving, shooting or fighting) for a complete turn."
+        },
+        {
+          "name": "Hand-Held Mortar",
+          "category": "missile",
+          "listCost": 70,
+          "note": "Warband special weapon (Trading Post 80+2D6 gc; Rare 12). Range 24\", S4. Prepared Shot, Save Modifier, Move or Fire, Scatter (on a miss the shot lands 2D6\" in a random direction), Experimental (as Repeater Handgun), Explosive Radius (target and all models within 1.5\" of the final landing point take a single S4 hit)."
+        },
+        {
+          "name": "Pigeon Bombs",
+          "category": "missile",
+          "listCost": 25,
+          "note": "Hersten-Wenkler Pigeon Bombs. Warband special weapon (Trading Post 30+2D6 gc; Rare 8). Range unlimited, S4. Move or Fire, Explosive Radius (as Hand-Held Mortar), Tempermental: do not use BS; roll a D12: 9-12 hits target, 3-8 pigeon explodes harmlessly, 1-2 explodes in the bearer's hands (bearer and all within 1.5\" take a S4 hit). Pigeon Roost: one purchase lasts the whole game and is replenished each game."
+        },
+        {
+          "name": "Light armour",
+          "category": "armour",
+          "listCost": 20
+        },
+        {
+          "name": "Shield",
+          "category": "armour",
+          "listCost": 5
+        },
+        {
+          "name": "Helmet",
+          "category": "armour",
+          "listCost": 10
+        },
+        {
+          "name": "Superior Black Powder",
+          "category": "misc",
+          "listCost": 25
+        }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "senior-gunnery-officer",
+      "name": "Senior Gunnery Officer",
+      "kind": "hero",
+      "cost": 60,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipmentList": "main",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Academic",
+        "Strength",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Leader",
+          "text": "Any models in the warband within 12\" may use his Leadership for Leadership tests."
+        },
+        {
+          "name": "Hunter",
+          "text": "Has the Hunter Shooting skill."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "instructor",
+      "name": "Instructor",
+      "kind": "hero",
+      "cost": 45,
+      "min": 0,
+      "max": 1,
+      "startingExp": 12,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": [
+        "main",
+        "marksmen"
+      ],
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Shooting",
+        "Academic",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Expert Weaponsmith",
+          "text": "While the warband includes an Instructor, all pistol weapons get +3\" range and all other black powder weapons get +6\" range."
+        }
+      ],
+      "notes": "Chooses from both the Gunnery School equipment list and the Marksmen equipment list."
+    },
+    {
+      "id": "senior-student",
+      "name": "Senior Student",
+      "kind": "hero",
+      "cost": 45,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Strength",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "underclassman",
+      "name": "Underclassmen",
+      "kind": "hero",
+      "cost": 20,
+      "min": 0,
+      "max": 2,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [
+        "Combat",
+        "Shooting",
+        "Speed"
+      ],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "sons-of-the-guns",
+      "name": "Sons of the Guns",
+      "kind": "henchman",
+      "cost": 25,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "marksman",
+      "name": "Marksmen",
+      "kind": "henchman",
+      "cost": 30,
+      "min": 0,
+      "max": 7,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 3,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "marksmen",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Quick Reload",
+          "text": "Marksmen have the Hunter skill. A Marksman who becomes a Hero gains no further effect from taking Hunter."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pistolier",
+      "name": "Pistoliers",
+      "kind": "henchman",
+      "cost": 35,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": [],
+      "specialRules": [
+        {
+          "name": "Crack Shot",
+          "text": "When using pistols in close combat, may re-roll missed to-hit rolls with the pistol in the first round of combat."
+        }
+      ],
+      "notes": ""
+    }
+  ],
+  "spells": null,
+  "conversionNotes": [
+    "Properly Used: misfire-ignore roll '3+' converted to 5+.",
+    "Pigeon Bombs Tempermental: D6 table 5-6 hit / 2-4 fizzle / 1 explodes converted to D12 9-12 / 3-8 / 1-2.",
+    "Fire Thrice '-1 to hit' modifier kept as printed; unclear whether d12heim scales flat to-hit modifiers.",
+    "Impeccable Care '+2 on rare rolls' kept as printed; unclear whether rarity roll modifiers scale in d12heim.",
+    "Instructor buys from both lists but the schema allows one equipmentList; set to 'main' with a note (marksmen list usedBy also names him).",
+    "Special weapons' list prices are used as listCost (Impeccable Care makes them always available at that price); Trading Post price and rarity kept in note.",
+    "PDF spells it 'Double Barreled Pistol' and 'Double Barrrelled Handgun'; normalised to 'Double Barrelled'. Duelling Pistol and D.B. Duelling Pistol appear only in the main list, Repeater Pistol, Repeater Handgun, Hand-Held Mortar and Pigeon Bombs only in the Marksmen list.",
+    "Senior Gunnery Officer 'Hunter: See Shooting Skills' interpreted as starting with the Hunter skill.",
+    "Marksmen 'Quick Reload' rule simply grants the Hunter skill; the Repeater Pistol has a different, unrelated 'Quick Reload' weapon rule.",
+    "Pigeon Roost text says 'Once a Hero buys pigeon bombs' but they are only on the Marksmen (henchman) list, plus the Instructor; availability to other heroes is unclear."
+  ]
+}

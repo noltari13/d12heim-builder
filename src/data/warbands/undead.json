@@ -1,0 +1,169 @@
+{
+  "id": "undead",
+  "name": "Undead",
+  "source": "Undead.pdf",
+  "startingGold": 500,
+  "minModels": 3,
+  "maxModels": 15,
+  "specialRules": [],
+  "equipmentLists": [
+    {
+      "id": "main",
+      "name": "Undead equipment list",
+      "usedBy": "Undead warbands (Vampire, Necromancer, Dregs)",
+      "items": [
+        { "name": "Dagger", "category": "melee", "listCost": 2, "note": "1st free" },
+        { "name": "Mace", "category": "melee", "listCost": 3 },
+        { "name": "Hammer", "category": "melee", "listCost": 3 },
+        { "name": "Axe", "category": "melee", "listCost": 5 },
+        { "name": "Sword", "category": "melee", "listCost": 10 },
+        { "name": "Double-handed weapon", "category": "melee", "listCost": 15 },
+        { "name": "Spear", "category": "melee", "listCost": 10 },
+        { "name": "Halberd", "category": "melee", "listCost": 10 },
+        { "name": "Bow", "category": "missile", "listCost": 10 },
+        { "name": "Short bow", "category": "missile", "listCost": 5 },
+        { "name": "Light armour", "category": "armour", "listCost": 20 },
+        { "name": "Heavy armour", "category": "armour", "listCost": 50 },
+        { "name": "Shield", "category": "armour", "listCost": 5 },
+        { "name": "Helmet", "category": "armour", "listCost": 10 }
+      ]
+    }
+  ],
+  "fighters": [
+    {
+      "id": "vampire",
+      "name": "Vampire",
+      "kind": "hero",
+      "cost": 110,
+      "min": 1,
+      "max": 1,
+      "startingExp": 20,
+      "profile": { "M": 6, "WS": 4, "BS": 4, "S": 4, "T": 4, "W": 2, "I": 5, "A": 2, "Ld": 8 },
+      "equipmentList": "main",
+      "isLeader": true,
+      "spellcaster": null,
+      "skills": ["Combat", "Academic", "Strength", "Speed"],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Leader", "text": "Any models in the warband within 6\" of the Vampire may use his Leadership instead of their own." },
+        { "name": "Cause Fear", "text": "Causes fear." },
+        { "name": "Immune to Psychology", "text": "Not affected by psychology (such as fear) and never leaves combat." },
+        { "name": "Immune to Poison", "text": "Not affected by any poison." },
+        { "name": "No Pain", "text": "Treats a 'stunned' result on the Injury chart as 'knocked down'." }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "necromancer",
+      "name": "Necromancer",
+      "kind": "hero",
+      "cost": 35,
+      "min": 0,
+      "max": 1,
+      "startingExp": 8,
+      "profile": { "M": 4, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 7 },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": "Necromancy",
+      "skills": ["Academic", "Speed"],
+      "fixedEquipment": [],
+      "specialRules": [
+        { "name": "Wizard", "text": "Wizard; may use Necromantic magic." }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "dreg",
+      "name": "Dreg",
+      "kind": "hero",
+      "cost": 20,
+      "min": 0,
+      "max": 3,
+      "startingExp": 0,
+      "profile": { "M": 4, "WS": 2, "BS": 2, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 7 },
+      "equipmentList": "main",
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": ["Combat", "Strength"],
+      "fixedEquipment": [],
+      "specialRules": [],
+      "notes": ""
+    },
+    {
+      "id": "zombie",
+      "name": "Zombie",
+      "kind": "henchman",
+      "cost": 15,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": { "M": 4, "WS": 2, "BS": 0, "S": 3, "T": 3, "W": 1, "I": 1, "A": 1, "Ld": 5 },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": ["None (may not have any weapons or armour and suffer no penalties for this)"],
+      "specialRules": [
+        { "name": "Cause Fear", "text": "Causes fear." },
+        { "name": "May not run", "text": "May not run (but may charge normally)." },
+        { "name": "Immune to Psychology", "text": "Not affected by psychology and never leaves combat." },
+        { "name": "Immune to Poison", "text": "Not affected by any poison." },
+        { "name": "No Pain", "text": "Treats a 'stunned' result on the Injury chart as 'knocked down'." },
+        { "name": "No Brain", "text": "Never gains experience." }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "ghoul",
+      "name": "Ghoul",
+      "kind": "henchman",
+      "cost": 40,
+      "min": 0,
+      "max": null,
+      "startingExp": 0,
+      "profile": { "M": 4, "WS": 2, "BS": 2, "S": 3, "T": 4, "W": 1, "I": 3, "A": 2, "Ld": 5 },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": ["Natural weapons (bones used as primitive weapons; never carry any equipment)"],
+      "specialRules": [
+        { "name": "Cause Fear", "text": "Causes fear." }
+      ],
+      "notes": "Bought in groups of 1-5 models."
+    },
+    {
+      "id": "dire-wolf",
+      "name": "Dire Wolf",
+      "kind": "henchman",
+      "cost": 50,
+      "min": 0,
+      "max": 5,
+      "startingExp": 0,
+      "profile": { "M": 9, "WS": 3, "BS": 0, "S": 4, "T": 3, "W": 1, "I": 2, "A": 1, "Ld": 4 },
+      "equipmentList": null,
+      "isLeader": false,
+      "spellcaster": null,
+      "skills": [],
+      "fixedEquipment": ["Natural weapons (Weapons/Armour: None)"],
+      "specialRules": [
+        { "name": "Charge", "text": "Fights with 2 attacks instead of 1 during the turn it charges." },
+        { "name": "May not Run", "text": "May not run (but may charge normally)." },
+        { "name": "Cause Fear", "text": "Causes fear." },
+        { "name": "Immune to Psychology", "text": "Not affected by psychology and never leaves combat." },
+        { "name": "Immune to Poison", "text": "Not affected by any poison." },
+        { "name": "Unliving", "text": "Never gains experience." },
+        { "name": "No Pain", "text": "Treats a 'stunned' result on the Injury chart as 'knocked down'." }
+      ],
+      "notes": ""
+    }
+  ],
+  "spells": { "listName": "Necromancy", "usedBy": ["necromancer"] },
+  "conversionNotes": [
+    "No d6 roll wording appears in any Undead special rule, so no dice conversions were needed.",
+    "The PDF has no warband-wide special rules section; all rules are per fighter.",
+    "The equipment list is printed as 'used by Undead warbands' without naming fighters; usedBy lists the three heroes whose Weapons/Armour entries reference it. Zombies, Ghouls and Dire Wolves cannot take equipment.",
+    "Henchmen starting experience is 0 per the PDF; Zombies (No Brain) and Dire Wolves (Unliving) never gain experience. Ghouls can gain experience.",
+    "Dire Wolf A is printed as 1; the Charge rule gives 2 attacks on the turn they charge. A is not doubled in d12heim, so 2 on the charge stands as written."
+  ]
+}
