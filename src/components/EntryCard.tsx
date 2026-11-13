@@ -32,7 +32,7 @@ export function EntryCard({ wb, entry, c, allowRare, onChange, onRemove, onDupli
   const removeGear = (i: number) => onChange({ ...entry, gear: entry.gear.filter((_, j) => j !== i) });
 
   return (
-    <article className={`card ${ft.kind}`}>
+    <article id={`entry-${entry.id}`} className={`card ${ft.kind}`}>
       <header className="card-head">
         <div className="card-title">
           <input
@@ -102,28 +102,21 @@ export function EntryCard({ wb, entry, c, allowRare, onChange, onRemove, onDupli
       </div>
 
       {c.weapons.length > 0 && (
-        <table className="weapons">
-          <thead>
-            <tr>
-              <th>Weapon</th>
-              <th>S</th>
-              <th>AP</th>
-              <th>Range</th>
-              <th>Rules</th>
-            </tr>
-          </thead>
-          <tbody>
-            {c.weapons.map((w, i) => (
-              <tr key={i}>
-                <td>{w.name}</td>
-                <td>{w.strength}</td>
-                <td>{w.ap}</td>
-                <td>{w.range}</td>
-                <td className="rules">{w.rules}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <ul className="weapons">
+          {c.weapons.map((w, i) => (
+            <li key={i}>
+              <div className="w-main">
+                <span className="w-name">{w.name}</span>
+                <span className="w-stats">
+                  <span>S {w.strength}</span>
+                  <span>AP {w.ap}</span>
+                  {w.range && <span>{w.range}</span>}
+                </span>
+              </div>
+              {w.rules && <div className="w-rules">{w.rules}</div>}
+            </li>
+          ))}
+        </ul>
       )}
 
       <div className="defence">

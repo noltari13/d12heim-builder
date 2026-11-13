@@ -1,0 +1,363 @@
+{
+  "sections": [
+    {
+      "id": "attack",
+      "title": "Attack sequence",
+      "summary": "Hit, (parry), wound, crit, armour save, barrier save, injury. All rolls on a d12, roll the TN or higher.",
+      "blocks": [
+        { "type": "p", "text": "Every stat below is the doubled d12 value. All target numbers (TN) are clamped to **1 minimum, 12 maximum**. Roll a d12; equal to or over the TN succeeds." },
+        { "type": "steps", "items": [
+          { "title": "1. Hit (shooting)", "text": "**TN = 13 - BS** + shooting modifiers (see Shooting). Example: BS 6 hits on 7+." },
+          { "title": "1. Hit (melee)", "text": "**TN = 7 + defender's WS - attacker's WS**. Defender WS 0: every attack hits. Two weapons: attacker uses WS - 2. Knocked-down target: hits automatically. Stunned target: hits and wounds automatically." },
+          { "title": "2. Parry (melee only)", "text": "Defender with Parry may pick one hit: roll d12 + Parry bonus; if **greater than** the attacker's natural to-hit roll, the hit is discarded. See Close combat." },
+          { "title": "3. Wound", "text": "**TN = 7 + defender's T - attacker's S**. Shooting uses the weapon's S (static S doubles: Bow 3 = S6). Melee uses the attacker's doubled S + weapon bonus (User +2 = S + 2)." },
+          { "title": "4. Critical hit", "text": "A **natural 12 to wound** is a critical, unless the attacker needed a 12 to wound. Max one crit per model per activation (the first natural 12). Roll d12 on the Critical Chart. Falls and spells never crit." },
+          { "title": "5. Armour save", "text": "**TN = 13 - AV + attacker's AP**. AV = armour + shield. AP = model AP (1 if its own doubled S is 8+, else 0) + weapon AP + crit AP bonus. **No save if AP > AV.** Stunned models get no save vs melee; they do vs shooting. No save vs falling." },
+          { "title": "6. Barrier save", "text": "If the model has one, roll it after armour. It can never be modified." },
+          { "title": "7. Wound and injury", "text": "Remove 1 Wound (crits may remove more). At 0 Wounds the attacker rolls the Injury table: 1-4 Knocked Down, 5-8 Stunned, 9-12 Out of Action. Add the crit's Injury bonus. Only one injury roll per crit." }
+        ] },
+        { "type": "table", "head": ["d12", "AP / Injury bonus", "Wounds", "Trauma"], "rows": [
+          ["1", "+0 / +0", "1", "-"],
+          ["2", "+1 / +0", "1", "-"],
+          ["3", "+2 / +0", "1", "-"],
+          ["4", "+2 / +1", "1", "-"],
+          ["5", "+3 / +1", "2", "-"],
+          ["6", "+3 / +2", "2", "-"],
+          ["7", "+4 / +2", "2", "-"],
+          ["8", "+4 / +3", "2", "-"],
+          ["9", "+5 / +3", "3", "Minor"],
+          ["10", "+6 / +3", "3", "Minor"],
+          ["11", "+6 / +3", "4", "Major"],
+          ["12", "+8 / +3", "4", "Major"]
+        ] },
+        { "type": "list", "items": [
+          "Critical Chart: the AP bonus adds to the attacker's AP for the armour save; the Injury bonus adds to the injury roll.",
+          "Wounds = Wounds lost by a multi-wound model. If the weapon normally does more, use the higher.",
+          "Trauma is gained after the battle, whatever the recovery roll."
+        ] },
+        { "type": "note", "tone": "working", "text": "Minor and Major Trauma are never defined. Note them on the roster until the group rules." },
+        { "type": "note", "tone": "working", "text": "Stats over 12 use the formula; nothing says what happens if a TN would drop below 1. Treat it as 1." }
+      ]
+    },
+    {
+      "id": "turn",
+      "title": "Turn sequence",
+      "summary": "Recovery phase, then alternating single-model activations; actions run in a fixed order.",
+      "blocks": [
+        { "type": "steps", "items": [
+          { "title": "1. Recovery phase", "text": "Each player, for their own warband, in order: take due Rout tests (or rout voluntarily); Rally check for each Shaken, Broken or Cowering model; resolve ongoing effects (fire, poison, etc.); remove 1 Exhaustion token per model; remove 1 Reload token per model." },
+          { "title": "2. Activation phase", "text": "Each player rolls **d12 + leader's Ld**; higher total chooses who activates first. Players alternate activating one model each, doing all its actions, until every model has activated." }
+        ] },
+        { "type": "list", "items": [
+          "A finished model takes an **Exhaustion token** and can't activate again this turn.",
+          "A player with fewer unactivated models than the opponent may **Pass** instead of activating.",
+          "A model that can activate must do so, even if it only passes."
+        ] },
+        { "type": "note", "tone": "working", "text": "Scenario 'who goes first': the scenario decides turn 1 only; roll d12 + Ld from turn 2." },
+        { "type": "table", "head": ["#", "Action", "Rule"], "rows": [
+          ["0", "Compulsory", "Psychological conditions first. A Stunned model becomes Knocked Down and its activation ends."],
+          ["1", "Charge", "Move into contact and Attack, then the activation ends. A failed charge also ends it."],
+          ["2", "Free", "Ability or item actions, any time in the activation. Not after charging."],
+          ["3", "Move", "Walk up to M, or Run up to 2M (running ends the activation)."],
+          ["4", "Shoot / Spell", "Fire one missile weapon once, or cast one spell."],
+          ["5", "Attack", "Melee attacks vs enemies in base contact. Not if the model shot or cast."]
+        ] },
+        { "type": "list", "items": [
+          "Actions go in this order; a skipped action is lost for this activation.",
+          "Melee attacks happen only in the active model's activation. A charged model strikes back on its own activation (unless Strike first/last applies)."
+        ] },
+        { "type": "p", "text": "**Knocked down and stunned in Recovery:** nothing happens to them in the Recovery phase. A **Stunned** model becomes Knocked Down at the start of its next activation, which then ends. A **Knocked Down** model may stand up with its next Move action." }
+      ]
+    },
+    {
+      "id": "movement",
+      "title": "Movement",
+      "summary": "Walk M, run 2M, charge 2M; climb, jump and hide with Initiative tests.",
+      "blocks": [
+        { "type": "list", "items": [
+          "**Walk:** up to M inches, then later actions (Shoot/Spell, Attack) as normal.",
+          "**Run:** up to 2M inches; activation ends. Not allowed if a standing, visible, non-fleeing enemy is within 8\" at the start of the activation. Can't run while climbing.",
+          "Turning on the spot isn't moving. Any move into base contact is a charge. Engaged models can't move except by disengaging."
+        ] },
+        { "type": "table", "head": ["Terrain", "Movement"], "rows": [
+          ["Open ground, ladders, doors", "Normal"],
+          ["Difficult (slopes, bushes, roofs)", "Half rate"],
+          ["Very difficult (crawlholes)", "Quarter rate"],
+          ["Walls/obstacles under 1\"", "Free to cross"]
+        ] },
+        { "type": "steps", "items": [
+          { "title": "Charge: declare", "text": "First action of the activation. Declare the target (must be seen, and reasonably in range) before measuring. Take any Fear check now." },
+          { "title": "Charge: measure", "text": "**Range = 2 x M.** In range: move into base contact by the shortest route, Attack immediately, activation ends (no Free actions). Out of range or blocked: no move, activation ends." },
+          { "title": "Hearing", "text": "No line of sight? Within 4\" of a non-hidden enemy, pass an I test to hear it and charge normally. Fail: no charge, activate otherwise as normal." },
+          { "title": "Interception", "text": "One unengaged enemy within 2\" of the charge path may move into contact with the charger instead (Fear rules apply). The charger still counts as charging." }
+        ] },
+        { "type": "note", "tone": "working", "text": "Charge range: the supplement points to a missing 'Range' page. Working rule: 2 x M (book)." },
+        { "type": "list", "items": [
+          "**Climbing:** start touching the feature; climb up to M total, max height M. I test: fail going up = no move this activation; fail going down = fall from the start point.",
+          "**Jumping down:** up to 6\", free. I test per full 2\" of height. Any fail = fall from the jump point, no more moving.",
+          "**Diving charge:** charge from a ledge onto an enemy within 2\" of the landing point. I tests as jumping down. Pass: +1 S and -1 to-hit TN for that Attack.",
+          "**Jumping gaps:** up to 3\". Declare without measuring; distance comes off movement. Not enough movement = fall; otherwise I test or fall.",
+          "**Falling:** D3 hits, no armour save, no crits. The model can't move or hide any more this activation.",
+          "**Near edges:** a knocked-down or stunned model within 1\" of a roof edge takes an I test or falls."
+        ] },
+        { "type": "note", "tone": "working", "text": "Falling Strength: the doc uses 2 x height in inches (book S = height, doubled). Not confirmed by the supplement." },
+        { "type": "list", "items": [
+          "**Knocked down:** may crawl 2\" as its Move action; can't fight, shoot or cast. Next activation it may stand with its Move action: half move, may shoot and cast, can't run or charge.",
+          "**Hiding:** declare as the Attack action, within 1\" of something to hide behind. Not if it ran, fled, charged or was stunned this turn, or an enemy would auto-spot it. Ends when it moves, attacks, casts or uses an item.",
+          "**Seeing (Free):** enemy Sees a hidden model if it's within the enemy's I in inches and the enemy wins an opposed I check, or it has no cover from that angle. Only that enemy may then shoot or charge it.",
+          "**Spotting (Shoot action):** within 12\" with no cover, or within half I in inches and win an opposed I check. Spotted = no longer hidden for anyone. Seeing and Spotting need line of sight."
+        ] },
+        { "type": "note", "tone": "working", "text": "Opposed I check is undefined. Working rule: both roll the I test; whoever passes by more wins." },
+        { "type": "note", "tone": "working", "text": "Standing up: the old text still allows a half-rate move in the same activation as standing. Working rule: allowed as above." }
+      ]
+    },
+    {
+      "id": "shooting",
+      "title": "Shooting",
+      "summary": "One shot per Shoot action at the closest target; TN 13 - BS plus modifiers.",
+      "blocks": [
+        { "type": "list", "items": [
+          "One Shoot action = one weapon, fired once. A model that shoots can't Attack this activation.",
+          "Can't shoot if engaged in melee, stunned or knocked down (a model that stood up this activation may). BS 0 can't shoot.",
+          "360-degree vision; turning to face is free.",
+          "Choose the target, then measure. Beyond max range = auto miss. Beyond half range = long range."
+        ] },
+        { "type": "p", "text": "**Target choice:** target on the same or higher level must be the **closest enemy**. Exceptions:" },
+        { "type": "list", "items": [
+          "Target below the shooter: any visible target.",
+          "A farther target that is easier to hit (e.g. closest in cover, farther in the open).",
+          "Ignore fleeing, knocked-down and stunned enemies.",
+          "A Large Target may always be chosen.",
+          "Shooter more than 2\" above the table: any visible target, unless enemies are in the same building and in line of sight."
+        ] },
+        { "type": "table", "head": ["Situation", "TN change"], "rows": [
+          ["Long range", "+1"],
+          ["Target in cover", "+2"],
+          ["Concealment", "+1 per layer"],
+          ["Shooting into melee", "+4"],
+          ["Shooter moved this activation", "+1"],
+          ["Large target (over 2\")", "-1"]
+        ] },
+        { "type": "note", "tone": "working", "text": "Moved (+1) and Large target (-1) are book modifiers the supplement doesn't mention. The doc keeps them." },
+        { "type": "list", "items": [
+          "**Cover / concealment** needs 50%+ of the model obstructed.",
+          "**Cover:** hard object (stone wall); target must be within 1\" of it.",
+          "**Concealment:** soft or see-through (bush, fence). Stacks per layer. Shooting through a window = concealment unless the shooter is within 1\" of it.",
+          "A shot that misses only because of cover hits the cover.",
+          "**Into melee:** a shot that misses only because of the +4 hits another model in that melee, chosen at random, weighted to the shooter's friends.",
+          "Shooting knocked-down or stunned models gives no bonus. A stunned model keeps its armour save vs shooting and goes out of action on an injury roll of 7+.",
+          "**Reload (n):** after firing, place n Reload tokens; remove 1 each Recovery phase."
+        ] },
+        { "type": "note", "tone": "working", "text": "Reload tokens: the supplement never says a model with tokens can't fire. Working rule: it can't fire that weapon until all tokens are gone." }
+      ]
+    },
+    {
+      "id": "combat",
+      "title": "Close combat",
+      "summary": "The active model strikes; TN 7 + enemy WS - own WS; one parry per turn.",
+      "blocks": [
+        { "type": "list", "items": [
+          "**Who strikes:** only the active model, as its Attack action (last action). A charger attacks right after contact. A model that shot or cast can't Attack.",
+          "Roll a d12 per Attack vs **TN = 7 + defender's WS - attacker's WS**.",
+          "**Strike last:** when this model Attacks, its target resolves an attack against it first.",
+          "**Strike first:** when an enemy activates and attacks this model, it strikes first, during the enemy's activation.",
+          "**Two weapons:** +1 Attack with the second weapon (added after Frenzy doubling); WS - 2 for to-hit. Different weapons: one Attack with one, the rest with the other."
+        ] },
+        { "type": "note", "tone": "working", "text": "Strike first: unclear if it is one extra attack or all Attacks. Working rule: all of the model's Attacks. The Spear's '-2 OS' is undefined; the doc applies -2 (read as -2 to hit)." },
+        { "type": "list", "items": [
+          "**Multiple combatants:** every model linked by base contact is one melee. Each model attacks only enemies touching it; split Attacks between them before rolling.",
+          "A model engaged with a standing enemy can't attack knocked-down or stunned enemies.",
+          "If all its opponents are down, a model may leave the melee and even charge another enemy.",
+          "Engaged models can't shoot; they may cast, but only at models in that melee."
+        ] },
+        { "type": "steps", "items": [
+          { "title": "Parry", "text": "After the opponent rolls to hit, choose one hit (or none). Roll d12 + bonus. **Greater than** that hit's natural to-hit roll = parried." },
+          { "title": "Parry level", "text": "Add the Parry (n) of all items carried. Level 1: +0. Level 2: +1. Level 3: +2. Level 4: +2 and a second parry attempt." },
+          { "title": "Limits", "text": "One attempt total, not one per enemy. Can't parry a hit with S 2x or more of the parrier's basic S." }
+        ] },
+        { "type": "note", "tone": "working", "text": "Parry period: '1 parry per melee' has no time limit. Working rule: one parry per turn." },
+        { "type": "steps", "items": [
+          { "title": "Disengage", "text": "Take an I test as part of the Move action." },
+          { "title": "Fail", "text": "One engaged enemy (owner's choice) makes 1 free attack. The model stays in and can still fight." },
+          { "title": "Pass", "text": "Leave the melee; may immediately charge into another melee." }
+        ] },
+        { "type": "note", "tone": "working", "text": "Disengaging: unclear whether the I test uses an action. Working rule: it is part of the Move action." },
+        { "type": "list", "items": [
+          "**Knocked-down target:** attacks hit automatically; roll to wound, save and injury normally.",
+          "**Stunned target:** attacks hit and wound automatically, **no armour save**, out of action on an injury roll of **7+**.",
+          "Knocked-down and stunned models can't attack."
+        ] }
+      ]
+    },
+    {
+      "id": "injuries",
+      "title": "Injuries and recovery",
+      "summary": "At 0 Wounds roll d12: 1-4 Knocked Down, 5-8 Stunned, 9-12 Out of Action.",
+      "blocks": [
+        { "type": "table", "head": ["d12", "Result"], "rows": [
+          ["1-4", "Knocked Down"],
+          ["5-8", "Stunned"],
+          ["9-12", "Out of Action"]
+        ] },
+        { "type": "list", "items": [
+          "The player who caused the wound rolls. Add crit Injury bonus and modifiers (e.g. Hunting Arrows +1).",
+          "**Extra Stun** weapons: 3-4 counts as Stunned.",
+          "**Helmet:** on a Stunned result roll d12; **8+** = Knocked Down instead. AP doesn't modify it."
+        ] },
+        { "type": "steps", "items": [
+          { "title": "Knocked Down", "text": "Place face up. May crawl 2\" as its Move action (away from an enemy only if that enemy is fighting someone else). Can't fight, shoot or cast. Melee attacks vs it hit automatically. Next activation: stand with the Move action, then fights normally even at 0 Wounds." },
+          { "title": "Stunned", "text": "Place face down; does nothing. Next activation it becomes Knocked Down and the activation ends. Melee vs it: auto hit, auto wound, no armour save. Shooting vs it: normal hit and save. Either way, out of action on an injury roll of 7+." },
+          { "title": "Out of Action", "text": "Remove from play. After the battle roll for its fate on the post-battle injury chart." }
+        ] },
+        { "type": "note", "tone": "working", "text": "Already-stunned model: an injury roll of 7+ takes it out of action; under 7 it stays Stunned." },
+        { "type": "list", "items": [
+          "**Multiple wounds:** each unsaved wound removes 1 Wound (crits may remove more). With 1+ Wound left the model fights normally.",
+          "At 0 Wounds, roll injury for that wound and every later one."
+        ] },
+        { "type": "note", "tone": "working", "text": "Several wounds in one activation: roll injury for each and apply the highest result." },
+        { "type": "note", "tone": "working", "text": "Post-battle 'Recover / Injured / Seriously Injured' is undefined. Working rule: use the book's Henchman and Hero injury charts." }
+      ]
+    },
+    {
+      "id": "psychology",
+      "title": "Psychology",
+      "summary": "Ld tests are d12 equal to or under Ld; failed Morale steps a model through Shaken, Broken, Cowering.",
+      "blocks": [
+        { "type": "list", "items": [
+          "**Ld test:** roll d12, pass on **equal to or under Ld** (not 2d6). A 12 always fails.",
+          "A model within 6\" of its leader may use the leader's Ld, unless the leader is knocked down, stunned, Broken or Cowering.",
+          "**Immune to psychology:** no Fear or Morale checks, never demoralised, no conditions. Its warband still takes Rout tests."
+        ] },
+        { "type": "steps", "items": [
+          { "title": "Fear: being charged", "text": "Test when the charge is declared and in range. Fail = Shaken (no further effect if already Shaken or worse)." },
+          { "title": "Fear: charging", "text": "Test before charging a fear-causer. Fail = no charge this activation; may still move and shoot." },
+          { "title": "Causing fear", "text": "A fear-causer never takes Fear checks." }
+        ] },
+        { "type": "p", "text": "**Morale check** when: a friend goes out of action within 6\"; its leader goes out of action in its line of sight; or it is charged while already engaged with no friends in that melee or within 2\" (this **replaces All Alone**). Fail = demoralised one level further." },
+        { "type": "table", "head": ["Level", "Effect"], "rows": [
+          ["1. Shaken", "-2 to all its rolls"],
+          ["2. Broken", "Runs to the closest board edge; won't end within 2\" of an enemy; takes stairs or jumps down."],
+          ["3. Cowering", "Treated as Knocked Down"]
+        ] },
+        { "type": "note", "tone": "working", "text": "Shaken -2 on roll-under tests (Ld, I, etc.): always counts against the model, i.e. treat the stat as 2 lower." },
+        { "type": "note", "tone": "working", "text": "Broken movement: no distance or board-edge result given. Working rule: moves its full M. Failing again while Cowering has no listed effect." },
+        { "type": "list", "items": [
+          "**Rally:** in Recovery each demoralised model takes an Ld test; pass = no longer demoralised, any level. In activation, a friend moving into contact may trigger an immediate rally check (its activation then ends)."
+        ] },
+        { "type": "steps", "items": [
+          { "title": "Rout: when", "text": "In your Recovery phase, if **25% or more** of your models are out of action." },
+          { "title": "Rout: how", "text": "Ld test on the leader's Ld. If the leader is out of action or stunned, use the highest Ld among models not stunned or out of action. Fail = warband routs and loses." },
+          { "title": "Routing in melee", "text": "Each routing model in melee takes an I test; fail = one opportunity attack (opponent picks the attacker). Down models count as standing." },
+          { "title": "Voluntary rout", "text": "In Recovery, if a Rout test is due or 25%+ are out of action, you may rout instead. Counts as a failed Rout test." }
+        ] },
+        { "type": "note", "tone": "working", "text": "Leader falls mid-battle: not covered. Working rule: the book rule (p.101) applies after the battle; nothing covers it during the battle." },
+        { "type": "list", "items": [
+          "**Frenzy:** must charge any enemy in charge range. Doubles its Attacks in melee (second-weapon +1 added after). Immune to other psychology while an enemy is in charge range. Lost for the battle if knocked down or stunned.",
+          "**Hatred:** re-roll missed to-hit rolls vs a hated enemy in its first Attack action in each melee.",
+          "**Stupidity, Animosity, Insanity:** conditions. Roll d12 as the compulsory action at the start of activation. Stupidity triggered = does nothing this activation. Animosity = charges the closest model, friend or foe. Insanity = moves full M in a random direction.",
+          "Condition severity triggers on: **Mild 1, Severe 1-2, Crippling 1-3.** Worsening a Crippling condition kills the model.",
+          "The book's Stupidity (Ld test, shamble, drool) is replaced by the condition."
+        ] },
+        { "type": "note", "tone": "working", "text": "Hatred 'first turn of each combat': working rule is the first Attack action in each melee. Severe/Crippling 'on a 2 / on a 3': working rule reads them as 1-2 and 1-3." }
+      ]
+    },
+    {
+      "id": "magic",
+      "title": "Magic",
+      "summary": "One spell per activation as the Shoot/Spell action: 2d6 equal to or over the Difficulty.",
+      "blocks": [
+        { "type": "steps", "items": [
+          { "title": "1. Choose", "text": "Pick a known spell and its target." },
+          { "title": "2. Roll", "text": "Roll **2d6** vs DC = spell Difficulty **+1 per spell the caster is sustaining**." },
+          { "title": "3. Result", "text": "Equal to or over the DC: the spell works. Under: it fails, and the caster can't cast again this activation." }
+        ] },
+        { "type": "note", "tone": "working", "text": "Casting dice: the book overlay says d12 equal to or over the Difficulty; the supplement says over the DC on 2d6. Working rule: 2d6, equal to or over the DC." },
+        { "type": "list", "items": [
+          "**Natural 2:** always fails (catastrophic failure).",
+          "**Natural 12:** always succeeds (great success)."
+        ] },
+        { "type": "note", "tone": "working", "text": "Catastrophic failure and great success have no defined effects. Working rule: no extra effect." },
+        { "type": "list", "items": [
+          "Casting uses the Shoot/Spell action: no shooting or Attack in the same activation, and not after running.",
+          "Casters can't wear armour, shields or bucklers (Prayers of Sigmar included).",
+          "Engaged casters may cast, but only at models in that melee.",
+          "Casting ends Hiding.",
+          "**Spell damage:** resolve like shooting: spell S (already doubled) vs T, armour saves allowed unless stated, then injury. Spells never crit. AP 1 if spell S is 8+, else 0."
+        ] },
+        { "type": "p", "text": "**Sustaining:** to keep a sustainable spell going, roll a d12 equal to or over its DC; fail = it ends. Each sustained spell adds +1 to the DC of new spells." },
+        { "type": "note", "tone": "working", "text": "Sustaining: no list of sustainable spells, timing or TN. Working rule: roll in the Recovery phase against the DC." },
+        { "type": "note", "tone": "working", "text": "Armour ban for casters removes the book's exception for Prayers of Sigmar; the doc applies the ban to priests too until the group rules." }
+      ]
+    },
+    {
+      "id": "conversions",
+      "title": "Dice conversions and group rulings",
+      "summary": "Converting d6 rules to d12, doubled stats, AP and saves.",
+      "blocks": [
+        { "type": "table", "head": ["d6 rule", "d12 equivalent"], "rows": [
+          ["Natural 6", "Natural 12"],
+          ["5-6", "9-12"],
+          ["4+", "7+"],
+          ["3+", "5+"],
+          ["2+", "3+"],
+          ["Result n", "2n-1 to 2n"]
+        ] },
+        { "type": "table", "head": ["Stat", "Doubled?"], "rows": [
+          ["WS, BS, S, T, I", "Yes"],
+          ["M, W, A, Ld", "No"],
+          ["AP (new)", "0, or 1 if own doubled S is 8+"]
+        ] },
+        { "type": "list", "items": [
+          "Example: human 4 3 3 3 3 1 3 1 7 becomes M4 WS6 BS6 S6 T6 W1 I6 A1 Ld7 AP0.",
+          "Modifiers never double: +1 S from a weapon, skill or spell adds 1 to the doubled value.",
+          "**Weapon S:** 'User' = doubled S; 'User +n' = doubled S + n; a static S doubles (Bow 3 = S6).",
+          "**AP:** 1 only if the model's own doubled S is 8+. A weapon's S bonus never grants it (S6 + 2 weapon = S8 hit, AP 0). Weapon AP adds to model AP.",
+          "**Armour:** AV stacks (armour + shield). Save TN = 13 - AV + attacker's AP. No save if AP > AV.",
+          "**Helmet:** 8+ save against a Stunned result (overrides the sheet's 4+).",
+          "**Prices:** the Equipment sheet overrides the book and warband lists.",
+          "Tests: characteristic and Ld tests are d12 equal to or under the stat; a 12 always fails.",
+          "Spell casting stays on 2d6 (working rule)."
+        ] },
+        { "type": "note", "tone": "working", "text": "Quantity dice (D3 hits, D6 inches, D6 gold, D66 charts, 2D6 Rare rolls, exploration) stay as written until the group rules." },
+        { "type": "note", "tone": "working", "text": "Undoubled +1 modifiers (advances, injuries, spells, paid upgrades) are half as strong on doubled stats. Unresolved; apply as written." }
+      ]
+    }
+  ],
+  "glossary": [
+    { "term": "User / User +n / User -n", "text": "Melee weapon Strength. User = the wielder's doubled S. User +n = doubled S + n (modifier not doubled). Dagger is User -1.", "source": "Equipment sheet" },
+    { "term": "Static Strength", "text": "A number in the Strength column (bows, guns) is doubled: Bow 3 = S6, Handgun 4 = S8.", "source": "Group ruling" },
+    { "term": "+n AP", "text": "Adds n to the wielder's own AP (0, or 1 if own doubled S is 8+). Armour save TN = 13 - AV + total AP; no save if AP > AV.", "source": "Equipment sheet" },
+    { "term": "+1 Crit", "text": "Add 1 to Critical Chart rolls (max 12). Also 'Barbed Arrows'.", "source": "Equipment sheet" },
+    { "term": "Extra Stun", "text": "Injury rolls of 3-4 count as Stunned instead of Knocked Down.", "source": "Equipment sheet (book concussion)" },
+    { "term": "Parry (n)", "text": "Once per turn, after the enemy rolls to hit, pick one hit: roll d12 + bonus, greater than the natural to-hit roll discards it. Add n from all items. Level 2 +1, level 3 +2, level 4 +2 and a second attempt. Can't parry S 2x or more of own basic S.", "source": "Supplement" },
+    { "term": "Unwieldy", "text": "Can't dual-wield with this weapon. A shield is allowed.", "source": "Equipment sheet" },
+    { "term": "Strike first (with -2 OS)", "text": "When an enemy activates and attacks this model, it strikes first with all its Attacks during the enemy's activation, at -2 (working rule). 'OS' (not defined in the sources).", "source": "Equipment sheet + book (spear)" },
+    { "term": "Double-Handed Weapon", "text": "Needs both hands: no shield, buckler or second weapon in melee.", "source": "Equipment sheet (book two-handed)" },
+    { "term": "+1 to wound (Gromril Weapon)", "text": "+1 to the to-wound roll (i.e. -1 to the TN). Costs 4x the base weapon.", "source": "Equipment sheet" },
+    { "term": "+1 to hit (Ithilmar Weapon)", "text": "+1 to the to-hit roll (i.e. -1 to the TN). Costs 4x the base weapon.", "source": "Equipment sheet" },
+    { "term": "Steady Aim", "text": "Move or shoot: can't Move and Shoot in the same activation. Pivoting and standing up are allowed.", "source": "Equipment sheet" },
+    { "term": "Reload (n)", "text": "After firing, place n Reload tokens. Remove 1 per Recovery phase. Can't fire while any remain (working rule).", "source": "Supplement" },
+    { "term": "Rifled", "text": "No long-range penalty.", "source": "Equipment sheet" },
+    { "term": "Sniper", "text": "May target any visible enemy, ignoring the closest-target rule (not defined in the sources; book long rifle reading).", "source": "Equipment sheet" },
+    { "term": "Shotgun", "text": "No to-hit roll: every model under a 16\" x 1\" line from the shooter is hit at the weapon's S (not defined in the sources; book blunderbuss reading).", "source": "Equipment sheet" },
+    { "term": "H2H", "text": "Usable in melee. When charging, shoot it at the target before melee attacks; in later rounds of that melee it counts as a Club.", "source": "Equipment sheet" },
+    { "term": "Skirmish", "text": "No penalty for moving: may Move and Shoot in the same activation without the +1 moved modifier.", "source": "Equipment sheet" },
+    { "term": "Double Shot", "text": "May shoot twice in one Shoot action (not defined in the sources; plain reading).", "source": "Equipment sheet" },
+    { "term": "Stealthy", "text": "May shoot while hidden and stay hidden; the target may take an I test, and on a pass the shooter is no longer hidden.", "source": "Skaven list (blowpipe)" },
+    { "term": "Limited Ammo", "text": "Once per battle.", "source": "Equipment sheet" },
+    { "term": "No damage", "text": "The weapon causes no wound or injury; only its listed effect applies (Net, Bolas).", "source": "Equipment sheet" },
+    { "term": "Net", "text": "No move or range penalty, no damage, once per battle. A model hit takes an S test; fail = can't move, shoot or cast for 1 turn.", "source": "Equipment sheet" },
+    { "term": "Bolas", "text": "Limited Ammo, no damage. A model hit has -2 WS and can't move; it may take an S test in Recovery to remove this.", "source": "Equipment sheet" },
+    { "term": "Hunting Arrows", "text": "Bows: +1 to injury rolls. Ammo is declared at the start and used up after the battle.", "source": "Equipment sheet" },
+    { "term": "Bodkin Arrows", "text": "Bows: +1 AP.", "source": "Equipment sheet" },
+    { "term": "Great Eagle Arrows", "text": "Bows: +1 to hit.", "source": "Equipment sheet" },
+    { "term": "Enhanced Gunpowder", "text": "Guns: +3\" range.", "source": "Equipment sheet" },
+    { "term": "Heavy Rounds", "text": "Guns: +1 to wound.", "source": "Equipment sheet" },
+    { "term": "Need a 7 Strength", "text": "Plate, Gromril Plate (Dwarves exempt) and Tower Shield need S 7 to use. Doubled S is always even, so as written this means S8+. No group ruling yet.", "source": "Equipment sheet" },
+    { "term": "-1\" M with shield", "text": "Plate plus a shield, or a Tower Shield plus Plate: -1\" Movement.", "source": "Equipment sheet" },
+    { "term": "+1 Initiative", "text": "Ithilmar Chainmail adds 1 to the doubled I (modifier not doubled).", "source": "Equipment sheet" },
+    { "term": "Pavise cover", "text": "The model can't run and always counts as in cover (+2 to the shooter's TN).", "source": "Equipment sheet" },
+    { "term": "Helmet", "text": "On a Stunned injury result roll d12: 8+ = Knocked Down instead. AP doesn't modify it.", "source": "Group ruling (overrides sheet 4+)" },
+    { "term": "Armour Value (AV)", "text": "Body armour AV + shield AV stack. Save TN = 13 - AV + AP.", "source": "Group ruling" }
+  ]
+}

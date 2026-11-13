@@ -2,16 +2,25 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Roster, RosterEntry } from './types';
 import { WARBANDS, getWarband } from './data';
 import { summarise } from './logic/validate';
-import { d12Profile } from './logic/stats';
 import { downloadJson, loadActive, loadRosters, newRoster, parseRoster, saveActive, saveRosters, uid } from './logic/storage';
 import { EntryCard } from './components/EntryCard';
 import { PrintRoster } from './components/PrintRoster';
+import { RecruitPanel } from './components/RecruitPanel';
+import { Reference } from './components/Reference';
+
+type Tab = 'builder' | 'reference';
+const initialTab = (): Tab => (location.hash.startsWith('#ref') ? 'reference' : 'builder');
 
 export default function App() {
   const [rosters, setRosters] = useState<Roster[]>(loadRosters);
   const [activeId, setActiveId] = useState<string | null>(() => loadActive());
   const [creating, setCreating] = useState(false);
   const [pick, setPick] = useState('');
+  const [tab, setTab] = useState<Tab>(initialTab);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [sheetOpen, setSheetOpen] = useState(false);
+  const [showErrors, setShowErrors] = useState(false);
+  const [lastAdded, setLastAdded] = useState<string | null>(null);
   const pickWb = pick ? getWarband(pick) : undefined;
   const fileRef = useRef<HTMLInputElement>(null);
 
@@ -19,6 +28,11 @@ export default function App() {
   useEffect(() => {
     if (activeId) saveActive(activeId);
   }, [activeId]);
+  useEffect(() => {
+    if (!lastAdded) return;
+    document.getElementById(`entry-${lastAdded}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setLastAdded(null);
+  }, [lastAdded]);
 
   const roster = rosters.find((r) => r.id === activeId) ?? rosters[0];
   const wb = roster ? getWarband(roster.warbandId) : undefined;
@@ -37,12 +51,20 @@ export default function App() {
     setPick('');
   };
 
+  const addFighter = (typeId: string) => {
+    const id = uid();
+    setEntries((es) => [...es, { id, typeId, name: '', count: 1, gear: [] }]);
+    setSheetOpen(false);
+    setLastAdded(id);
+  };
+
   const importFile = async (f: File) => {
     try {
       const r = parseRoster(await f.text());
       if (!getWarband(r.warbandId)) throw new Error(`Unknown warband "${r.warbandId}".`);
       setRosters((rs) => [...rs, r]);
       setActiveId(r.id);
+      setCreating(false);
     } catch (err) {
       alert(`Import failed: ${(err as Error).message}`);
     }
@@ -55,55 +77,93 @@ export default function App() {
     setActiveId(rest[0]?.id ?? null);
   };
 
+  const go = (t: Tab) => {
+    setTab(t);
+    setMenuOpen(false);
+    history.replaceState(null, '', t === 'reference' ? '#ref' : '#');
+    window.scrollTo({ top: 0 });
+  };
+
+  const menu = (fn: () => void) => () => {
+    setMenuOpen(false);
+    fn();
+  };
+
   const showPicker = creating || !roster;
+  const legal = summary && summary.errors.length === 0;
 
   return (
-    <div className="app">
+    <div className={`app tab-${tab}`}>
       <header className="topbar no-print">
         <h1>
-          d12heim <span>Warband Builder</span>
+          d12heim <span>Warbands</span>
         </h1>
-        <div className="top-actions">
-          {rosters.length > 0 && (
-            <select value={roster?.id ?? ''} onChange={(e) => setActiveId(e.target.value)} aria-label="Saved warbands">
-              {rosters.map((r) => (
-                <option key={r.id} value={r.id}>
-                  {r.name} ({getWarband(r.warbandId)?.name ?? r.warbandId})
-                </option>
-              ))}
-            </select>
-          )}
-          <button onClick={() => setCreating(true)}>New</button>
-          <button onClick={() => fileRef.current?.click()}>Import</button>
-          <input
-            ref={fileRef}
-            type="file"
-            accept=".json,application/json"
-            hidden
-            onChange={(e) => {
-              const f = e.target.files?.[0];
-              if (f) importFile(f);
-              e.target.value = '';
-            }}
-          />
-          {roster && !showPicker && (
-            <>
-              <button onClick={() => downloadJson(roster)}>Export</button>
-              <button onClick={() => window.print()}>Print</button>
-              <button className="danger" onClick={removeRoster}>
-                Delete
-              </button>
-            </>
-          )}
-        </div>
+        <nav className="tabs desktop-only" aria-label="Sections">
+          <button className={tab === 'builder' ? 'on' : ''} onClick={() => go('builder')}>
+            Builder
+          </button>
+          <button className={tab === 'reference' ? 'on' : ''} onClick={() => go('reference')}>
+            Quick reference
+          </button>
+        </nav>
+        {tab === 'builder' && (
+          <div className="menu-wrap">
+            <button className="icon-btn" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label="Warband menu">
+              ☰ <span className="desktop-only">Menu</span>
+            </button>
+            {menuOpen && (
+              <>
+                <div className="scrim clear" onClick={() => setMenuOpen(false)} />
+                <div className="menu" role="menu">
+                  <button role="menuitem" onClick={menu(() => setCreating(true))}>
+                    New warband
+                  </button>
+                  <button role="menuitem" onClick={menu(() => fileRef.current?.click())}>
+                    Import file…
+                  </button>
+                  {roster && !showPicker && (
+                    <>
+                      <button role="menuitem" onClick={menu(() => downloadJson(roster))}>
+                        Export file
+                      </button>
+                      <button role="menuitem" onClick={menu(() => window.print())}>
+                        Print roster
+                      </button>
+                      <button role="menuitem" className="danger" onClick={menu(removeRoster)}>
+                        Delete warband
+                      </button>
+                    </>
+                  )}
+                </div>
+              </>
+            )}
+          </div>
+        )}
+        <input
+          ref={fileRef}
+          type="file"
+          accept=".json,application/json"
+          hidden
+          onChange={(e) => {
+            const f = e.target.files?.[0];
+            if (f) importFile(f);
+            e.target.value = '';
+          }}
+        />
       </header>
 
-      {showPicker && (
+      {tab === 'reference' && (
+        <main className="no-print">
+          <Reference roster={roster} wb={wb} computed={summary?.computed} />
+        </main>
+      )}
+
+      {tab === 'builder' && showPicker && (
         <main className="picker no-print">
           <h2>New warband</h2>
           <label className="picker-field">
             Warband
-            <select value={pick} onChange={(e) => setPick(e.target.value)} autoFocus>
+            <select value={pick} onChange={(e) => setPick(e.target.value)}>
               <option value="">Choose one of {WARBANDS.length} warbands…</option>
               {WARBANDS.map((w) => (
                 <option key={w.id} value={w.id}>
@@ -139,103 +199,75 @@ export default function App() {
                 Cancel
               </button>
             )}
+            {!roster && (
+              <button className="link" onClick={() => fileRef.current?.click()}>
+                or import a file
+              </button>
+            )}
           </div>
         </main>
       )}
 
-      {!showPicker && roster && wb && summary && (
+      {tab === 'builder' && !showPicker && roster && wb && summary && (
         <>
+          <div className="roster-switch no-print">
+            <select value={roster.id} onChange={(e) => setActiveId(e.target.value)} aria-label="Saved warbands">
+              {rosters.map((r) => (
+                <option key={r.id} value={r.id}>
+                  {r.name} · {getWarband(r.warbandId)?.name ?? r.warbandId}
+                </option>
+              ))}
+            </select>
+          </div>
+
           <section className="summary no-print">
             <input className="roster-name" value={roster.name} onChange={(e) => update({ name: e.target.value })} aria-label="Warband name" />
-            <div className="stats-row">
-              <Stat label="Spent" value={`${summary.spent} gc`} />
-              <Stat label="Treasury" value={`${summary.remaining} gc`} bad={summary.remaining < 0} />
-              <Stat label="Models" value={`${summary.models} / ${wb.maxModels}`} bad={summary.models > wb.maxModels || summary.models < wb.minModels} />
-              <Stat label="Heroes" value={`${summary.heroes} / 6`} bad={summary.heroes > 6} />
+            <div className="sub muted">{wb.name}</div>
+          </section>
+
+          <div className="statusbar no-print">
+            <div className="stat-pills">
+              <span className={`pill ${summary.remaining < 0 ? 'bad' : ''}`}>
+                <b>{summary.spent}</b>/{wb.startingGold} gc
+              </span>
+              <span className={`pill ${summary.models > wb.maxModels || summary.models < wb.minModels ? 'bad' : ''}`}>
+                <b>{summary.models}</b>/{wb.maxModels} models
+              </span>
+              <span className={`pill ${summary.heroes > 6 ? 'bad' : ''}`}>
+                <b>{summary.heroes}</b>/6 heroes
+              </span>
+              <button className={`pill status ${legal ? 'ok' : 'bad'}`} onClick={() => setShowErrors(!showErrors)} disabled={!!legal}>
+                {legal ? '✓ Legal' : `⚠ ${summary.errors.length} issue${summary.errors.length > 1 ? 's' : ''}`}
+              </button>
             </div>
             <div className="budget">
               <div className={`budget-fill ${summary.remaining < 0 ? 'over' : ''}`} style={{ width: `${Math.min(100, (summary.spent / wb.startingGold) * 100)}%` }} />
             </div>
-            {summary.errors.length > 0 ? (
+            {!legal && showErrors && (
               <ul className="errors">
                 {summary.errors.map((e, i) => (
                   <li key={i}>{e}</li>
                 ))}
               </ul>
-            ) : (
-              <p className="ok">Legal starting warband.</p>
             )}
-          </section>
+          </div>
 
           <div className="layout no-print">
-            <aside className="recruit">
+            <aside className="recruit desktop-only">
               <h2>Recruit</h2>
-              {(['hero', 'henchman'] as const).map((kind) => (
-                <div key={kind}>
-                  <h3>{kind === 'hero' ? 'Heroes' : 'Henchmen'}</h3>
-                  {wb.fighters
-                    .filter((f) => f.kind === kind)
-                    .map((f) => {
-                      const have = roster.entries
-                        .filter((e) => e.typeId === f.id)
-                        .reduce((n, e) => n + (f.kind === 'hero' ? 1 : e.count), 0);
-                      const full = f.max != null && have >= f.max;
-                      const p = d12Profile(f.profile);
-                      return (
-                        <button
-                          key={f.id}
-                          className="recruit-btn"
-                          disabled={full}
-                          title={`M${p.M} WS${p.WS} BS${p.BS} S${p.S} T${p.T} W${p.W} I${p.I} A${p.A} Ld${p.Ld}`}
-                          onClick={() =>
-                            setEntries((es) => [...es, { id: uid(), typeId: f.id, name: '', count: 1, gear: [] }])
-                          }
-                        >
-                          <span>
-                            {f.name}
-                            <small>
-                              {have}/{f.max ?? '∞'}
-                              {f.min ? `, min ${f.min}` : ''}
-                            </small>
-                          </span>
-                          <b>{f.cost} gc</b>
-                        </button>
-                      );
-                    })}
-                </div>
-              ))}
-              <label className="toggle">
-                <input
-                  type="checkbox"
-                  checked={roster.allowRareSubstitutes}
-                  onChange={(e) => update({ allowRareSubstitutes: e.target.checked })}
-                />
-                Show rare sheet substitutes (e.g. Chainmail for "Light armour")
-              </label>
-              {wb.specialRules.length > 0 && (
-                <details className="wb-rules">
-                  <summary>Warband rules</summary>
-                  {wb.specialRules.map((r) => (
-                    <p key={r.name}>
-                      <b>{r.name}.</b> {r.text}
-                    </p>
-                  ))}
-                </details>
-              )}
-              {wb.conversionNotes && wb.conversionNotes.length > 0 && (
-                <details className="wb-rules">
-                  <summary>d6 → d12 conversion notes</summary>
-                  <ul>
-                    {wb.conversionNotes.map((n, i) => (
-                      <li key={i}>{n}</li>
-                    ))}
-                  </ul>
-                </details>
-              )}
+              <RecruitPanel wb={wb} roster={roster} onAdd={addFighter} onToggleRare={(v) => update({ allowRareSubstitutes: v })} />
             </aside>
 
             <main className="entries">
-              {roster.entries.length === 0 && <p className="muted empty">Recruit fighters from the list on the left.</p>}
+              {roster.entries.length === 0 && (
+                <div className="empty">
+                  <p>No fighters yet.</p>
+                  <button className="primary mobile-only" onClick={() => setSheetOpen(true)}>
+                    + Recruit a fighter
+                  </button>
+                  <p className="muted desktop-only">Recruit fighters from the list on the left.</p>
+                </div>
+              )}
               {roster.entries.map((e, i) => {
                 const c = summary.computed.get(e.id);
                 if (!c) return null;
@@ -248,9 +280,7 @@ export default function App() {
                     allowRare={roster.allowRareSubstitutes}
                     onChange={(ne) => setEntries((es) => es.map((x) => (x.id === e.id ? ne : x)))}
                     onRemove={() => setEntries((es) => es.filter((x) => x.id !== e.id))}
-                    onDuplicate={() =>
-                      setEntries((es) => [...es.slice(0, i + 1), { ...e, id: uid(), name: '' }, ...es.slice(i + 1)])
-                    }
+                    onDuplicate={() => setEntries((es) => [...es.slice(0, i + 1), { ...e, id: uid(), name: '' }, ...es.slice(i + 1)])}
                   />
                 );
               })}
@@ -261,18 +291,40 @@ export default function App() {
             </main>
           </div>
 
+          <button className="fab mobile-only no-print" onClick={() => setSheetOpen(true)} aria-label="Recruit a fighter">
+            + Recruit
+          </button>
+
+          {sheetOpen && (
+            <div className="sheet-wrap mobile-only no-print">
+              <div className="scrim" onClick={() => setSheetOpen(false)} />
+              <div className="sheet" role="dialog" aria-label="Recruit">
+                <div className="sheet-head">
+                  <h2>Recruit</h2>
+                  <span className="muted">{summary.remaining} gc left</span>
+                  <button className="icon-btn" onClick={() => setSheetOpen(false)} aria-label="Close">
+                    ✕
+                  </button>
+                </div>
+                <RecruitPanel wb={wb} roster={roster} onAdd={addFighter} onToggleRare={(v) => update({ allowRareSubstitutes: v })} />
+              </div>
+            </div>
+          )}
+
           <PrintRoster wb={wb} r={roster} s={summary} />
         </>
       )}
-    </div>
-  );
-}
 
-function Stat({ label, value, bad }: { label: string; value: string; bad?: boolean }) {
-  return (
-    <div className={`stat ${bad ? 'bad' : ''}`}>
-      <small>{label}</small>
-      <b>{value}</b>
+      <nav className="bottom-nav mobile-only no-print" aria-label="Sections">
+        <button className={tab === 'builder' ? 'on' : ''} onClick={() => go('builder')}>
+          <svg aria-hidden width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" /></svg>
+          Builder
+        </button>
+        <button className={tab === 'reference' ? 'on' : ''} onClick={() => go('reference')}>
+          <svg aria-hidden width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5z" /><path d="M8 7h7M8 11h7" /></svg>
+          Reference
+        </button>
+      </nav>
     </div>
   );
 }
