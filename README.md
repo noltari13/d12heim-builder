@@ -2,7 +2,9 @@
 
 Builds a legal 500gc starting warband for the d12heim homebrew Mordheim rules. Runs in the browser and saves rosters in local storage, with JSON export/import and a printable landscape roster.
 
-Run it: `npm install`, then `npm run dev` (http://localhost:3000). `npm run build` makes a static site in `dist/`.
+**Live:** https://noltari13.github.io/d12heim-builder/ (deploys from `main` via GitHub Actions)
+
+Run it locally: `npm install`, then `npm run dev` (http://localhost:3000). `npm run build` makes a static site in `dist/`.
 
 ## What it applies
 
